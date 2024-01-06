@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Network Server Activation</title>
+<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<STYLE TYPE="text/css" MEDIA=screen> <!-- H1.REGTITLE { font: 19pt Verdana, Helvetica, sans-serif; color: "#0066cc"; margin-top: 15px; margin-left:0px; margin-bottom: 0px; }
+	--> 
+	</STYLE>
+<script language="javascript1.2"><!--
+	function onLoad() {
+		window.scrollTo(0,0);
+	}
+	
+	function onClose() {
+		window.close();
+	}
+	
+//-->
+</script>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Arial" onload="onLoad()">
+	<form name=Form1 ID="Form1">
+	<p><img border="0" src="adsk_logo.gif"></p>
+	<H1 class="REGTITLE">Network License Activation</H1>
+	<hr size=6 color="#0067cc">
+<P><b>Inserting New License Information into an Existing License File</b></P>
+<P>If you choose to have the new license information automatically inserted into 
+an existing license file, you eliminate the chance for error and reduce the time 
+and effort it takes for you to add the information manually.</P>
+<P>To automatically insert the new license information, click the “Insert the 
+new license information into it.” radio button. Click Browse to locate the 
+existing file, and then click Next. The license information is added to your 
+existing file. </P>
+<P>Note: The new license information is added to the end of your existing 
+license file. </P>
+<P>For example: </P>
+<font size="1">
+<p>SERVER Abcpc12345 00a0b0d12abc <br>
+USE_SERVER<br>
+VENDOR adskflex port=2080<br>
+INCREMENT 42600ACD_2004_0F adskflex 1.000 permanent 21 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;VENDOR_STRING=commercial:permanent BORROW=720 SUPERSEDE \<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;DUP_GROUP=UH ISSUED=30-Sep-2003 SN=341-12345678 SIGN=B62442768702<br>
+INCREMENT 46300ACD_2005_0F adskflex 1.000 permanent 21 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;VENDOR_STRING=commercial:permanent BORROW=720 SUPERSEDE \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DUP_GROUP=UH ISSUED=13-Oct-2003 SN=341-87654321 SIGN="155D E3E2 2C25 A0DF \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A02A A702 294D CCF3 4385 A62E 510B 5756 9EA5 1F99 1E6B 1038 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;063F 4AA2 B23E 2633 3265 39EE 75B5 3645 3FDC D452 9265 2562 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;D612 A7B9" SIGN2="015C CA8B D9CD 06C2 5D82 2575 67A7 601D DBB3 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;F313 7048 763D AB69 4C61 5BF4 0C8C 7812 F2B4 196A 0822 2EF2 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C683 B692 D723 1189 122D 05B1 BBA7 1D14 C96E"</p>
+</font>
+<p>In the example above, the new license information "46300ACD_2005_0F" is inserted into 
+your existing license file.</p>
+<p><b>Overwrite an Existing License File</b></p> 
+<p>If you choose to overwrite the existing license file, you replace the entire contents of the 
+existing license file with the new license file information.</P>
+<p><img height=20 width=20 src="RTInfoIcon.gif">Warning! By overwriting an existing license file, you are deleting all Autodesk 
+network-licensed products that are specified in the existing license file. Use 
+this option <i>only</i> if you no longer require any part of the previous license file 
+contents.</p>
+<p>To overwrite an existing license file, click Overwrite the Existing 
+File. Click Browse to locate the existing file, and then click Next. The 
+existing file is overwritten by your new license file. </P>
+<P>
+	<hr>
+</P>
+
+<P></P>
+	<center><input type="button" value="OK" onclick="onClose();" id=Button1 name=Button1></center>
+	</form>
+<P></P>
+</body>
+</html>

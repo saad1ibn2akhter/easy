@@ -1,0 +1,1172 @@
+!*_TOOLPALETTEPATH|String|Registry|C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\support\ToolPalette
+Controls the path(s) that are used for the Tool Palette Windows.
+#_PKSER|String|Not saved|
+Stores the AutoCAD serial number.
+#_VERNUM|String|Not saved|
+Stores the AutoCAD build version number.
+!3DDWFPREC|Integer|Drawing|2
+Controls the precision of 3D DWF publishing. This system variable has a range from 1 to 6. Higher settings result in finer precision.\n\nNote: Setting a 3DDWFPREC value of 5 or 6 will create very large 3D DWF files or sheets in a multi-sheet DWF.\n\nValue\tDeviation Value\n1\t1\n2\t0.5\n3\t0.2\n4\t0.1\n5\t0.01\n6\t0.001
+!ACADLSPASDOC|Integer|Registry|0
+Controls whether AutoCAD loads the acad.lsp file into every drawing or just the first drawing opened in an AutoCAD session.\n\n0\tLoads acad.lsp into just the first drawing opened in an AutoCAD session\n1\tLoads acad.lsp into every drawing opened
+#ACADPREFIX|String|Not saved|C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\support;C:\Program Files\AutoCAD 2007\support;C:\Program Files\AutoCAD 2007\fonts;C:\Program Files\AutoCAD 2007\help;C:\Program Files\AutoCAD 2007\express;C:\Program Files\AutoCAD 2007\support\color;C:\Documents and Settings\<user name>\My Documents;C:\Program Files\AutoCAD 2007\drv;
+Stores the directory path, if any, specified by the ACAD environment variable, with path separators appended if necessary.
+#ACADVER|String|Not saved|
+Stores the AutoCAD version number. This variable differs from the DXF file $ACADVER header variable, which contains the drawing database level number.\n\n17.0s (LMS Tech)\tAutoCAD 2007\n16.2s (LMS Tech)\tAutoCAD 2006\n16.1s (LMS Tech)\tAutoCAD 2005\n16.0\t\t\t\tAutoCAD 2004\n15.06\t\t\t\tAutoCAD 2002\n15.05\t\t\t\tAutoCAD 2000i
+!ACISOUTVER|Integer|Not saved|70
+Controls the ACIS version of SAT files created using the ACISOUT command. Currently, ACISOUT only supports a value of 15 through 18, 20, 21, 30, 40, 50, 60 and 70.
+#ADCSTATE|Integer|Not saved|0
+Indicates the display status of the AutoCAD DesignCenter.\n\n0\tDesignCenter is not active\n1\tDesignCenter is active
+!AFLAGS|Integer|Not saved|16
+Sets attribute flags for ATTDEF bitcode. The value is the sum of the following:\n\n0\tNo attribute mode selected\n1\tInvisible\n2\tConstant\n4\tVerify\n8\tPreset
+!ANGBASE|Real|Drawing|0.0000
+Sets the base angle to 0 with respect to the current UCS.
+!ANGDIR|Integer|Drawing|0
+Sets the positive angle direction from angle 0 with respect to the current UCS.\n\n0\tCounterclockwise\n1\tClockwise
+!APBOX|Integer|Registry|0
+Turns the AutoSnap aperture box on or off. The aperture box is displayed in the center of the crosshairs when you snap to an object.\n\n0\tAperture box is not displayed\n1\tAperture box is displayed
+!APERTURE|Integer|Registry|10
+Sets the display size for the aperture, in pixels. The aperture is the selection tool used in drawing commands. Valid settings range from 1 to 50.
+#APSTATE|Integer|Not saved|0
+Stores a value that indicates whether the Block Authoring Palettes window in the Block Editor is open.\n\n0\tClosed\n1\tOpen
+#AREA|Real|Not saved|0.0000
+AREA is both a command and a system variable. The AREA system variable stores the last area computed by the AREA command. Because entering area at the Command prompt invokes the AREA command, you must use the SETVAR command to access the AREA system variable.
+#ASSISTSTATE|Integer|Not saved|0
+Indicates the display status of the AutoCAD Info Palette.\n\n0\tInfo Palette is not active\n1\tInfo Palette is active
+!ATTDIA|Integer|Registry|0
+Controls whether the -INSERT command uses a dialog box for attribute value entry.\n\n0\tIssues prompts on the command line\n1\tUses a dialog box
+!ATTMODE|Integer|Drawing|1
+Controls the display of attributes.\n\n0\tOff: Makes all attributes invisible\n1\tNormal: Retains current visibility of each attribute: visible attributes are displayed; invisible attributes are not\n2\tOn: Makes all attributes visible
+!ATTREQ|Integer|Registry|1
+Determines whether the INSERT command uses default attribute settings during insertion of blocks.\n\n0\tAssumes the defaults for the values of all attributes\n1\tTurns on prompts or dialog box for attribute values, as specified by
+!AUDITCTL|Integer|Registry|0
+Controls whether the AUDIT command creates an audit report (ADT) file.\n\n0\tPrevents writing of ADT files\n1\tWrites ADT files
+!AUNITS|Integer|Drawing|0
+Sets units for angles.\n\n0\tDecimal degrees\n1\tDegrees/minutes/seconds\n2\tGradians\n3\tRadians\n4\tSurveyor's units
+!AUPREC|Integer|Drawing|0
+Sets the number of decimal places for angular units displayed on the status line or in information reported by the LIST command.
+!AUTOSNAP|Integer|Registry|55
+Controls AutoSnap marker, tooltip, and magnet. Also turns on polar and object snap tracking, and controls the display of polar and object snap tracking tooltips. The system variable value is the sum of the following bit values:\n\n0\tTurns off the AutoSnap marker, tooltips, and magnet. Also turns off polar tracking, object snap tracking, and tooltips for polar and object snap tracking\n1\tTurns on the AutoSnap marker\n2\tTurns on the AutoSnap tooltips\n4\tTurns on the AutoSnap magnet\n8\tTurns on polar tracking\n16\tTurns on object snap tracking\n32\tTurns on tooltips for polar tracking and object snap tracking
+!BACKGROUNDPLOT|Integer|Registry|2
+Controls whether or not backgrouind plotting is enabled for the PLOT and/or PUBLISH command. The setting is ignored when the commands -PLOT, PLOT, -PUBLISH or PUBLISH are used in Scripts.  The system variable value is a integer number that desigantes which commands should be running in the background:\n\n0\tTurns off background plot for both PLOT and PUBLISH\n1\tTurns on background plotting for only PLOT\n2\tTurns on background plotting for only PUBLISH\n3\tTurns on background plotting on for both PLOT and PUBLISH
+#BACKZ|Real|Drawing|0.0000
+Stores the back clipping plane offset from the target plane for the current viewport, in drawing units. Meaningful only if the back clipping bit in VIEWMODE is on. The distance of the back clipping plane from the camera point can be found by subtracting BACKZ from the camera-to-target distance.
+!BACTIONCOLOR|String|Registry|"7"
+Controls the text color for actions in the Block Editor. Valid values include 1 - 255, BYLAYER, or BYBLOCK, plus RGB:000,000,000 when setting a True color. True colors can be established by using a number of 1 - 255 between each comma.
+!BDEPENDENCYHIGHLIGHT|Integer|Registry|1
+Controls whether dependent objects related to a parameter, action or grip are highlighted in the Block Editor. When dependency highlighting is enabled, objects are displayed with a halo effect.\n\n0\tDependent objects are no highlighted\n1\tDependent objects are highlighted 
+!BGRIPOBJCOLOR|String|Registry|"141"
+Controls the color for grips in the Block Editor. Valid values include 1 - 255, BYLAYER, or BYBLOCK, plus RGB:000,000,000 when setting a True color. True colors can be established by using a number of 1 - 255 between each comma.
+!BGRIPOBJSIZE|Integer|Registry|8
+Controls the display size for custom grips in the Block Editor. Valid range is 1 - 255.
+!BINDTYPE|Integer|Not Saved|0
+Controls how xref names are handled when binding xrefs or editing xrefs in place.\n\n0\tTraditional binding behavior ("xref1|one" becomes "xref$0$one")\n1\tInsert-like behavior ("xref1|one" becomes "one")
+!BLIPMODE|Integer|Registry|0
+Controls whether marker blips are visible.\n\n0\tTurns off marker blips\n1\tTurns on marker blips
+!BLOCKEDITLOCK|Integer|Registry|0
+Disallows opening of the Block Editor and editing of dynamic block definitions. When BLOCKEDITLOCK is set to 1, double-clicking a dynamic block in a drawing opens the Properties palette. If the dynamic block contains attributes, double-clicking the block reference opens the Enhanced Attribute Editor Double click actions can be customized using the Customize User Interface (CUI) editor..\n\n0\tSpecifies that the Block Editor can be opened\n1\tSpecifies that the Block Editor cannot be opened
+#BLOCKEDITOR|Integer|Not saved|0
+Reflects if the Block Editor environment is currently open.\n\n0\tBlock Editor is not open\n1\tBlock Editor is open
+!BPARAMETERCOLOR|String|Registry|"7"
+Controls the color for parameters in the Block Editor. Valid values include 1 - 255, BYLAYER, or BYBLOCK, plus RGB:000,000,000 when setting a True color. True colors can be established by using a number of 1 - 255 between each comma.
+!BPARAMETERFONT|String|Registry|"Simplex.shx"
+Controls which font is used for parameters and actions in the Block Editor. Either True Type fonts or SHX fonts can be used. When specifying a True Type font it is optional if you use the TTF extension or not, but if you are specifyinh a SHX font file the file extension must be provided. When specifying an Asian Big Font use a SHX font with a comma followed by the Big Font file, (Simplex.shx,Bigfont.shx).
+!BPARAMETERSIZE|Integer|Registry|12
+Controls the display size of parameter text and features in the Block Editor relative to the screen size. Valid range is 1 - 255.
+!BTMARKDISPLAY|Integer|Registry|1
+Controls whether value set markers are displayed for dynamic block references.\n\n0\tValue set markers are not displayed\n1\tValue set markers are displayed
+!BVMODE|Integer|Not saved|0
+Controls how objects that are made invisible for the current visibility state are displayed with in the Block Editor.\n\n0\tHidden objects are not visible\n1\tHidden objects are visible on screen, but dimmed
+!CALCINPUT|Integer|Registry|1
+Controls whether mathematical expressions and global constans are evaluated when used in a text field with in a palette or dialog box.\n\n0\tExpressions are not evaluated\n1\tExpressions are evaluated, buit only after the END key is pressed
+!CAMERADISPLAY|Integer|Drawing|0
+Turns the display of camera objects on or off. The value changes to 1 (to display cameras) when you use the CAMERA command.\n\n0\tCamera glyphs are not displayed\n1\tCamera glyphs are displayed
+!CAMERAHEIGHT|Real|Drawing|Varies
+Specifies the default height for new camera objects. The height is expressed in current drawing units. 
+#CDATE|Real|Not saved|
+Sets calendar date and time.
+!CECOLOR|String|Drawing|"BYLAYER"
+Sets the color of new objects.\n\nColors may appear for the following types:\nByLayer or ByBlock\nACI\t\t1 to 255\nTrue\tRGB:000,000,000
+!CELTSCALE|Real|Drawing|1.0000
+Sets the current object linetype scaling factor. Sets the linetype scaling for new objects relative to the LTSCALE command setting. A line created with CELTSCALE = 2 in a drawing with LTSCALE set to 0.5 would appear the same as a line created with CELTSCALE = 1 in a drawing with LTSCALE = 1.
+!CELTYPE|String|Drawing|"ByLayer"
+Sets the linetype of new objects.
+!CELWEIGHT|Integer|Drawing|-1
+Sets the lineweight of new objects.\n\n-1\tSets the lineweight to "ByLayer."\n-2\tSets the lineweight to "ByBlock."\n-3\tSets the lineweight to "Default." "Default" is controlled by the\n\nOther valid values entered in millimeters include 0, 5, 9, 13, 15, 18, 20, 25, 30, 35, 40, 50, 53, 60, 70, 80, 90, 100, 106, 120, 140, 158, 200, and 211.\n\nAll values must be entered in millimeters. (Multiply a value by 2.54 to convert values from inches to millimeters.)
+!CENTERMT|Integer|Registry|1
+Controls how using grips to stretch the bounding box of Mtext that is justified centered horizontally, doesn't have any affect when using the ruler in the in-place text editor.\n\n0\tMoving a corner grip results in the center grip to move in the same direction as the grip that is being dragged.\n1\tMoving a corner grip results in the center grip remaining fixed in its current location and the grips on the opposite side move away from the center grip. 
+!CHAMFERA|Real|Drawing|0.0000
+Sets the first chamfer distance.
+!CHAMFERB|Real|Drawing|0.0000
+Sets the second chamfer distance.
+!CHAMFERC|Real|Drawing|0.0000
+Sets the chamfer length.
+!CHAMFERD|Real|Drawing|0.0000
+Sets the chamfer angle.
+!CHAMMODE|Integer|Not saved|0
+Sets the input method by which AutoCAD creates chamfers.\n\n0\tRequires two chamfer distances\n1\tRequires one chamfer distance and an angle
+!CIRCLERAD|Real|Not saved|0.0000
+Sets the default circle radius. A zero indicates no default.
+!CLAYER|String|Drawing|"0"
+Sets the current layer.
+#CLEANSCREENSTATE|Integer|Not saved|0
+Indicates the current status of Clean Screen.\n\n0\tAutoCAD is in normal display state with Title bar, Toolbars and Tool Palettes displaying\n1\tAutoCAD is in Clean Screen display state the Title bar, Toolbars and Tool Palettes are not displayed
+#CLISTATE|Integer|Registry|1
+Holds the current state of the Command Line.\n\n0\tCommand Line is hidden\n1\tCommand Line is displayed 
+!CMATERIAL|String|Drawing|"ByLayer"
+Sets the material of new objects. Valid values are BYLAYER and the name of a material in the drawing.
+#CMDACTIVE|Integer|Not saved|
+Stores the bitcode that indicates whether an ordinary command, transparent command, script, or dialog box is active. The value is the sum of the following:\n\n1\tOrdinary command is active\n2\tOrdinary command and a transparent command are active\n4\tScript is active\n8\tDialog box is active\n16\tDDE is active\n32\tAutoLISP is active (only visible to an ObjectARX-defined command)\n64\tObjectARX command is currently active
+!CMDDIA|Integer|Registry|1
+Controls the display of the In-Place Text Editor for the QLEADER command.\n\n0\tOff\n1\tOn
+!CMDECHO|Integer|Not saved|1
+Controls whether AutoCAD echoes prompts and input during the AutoLISP command function.\n\n0\tTurns off echoing\n1\tTurns on echoing
+!CMDINPUTHISTORYMAX|Integer|Registry|20
+Controls the maximum number of previous input values that are stored for a prompt in a command.
+#CMDNAMES|String|Not saved|
+Displays the names of the active and transparent commands. For example, LINE'ZOOM indicates that the ZOOM command is being used transparently during the LINE command.\n\nThis variable is designed for use with programming interfaces such as AutoLISP, DIESEL, and ActiveX Automation.\n\nThe following is a simple example that demonstrates how to use DIESEL to display the current command at the status line.\n\nCommand: modemacro\nNew value for MODEMACRO, or . for none <"">: $(getvar, cmdnames)\n\nFor additional information on AutoCAD programming interfaces, see chapter 6, "Programming Interfaces," in the Customization Guide.
+!CMLJUST|Integer|Drawing|0
+Specifies Multiline justification.\n\n0\tTop\n1\tMiddle\n2\tBottom
+!CMLSCALE|Real|Drawing|1.0000 (imperial) or 20.0000 (metric)
+Controls the overall width of a Multiline. A scale factor of 2.0 produces a Multiline twice as wide as the style definition. A zero scale factor collapses the Multiline into a single line. A negative scale factor flips the order of the offset lines (that is, the smallest or most negative is placed on top when the Multiline is drawn from left to right).
+!CMLSTYLE|String|Drawing|"STANDARD"
+Sets the Multiline style that AutoCAD uses to draw the Multiline.
+!COMPASS|Integer|Not saved|0
+Controls whether the 3D compass is on or off in the current viewport.\n\n0\tTurns off the 3D compass\n1\tTurns on the 3D compass
+!COORDS|Integer|Registry|1
+Controls when coordinates are updated on the status line.\n\n0\tCoordinate display is updated as you specify points with the pointing device\n1\tDisplay of absolute coordinates is updated continuously\n2\tDisplay of absolute coordinates is updated continuously, and distance and angle from last point are displayed when a distance or angle is requested
+#CPLOTSTYLE|String|Drawing|"ByLayer"
+Controls the current plot style for new objects.  If the value of PSTYLEPOLICY is set to 1, the drawing is set to be color-dependent and the initial value is "ByColor". The AutoCAD defined values are\n"ByLayer"\n"ByBlock"\n"Normal"\n"User Defined"
+#CPROFILE|String|Registry|<<Unnamed Profile>>
+Displays the name of the current profile. For more information on profiles, see the OPTIONS command.
+!CROSSINGAREACOLOR|Integer|Registry|3
+Controls the fill color used during a crossing selection. Valid values include 1 - 255.
+!CSHADOW|Integer|Drawing|0
+Sets the shadow display property for a 3D object. To be visible, shadows must be turned on in the visual style that is applied to the viewport.\n\nNote: To display full shadows, hardware acceleration is required. When Geometry Acceleration is off, full shadows cannot be displayed. (To access these settings, enter 3dconfig at the Command prompt. In the Adaptive Degradation and Performance Tuning dialog box, click Manual Tune.)\n\n0\tCasts and receives shadows\n1\tCasts shadows\n2\tReceives shadows\n3\tIgnores shadows
+!CTAB|String|Drawing|"Model"
+Returns the name of the current (model or layout) tab in the drawing. Provides a means for the user to determine which tab is active.
+!CTABLESTYLE|String|Drawing|"Standard"
+Sets the name of the current table style.
+!CURSORSIZE|Integer|Registry|5
+Determines the size of the crosshairs as a percentage of the screen size. Valid settings range from 1 to 100 percent. When set to 100, the crosshairs are full-screen and the ends of the crosshairs are never visible. When less than 100, the ends of the crosshairs may be visible when the cursor is moved to one edge of the screen.
+!CVPORT|Integer|Drawing|2
+Sets the identification number of the current viewport. You can change this value, which changes the current viewport, if the following conditions are met:\n\nThe identification number you specify is that of an active viewport.\nA command in progress has not locked cursor movement to that viewport.\nTablet mode is off.
+#DASHBOARDSTATE|Integer|Not saved|0
+Indicates whether the Dashboard window is active or not.\n\n0\tNot active\n1\tActive
+#DATE|Real|Not saved|
+Stores the current date and time represented as a Julian date and fraction in a real number:\n\n<Julian date>.<Fraction>\n\nFor example, on January 29, 1993, at 2:29:35 in the afternoon, the DATE variable would contain 2446460.603877364.\n\nYour computer clock provides the date and time. The time is represented as a fraction of a day. To compute differences in time, subtract the times returned by DATE. To extract the seconds since midnight from the value returned by DATE, use AutoLISP expressions:\n\n(setq s (getvar "DATE"))\n(setq seconds (* 86400.0 (? s (fix s))))\n\nDATE returns a true Julian date only if the system clock is set to UTC/Zulu (Greenwich Mean Time). TDCREATE and TDUPDATEhave the same format as DATE, but their values represent the creation time and last update time of the current drawing.
+#DBCSTATE|Integer|Not saved|0
+Indicates the display status of the dbConnect Manager.\n\n0\tdbConnect Manager is not active\n1\tdbConnect Manager is active
+!DBLCLKEDIT|Integer|Registry|1
+Controls the double click editing behavior in the drawing area. Double click actions can be customized using the Customize User Interface (CUI) editor. The system variable can accept the values of On and Off in place of 1 and 0.\n\n0\tDisabled\n1\tEnabled
+#DBMOD|Integer|Not saved|0
+Indicates the drawing modification status using bitcode. The value is the sum of the following:\n\n1\tObject database modified\n4\tDatabase variable modified\n8\tWindow modified\n16\tView modified\n32\tField modified\n\nAutoCAD resets the DBMOD value to 0 when you save the drawing.
+#DCTCUST|String|Registry|"C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\support\sample.cus"
+Displays the path and file name of the current custom spelling dictionary.
+!DCTMAIN|String|Registry|varies by country
+Displays the file name of the current main spelling dictionary. The full path is not shown because this file is expected to reside in the support directory.\n\nYou can specify a default main spelling dictionary using the SETVAR command. When prompted for a new value for DCTMAIN, you can enter one of the keywords below.\n\nKeyword\t\tLanguage name\nenu\t\t\tAmerican English\nena\t\t\tAustralian English\nens\t\t\tBritish English (ise)\nenz\t\t\tBritish English (ize)\nca\t\t\tCatalan\ncs\t\t\tCzech\nda\t\t\tDanish\nnl\t\t\tDutch (primary)\nnls\t\t\tDutch (secondary)\nfi\t\t\tFinnish\nfr\t\t\tFrench (unaccented capitals)\nfra\t\t\tFrench (accented capitals)\nde\t\t\tGerman (Scharfes s)\nded\t\t\tGerman (Dopple s)\nit\t\t\tItalian\nno\t\t\tNorwegian (Bokmal)\nnon\t\t\tNorwegian (Nynorsk)\npt\t\t\tPortuguese (Iberian)\nptb\t\t\tPortuguese (Brazilian)\nru\t\t\tRussian (infrequent io)\nrui\t\t\tRussian (frequent io)\nes\t\t\tSpanish (unaccented capitals)\nesa\t\t\tSpanish (accented capitals)\nsv\t\t\tSwedish
+!DEFAULTLIGHTING|Integer|Drawing|1
+Controls default lighting in the current viewport. Default lighting is provided by a set of distant lights that follow the view direction. When default lighting is on, the sun and other lights do not cast light, even if they are turned on. The setting of this system variable is viewport-specific.\n\n0\tAuto: default lighting is automatically turned off when point lights, spotlights, distant lights, or the sun are on\n1\tOn
+!DEFAULTLIGHTINGTYPE|Integer|Drawing|1
+Specifies the type of default lighting. The default lighting provided in AutoCAD 2006 and earlier releases used one distant light. The new default lighting uses two distant lights to illuminate more of the model and also adjusts ambient light. The setting of this system variable is viewport-specific.\n\n0\tOld type of default lighting\n1\tNew type of default lighting
+#DEFLPLSTYLE|String|Registry|"ByLayer"
+Specifies the default plot style for new layers. If the value of PSTYLEPOLICY is set to 1, the drawing is set to be color-dependent and the initial value is "ByColor". If the value of PSTYLEPOLICY is set to 0, the drawing is set to named plot style mode and the initial value is "Normal".
+#DEFPLSTYLE|String|Registry|"ByLayer"
+Specifies the default plot style for new objects.  If the value of PSTYLEPOLICY is set to 1, the drawing is set to be color-dependent and the initial value is "ByColor". If the value of PSTYLEPOLICY is set to 0, the drawing is set to named plot style mode and the initial value is "ByLayer".
+!DELOBJ|Integer|Registry|1
+Controls whether objects used to create other objects are retained or deleted from the drawing database.\n\n0\tObjects are retained\n1\tObjects are deleted
+!DEMANDLOAD|Integer|Registry|3
+Specifies if and when AutoCAD demand loads a third-party application if a drawing contains custom objects created in that application.\n\n0\tTurns off demand loading.\n1\tDemand loads the source application when you open a drawing that contains custom objects. This setting does not demand load the application when you invoke one of the application's commands.\n2\tDemand loads the source application when you invoke one of the application's commands. This setting does not demand load the application when you open a drawing that contains custom objects.\n3\tDemand loads the source application when you open a drawing that contains custom objects or when you invoke one of the application's commands.
+#DIASTAT|Integer|Not saved|
+Stores the exit method of the most recently used dialog box.\n\n0\tCancel\n1\tOK
+!DIMADEC|Integer|Drawing|0
+Controls the number of precision places displayed in angular dimensions.\n\n-1\tIndicates the number of decimal places to display in angular dimensions using the DIMDEC variable\n0-8\tIndicates the number of decimal places to display in angular dimensions.
+!DIMALT|Switch|Drawing|Off
+Controls the display of alternate units in dimensions. See also DIMALTD, DIMALTF, DIMALTTD, DIMALTTZ, DIMALTZ, and DIMAPOST.\n\nOff\tDisables alternate units\nOn\tEnables alternate units
+!DIMALTD|Integer|Drawing|2
+Controls the number of decimal places in alternate units.
+!DIMALTF|Real|Drawing|25.4000
+Controls the multiplier for alternate units. If DIMALT is turned on, DIMALTF multiplies linear dimensions by a factor to produce a value in an alternate system of measurement. The initial value represents the number of millimeters in an inch.
+!DIMALTRND|Real|Drawing|0.0000
+Rounds off the alternate dimension units.
+!DIMALTTD|Integer|Drawing|2
+Sets the number of decimal places for the tolerance values in the alternate units of a dimension.
+!DIMALTTZ|Integer|Drawing|0
+Toggles suppression of zeros in tolerance values.\n\n0\tSuppresses zero feet and precisely zero inches\n1\tIncludes zero feet and precisely zero inches\n2\tIncludes zero feet and suppresses zero inches\n3\tIncludes zero inches and suppresses zero feet\n\nTo the preceding values, add:\n\n4\tSuppresses leading zeros\n8\tSuppresses trailing zeros
+!DIMALTU|Integer|Drawing|2
+Sets the units format for alternate units of all dimension style family members except angular.\n\n1\tScientific\n2\tDecimal\n3\tEngineering\n4\tArchitectural (stacked)\n5\tFractional (stacked)\n6\tArchitectural\n7\tFractional\n8\tWindows(r)  Desktop (decimal format using Control Panel settings for decimal separator and number grouping symbols)
+!DIMALTZ|Integer|Drawing|0
+Controls the suppression of zeros for alternate unit dimension values. DIMALTZ values 0-3 affect feet-and-inch dimensions only.\n\n0\tSuppresses zero feet and precisely zero inches\n1\tIncludes zero feet and precisely zero inches\n2\tIncludes zero feet and suppresses zero inches\n3\tIncludes zero inches and suppresses zero feet\n4\tSuppresses leading zeros in decimal dimensions (for example, 0.5000 becomes .5000)\n8\tSuppresses trailing zeros in decimal dimensions (for example, 12.5000 becomes 12.5)\n12\tSuppresses both leading and trailing zeros (for example, 0.5000 becomes .5)
+!DIMAPOST|String|Drawing|""
+Specifies a text prefix or suffix (or both) to the alternate dimension measurement for all types of dimensions except angular.\n\nFor instance, if the current units are Architectural, DIMALT is on, DIMALTF is 25.4 (the number of millimeters per inch), DIMALTD is 2, and DIMAPOST is set to "mm," a distance of 10 units would be displayed as 10"[254.00mm].\n\nTo turn off an established prefix or suffix (or both), set it to a single period (.).
+!DIMARCSYM|Integer|Drawing|0
+Controls display of the arc symbol in an arc length dimension.\n\n0\tPlaces arc length symbols before the dimension text\n1\tPlaces arc length symbols above the dimension text\n2\tSuppresses the display of arc length symbols
+!DIMASO|Switch|Drawing|On
+Obsolete. Has no effect in AutoCAD 2004 except to preserve the integrity of pre-AutoCAD 2002 scripts and AutoLISP routines. In AutoCAD 2004, DIMASO is replaced by DIMASSOC.
+!DIMASSOC|Integer|Drawing|2
+Controls the associativity of dimension objects.\n\n0\tCreates no association between the various elements of the dimension. The lines, arcs, arrowheads, and text of a dimension are drawn as separate objects.\n1\tCreates a non-associative dimension object. The elements are formed into a single object. If the definition point on the object moves, the dimension value is updated.\n2\tCreates an associative dimension object. The elements are formed into a single object, and one or more definition points of the dimension are coupled with association points on geometric objects. If the association point on the geometric object moves, the location. orientation and value of the dimension is updated.\n\nDIMASSOC is not stored in a dimension style. DIMASO was the previous variable used for this functionality prior to AutoCAD 2002.
+!DIMASZ|Real|Drawing|0.1800
+Controls the size of dimension line and leader line arrowheads. Also controls the size of hook lines.\n\nMultiples of the arrowhead size determine whether dimension lines and text should fit between the extension lines. DIMASZ is also used to scale arrowhead blocks if set by DIMBLK. DIMASZ has no effect when DIMTSZ is other than zero.
+!DIMATFIT|Integer|Drawing|3
+Determines how dimension text and arrows are arranged when space is not sufficient to place both within the extension lines.\n\n0\tPlaces both text and arrows outside extension lines\n1\tMoves arrows first, then text\n2\tMoves text first, then arrows\n3\tMoves either text or arrows, whichever fits best\n\nAutoCAD adds a leader to moved dimension text when DIMTMOVE is set to 1.
+!DIMAUNIT|Integer|Drawing|0
+Sets the units format for angular dimensions.\n\n0\tDecimal degrees\n1\tDegrees/minutes/seconds\n2\tGradians\n3\tRadians\n4\tSurveyor's units\n\nDIMAUNIT sets this value when entered on the command line or when set from the Primary Units area in the Annotation dialog box.
+!DIMAZIN|Integer|Drawing|0
+Suppresses zeros for angular dimensions.\n\n0\tDisplays all leading and trailing zeros\n1\tSuppresses leading zeros in decimal dimensions (for example, 0.5000 becomes .5000)\n2\tSuppresses trailing zeros in decimal dimensions (for example, 12.5000 becomes 12.5)\n3\tSuppresses leading and trailing zeros  (for example, 0.5000 becomes .5)
+!DIMBLK|String|Drawing|
+Sets the arrowhead block displayed at the ends of dimension lines or leader lines. To turn off arrowheads, enter a single period (.). Arrowhead block entries and the names used to select them in the New, Modify and Override Dimension Style dialog boxes are shown below. You can also enter the names of user-defined arrowhead blocks.\n\nBlock Name\t\t\tDescription\n"" \t\t\t\t\tclosed filled\n"_DOT" \t\t\tdot\n"_DOTSMALL" \t\tdot small\n"_DOTBLANK" \t\tdot blank\n"_ORIGIN" \t\t\torigin indicator\n"_ORIGIN2" \t\torigin indicator 2\n"_OPEN" \t\t\topen\n"_OPEN90" \t\t\tright angle\n"_OPEN30" \t\t\topen 30\n"_CLOSED" \t\t\tclosed\n"_SMALL" \t\t\tdot small blank\n"_NONE" \t\t\tnone\n"_OBLIQUE" \t\toblique\n"_BOXFILLED" \t\tbox filled\n"_BOXBLANK" \t\tbox\n"_CLOSEDBLANK" \tclosed blank\n"_DATUMFILLED" \tdatum triangle filled\n"_DATUMBLANK" \tdatum triangle\n"_INTEGRAL" \t\tintegral\n"_ARCHTICK" \t\tarchitectural tick
+!DIMBLK1|String|Drawing|
+Sets the arrowhead for the first end of the dimension line when DIMSAH is on. To turn off arrowheads, enter a single period (.). For a list of arrowheads, see DIMBLK.
+!DIMBLK2|String|Drawing|
+Sets the arrowhead for the second end of the dimension line when DIMSAH is on. To turn off arrowheads, enter a single period (.). For a list of arrowheads, see DIMBLK.
+!DIMCEN|Real|Drawing|0.0900
+Controls drawing of circle or arc center marks and centerlines by the DIMCENTER, DIMDIAMETER, and DIMRADIUS commands. For DIMDIAMETER and DIMRADIUS, the center mark is drawn only if you place the dimension line outside the circle or arc.\n\n 0  No center marks or lines are drawn\n<0  Centerlines are drawn\n>0  Center marks are drawn\n\nThe absolute value specifies the size of the center mark.
+!DIMCLRD|Integer|Drawing|0
+Assigns colors to dimension lines, arrowheads, and dimension leader lines. Also controls the color of leader lines created with the LEADER command. The color can be any valid color number. Integer equivalents for the BYBLOCK and BYLAYER properties are 0 and 256, respectively.
+!DIMCLRE|Integer|Drawing|0
+Assigns colors to dimension extension lines. The color can be any valid color number. See DIMCLRD.
+!DIMCLRT|Integer|Drawing|0
+Assigns colors to dimension text. The color can be any valid color number. See DIMCLRD.
+!DIMDEC|Integer|Drawing|4
+Sets the number of decimal places displayed for the primary units of a dimension. The precision is based on the units or angle format you have selected.
+!DIMDLE|Real|Drawing|0.0000
+Sets the distance the dimension line extends beyond the extension line when oblique strokes are drawn instead of arrowheads.
+!DIMDLI|Real|Drawing|0.3800
+Controls the spacing of the dimension lines in baseline dimensions. Each dimension line is offset from the previous one by this amount, if necessary, to avoid drawing over it. Changes made with DIMDLI are not applied to existing dimensions.
+!DIMDSEP|Single character|Drawing|Decimal point
+Specifies a single-character decimal separator to use when creating dimensions whose unit format is decimal.\n\nWhen prompted, enter a single character at the command line. If dimension units is set to Decimal, the DIMDSEP character is used instead of the default decimal point. If DIMDSEP is set to NULL (default value, reset by entering a period), AutoCAD uses the decimal point as the dimension separator.
+!DIMEXE|Real|Drawing|0.1800
+Specifies how far to extend the extension line beyond the dimension line.
+!DIMEXO|Real|Drawing|0.0625
+Specifies how far extension lines are offset from origin points. If you point directly at the corners of an object to be dimensioned, the extension lines do not touch the object.
+!DIMFIT|Integer|Drawing|3
+Obsolete. Has no effect in AutoCAD 2000 except to preserve the integrity of pre-AutoCAD 2000 scripts and AutoLISP routines. In AutoCAD 2000, DIMFIT is replaced by DIMATFIT and DIMTMOVE.
+!DIMFRAC|Integer|Drawing|0
+Sets the fraction format when DIMLUNIT is set to 4 (Architectural) or 5 (Fractional).\n\n0\tHorizontal\n1\tDiagonal\n2\tNot stacked  (for example, 1/2)
+!DIMFXL|Real|Drawing|1.0000
+Sets the total length of the extension lines starting from the dimension line toward the dimension origin. The length is set in drawing units.
+!DIMFXLON|Switch|Drawing|Off
+Controls whether extension lines are set to a fixed length. When DIMFXLON is on, extension lines are set to the length specified by DIMFXL.
+!DIMGAP|Real|Drawing|0.0900
+Sets the distance around the dimension text when the dimension line breaks to accommodate dimension text. Also sets the gap between annotation and a hook line created with the LEADER command. If you enter a negative DIMGAP value, AutoCAD places a box around the dimension text.\n\nAutoCAD also uses DIMGAP as the minimum length for pieces of the dimension line. When calculating the default position for the dimension text, it positions the text inside the extension lines only if doing so breaks the dimension lines into two segments at least as long as DIMGAP. Text placed above or below the dimension line is moved inside only if there is room for the arrowheads, dimension text, and a margin between them at least as large as DIMGAP: 2 * (DIMASZ + DIMGAP).\n\nDIMGAP also sets the gap between a tolerance symbol and its feature control frame.
+!DIMJOGANG|Real|Drawing|45 (90 for metric)
+Determines the angle of the transverse segment of the dimension line in a jogged radius dimension. Jogged radius dimensions are often created when the center point is located off the page.
+!DIMJUST|Integer|Drawing|0
+Controls the horizontal positioning of dimension text.\n\n0\tCentered along the dimension line between the extension lines\n1\tNext to the first extension line\n2\tNext to the second extension line\n3\tAbove and aligned with the first extension line\n4\tAbove and aligned with the second extension line
+!DIMLDRBLK|String|Drawing|
+Specifies the arrow type for leaders. To turn off arrowhead display, enter a single period (.). For a list of arrowheads, see DIMBLK.
+!DIMLFAC|Real|Drawing|1.0000
+Sets a scale factor for linear dimension measurements. All linear dimension distances, including radii, diameters, and coordinates, are multiplied by DIMLFAC before being converted to dimension text.\n\nDIMLFAC has no effect on angular dimensions, and is not applied to the values held in DIMRND, DIMTM, or DIMTP.\n\nIf you create a dimension in paper space and DIMLFAC is not set to zero, AutoCAD multiplies the distance measured by the absolute value of DIMLFAC. In model space, negative values for DIMLFAC are ignored, and the value 1.0 is used instead.\n\nAutoCAD computes a value for DIMLFAC if you try to change DIMLFAC from the Dim prompt while in paper space and you select the Viewport option.\n\nDim: dimlfac\nCurrent value <1.0000> New value (Viewport): v\nSelect viewport to set scale:\n\nAutoCAD calculates the scaling of model space to paper space and assigns the negative of this value to DIMLFAC.
+!DIMLIM|Switch|Drawing|Off
+Generates dimension limits as the default text. Setting DIMLIM to on turns DIMTOL off.\n\nOff\tDimension limits are not generated as default text\nOn\tDimension limits are generated as default text
+#DIMLTEX1|String|Drawing|
+Sets the linetype of the first extension line. The value is BYLAYER, BYBLOCK, or the name of a linetype.
+#DIMLTEX2|String|Drawing|
+Sets the linetype of the second extension line. The value is BYLAYER, BYBLOCK, or the name of a linetype.
+#DIMLTYPE|String|Drawing|
+Sets the linetype of the dimension line. The value is BYLAYER, BYBLOCK, or the name of a linetype.
+!DIMLUNIT|Integer|Drawing|2
+Sets units for all dimension types except Angular.\n\n1\tScientific\n2\tDecimal\n3\tEngineering\n4\tArchitectural\n5\tFractional\n6\tWindows desktop
+!DIMLWD|Enum|Drawing|-2
+Assigns lineweight to dimension lines.\n\n-2\tSets the lineweight to "ByBlock."\n-3\tSets the lineweight to "ByLayer."\nOther valid values entered in millimeters include 0, 5, 9, 13, 15, 18, 20, 25, 30, 35, 40, 50, 53, 60, 70, 80, 90, 100, 106, 120, 140, 158, 200, and 211.\n\nAll values must be entered in millimeters. (Multiply a value by 2.54 to convert values from inches to millimeters.)
+!DIMLWE|Enum|Drawing|-2
+Assigns lineweight to extension lines.\n\n-2\tSets the lineweight to "ByBlock."\n-3\tSets the lineweight to "ByLayer."\nOther valid values entered in millimeters include 0, 5, 9, 13, 15, 18, 20, 25, 30, 35, 40, 50, 53, 60, 70, 80, 90, 100, 106, 120, 140, 158, 200, and 211.\n\nAll values must be entered in millimeters. (Multiply a value by 2.54 to convert values from inches to millimeters.)
+!DIMPOST|String|Drawing|""
+Specifies a text prefix or suffix (or both) to the dimension measurement. For example, to establish a suffix for millimeters, set DIMPOST to mm; a distance of 19.2 units would be displayed as 19.2 mm.\n\nIf tolerances are turned on, the suffix is applied to the tolerances as well as to the main dimension.\n\nUse <> to indicate placement of the text in relation to the dimension value. For example, enter <>mm to display a 5.0 millimeter radial dimension as "5.0mm." If you entered mm <>, the dimension would be displayed as "mm 5.0." Use the <> mechanism for angular dimensions.
+!DIMRND|Real|Drawing|0.0000
+Rounds all dimensioning distances to the specified value. For instance, if DIMRND is set to 0.25, all distances round to the nearest 0.25 unit. If you set DIMRND to 1.0, all distances round to the nearest integer. Note that the number of digits edited after the decimal point depends on the precision set by DIMDEC. DIMRND does not apply to angular dimensions.
+!DIMSAH|Switch|Drawing|Off
+Controls the display of dimension line arrowhead blocks.\n\nOff\tUse arrowhead blocks set by DIMBLK\nOn\tUse arrowhead blocks set by DIMBLK1 and DIMBLK2
+!DIMSCALE|Real|Drawing|1.0000
+Sets the overall scale factor applied to dimensioning variables that specify sizes, distances, or offsets. Also affects the scale of leader objects created with the LEADER command.\n\n0.0\tAutoCAD computes a reasonable default value based on the scaling between the current model space viewport and paper space. If you are in paper space or model space and not using the paper space feature, the scale factor is 1.0.\n>0\tAutoCAD computes a scale factor that leads text sizes, arrowhead sizes, and other scaled distances to plot at their face values.\n\nDIMSCALE does not affect tolerances or measured lengths, coordinates, or angles.
+!DIMSD1|Switch|Drawing|Off
+Controls suppression of the first dimension line.\n\nWhen turned on, suppresses the display of the dimension line and arrowhead between the first extension line and the text.
+!DIMSD2|Switch|Drawing|Off
+Controls suppression of the second dimension line.\n\nWhen turned on, suppresses the display of the dimension line and arrowhead between the second extension line and the text.
+!DIMSE1|Switch|Drawing|Off
+Suppresses display of the first extension line.\n\nOff\tExtension line is not suppressed\nOn\tExtension line is suppressed
+!DIMSE2|Switch|Drawing|Off
+Suppresses display of the second extension line.\n\nOff\tExtension line is not suppressed\nOn\tExtension line is suppressed
+!DIMSHO|Switch|Drawing|On
+Obsolete. Has no effect except to preserve the integrity of scripts.\n\nIn versions of AutoCAD prior to 2004 it controled the redefinition of dimension objects while dragging. Associative dimensions recompute dynamically as they are dragged. On some computers, dynamic dragging can be very slow, so, set DIMSHO to off to drag the original image instead. DIMSHO is not stored in a dimension style.
+!DIMSOXD|Switch|Drawing|Off
+Suppresses drawing of dimension lines outside the extension lines.\n\nOff\tDimension lines are not suppressed\nOn\tDimension lines are suppressed\n\nIf the dimension lines would be outside the extension lines and DIMTIX is on, setting DIMSOXD to on suppresses the dimension line. If DIMTIX is off, DIMSOXD has no effect.
+#DIMSTYLE|String|Drawing|Standard
+DIMSTYLE is both a command and a system variable. The DIMSTYLE system variable shows the current dimension style. To display the DIMSTYLE system variable, use the SETVAR command. The DIMSTYLE system variable is read-only; you cannot change its value on the command line. To change the current dimension style, use the DIMSTYLE command.
+!DIMTAD|Integer|Drawing|0
+Controls the vertical position of text in relation to the dimension line.\n\n0\tCenters the dimension text between the extension lines.\n1\tPlaces the dimension text above the dimension line except when the dimension line is not horizontal and text inside the extension lines is forced horizontal (DIMTIH = 1). The distance from the dimension line to the baseline of the lowest line of text is the current DIMGAP value.\n2\tPlaces the dimension text on the side of the dimension line farthest away from the defining points.\n3\tPlaces the dimension text to conform to Japanese Industrial Standards (JIS).
+!DIMTDEC|Integer|Drawing|4
+Sets the number of decimal places to display in tolerance values for the primary units in a dimension.
+!DIMTFAC|Real|Drawing|1.0000
+Sets a scale factor used to calculate the height of text for dimension fractions and tolerances. AutoCAD multiplies DIMTXT by DIMTFAC to set the fractional or tolerance text height.
+!DIMTFILL|Integer|drawing|0
+Controls the background of dimension text.\n\n0\tNo background\n1\tThe background color of the drawing\n2\tThe background specified by DIMTFILLCLR
+!DIMTFILLCLR|Integer|Drawing|0
+Sets the color for the text background in dimensions. Color numbers are displayed in the Select Color dialog box. For BYBLOCK, enter 0. For BYLAYER, enter 256.
+!DIMTIH|Switch|Drawing|On
+Controls the position of dimension text inside the extension lines for all dimension types except ordinate.\n\nOff\tAligns text with the dimension line\nOn\tDraws text horizontally
+!DIMTIX|Switch|Drawing|Off
+Draws text between extension lines.\n\nOff\tVaries with the type of dimension. For linear and angular dimensions, AutoCAD places text inside the extension lines if there is sufficient room. For radius and diameter dimensions that don't fit inside the circle or arc, DIMTIX has no effect and always forces the text outside the circle or arc.\nOn\tDraws dimension text between the extension lines even if AutoCAD ordinarily places it outside those lines.
+!DIMTM|Real|Drawing|0.0000
+Sets the minimum (or lower) tolerance limit for dimension text when DIMTOL or DIMLIM is on. AutoCAD accepts signed values for DIMTM. If DIMTOL is on and DIMTP and DIMTM are set to the same value, AutoCAD draws a tolerance value.\n\nIf DIMTM and DIMTP values differ, the upper tolerance is drawn above the lower, and a plus sign is added to the DIMTP value if it is positive.\n\nFor DIMTM, AutoCAD uses the negative of the value you enter (adding a minus sign if you specify a positive number and a plus sign if you specify a negative number).
+!DIMTMOVE|Integer|Drawing|0
+Sets dimension text movement rules.\n\n0\tMoves the dimension line with dimension text\n1\tAdds a leader when dimension text is moved\n2\tAllows text to be moved freely without a leader
+!DIMTOFL|Switch|Drawing|Off
+Controls whether a dimension line is drawn between the extension lines even when the text is placed outside. For radius and diameter dimensions (when DIMTIX is off), draws a dimension line inside the circle or arc and places the text, arrowheads, and leader outside.\n\nOff\tDoes not draw dimension lines between the measured points when arrowheads are placed outside the measured points\nOn\tDraws dimension lines between the measured points even when arrowheads are placed outside the measured points
+!DIMTOH|Switch|Drawing|On
+Controls the position of dimension text outside the extension lines.\n\nOff\tAligns text with the dimension line\nOn\tDraws text horizontally
+!DIMTOL|Switch|Drawing|Off
+Appends tolerances to dimension text.\n\nOff\tNo tolerance is used or added\nOn\tTolerance is added and DIMLIM is turned off.
+!DIMTOLJ|Integer|Drawing|1
+Sets the vertical justification for tolerance values relative to the nominal dimension text.\n\n0\tBottom\n1\tMiddle\n2\tTop
+!DIMTP|Real|Drawing|0.0000
+Sets the maximum (or upper) tolerance limit for dimension text when DIMTOL or DIMLIM is on. AutoCAD accepts signed values for DIMTP. If DIMTOL is on and DIMTP and DIMTM are set to the same value, AutoCAD draws a tolerance value.\n\nIf DIMTM and DIMTP values differ, the upper tolerance is drawn above the lower and a plus sign is added to the DIMTP value if it is positive.
+!DIMTSZ|Real|Drawing|0.0000
+Specifies the size of oblique strokes drawn instead of arrowheads for linear, radius, and diameter dimensioning.\n\n  0\tDraws arrowheads.\n>0\tDraws oblique strokes instead of arrowheads. The size of the oblique strokes is determined by this value multiplied by the DIMSCALE value.
+!DIMTVP|Real|Drawing|0.0000
+Controls the vertical position of dimension text above or below the dimension line. AutoCAD uses the DIMTVP value when DIMTAD is off. The magnitude of the vertical offset of text is the product of the text height and DIMTVP. Setting DIMTVP to 1.0 is equivalent to setting DIMTAD to on. AutoCAD splits the dimension line to accommodate the text only if the absolute value of DIMTVP is less than 0.7.
+!DIMTXSTY|String|Drawing|"Standard"
+Specifies the text style of the dimension.
+!DIMTXT|Real|Drawing|0.1800
+Specifies the height of dimension text, unless the current text style has a fixed height.
+!DIMTZIN|Integer|Drawing|0
+Controls the suppression of zeros in tolerance values. DIMTZIN stores this value when you enter it on the command line or set it under Primary Units in the Annotation dialog box. DIMTZIN values 0-3 affect feet-and-inch dimensions only.\n\n0\tSuppresses zero feet and precisely zero inches\n1\tIncludes zero feet and precisely zero inches\n2\tIncludes zero feet and suppresses zero inches\n3\tIncludes zero inches and suppresses zero feet\n4\tSuppresses leading zeros in decimal dimensions (for example, 0.5000 becomes .5000)\n8\tSuppresses trailing zeros in decimal dimensions (for example, 12.5000 becomes 12.5)\n12\tSuppresses both leading and trailing zeros (for example, 0.5000 becomes 0.5)
+!DIMUNIT|Integer|Drawing|2
+Obsolete. Has no effect in AutoCAD 2000 except to preserve the integrity of pre-AutoCAD 2000 scripts and AutoLISP routines. In AutoCAD 2000, DIMUNIT is replaced by DIMLUNIT and DIMFRAC.
+!DIMUPT|Switch|Drawing|Off
+Controls options for user-positioned text.\n\nOff\tCursor controls only the dimension line location\nOn\tCursor controls both the text position and the dimension line location
+!DIMZIN|Integer|Drawing|0
+Controls the suppression of zeros in the primary unit value. DIMZIN stores this value when you enter it on the command line or set it under Primary Units in the Annotation dialog box. DIMZIN values 0-3 affect feet-and-inch dimensions only.\n\n0\tSuppresses zero feet and precisely zero inches\n1\tIncludes zero feet and precisely zero inches\n2\tIncludes zero feet and suppresses zero inches\n3\tIncludes zero inches and suppresses zero feet\n4\tSuppresses leading zeros in decimal dimensions (for example, 0.5000 becomes .5000)\n8\tSuppresses trailing zeros in decimal dimensions (for example, 12.5000 becomes 12.5)\n12\tSuppresses both leading and trailing zeros (for example, 0.5000 becomes 0.5)\n\nDIMZIN also affects real-to-string conversions performed by the AutoLISP rtos and angtos functions.
+!DISPSILH|Integer|Drawing|0
+Controls display of silhouette curves of solid objects in Wireframe mode. Also controls whether mesh is drawn or suppressed when a solid object is hidden.\n\n0\tOff\n1\tOn
+#DISTANCE|Real|Not saved|0.0000
+Stores the distance computed by the DIST command.
+!DONUTID|Real|Not saved|0.5000
+Sets the default for the inside diameter of a donut.
+!DONUTOD|Real|Not saved|1.0000
+Sets the default for the outside diameter of a donut. The value must be nonzero. If DONUTID is larger than DONUTOD, the two values are swapped by the next command.
+!DRAGMODE|Integer|Registry|2
+Controls the display of objects being dragged.\n\n0\tDoes not display an outline of the object as you drag it\n1\tDisplays the outline of the object as you drag it only if you enter drag on the command line after selecting the object to drag\n2\tAuto; always displays an outline of the object as you drag it
+!DRAGP1|Integer|Registry|10
+Sets the regen-drag input sampling rate.
+!DRAGP2|Integer|Registry|25
+Sets the fast-drag input sampling rate.
+#DRAGVS|String|Drawing|Current visual style
+Sets the visual style while creating 3D solid primitives and extruded solids and surfaces. You can enter a period (.) to specify the current visual style. DRAGVS can only be set to a visual style that is saved in the drawing.\n\nDRAGVS has no effect when the current viewport's visual style is set to 2D Wireframe.\n\nThe visual style specified for DRAGVS cannot be removed with the PURGE command.
+!DRAWORDERCTL|Integer|Drawing|3
+Controls the draw order functionality when editting or inheriting from objects.\n\n0\tDisables draw order display until the drawing is reopened or a REGEN is completed.  Newly created objects do not inherit draw order from the original object.\n1\tDraw order display is retained after an object is editted.  Once the object is modified it will be displayed on screen at the correctly based on its original draw order.\n2\tDraw order for object inheritance is turned on. So an object will have the same draw oder that the original object had.\n3\tFull draw order functionality is provided for display and object inheritance.
+#DRSTATE|Integer|Not saved|0
+Holds the current state of the Drawing Recovery palette.\n\n0\tDrawing Recovery palette is hidden\n1\tDrawing Recovery palette is displayed
+!DTEXTED|Integer|Registry|2
+Controls whether the in-place editor or a dialog box is used to create and edit single-line text.\n\n0\tIn-place text editor is used\n1\tEdit Text dialog box is used\n2\tIn-place text editor is used and clicking in the drawing allows you to create a new text object at that location
+!DWFFRAME|Integer|Drawing|2
+Determines whether the DWF underlay frame is visible.\n\n0\tThe DWF underlay frame is not visible and it is not plotted\n1\tDisplays the DWF underlay frame and allows it to be plotted\n2\tDisplays the DWF underlay frame but keeps it from being plotted
+!DWFOSNAP|Integer|Registry|1
+Determines whether object snapping is active for geometry in DWF underlays that are attached to the drawing.\n\n0\tObject snapping is disabled for geometry in all DWF underlay attachments in the drawing\n1\tObject snapping is enabled for geometry in all DWF underlay attachments in the drawing
+!DWGCHECK|Integer|Registry|0
+Controls the automatic data integrity check of AutoCAD when a drawing is being opened.\n\n0\tWarns if the drawing has potential problems before the drawing is opened.\n1\tWarns if the drawing has potential problems before the drawing is opened and the file was saved by an application other than AutoCAD or AutoCAD LT.\n2\tOpens the drawing and notification is handled via the command line if potential problems were found.\n3\tOpens the drawing and notification is handled via the command line if potential problems were found and the file was saved by an application other than AutoCAD or AutoCAD LT.
+#DWGCODEPAGE|String|Drawing|
+Stores the same value as SYSCODEPAGE (for compatibility reasons).
+#DWGNAME|String|Not saved|
+Stores the drawing name as entered by the user. If the drawing has not been named yet, DWGNAME defaults to "Drawing.dwg." If the user specified a drive/directory prefix, the prefix is stored in DWGPREFIX.
+#DWGPREFIX|String|Not saved|
+Stores the drive/directory prefix for the drawing.
+#DWGTITLED|Integer|Not saved|0
+Indicates whether the current drawing has been named.\n\n0\tDrawing has not been named\n1\tDrawing has been named
+!DYNDIGRIP|Integer|Registry|31
+Controls how the dynamic input provides feedback when using grip editing. The DYNDIVIS system variable must be set to the value of 2, which enables the displaying of dynamic dimensions.\n\n0\tNone\n1\tResulting dimension\n2\tLength change dimension\n4\tAbsolute angle dimension\n8\tAngle change dimension\n16\tArc raqdius dimension
+!DYNDIVIS|Integer|Registry|1
+Controls how many dynamic dimensions are displayed when using grip editing. The DYNDIGRIP system variable controls what dynamic dimensions are displayed during grip editing.\n\n0\tOnly the first dynamic dimension in the cycle order\n1\tOnly the two dynamic dimension in the cycle order\n2\tAll dynamic dimensions that can be displayed and allowed based on the DYNDIGRIP system variable
+!DYNMODE|Integer|Registry|3
+Controls the behavior of the Dynamic Input feature. The value can be a negative value which keeps the original value before it was toggled off by clicking the DYN button on the Status Bar or using the F12 key (simple press or used as a temporary override).\n\n0\tOff\n1\tOnly pointer input is enabled\n2\tOnly dimenional input is enabled\n3\tAll features are enabled
+!DYNPICOORDS|Integer|Registry|0
+Controls whether pointer input uses relative or absolute coordinate formatting.\n\n0\tRelative\n1\tAbsolute
+!DYNPIFORMAT|Integer|Registry|0
+Controls whether pointer input uses polar or Cartesian coordinate formatting for a second or next point.\n\n0\tPolar\n1\tCartesian 
+!DYNPIVIS|Integer|Registry|1
+Controls whether pointer input is displayed.\n\n0\tOnly when you type at a prompt for a point\n1\tAutomatically at a prompt for a point\n2\tAlways
+!DYNPROMPT|Integer|Registry|1
+Controls whether command prompts are displayed in Dynamic Input tooltips.\n\n0\tOff\n1\tOn
+!DYNTOOLTIPS|Integer|Registry|1
+Controls which tooltips are affected by tooltip appearance settings.\n\n0\tOnly Dynamic Input value fields\n1\tAll drafting tooltips
+!EDGEMODE|Integer|Registry|0
+Controls how the TRIM and EXTEND commands determine cutting and boundary edges.\n\n0\tUses the selected edge without an extension\n1\tExtends or trims the selected object to an imaginary extension of the cutting or boundary edge\n\nLines, arcs, elliptical arcs, rays, and polylines are objects eligible for natural extension. The natural extension of a line or ray is an unbounded line (xline), an arc is a circle, and an elliptical arc is an ellipse. A polyline is broken down into its line and arc components, which are extended to their natural boundaries.
+!ELEVATION|Real|Drawing (viewport specific)|0.0000
+Stores the current elevation relative to the current UCS for the current viewport in the current space.
+#ENTERPRISEMENU|String|Registry|"."
+Holds the current path and file name for the CUI file if one has been assigned.
+!ERRNO|Integer|Nor saved|0
+Reports what type of error occurred with in the AutoLISP program.  This value is reset at the startup of AutoCAD and upon opening a drawing.  These values currently range from 0 to 85 in value.  Look at the AutoLISP Developer's Guide for full list of values and meanings.
+#ERSTATE|Integer|Not saved|0
+Determines whether the External References palette is inactive or active.\n\n0\tNot active\n1\tActive
+!EXPERT|Integer|Not saved|0
+Controls whether certain prompts are issued.\n\n0\tIssues all prompts normally.\n1\tSuppresses "About to regen, proceed?" and "Really want to turn the current layer off?"\n2\tSuppresses the preceding prompts and "Block already defined. Redefine it?" (BLOCK) and "A drawing with this name already exists. Overwrite it?" (SAVE or WBLOCK).\n3\tSuppresses the preceding prompts and those issued by the LINETYPE command if you try to load a linetype that's already loaded or create a new linetype in a file that already defines that linetype.\n4\tSuppresses the preceding prompts and those issued by UCS Save and VPORTS Save if the name you supply already exists.\n5\tSuppresses the prompt, "That name is already in Use, redefine it?" issued by the -DIMSTYLE Save option when you supply the name of an existing dimension style.\n\nWhen a prompt is suppressed by EXPERT, the operation in question is performed as though you entered y at the prompt. Setting EXPERT can affect scripts, menu macros, AutoLISP, and the command functions.
+!EXPLMODE|Integer|Not saved|1
+Controls whether the EXPLODE command supports nonuniformly scaled (NUS) blocks.\n\n0\tDoes not explode NUS blocks\n1\tExplodes NUS blocks
+#EXTMAX|3D Point|Drawing|
+Stores the upper-right point of the drawing extents. Expands outward as new objects are drawn; shrinks only with ZOOM All or ZOOM Extents. Reported in world coordinates for the current space.
+#EXTMIN|3D Point|Drawing|
+Stores the lower-left point of the drawing extents. Expands outward as new objects are drawn; shrinks only with ZOOM All or ZOOM Extents. Reported in world coordinates for the current space.
+!EXTNAMES|Integer|Drawing|1
+Sets the parameters for named object names (such as linetypes and layers) stored in symbol tables.\n\n0\tUses Release 14 parameters, which limit names to 31 characters in length. Names can include the letters A to Z, the numerals 0 to 9, and the special characters, dollar sign ($), underscore (_), and hyphen (-).\n1\tUses AutoCAD 2000 parameters. Names can be up to 255 characters in length, and can include the letters A to Z, the numerals 0 to 9, spaces, and any special characters not used by Microsoft Windows and AutoCAD for other purposes.
+!FACETRATIO|Integer|Not saved|0
+Controls the aspect ratio of faceting for cylindrical and conic ACIS solids. A setting of 1 increases the density of the mesh to improve the quality of rendered and shaded models.\n\n0\tCreates an N by 1 mesh for cylindrical and conic ACIS solids\n1\tCreates an N by M mesh for cylindrical and conic ACIS solids
+!FACETRES|Real|Drawing|0.5000
+Adjusts the smoothness of shaded and rendered objects and objects with hidden lines removed. Valid values are from 0.01 to 10.0.
+!FIELDDISPLAY|Integer|Registry|1
+Controls whether or not Fields are displayed with a gray background on screen. The background for the Field is no plotted even when displayed.\n\n0\tFields do not display with a gray background\n1\tFields are displayed with a gray background
+!FIELDEVAL|Integer|Registry|31
+Controls when the value for the Field should be updated. The system variable value is the sum of the following bit values:\n\n0\tUpdating is disabled\n1\tUpdate upon opening of the drawing\n2\tUpdate when the drawing is being saved\n4\tUpdate before the drawing is being plotted\n8\tUpdate when using eTransmit\n16\tUpdate on regenating the drawing (or REGEN/REGENALL)
+!FILEDIA|Integer|Registry|1
+Suppresses display of the file dialog boxes.\n\n0\tDoes not display dialog boxes. You can still request a file dialog box to appear by entering a tilde (~) in response to the command's prompt. The same is true for AutoLISP and ADS functions.\n1\tDisplays file dialog boxes. However, if a script or AutoLISP/ObjectARX program is active, AutoCAD displays an ordinary prompt.
+!FILLETRAD|Real|Drawing|0.0000
+Stores the current fillet radius.
+!FILLMODE|Integer|Drawing|1
+Specifies whether multilines, traces, solids, all hatches (including solid-fill), and wide polylines are filled in.\n\n0\tObjects are not filled\n1\tObjects are filled
+!FONTALT|String|Registry|"simplex.shx"
+Specifies the alternate font to be used when the specified font file cannot be located. If an alternate font is not specified, AutoCAD displays the Alternate Font dialog box. The dialog box is displayed in the following cases:\n\n1.\tA Release 13 drawing is opened; FONTALT is not set or not found; and a TrueType(r), SHX, or PostScript font is not found for a defined text style.\n2.\tA Release 14 drawing is opened, FONTALT is not set or not found, and an SHX or PostScript font is not found for a defined text style. For missing TrueType fonts in Release 14 drawings, AutoCAD automatically substitutes the closest TrueType font available.\n3.\tThe Browse button is pressed in the Options dialog box when you specify an alternate font.\n\nAutoCAD validates the alternate font specified for FONTALT. If the font name or font file name is not found, the message "Font not found" is displayed. Enter either a TrueType font name (for example, Times New Roman Bold) or a TrueType file name (for example timebd.ttf). When a TrueType file name is entered for FONTALT, AutoCAD returns the font name in place of the file name if the font is registered with the operating system.\n\nFor more information about font substitution, see "Substituting Fonts" in chapter 11, "Adding Text to Drawings," in the User's Guide.
+#FONTMAP|String|Registry|"C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\support\acad.fmp"
+Specifies the font mapping file to be used. A font mapping file contains one font mapping per line; the original font used in the drawing and the font to be substituted for it are separated by a semicolon (;). For example, to substitute the Times TrueType font for the Roman font, the line in the mapping file would read as follows:\n\nromanc.shx;times.ttf\n\nIf FONTMAP does not point to a font mapping file, if the FMP file is not found, or if the font file name specified in the FMP file is not found, AutoCAD uses the font defined in the style. If the font in the style is not found, AutoCAD substitutes the font according to substitution rules.\n\nFor more information about font substitution, see "Substituting Fonts" in chapter 11, "Adding Text to Drawings," in the User's Guide.
+#FRONTZ|Real|Drawing|
+Stores the front clipping plane offset from the target plane for the current viewport, in drawing units. Meaningful only if the front clipping bit in VIEWMODE is on and the front-clip-not-at-eye bit is also on. The distance of the front clipping plane from the camera point is found by subtracting FRONTZ from the camera-to-target distance.
+#FULLOPEN|Integer|Not saved|
+Indicates whether the current drawing is partially open.\n\n0\tIndicates a partially open drawing\n1\tIndicates a fully open drawing
+!FULLPLOTPATH|Integer|Registry|1
+Controls whether the full path of the drawing or just the drawing name is sent to the plot spooler.\n\n0\tSends the drawing file name only to the plot spooler\n1\tSends the full path of the drawing file to the plot spooler
+!GFANG|Integer|Not saved|0
+Controls the angle used for the gradient fill.  Valid value range is 0 to 360.
+!GFCLR1|String|Not saved|"RGB 000,000,255"
+Specifies the color used in a one-color fill or the first color in a two-color gradient fill.  The number is expressed as a True Color in the format of "RGB:000,000,000". Valid value range is "RGB:000,000,000" through "RGB:255,255,255".
+!GFCLR2|String|Not saved|"RGB 255,255,153"
+Specifies the second color in a two-color gradient fill.  The number is expressed as a True Color in the format of "RGB:000,000,000". Valid value range is "RGB:000,000,000" through "RGB:255,255,255".
+!GFCLRLUM|Real|Not saved|1.0000
+Specifies the color tint (mixture of white) or a shade (mixture of black) in a one-color fill or gradient fill. Valid value range is 0.0 (darkest) to 1.0 (lightest).
+!GFCLRSTATE|Integer|Not saved|1
+Specifies the gradient fill mode of one or two color.\n\n0\tTwo-Color gradient fill\n1\tOne-Color gradient fill
+!GFNAME|Integer|Not saved|1
+Specifies the pattern of the gradient fill.\n\n1\tLinear\n2\tCylindrical\n3\tInverted cylindrical\n4\tSpherical\n5\tInverted Spherical\n6\tHemispherical\n7\tInverted Hemispherical\n8\tCurved\n9\tInverted Curved
+!GFSHIFT|Integer|Not saved|0
+Specifies whether the gradient fill is centered or shifted up and left.\n\n0\tCentered\n1\tShifted up and left
+!GRIDDISPLAY|Integer|Drawing|3
+Controls the display behavior and display limits of the grid.\n\nThe setting is stored as a bitcode using the sum of the following values:\n0\tRestricts the grid to the area specified by the LIMITS command\n1\tDoes not restrict the grid to the area specified by the LIMITS command\n2\tTurns on adaptive grid display, which limits the density of the grid when zoomed out\n4\tIf the grid is set to adaptive display and when zoomed in, generates additional, more closely spaced grid lines in the same proportion as the intervals of the major grid lines\n8\tChanges the grid plane to follow the XY plane of the dynamic UCS\n\nNote:Setting 4 is ignored unless setting 2 is specified.
+!GRIDMAJOR|Integer|Drawing|5
+Controls the frequency of major grid lines compared to minor grid lines. Valid values range from 1 to 100. Grid lines are displayed in any visual style except 2D Wireframe.
+!GRIDMODE|Integer|Drawing|0
+Specifies whether the grid is turned on or off.\n\n0\tTurns the grid off\n1\tTurns the grid on
+!GRIDUNIT|2D point|Drawing|0.5000,0.5000
+Specifies the grid spacing (X and Y) for the current viewport.
+!GRIPBLOCK|Integer|Registry|0
+Controls the assignment of grips in blocks.\n\n0\tAssigns a grip only to the insertion point of the block\n1\tAssigns grips to objects within the block
+!GRIPCOLOR|Integer|Registry|160
+Controls the color of nonselected grips (drawn as box outlines). The valid range is 1 to 255.
+!GRIPDYNCOLOR|Integer|Registry|140
+Controls the color for custom grips that are part of a dynamic block. The valid range is 1 to 255.
+!GRIPHOT|Integer|Registry|1
+Controls the color of selected grips (drawn as filled boxes). The valid range is 1 to 255.
+!GRIPHOVER|Integer|Registry|3
+Controls the color that a grip changes to when the mouse pauses over the grip. The valid range is 1 to 255.
+!GRIPOBJLIMIT|Integer|Registry|100
+The number of objects that will be used to control the display of grips.  If more objects are selected than what the value is set to, grips will not be displayed.  Valid range is 1 to 32,767.
+!GRIPS|Integer|Registry|1
+Controls the use of selection set grips for the Stretch, Move, Rotate, Scale, and Mirror Grip modes.\n\n0\tTurns off grips\n1\tTurns on grips\n\nTo adjust the size of the grips and the effective selection area used by the cursor when you snap to a grip, use GRIPSIZE.
+!GRIPSIZE|Integer|Registry|5
+Sets the size of the grip box in pixels. The valid range is 1 to 255.
+!GRIPTIPS|Integer|Registry|1
+Controls if a grip tip (or Tooltip) is displayed for custom objects when the mouse hovers over the grip, and if the object supports grip tips.\n\n0\tDisplay of grip tips is turned off\n1\tDisplay of grip tips is turned on
+!GTAUTO|Integer|Registry|1
+Controls whether or not grip tools display automatically when selecting objects before starting a command in a viewport set to a 3D visual style.\n\n0\tGrip tools do not display automatically when selecting objects before starting a command\n1\tGrip tools display automatically after creating a selection set before starting a command
+!GTDEFAULT|Integer|Registry|0
+Controls whether or not the 3DMOVE and 3DROTATE commands start automatically when the MOVE and ROTATE commands (respectively) are started in a 3D view.\n\n0\t3DMOVE and 3DROTATE commands do not start automatically when the MOVE and ROTATE commands (respectively) are started in a 3D view\n1\t3DMOVE and 3DROTATE commands start automatically when the MOVE and ROTATE commands (respectively) are started in a 3D view
+!GTLOCATION|Integer|Registry|0
+Controls the initial location of grip tools when objects are selected prior to running the 3DMOVE or 3DROTATE commands.\n\n0\tPlaces the grip tool at the same location as the UCS icon. Also aligns the grip tool with the UCS icon.\n1\tPlaces the grip tool on and aligned with the last selected object or subobject.
+!HALOGAP|Integer|Drawing|0
+Specifies a gap to be displayed where an object is hidden by another object. The value that is specified is a percentage of one unit and is independent of the zoom level. Specifies the distance to shorten a displayed haloed line at the point the object is hidden.
+#HANDLES|Integer|Drawing|On
+Reports whether object handles can be accessed by applications.
+!HIDEPRECISION|Integer|Not saved|0
+Controls the accuracy of hides and shades. Hides can be calculated in double precision or single precision. Setting HIDEPRECISION to 1 produces more accurate hides by using double precision, but this setting also uses more memory and can affect performance, especially when hiding solids.\n\n0\tSingle precision; uses less memory\n1\tDouble precision; uses more memory
+!HIDETEXT|Switch|Drawing|On
+Toggles the behavior of text objects created by the TEXT, DTEXT, or MTEXT commands are processed during the HIDE command.\n\nOff (0)\tText objects are not hidden during the processing of the Hide.\nOn (1)\tText objects are hidden during the processing of the Hide.
+!HIGHLIGHT|Integer|Not saved|1
+Controls object highlighting; does not affect objects selected with grips.\n\n0\tHighlighting is turned off and objects don't appear dashed when selected\n1\tHighlighting is turned on and objects do appear dashed when selected
+!HPANG|Real|Not saved|0.0000
+Specifies the hatch pattern angle.
+!HPASSOC|Integer|Registry|1
+Controls the associative property of hatch patterns or gradient fills.\n\n0\tHatch patterns and gradient fills are not associated to the boundaries\n1\tHatch patterns and gradient fills are associated to the boundaries and update when the boundaries are changed
+!HPBOUND|Integer|Not saved|1
+Controls the object type created by the BHATCH and BOUNDARY commands.\n\n0\tCreates a region\n1\tCreates a polyline
+!HPDOUBLE|Integer|Not saved|0
+Specifies hatch pattern doubling for user-defined patterns.\n\n0\tTurns off hatch pattern doubling\n1\tTurns on hatch pattern doubling
+!HPDRAWORDER|Integer|Not saved|3
+Controls the draw order for both hatches and fills.\n\n0\tNone. The hatch or fill object is not assigned a draw order value.\n1\tSend to back. The hatch or fill is sent behind all other objects.\n2\tBring to front. The hatch or fill is brought to the front all other objects.\n3\tSend behind boundary. The hatch or fill is sent behind the hatch boundary.\n4\tBring in front of boundary. The hatch or fill is brought in front of the hatch boundary.
+!HPGAPTOL|Real|Not saved|0.0000
+Specifies the maximum gap (or opening) that is to be bridged when try to form a closed hatch boundary. Valid range is 0 to 5000.
+!HPINHERIT|Integer|Drawing|0
+Controls whether the hatch origin is used when inheriting properties from an existing hatch object.\n\n0\tHatch origin is used from the HPORIGIN variable\n1\tHatch origin is taken from the source hatch object
+!HPNAME|String|Not saved|"ANSI31"
+Sets a default hatch pattern name of up to 34 characters without spaces. Returns "" if there is no default. Enter a period (.) to set no default.
+!HPOBJWARNING|Integer|Registry|10000
+Controls the number of hatch boundary objects that can be selected before a warning message is displayed.
+!HPORIGIN|2D-Point|Drawing|0.0000,0.0000
+Controls the hatch origin point for new hatch objects relative to the current user coordinate system.
+!HPORIGINMODE|Integer|Registry|0
+Controls how the default hatch origin point is determined.\n\n0\tHatch origin is based on HPORIGIN\n1\tHatch origin is set to the bottom-left corner of the rectangular extents of the hatch boundaries\n2\tHatch origin is set to the bottom-right corner of the rectangular extents of the hatch boundaries\n3\tHatch origin is set to the top-right corner of the rectangular extents of the hatch boundaries\n4\tHatch origin is set to the top-left corner of the rectangular extents of the hatch boundaries\n5\tHatch origin is set to the center of the rectangular extents of the hatch boundaries 
+!HPSCALE|Real|Not saved|1.0000
+Specifies the hatch pattern scale factor, which must be nonzero.
+!HPSEPARATE|Integer|Registry|0
+Controls whether the single hatch object or separate hatch objects are created when there are several separate closed boundaries.\n\n0\tA single hatch object is created\n1\tSeparate hatch objects are created 
+!HPSPACE|Real|Not saved|1.0000
+Specifies the hatch pattern line spacing for user-defined simple patterns, which must be nonzero.
+!HYPERLINKBASE|String|Drawing|""
+Specifies the path used for all relative hyperlinks in the drawing.  If no value is specifed, the drawing path is used for all relative hyperlinks.
+!IMAGEHLT|Integer|Registry|0
+Controls whether the entire raster image or only the raster image frame is highlighted.\n\n0\tHighlights only the raster image frame\n1\tHighlights the entire raster image
+!IMPLIEDFACE|Integer|Registry|1
+Controls the detection of implied faces. This variable must be set to 1 if you want to select and modify implied faces.\n\n0\tImplied faces cannot be detected\n1\tImplied faces can be detected
+!INDEXCTL|Integer|Drawing|0
+Controls whether layer and spatial indexes are created and saved in drawing files.\n\n0\tNo indexes are created\n1\tLayer index is created\n2\tSpatial index is created\n3\tLayer and spatial indexes are created
+!INETLOCATION|String|Registry|"http://www.autodesk.com"
+Stores the Internet location used by the BROWSER command and the Browse the Web dialog box.
+!INPUTHISTORYMODE|Integer|Registry|15
+Controls the type of content and the location that user input history is available. Since it is a bitcode, it is value based on the combination of the values below summed together.\n\n0\tNo history of recent input is displayed\n1\tHistory of recent input is displayed using the Up and Down arrow keys at the Command Line or the dynamic prompt tooltip\n2\tHistory of recent input for the current command is displayed in the shortcut menu\n4\tHistory of recent input for all commands is in the current session is displayed in the shortcutmenu\n8\tMarkers of recent input of point locations are displayed in the drawing
+!INSBASE|3D point|Drawing|0.0000,0.0000,0.0000
+Stores the insertion base point set by BASE, which gets expressed as a UCS coordinate for the current space.
+!INSNAME|String|Not saved|""
+Sets a default block name for the INSERT command. The name must conform to symbol naming conventions. Returns "" if no default is set. Enter a period (.) to set no default.
+!INSUNITS|Integer|Drawing|1 (imperial) or 4 (metric)
+When you drag a block from AutoCAD DesignCenter, specifies a drawing units value as follows:\n\n0\tUnspecified (No units)\n1\tInches\n2\tFeet\n3\tMiles\n4\tMillimeters\n5\tCentimeters\n6\tMeters\n7\tKilometers\n8\tMicroinches\n9\tMils\n10\tYards\n11\tAngstroms\n12\tNanometers\n13\tMicrons\n14\tDecimeters\n15\tDecameters\n16\tHectometers\n17\tGigameters\n18\tAstronomical Units\n19\tLight Years\n20\tParsecs
+!INSUNITSDEFSOURCE|Integer|Registry|1 (imperial) or 4 (metric)
+Sets source content units value. Valid range is 0 to 20. See INSUNITS for the actual meanings of the values 0 to 20.
+!INSUNITSDEFTARGET|Integer|Registry|1 (imperial) or 4 (metric)
+Sets target drawing units value. Valid range is 0 to 20. See INSUNITS for the actual meanings of the values 0 to 20.
+!INTELLIGENTUPDATE|Integer|Registry|20
+Controls the graphic refresh rate. If you encounter problems related to graphics generation or timing, the feature can be disabled by setting it to a value of 0. The setting works by supressing the graphics update until the timer expires, each update results in the resetting of the timer. The performance improvement will significantly affect updates for scripts and AutoLISP graphics. Regular AutoCAD commands will not see a noticeable difference in performance.
+!INTERFERECOLOR|String|Drawing|"1"
+Sets the color for interference objects. Valid values include BYLAYER and an integer from 1 to 255. Valid values for True Colors are a string of integers each from 1 to 255 separated by commas and preceded by RGB. The True Color setting is entered as follows:\nRGB:000,000,000\n\nIf you have a color book installed, you can specify any colors that are defined in the book.
+!INTERFEREOBJVS|String|Drawing|"Realistic"
+Sets the visual style for interference objects. INTERFEREOBJVS can only be set to a visual style that is saved in the drawing. The visual style specified for INTERFEREOBJVS cannot be removed with the PURGE command.
+!INTERFEREVPVS|String|Drawing|"Wireframe"
+Specifies the visual style for the viewport during interference checking. INTERFEREVPVS can only be set to a visual style that is saved in the drawing. The visual style specified for INTERFEREVPVS cannot be removed with the PURGE command.
+!INTERSECTIONCOLOR|Integer|Drawing|257
+Controls the color that is used for intersection polylines.  Intersectiondisplay must be turned On in order for this value to matter.\n\n0\t\t\tByBlock\n1 to 255\t\tStandard ACI colors\n256\t\t\tByLayer\n257\t\t\tByEntity
+!INTERSECTIONDISPLAY|Switch|Off
+Controls the use of Intersectioncolor for displaying intersection polylines.\n\nOff\tDisplay of intersection polylines is not enabled\nOn\tDisplay of intersection ploylines is enabled
+!ISAVEBAK|Integer|Registry|1
+Improves the speed of incremental saves, especially for large drawings. ISAVEBAK controls the creation of a backup file (BAK). In Windows, copying the file data to create a BAK file for large drawings takes a major portion of the incremental save time.\n\n0\tNo BAK file is created (even for a full save)\n1\tA BAK file is created\n\nWARNING In some cases (such as a power failure in the middle of a save), it's possible that drawing data can be lost.
+!ISAVEPERCENT|Integer|Registry|50
+Determines the amount of wasted space tolerated in a drawing file. The value of ISAVEPERCENT is an integer between 0 and 100. The default value of 50 means that the estimate of wasted space within the file does not exceed 50 percent of the total file size. Wasted space is eliminated by periodic full saves. When the estimate exceeds 50 percent, the next save will be a full save. This resets the wasted space estimate to 0. If ISAVEPERCENT is set to 0, every save is a full save.
+!ISOLINES|Integer|Drawing|4
+Specifies the number of isolines per surface on objects. Valid integer values are from 0 to 2047.
+#LASTANGLE|Real|Not saved|0.0000
+Stores the end angle of the last arc entered relative to the XY plane of the current UCS for the current space.
+!LASTPOINT|3D point|Not saved|0.0000,0.0000,0.0000
+Stores the last point entered, expressed as a UCS coordinate for the current space; referenced by the at symbol (@) during keyboard entry.
+#LASTPROMPT|String|Not saved|""
+Stores the last string echoed to the command line. This string is identical to the last line seen at the command line and includes any user input.
+!LATITUDE|Real|Drawing|37.7950
+Specifies the latitude of the drawing model in decimal format. The default is the latitude of San Francisco, California. The valid range is -90 to +90. Positive values represent north latitudes. This value is not affected by the settings of the AUNITS and AUPREC system variables.
+!LAYERFILTERALERT|Integer|Registry|2
+Controls the behavior of removing layer filters out of a drawing automatically. If a drawing contains over 100 layer filters and the number of layer filters exceeds the number of layers the system helps to improve performance by dealing with this excessive number of layer filters.\n\n0\tOff\n1\tUpon opening the Layer Manager, delete all the layer filters and don't display a warning message\n2\tUpon opening the Layer Manager, display a warning message that recommends the dealeteing of all the layer filters. A dialog box with the question "Do you want to delete all layer filters now?" appears on screen.\n3\tUpon opening the drawing, a message is displayed and offers the choice of which filters should be deleted
+!LAYOUTREGENCTL|Integer|Registry|2
+Controls the display behavior of how a layout acts when switching to it.\n\n0\tEach time you switching to a layout tab, a regeneration occurs\n1\tModel and the last layout tab is cached into memory\n2\tInitial display of the tab is the only time that a regeneration occurs and any other time that the tab is activated it is read from cache
+#LEGACYCTRLPICK|Integer|Registry|0
+Specifies the keys for selection cycling and the behavior for CTRL+Left-click.\n\n0\tCTRL+Left-click is used to select subobjects (faces, edges, and vertices) on 3D solids.\n1\tCTRL+Left-click is used to cycle through overlapping objects. Disallows using CTRL+Left-click to select subobjects on 3D solids.
+#LENSLENGTH|Real|Drawing|50.0000
+Stores the length of the lens (in millimeters) used in perspective viewing for the current viewport.
+!LIGHTGLYPHDISPLAY|Integer|Drawing|1
+Controls whether light glyphs are displayed. When this system variable is off, the glyphs that represent lights in the drawing are not displayed.\n\n0\tOff\n1\tOn
+#LIGHTLISTSTATE|Integer|Not saved|0
+Indicates whether the Lights in Model window is open.\n\n0\tClosed\n1\tOpen
+!LIMCHECK|Integer|Drawing|0
+Controls the creation of objects outside the drawing limits.\n\n0\tObjects can be created outside the limits\n1\tObjects cannot be created outside the limits
+!LIMMAX|2D point|Drawing|12.0000,9.0000
+Stores the upper-right drawing limits for the current space, expressed as a world coordinate. LIMMAX is read-only when paper space is active and the paper background or paper margins are displayed.
+!LIMMIN|2D point|Drawing|0.0000,0.0000
+Stores the lower-left drawing limits for the current space, expressed as a world coordinate. LIMMIN is read-only when paper space is active and the paper background or paper margins are displayed.
+!LISPINIT|Integer|Registry|1
+When single-document interface is enabled, specifies whether AutoLISP-defined functions and variables are preserved when you open a new drawing or whether they are valid in the current drawing session only.\n\n0\tAutoLISP functions and variables are preserved from drawing to drawing\n1\tAutoLISP functions and variables are valid in the current drawing only\n\nWhen SDIis set to 0, AutoLISP always behaves as if LISPINIT were set to 1. For information about the behavior of AutoLISP-defined functions and variables in a multiple-document interface, see "Designing For a Multiple Document Environment", in chapter 4, "Building Applications", in the Visual LISP Developer's Guide.
+#LOCALE|String|Not saved|"ENU"
+Displays the International Standards Organization (ISO) language code of the current AutoCAD version you're running. 
+#LOCALROOTPREFIX|String|Registry|"C:\Documents and Settings\<user name>\Local Settings\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\"
+Location that points to the Local Settings folder for AutoCAD on the machine or profile.
+!LOCKUI|Integer|Registry|0
+Controls which type of UI elements are locked and unlocked. The UI elements that are affected by this variable are toolbars and palettes. The CTRL key acts like a temporary override. If the CTRL key is held down while attempting to drag a toolbar or palette after the UI has been locked it will allow you to move it as if it wasn't locked. Since it is a bitcode, it is value based on the combination of the values below summed together.\n\n0\tToolbars and palettes are not locked\n1\tDocked toolbars are locked\n2\tDocked palettes are locked\n4\tFloating toolbars are locked\n8\tFloating palettes are locked 
+!LOFTANG1|Real|Drawing|90
+Sets the draft angle through the first cross section in a loft operation. The 0 direction is measured outward from the curve on the plane of the curve. The positive direction is measured toward the next cross section. Valid values include 0 to less than 360.
+!LOFTANG2|Real|Drawing|90
+Sets the draft angle through the last cross section in a loft operation. The 0 direction is measured outward from the curve on the plane of the curve. The positive direction is measured toward the previous cross section. Valid values include 0 to less than 360.
+!LOFTMAG1|Integer|Drawing|1
+Sets the magnitude of the draft angle through the first cross section in a loft operation. Controls how soon the surface starts bending back toward the next cross section. Valid values include integers from 1 to 10.
+!LOFTMAG2|Integer|Drawing|1
+Sets the magnitude of the draft angle through the last cross section in a loft operation. Controls how soon the surface starts bending back toward the next cross section. Valid values include integers from 1 to 10.
+!LOFTNORMALS|Integer|Drawing|1
+Controls the normals of a lofted object where it passes through cross sections. This setting is ignored when specifying a path or guide curves. These settings can also be specified in the Loft Settings dialog box.\n\n0\tRuled\n1\tSmooth\n2\tFirst normal\n3\tLast normal\n4\tEnds normal\n5\tAll normal\n6\tUse draft angle and magnitude
+!LOFTPARAM|Integer|Drawing|7
+Controls the shape of lofted solids and surfaces. The value is the sum of the following:\n\n1\tNo twist (minimizes the twist between cross sections)\n2\tAlign direction (aligns the start to end direction of each cross section curve)\n4\tSimplify (produces simple solids and surfaces, such as a cylinder or plane, instead of spline solids and surfaces)\n8\tClose (closes the surface or solid between the first and the last cross sections)
+!LOGFILEMODE|Integer|Registry|0
+Specifies whether the contents of the text window are written to a log file.\n\n0\tLog file is not maintained\n1\tLog file is maintained
+#LOGFILENAME|String|Drawing|"C:\Documents and Settings\<user name>\Local Settings\Application Data\Autodesk\AutoCAD 2007\R17.0\Enu\Acad.log"
+Specifies the path and name of the log file for the current drawing. The initial value varies depending on where you installed AutoCAD.
+!LOGFILEPATH|String|Registry|"C:\Documents and Settings\<user name>\Local Settings\Application Data\Autodesk\AutoCAD 2007\R17.0\Enu\"
+Specifies the path for the log files for all drawings in a session. You can also specify the path by using the OPTIONS command. The initial value varies depending on where you installed AutoCAD.
+#LOGINNAME|String|Not saved|
+Displays the user's name as configured or as input when AutoCAD is loaded. The maximum length for a login name is 30 characters.
+!LONGITUDE|Real|Drawing|-122.3940
+Specifies the longitude of the drawing model in decimal format. The default is the longitude of San Francisco, California. The valid range is -180 to +180. Positive values represent west longitudes. This value is not affected by the settings of the AUNITS and AUPREC system variables.
+!LTSCALE|Real|Drawing|1.0000
+Sets the global linetype scale factor. The linetype scale factor cannot equal zero.
+!LUNITS|Integer|Drawing|2
+Sets linear units.\n\n1\tScientific\n2\tDecimal\n3\tEngineering\n4\tArchitectural\n5\tFractional
+!LUPREC|Integer|Drawing|4
+Sets the number of decimal places displayed for linear units in commands (except dimensioning commands), variables, and output. This includes coordinate display, and the AREA, DIST, ID, LIST, PROPERTIES, and UNITS commands.
+!LWDEFAULT|Enum|Registry|25
+Sets the value for the default lineweight. The default lineweight can be set to any valid lineweight value in hundredths of millimeters, including: 0, 5, 9, 13, 15, 18, 20, 25, 30, 35, 40, 50, 53, 60, 70, 80, 90, 100, 106, 120, 140, 158, 200, and 211.\n\nAll values must be entered in hundredths of millimeters. (Multiply a value by 2540 to convert values from inches to hundredths of millimeters.)
+!LWDISPLAY|Integer|Drawing|0
+Controls whether the lineweight is displayed on the Model or Layout tab. The setting is saved with each tab in the drawing.\n\n0 (off)\tLineweight is not displayed\n1 (on)\tLineweight is displayed
+!LWUNITS|Integer|Registry|1
+Controls whether lineweight units are displayed in inches or millimeters.\n\n0\tInches\n1\tMillimeters
+#MATSTATE|Integer|Not saved|0
+Indicates whether the Materials window is open.\n\n0\tClosed\n1\tOpen
+!MAXACTVP|Integer|Drawing|64
+Sets the maximum number of viewports that can be active at one time in the display. MAXACTVP has no effect on the number of viewports that are plotted.
+!MAXSORT|Integer|Registry|1000
+Sets the maximum number of symbol names or block names sorted by listing commands. If the total number of items exceeds this value, no items are sorted.
+!MBUTTONPAN|Integer|Registry|1
+Controls the behavior of the third button or wheel on the pointing device.\n\n0\tSupports the action defined in the AutoCAD menu (.mnu) file.\n1\tSupports panning by holding and dragging the button or wheel.
+!MEASUREINIT|Integer|Registry|varies by country
+Sets the initial drawing units as English or metric. Specifically, MEASUREINIT controls which hatch pattern and linetype files an existing drawing uses when it's opened. It also controls which template is used.\n\n0\tEnglish; AutoCAD uses the hatch pattern file and linetype file designated by the ANSIHatch and ANSILinetype registry settings.\n1\tMetric; AutoCAD uses the hatch pattern file and linetype file designated by the ISOHatch and ISOLinetype registry settings.
+!MEASUREMENT|Integer|Drawing|0
+Sets drawing units as English or metric for the current drawing only. Specifically, MEASUREMENT controls which hatch pattern and linetype files an existing drawing uses when it is opened.\n\n0\tEnglish; AutoCAD uses the hatch pattern file and linetype file designated by the ANSIHatch and ANSILinetype registry settings.\n1\tMetric; AutoCAD uses the hatch pattern file and linetype file designated by the ISOHatch and ISOLinetype registry settings.\n\nThe drawing units for new drawings are controlled by MEASUREINIT (MEASUREINIT uses the same values as MEASUREMENT). The MEASUREMENT setting of a drawing always overrides the MEASUREINIT setting.
+!MENUCTL|Integer|Registry|1
+Controls the page switching of the screen menu.\n\n0\tScreen menu does not switch pages in response to keyboard command entry\n1\tScreen menu does switch pages in response to keyboard command entry
+!MENUECHO|Integer|Not saved|0
+Sets menu echo and prompt control bits. The value is the sum of the following:\n\n1\tSuppresses echo of menu items (^P in a menu item toggles echoing)\n2\tSuppresses display of system prompts during menu\n4\tDisables ^P toggle of menu echoing\n8\tDisplays input/output strings; debugging aid for DIESEL macros
+#MENUNAME|String|Registry|"C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\support\acad"
+Stores the menu file name, including the path for the file name.
+!MIRRTEXT|Integer|Drawing|0
+Controls how the MIRROR command reflects text.\n\n0\tRetains text direction\n1\tMirrors the text
+!MODEMACRO|String|Not saved|""
+Displays a text string on the status line, such as the name of the current drawing, time/date stamp, or special modes.\n\nUse MODEMACRO to display a string of text, or use special text strings written in the DIESEL macro language to have AutoCAD evaluate the macro from time to time and base the status line on user-selected conditions. For details, see chapter 5, "Using DIESEL-String Expression Language," in the Customization Guide.
+#MSMSTATE|Integer|Not saved|0
+Indicates whether the Markup Set Manager is open.\n\n0\tClosed\n1\tOpen
+!MSOLESCALE|Real|Drawing|1.0000
+Controls the size of an OLE object that has text when it is pasted into Model Space. This only affects the inital size, and if the value is changed has no affect on objects already in the drawing.\n\n>0\tPositive number scales by value\n0\tDIMSCALE value is used for scaling
+!MTEXTED|String|Registry|"Internal"
+Sets the primary and secondary text editors to use for multiline text objects. The default setting is Internal, which calls the internal MTEXT editor. If the mtext object is fewer than 80 characters you can specify :lisped to use the lisp editor.
+!MTEXTFIXED|Integer|Registry|2
+Determines how the Mtext Editor is presented to the user.\n\n0\tMtext Editor works in-place based on the text height and size on screen. If text is too large or small the in-place editing will not be used.\n1\tMtext Editor will not use in-place editing and will be displayed at the last used size and location
+!MTJIGSTRING|String|Registry|"abc"
+Displays a preview string when creating a MTEXT object. Preview string shows what the text will look like with the current font and text size. A Max of 10 characters is allowed.
+#MYDOCUMENTSPREFIX|String|Registry|"C:\Documents and Settings\<user name>\My Documents"
+Location that points to the My Documents folder on the machine or profile.
+#NODENAME|String|Registry|"ac$"
+Stores the file extension name for temporary files.
+!NOMUTT|Short|Not Saved|0
+Suppresses the message display (muttering) when it wouldn't normally be suppressed. Displaying messages is the normal mode of AutoCAD, but message display is suppressed during scripts, AutoLISP routines, and so on.\n\n0\tResumes normal muttering behavior\n1\tSuppresses muttering indefinitely
+!NORTHDIRECTION|Integer|Drawing|0
+Specifies the angle of the sun from north. This value is affected by the settings of the AUNITS and AUPREC system variables.\n\nNote: The angle is interpreted in the context of the world coordinate system (WCS). This value is completely separate from surveyor angular units, which are always set relative to the current UCS.
+!OBSCUREDCOLOR|Integer|Drawing|257
+Specifies the color of obscured lines. An obscured line is a hidden line made visible by changing its color and linetype and is visible only when the HIDE or SHADEMODE commands are used and OBSCUREDLTYPE is turned ON.\n\n0\t\t\tByBlock\n1 to 255\t\tStandard ACI colors\n256\t\t\tByLayer\n257\t\t\tByEntity
+!OBSCUREDLTYPE|Integer|Drawing|0
+Specifies the Linetype of obscured lines. Obscured linetypes are not like standard linetypes in AutoCAD because they are independent of zoom level.\n\n0\tOff\n1\tSolid\n2\tDashed\n3\tDotted\n4\tShort Dash\n5\tMedium Dash\n6\tLong Dash\n7\tDouble Short Dash\n8\tDouble Medium Dash\n9\tDouble Long Dash\n10\tMedium Long Dash\n11\tSparse Dot\n\n0\n1\t________________________________\n2\t__  __  __  __  __  __  __  __  __  __  __\n3\t. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . \n4\t__      __      __      __      __      __      __\n5\t___    ___    ___    ___    ___    ___    ___\n6\t____  ____  ____  ____  ____  ____  ____\n7\t___              ___              ___              ___\n8\t_____          _____          _____\n9\t________    ________    ________\n10\t___    ___    ___    ___    ___    ___    ___\n11\t.         .         .         .         .         .         . 
+!OFFSETDIST|Real|Not saved|-1.0000
+Sets the default offset distance.\n\n<0\tOffsets an object through a specified point\n>0\tSets the default offset distance
+!OFFSETGAPTYPE|Integer|Registry|0
+Controls how to offset polylines when a gap is created as a result of offsetting the individual polyline segments.\n\n0\tExtends the segments to fill the gap\n1\tFills the gaps with a filleted arc segment (the radius of the arc segment is equal to the offset distance)\n2\tFills the gaps with a chamfered line segment
+!OLEFRAME|Integer|Registry|2
+Controls the display of a frame around all OLE objects during display and plotting.  The frames must be visible inorder to use grips during editting.\n\n0\tFrame is not displayed or plotted\n1\tFrame is displayed and plotted\n2\tFrame is displayed and is not plotted
+!OLEHIDE|Integer|Registry|0
+Controls the display of OLE objects in AutoCAD.\n\n0\tAll OLE objects are visible\n1\tOLE objects are visible in paper space only\n2\tOLE objects are visible in model space only\n3\tNo OLE objects are visible\n\nOLEHIDE affects both screen display and printing.
+!OLEQUALITY|Integer|Registry|3
+Controls the default plot quality for OLE objects.  If ther value is set to 3, Automatic the value is based on what type of object is being plotted.  For example, spreadsheets, tables and text documents are set to 0, color text and charts are set to 1, and photographs are set to 2.\n\n0\tMonochrome\n1\tLow quality graphics\n2\tHigh quality graphics\n3\tAutomaticlly select\n\nDescription and values prior to 2005\nInitial value: 1\nControls the default quality level for embedded OLE objects.\n\n0\tLine art quality, such as an embedded spreadsheet\n1\tText quality, such as an embedded Word document\n2\tGraphics quality, such as an embedded pie chart\n3\tPhotograph quality\n4\tHigh quality photograph
+!OLESTARTUP|Integer|Drawing|0
+Controls whether the source application of an embedded OLE object loads when plotting. Loading the OLE source application may improve the plot quality.\n\n0\tDoes not load the OLE source application\n1\tLoads the OLE source application when plotting
+#OPMSTATE|Integer|Not saved|0
+Indicates the display status of the Object Properties Manager.\n\n0\tProperties Manager is not active\n1\tProperties manager is active\n2\tProperties manager is active, but is set to Auto-hide
+!ORTHOMODE|Integer|Drawing|0
+Constrains cursor movement to the perpendicular. When ORTHOMODE is turned on, the cursor can move only horizontally or vertically relative to the UCS and the current grid rotation angle.\n\n0\tTurns off Ortho mode\n1\tTurns on Ortho mode
+!OSMODE|Integer|Registry|4133
+Sets running Object Snap modes using the following bitcodes.\n\n0\t\tNONe\n1\t\tENDpoint\n2\t\tMIDpoint\n4\t\tCENter\n8\t\tNODe\n16\t\tQUAdrant\n32\t\tINTersection\n64\t\tINSertion\n128\t\tPERpendicular\n256\t\tTANgent\n512\t\tNEArest\n1024\tQUIck\n2048\tAPParent Intersection\n4096\tEXTension\n8192\tPARallel\n\nTo specify more than one object snap, enter the sum of their values. For example, entering 3 specifies the Endpoint (bitcode 1) and Midpoint (bitcode 2) object snaps. Entering 16383 specifies all object snaps.\n\nWhen object snaps are switched off using the Osnap button on the status bar, a bitcode of 16384 (0x4000) is returned, in addition to the normal value of OSMODE. With this additional value developers can write applications for AutoCAD, and distinguish this mode from Object Snap modes that have been turned off from within the Drafting Settings dialog box. Setting this bit toggles running object snaps off. Setting OSMODE to a value with this bit off toggles running object snaps on.
+!OSNAPCOORD|Integer|Registry|2
+Controls whether coordinates entered on the command line override running object snaps.\n\n0\tRunning object snap settings override keyboard coordinate entry\n1\tKeyboard entry overrides object snap settings\n2\tKeyboard entry overrides object snap settings except in scripts
+!OSNAPHATCH|Integer|Registry|0
+Controls whether or not hatch objects are ignored when using running object snaps.\n\n0\tIgnore hatch objects when using running object snaps; you can't snap to hatch objects\n1\tHatch objects are not ignored when using running object snaps; you can snap to hatch objects
+!OSNAPNODELEGACY|Integer|Registry|0
+Controls whether or not the Node object snap is enabled at the grip points for a Mtext object.\n\n0\tNode snap is enabled at the grip points\n1\tNode snap is disabled at the grip points and is the legacy behavior of AutoCAD 2002 and ealier
+!OSNAPOVERRIDE|Integer|Not saved|0
+Controls whether using object snap overrides are allowed, or just running object snaps. This system variable was implemented to support the Temporary Override feature.\n\n0\tObject snap overrides are allowed\n1\tObject snap overrides are not allowed
+!OSNAPZ|Integer|Not saved|0
+Controls whether object snaps are projected onto a different plane parallel to the XY plane of the current UCS based on the current elevation.\n\n0\tThe Z-value is used from the specified point selected with the object snap\n1\tThe Z-value is substituted with the current value in the ELEV system variable for the specified point selected with the object snap
+!OSOPTIONS|Integer|Registry|3
+Automatically suppresses object snaps on hatch objects and geometry with negative Z values when using a dynamic UCS. The setting is stored as a bitcode using the sum of the following values:\n\n0\tObject snaps operate on hatch objects, and on geometry with negative Z values when using a dynamic UCS\n1\tObject snaps ignore hatch objects\n2\tObject snaps ignore geometry with negative Z values during use of a dynamic UCS
+!PALETTEOPAQUE|Integer|Registry|0
+Controls whether or not palettes use transparency\n\n0\tTransparency is enabled by the user\n1\tTransparency is disabled by the user\n2\tTransparency is enabled by the user, but is unavailable due to hardware acceleration being active or transparency unavailable due to OS limitation\n3\tTransparency is disabled by the user, but is unavailable due to hardware acceleration being active or transparency unavailable due to OS limitation
+!PAPERUPDATE|Integer|Registry|0
+Controls the display of a warning dialog when attempting to print a layout with a paper size different from the paper size specified by the default for the plotter configuration file.\n\n0\tDisplays a warning dialog box if the paper size specified in the layout is not supported by the plotter\n1\tSets paper size to the configured paper size of the plotter configuration file
+!PDMODE|Integer|Drawing|0
+Controls how point objects are displayed. For information about values to enter, see the POINT command.
+!PDSIZE|Real|Drawing|0.0000
+Sets the display size for point objects.\n\n 0\tCreates a point at 5 percent of the drawing area height\n>0\tSpecifies an absolute size\n<0\tSpecifies a percentage of the viewport size
+!PEDITACCEPT|Integer|Registry|0
+Controls whether or not the prompt “Do you want it to turn into one?” is active in the PEDIT command.\n\n0\tPrompt is disabled\n1\tPrompt is enabled
+!PELLIPSE|Integer|Drawing|0
+Controls the ellipse type created with ELLIPSE.\n\n0\tCreates a true ellipse object\n1\tCreates a polyline representation of an ellipse
+#PERIMETER|Real|Not saved|0.0000
+Stores the last perimeter value computed by the AREA, DBLIS, or LIST commands.
+#PFACEVMAX|Integer|Not saved|4
+Sets the maximum number of vertices per face.
+!PICKADD|Integer|Registry|1
+Controls whether subsequent selections replace the current selection set or add to it.\n\n0\tTurns off PICKADD. The objects most recently selected become the selection set. Previously selected objects are removed from the selection set. Add more objects to the selection set by pressing SHIFT while selecting.\n1\tTurns on PICKADD. Each object selected, either individually or by windowing, is added to the current selection set. To remove objects from the set, press SHIFT while selecting.
+!PICKAUTO|Integer|Registry|1
+Controls automatic windowing at the Select Objects prompt.\n\n0\tTurns off PICKAUTO\n1\tDraws a selection window (for either a window or a crossing selection) automatically at the Select Objects prompt
+!PICKBOX|Integer|Registry|3
+Sets the object selection target height, in pixels.
+!PICKDRAG|Integer|Registry|0
+Controls the method of drawing a selection window.\n\n0\tDraws the selection window using two points. Click the pointing device at one corner then click to select another corner.\n1\tDraws the selection window using dragging. Click one corner and drag the pointing device; release the button at the other corner.
+!PICKFIRST|Integer|Registry|1
+Controls whether you select objects before (noun-verb selection) or after you issue a command.\n\n0\tTurns off PICKFIRST; you select objects after you issue a command\n1\tTurns on PICKFIRST; you select objects before you issue a command
+!PICKSTYLE|Integer|Registry|1
+Controls the use of group selection and associative hatch selection.\n\n0\tNo group selection or associative hatch selection\n1 \tGroup selection\n2 \tAssociative hatch selection\n3 \tGroup selection and associative hatch selection
+#PLATFORM|String|Not saved|
+Indicates which AutoCAD platform is in use. One of the following strings may appear:\n\n"Microsoft Windows NT Version 4.00 (x86)"\n"Microsoft Windows Version 4.00 (x86)"\n"Microsoft Windows NT Version 5.1 (x86)"
+!PLINEGEN|Integer|Drawing|0
+Sets how linetype patterns generate around the vertices of a 2D polyline. Does not apply to polylines with tapered segments.\n\n0\tGenerates polylines to start and end with a dash at each vertex\n1\tGenerates the linetype in a continuous pattern around the vertices of the polyline
+!PLINETYPE|Integer|Registry|2
+Specifies whether AutoCAD uses optimized 2D polylines. PLINETYPE controls both the creation of new polylines with the PLINE command and the conversion of existing polylines in drawings from previous releases.\n\n0\tPolylines in older drawings are not converted when opened; PLINE creates old-format polylines\n1\tPolylines in older drawings are not converted when opened; PLINE creates optimized polylines\n2\tPolylines in older drawings are converted when opened; PLINE creates optimized polylines\n\nFor more information on the two formats, see the CONVERT command.\n\nPLINETYPE also controls the polyline type created with the following commands: BOUNDARY (when object type is set to Polyline), DONUT, PEDIT (when selecting a line or arc), POLYGON, and SKETCH (when SKPOLY is set to 1).
+!PLINEWID|Real|Drawing|0.0000
+Stores the default polyline width.
+!PLOTOFFSET|Integer|Registry|0
+Controls whether the plot offset is relative to the printable area or the edge.\n\n0\tPlot offset is set relative to the printable area.\n1\tPlot offset is set relative to the edge of the paper.
+!PLOTROTMODE|Integer|Registry|2
+Controls the orientation of plots.\n\n0\tRotates the effective plotting area so the corner with the Rotation icon aligns with the paper at the lower left for 0, top left for 90, top right for 180, and lower right for 270. X and Y origin offsets are calculated relative to the lower-left corner.\n1\tAligns the lower-left corner of the effective plotting area with the lower-left corner of the paper.\n2\tWorks the same as 0 value except that the X and Y origin offsets are calculated relative to the rotated origin position.
+!PLQUIET|Integer|Registry|0
+Controls the display of optional dialog boxes and nonfatal errors for batch plotting and scripts.\n\n0\tDisplays plot dialog boxes and nonfatal errors\n1\tLogs nonfatal errors and doesn't display plot-related dialog boxes
+!POLARADDANG|String|Registry|
+Contains user-defined polar angles. You can add up to 10 angles. Each angle can be up to 25 characters, separated with semicolons (;). AutoCAD displays angles in the format set in the AUNITS system variable.
+!POLARANG|Real|Registry|90
+Sets the polar angle increment. Values are 90, 45, 30, 22.5, 18, 15,10, and 5.
+!POLARDIST|Real|Registry|0.0000
+Sets the snap increment when the SNAPSTYL system variable is set to 1 (polar snap).
+!POLARMODE|Integer|Registry|0
+Controls settings for polar and object snap tracking. The value is the sum of four bitcodes:\n\nPolar angle measurements\n0\tMeasure polar angles based on current UCS (absolute)\n1\tMeasure polar angles from selected objects (relative)\n\nObject snap tracking\n0\tTrack orthogonally only\n2\tUse polar tracking settings in object snap tracking\n\nUse additional polar tracking angles\n0\tNo\n4\tYes\n\nAcquire object snap tracking points\n0\tAcquire automatically\n8\tPress SHIFT to acquire
+!POLYSIDES|Integer|Not saved|4
+Sets the default number of sides for the POLYGON command. The range is 3 to 1024.
+#POPUPS|Integer|Not saved|1
+Displays the status of the currently configured display driver.\n\n0\tDoes not support dialog boxes, the menu bar, and icon menus\n1\tSupports these features
+!PREVIEWEFFECT|Integer|Registry|2
+Controls whether object selection previewing is enabled and which visual effect it uses.\n\n0\tDashed lines only\n1\tThickened lines only\n2\tDashed and thickened lines
+!PREVIEWFILTER|Integer|Registry|7
+Controls which type of objects are excluded from the selection preview feature. Since it is a bitcode, it is value based on the combination of the values below summed together.\n\n0\tNothing is excluded\n1\tObjects and locked layers are excluded\n2\tXrefs are excluded\n4\tTables are excluded\n8\tMultiline objects are excluded\n16\tHatch objects are excluded\n32\tGroups are excluded 
+#PRODUCT|String|Not saved|"AutoCAD"
+Returns the product name.
+#PROGRAM|String|Not saved|"acad"
+Returns the program name.
+!PROJECTNAME|String|Drawing|""
+Assigns a project name to the current drawing. Used when an xref or image is not found in its original path. The project name points to a section in the registry that can contain one or more search paths for each project name defined. Project names and their search directories are created from the Files tab of the Options dialog box.\n\nProject names make it easier for users to manage xrefs and images when drawings are exchanged between customers, or if users have different drive mappings to the same location on a server.\n\nIf the xref or image is not found at the original path, the project paths associated with the project name are searched. If the xref or image is not found there, the AutoCAD search path is searched.
+!PROJMODE|Integer|Registry|1
+Sets the current Projection mode for trimming or extending.\n\n0\tTrue 3D mode (no projection)\n1\tProject to the XY plane of the current UCS\n2\tProject to the current view plane
+!PROXYGRAPHICS|Integer|Drawing|1
+Specifies whether images of proxy objects are saved in the drawing.\n\n0\tDoes not save image with the drawing; a bounding box is displayed instead\n1\tSaves image with the drawing
+!PROXYNOTICE|Integer|Registry|1
+Displays a notice when a proxy is created. A proxy is created when you open a drawing containing custom objects created by an application that is not present. A proxy is also created when you issue a command that unloads a custom object's parent application.\n\n0\tNo proxy warning is displayed\n1\tProxy warning is displayed
+!PROXYSHOW|Integer|Registry|1
+Controls the display of proxy objects in a drawing.\n\n0\tProxy objects are not displayed\n1\tGraphic images are displayed for all proxy objects\n2\tOnly the bounding box is displayed for all proxy objects
+!PROXYWEBSEARCH|Integer|Registry|0
+Specifies how AutoCAD goes about checking for Object Enablers.\n\n0\tPrevents AutoCAD from checking for Object Enablers\n1\tAutoCAD will only look for Object Enablers at the Autodesk Point A portal web site.  Live connection to the internet must be established.\n2\tSpecifies the number of times AutoCAD will try to check for the Object Enabler
+!PSLTSCALE|Integer|Drawing|1
+Controls paper space linetype scaling.\n\n0\tNo special linetype scaling. Linetype dash lengths are based on the drawing units of the space (model or paper) in which the objects were created. Scaled by the global LTSCALE factor.\n1\tViewport scaling governs linetype scaling. If TILEMODE is set to 0, dash lengths are based on paper space drawing units, even for objects in model space. In this mode, viewports can have varying magnifications, yet display linetypes identically. For a specific linetype, the dash lengths of a line in a viewport are the same as the dash lengths of a line in paper space. You can still control the dash lengths with LTSCALE.\nWhen you change PSLTSCALE or use a command such as ZOOM with PSLTSCALE set to 1, objects in viewports are not automatically regenerated with the new linetype scale. Use the REGEN  or REGENALL commands to update the linetype scales in each viewport.
+!PSOLHEIGHT|Real|Drawing|4.0000 (80.0000 for metric)
+Controls the default height for a swept solid object created with the POLYSOLID command. The value reflects the last entered height value when using the POLYSOLID command. You cannot enter 0 as the value.
+!PSOLWIDTH|Real|Drawing|0.2500 (5.0000 for metric)
+Controls the default width for a swept solid object created with the POLYSOLID command. The value reflects the last entered width value when using the POLYSOLID command. You cannot enter 0 as the value.
+!PSPROLOG|String|Registry|""
+Assigns a name for a prolog section to be read from the acad.psf file when you use the PSOUT command.
+!PSQUALITY|Integer|Registry|75
+Controls the rendering quality of PostScript images and whether they are drawn as filled objects or as outlines.\n\n 0\tTurns off PostScript image generation.\n<0\tSets the number of pixels per AutoCAD drawing unit for the PostScript resolution.\n>0\tSets the number of pixels per drawing unit but uses the absolute value. Causes AutoCAD to show the PostScript paths as outlines and does not fill them.
+#PSTYLEMODE|Integer|Drawing|1
+Indicates whether the current drawing is in a Color-Dependent or Named Plot Style mode.\n\n0\tUses named plot style tables in the current drawing\n1\tUses color-dependent plot style tables in the current drawing
+!PSTYLEPOLICY|Integer|Registry|1
+Controls whether an object's color property is associated with its plot style.\n\n0\tNo association is made between color and plot style. The plot style for new objects is set to the default defined in DEFPLSTYLE. The plot style for new layers is set to the default defined in DEFLPLSTYLE.\n1\tAn object's plot style is associated with its color.
+!PUBLISHALLSHEETS|Integer|Registry|1
+Controls how the Publish dialog box list is populated when the PUBLISH command is issued.\n\n0\tOnly the current document's contents (layouts and/or model space) are automatically loaded in the publish list\n1\tThe contents (layouts and/or model space) of all open AutoCAD documents are automatically loaded in the publish list
+!PSVPSCALE|Real|Not Saved|0.0000
+Sets the view scale factor for all newly created viewports. The view scale factor is defined by comparing the ratio of units in paper space to the units in newly created model space viewports. The view scale factor you set is used with  the VPORTS command. A value of 0 means the scale factor is Scaled to Fit. A scale must be a positive real value.
+!PUCSBASE|String|Drawing|""
+Stores the name of the UCS that defines the origin and orientation of orthographic UCS settings in paper space only.
+#QCSTATE|Integer|Not saved|0
+Holds the current visibility state of the QuickCalc palette.\n\n0\tQuickCalc is hidden\n1\tQuickCalc is displayed
+!QTEXTMODE|Integer|Drawing|0
+Controls how text is displayed.\n\n0\tTurns off Quick Text mode; displays characters\n1\tTurns on Quick Text mode; displays a box in place of text
+!RASTERDPI|Integer|Registry|300
+Controls paper size and plot scale when changing between ouput devices from dimensional (inches or millimeters) to dimensionless (pixel) and vice versa.  Valid range is 100 to 32,767.
+!RASTERPREVIEW|Integer|Registry|1
+Controls whether BMP preview images are saved with the drawing.\n\n0\tNo preview image is created\n1\tPreview image created
+!RASTERTHRESHOLD|Integer|Drawing|20
+Placeholder for the RASTERTHRESHOLD variable. It accepts a range of values from 0 through 2000.
+!RECOVERYMODE|Integer|Registry|2
+Controls whether drawing recovery information is recorded after a crash.\n\n0\tDrawing recovery information is not maintained after a crash, but the Drawing Recovery palette doesn't automatically load after a crash.\n1\tDrawing recovery information is maintained after a crash, but the Drawing Recovery palette doesn't automatically load after a crash.\n2\tDrawing recovery information is maintained after a crash and the Drawing Recovery palette does automatically load in the next session after a crash.
+#REFEDITNAME|String|Not Saved|""
+Indicates whether a drawing is in a reference-editing state; also, stores the reference file name.
+!REGENMODE|Integer|Drawing|1
+Controls automatic regeneration of the drawing.\n\n0\tTurns off the REGENAUTO command\n1\tTurns on the REGENAUTO command
+!RE-INIT|Integer|Not saved|0
+Reinitializes the digitizer, digitizer port, and acad.pgp file by using the following bitcodes:\n\n1\tDigitizer input/output port reinitialization\n4\tDigitizer reinitialization\n16\tPGP file reinitialization (reload)\n\nTo specify more than one reinitialization, enter the sum of the bitcode values. For example, enter 5 to specify both digitizer port (1) and digitizer reinitialization (4).
+!REMEMBERFOLDERS|Integer|Registry|1
+Controls the path that is used for Look In or Save In as the default.\n\n0\tUses the Start In value of the shortcut icon on the desktop.  This setting is used to restore the behavior of AutoCAD 2000 and previous releases.\n1\tUses the last path that was called up from each particular dialog box.  The Start In value is ignored for AutoCAD 2000i and later after the session has been started and changes have been made under each dialog box. The values are only held while the session is active.
+!REPORTERROR|Integer|Registry|1
+Controls whether or not an error report is sent to Autodesk when a fatal error occurs or AutoCAD closes unexpectedly.\n\n0\tDisables error report system\n1\tEnables error report system
+#ROAMABLEROOTPREFIX|String|Registry|"C:\Documents and Settings\<user name>\Application Data\Autodesk\AutoCAD 2007\R17.0\enu\"
+Location that points to the Application Data folder for AutoCAD on the machine or profile.
+!RTDISPLAY|Integer|Registry|1
+Controls the display of raster images and OLE objects during Realtime ZOOM or PAN.\n\n0\tDisplays raster image and OLE content\n1\tDisplays outline only\n\nRTDISPLAY is saved in the current profile.
+#SAVEFILE|String|Registry|"auto.sv$"
+Stores the current automatic save file name.
+!SAVEFILEPATH|String|Registry|"C:\Documents and Settings\<user name>\Local Settings\Temp\"
+Specifies the path to the directory for all automatic save files for the AutoCAD session. You can also change the path on the Files tab in the Options dialog box.
+#SAVENAME|String|Not saved|""
+Stores the file name and directory path of the current drawing after you save it.
+!SAVETIME|Integer|Registry|10
+Sets the automatic save interval, in minutes.\n\n 0\tTurns off automatic saving\n>0\tSaves the drawing at intervals specified by the nonzero integer automatically\n\nThe SAVETIME timer starts as soon as you make a change to a drawing. It is reset and restarted by a manual QSAVE, SAVE, or SAVEAS. The current drawing is saved to auto.sv$.
+#SCREENBOXES|Integer|Not saved|0
+Stores the number of boxes in the screen menu area of the drawing area. If the screen menu is turned off, SCREENBOXES is zero. On platforms that permit the drawing area to be resized or the screen menu to be reconfigured during an editing session, the value of this variable might change during the editing session.
+#SCREENMODE|Integer|Not saved|3
+Stores a bitcode indicating the graphics/text state of the AutoCAD display. It is the sum of the following bit values:\n\n0\tText screen is displayed\n1\tDrawing area is displayed\n2\tDual-screen display is configured
+#SCREENSIZE|2D point|Not saved|
+Stores current viewport size in pixels (X and Y).
+!SDI|Integer|Registry|0
+Controls whether AutoCAD runs in single- or multiple-document interface. Helps third-party developers update applications to work smoothly with the AutoCAD multiple-drawing mode.\n\n0\tTurns on multiple-drawing interface.\n1\tTurns off multiple-drawing interface.\n2\t(Read-only) Multiple-drawing interface is disabled because AutoCAD has loaded an application that does not support multiple drawings. SDI setting 2 is not saved.\n3\t(Read-only) Multiple-drawing interface is disabled because the user has set SDI to 1 and AutoCAD has loaded an application that does not support multiple drawings. (SDI was set to 1 before the application was loaded.) SDI setting 3 is not saved.\n\n\tIf SDI is set to 3, AutoCAD switches it back to 1 when the application that doesn't support multiple drawings is unloaded.
+!SELECTIONAREA|Integer|Registry|1
+Controls whether or not a fill color appears iside of a window or crossing selection operation.\n\n0\tOff\n1\tOn
+!SELECTIONAREAOPACITY|Integer|Registry|25
+Controls the amount of transparency of the selection area when using a crossing or window selection. The valid range is 0 - 100, the lower the value the more transparent the area is and the higher the number the more opaque the area is.
+!SELECTIONPREVIEW|Integer|Registry|3
+Controls when selection previewing is enabled. Since it is a bitcode, it is value based on the combination of the values below summed together.\n\n0\tOff\n1\tOn when no command is active\n2\tOn when object selection is being prompted for during a command
+!SHADEDGE|Integer|Drawing|3
+Controls the shading of edges in rendering.\n\n0\tFaces shaded, edges not highlighted\n1\tFaces shaded, edges drawn in background color\n2\tFaces not filled, edges in object color\n3\tFaces in object color, edges in background color
+!SHADEDIF|Integer|Drawing|70
+Sets the ratio of diffuse reflective light to ambient light in percentage of diffuse reflective light, when SHADEDGE is set to 0 or 1.
+!SHADOWPLANELOCATION|Real|Drawing|0.0000
+Controls the location of an invisible ground plane used to display shadows. The value is a location on the current Z axis. The ground plane is invisible, but it casts and receives shadows. Objects that are located below the ground plane are shadowed by it. The ground plane is used when the VSSHADOWS system variable is set to display either full shadows or ground shadows. 
+!SHORTCUTMENU|Integer|Registry|11
+Controls whether Default, Edit, and Command mode shortcut menus are available in the drawing area. SHORTCUTMENU uses the following bitcodes:\n\n0\tDisables all Default, Edit, and Command mode shortcut menus, restoring R14 legacy behavior.\n1\tEnables Default mode shortcut menus.\n2\tEnables Edit mode shortcut menus.\n4\tEnables Command mode shortcut menus. In this case, the Command mode shortcut menu is available whenever a command is active.\n8\tEnables Command mode shortcut menus only when command options are currently available from the command line.\n16\tEnables time delay right click feature\n\nTo enable more than one type of shortcut menu at once, enter the sum of their values. For example, entering 3 enables both Default (1) and Edit (2) mode shortcut menus.
+!SHOWHIST|Integer|Drawing|1
+Controls the Show History property for solids in a drawing.\n\n0\tSets the Show History property to No (read-only) for all solids. Overrides the individual Show History property settings for solids. When a composite solid is selected, you will not see the original objects that were used to create the solid.\n1\tDoes not override the individual Show History property settings for solids.\n2\tDisplays the history of all solids by overriding the individual Show History property settings for solids. When a composite solid is selected, you will see the original objects that were used to create the solid.
+!SHOWLAYERUSAGE|Integer|Registry|0
+Controls whether the Layer Manager checks to see if a layer is currently in use in the drawing and adjusts the icon in the Status column accordingly.\n\n0\tOff\n1\tOn 
+!SHPNAME|String|Not saved|""
+Sets a default shape name that must conform to symbol naming conventions. If no default is set, it returns "". Enter a period (.) to set no default.
+!SIGWARN|Integer|Registry|1
+Controls whether a message is displayed notifying the user that a drawing with a digital signature is being opened.\n\n0\tNo warning message is displayed\n1\tWarning message is displayed
+!SKETCHINC|Real|Drawing|0.1000
+Sets the record increment for the SKETCH command.
+!SKPOLY|Integer|Drawing|0
+Determines whether the SKETCH command generates lines or polylines.\n\n0\tGenerates lines\n1\tGenerates polylines
+!SNAPANG|Real|Drawing|0.0000
+Sets the snap and grid rotation angle for the current viewport. The angle you specify is relative to the current UCS.\n\nChanges to this variable are not reflected in the grid until the display is refreshed. AutoCAD does not redraw automatically when system variable settings are changed.
+!SNAPBASE|2D point|Drawing|0.0000,0.0000
+Sets the snap and grid origin point for the current viewport relative to the current UCS.\n\nChanges to this variable are not reflected in the grid until the display is refreshed. AutoCAD does not redraw automatically when system variable settings are changed.
+!SNAPISOPAIR|Integer|Drawing|0
+Controls the isometric plane for the current viewport.\n\n0\tLeft\n1\tTop\n2\tRight
+!SNAPMODE|Integer|Drawing|0
+Turns the Snap mode on and off.\n\n0\tSnap off\n1\tSnap on for the current viewport
+!SNAPSTYL|Integer|Drawing|0
+Sets the snap style for the current viewport.\n\n0\tStandard (rectangular snap)\n1\tIsometric snap
+!SNAPTYPE|Integer|Registry|0
+Sets the snap style for the current viewport.\n\n0\tGrid, or standard snap.\n1\tPolar snap. Snaps along polar angle increments. Use polar snap with polar and object snap tracking.
+!SNAPUNIT|2D point|Drawing|0.5000,0.5000
+Sets the snap spacing for the current viewport. If SNAPSTYL is set to 1, AutoCAD adjusts the X value of SNAPUNIT automatically to accommodate the isometric snap.\n\nChanges to this system variable are not reflected in the grid until the display is refreshed. AutoCAD does not redraw automatically when system variable settings are changed.
+!SOLIDCHECK|Integer|Not Saved|1
+Turns the solid validation on and off for the current AutoCAD session.\n\n0\tTurns off solid validation\n1\tTurns on solid validation
+!SOLIDHIST|Integer|Drawing|1
+Controls the default History property setting for new and existing objects. When set to 1, composite solids retain a "history" of the original objects contained in the composite.\n\n0\tSets the History property to None for all solids. No history is retained.\n1\tSets the History property to Record for all solids. All solids retain a history of their original objects.
+!SORTENTS|Integer|Drawing|127
+Controls the OPTIONS command (from the Selection tab) object sort order operations. SORTENTS uses the following bitcodes:\n\n0\tDisables SORTENTS\n1\tSorts for object selection\n2\tSorts for object snap\n4\tSorts for redraws\n8\tSorts for MSLIDE command slide creation\n16\tSorts for REGEN commands\n32\tSorts for plotting\n64\tSorts for PostScript output\n\nTo select more than one setting, enter the sum of the settings' codes. For example, enter 3 to specify sorting for both object selection and object snap.\n\nThe initial value of 96 enables sorting for plotting and PostScript output only. Setting additional sorting options can result in slower regeneration and redrawing times.
+!SPACESWITCH|Integer|Registry|1
+Controls whether or not the user is allowed to double click on a Viewport in a layout and enter Model Space.\n\n0\tDisables the double clicking on a Viewport and doesn’t allow the user to enter Model Space\n1\tAllows the user to double click on a Viewport and enter Model Space
+!SPLFRAME|Integer|Drawing|0
+Controls the display of splines and spline-fit polylines.\n\n0\tDoes not display the control polygon for splines and spline-fit polylines. Displays the fit surface of a polygon mesh, not the defining mesh. Does not display the invisible edges of 3D faces or polyface meshes.\n1\tDisplays the control polygon for splines and spline-fit polylines. Only the defining mesh of a surface-fit polygon mesh is displayed (not the fit surface). Invisible edges of 3D faces or polyface meshes are displayed.
+!SPLINESEGS|Integer|Drawing|8
+Sets the number of line segments to be generated for each spline-fit polyline generated by the Spline option of the PEDIT command.  Valid settings range from -32768 to 32767. If you set SPLINESEGS to a negative value, AutoCAD generates segments using the absolute value of the setting, and then applies a fit-type curve to those segments. Fit-type curves use arcs as the approximating segments. Using arcs yields a smoother generated curve when few segments are specified, but the curve can take longer to generate.
+!SPLINETYPE|Integer|Drawing|6
+Sets the type of curve generated by the Spline option of the PEDIT command.\n\n5\tQuadratic B-spline\n6\tCubic B-spline
+#SSFOUND|String|Not saved|""
+The path and file name for the location of the sheet set that is associated with the drawing file.  A value is only displayed if the search is successful.
+#SSMSTATE|Integer|Not saved|0
+Indicates the display status of the Sheet Set Manager.\n\n0\tSheet Set Manager is not active\n1\tSheet Set Manager is active
+!SSLOCATE|Integer|Registry|1
+Controls whether or not the associated sheet set is located and opened that is associated with the drawing file that is being opened.\n\n0\tDo not open Sheet Set Manager automatically\n1\tOpen Sheet Set Manager automatically
+!SSMAUTOOPEN|Integer|Registry|1
+Controls whether or not Sheet Set Manager is displayed when a drawing file is being opened that is associated with a sheet set.\n\n0\tDo not open the sheet set that is associated with the drawing file\n1\tOpen the sheet set that is associated with the drawing file
+!SSMPOLLTIME|Integer|Registry|60
+Controls the amount between automatic refreshes of the status data in a sheet set. The value specified is in seconds and must be within the range of 20 - 600. The SHEETSETSTATUS system variable must be set to 2 inorder for the timer to operate.
+!SSMSHEETSTATUS|Integer|Registry|2
+Controls when the status data for a sheet set is updated. The status data that os being referred to in a sheet set is if a sheet is currently locked (opened by another user), a sheet is missing from the sheet set or possibly a sheet is found in an unexpected location. A sheet set can be manually refreshed by clicking the Refresh sheet status button located on the Sheet List tab of the Sheet Set Manager.\n\n0\tRefreshing of the sheet set status data is not done automatically\n1\tRefreshing of the sheet ste status data is done only when it is initially loaded or updated\n2\tIn addition to the affects that happen when the valus is set to 1, the status data is also updated when the time interval set by SSMPOLLTIME has elapsed
+!STANDARDSVIOLATION|Integer|Registry|2
+Controls the behavior of the Standards violation notification system.\n\n0\tNotifications are disabled\n1\tA message box is displayed when a violation to the standards occurs\n2\tIcon is displayed in the drawing status bar area notifying of a drawing that has been opened or object modified that doesn’t meet standards
+!STARTUP|Integer|Registry|0
+Controls the display of the Create New Drawing dialog box.\n\n0\tDisplays the Select Template File dialog box or uses the default template that is specified under the File section of the Options dialog\n1\tDisplays the Startup and Create New Drawing dialog box
+!STEPSIZE|Real|Drawing|6.0000
+Specifies the size of each step when in walk or fly mode, in drawing units. You can enter any real number from 1E-6 to 1E+6.
+!STEPSPERSEC|Real|Drawing|2.0000
+Specifies the number of steps taken per second when you are in walk or fly mode. You can enter any real number from 1 to 30.
+#SUNPROPERTIESSTATE|Integer|Not Saved|0
+Indicates whether the Sun Properties window is open.\n\n0\tClosed\n1\tOpen
+!SUNSTATUS|Integer|Drawing|0
+Controls whether the sun casts light in the current viewport.\n\n0\tOff\n1\tOn
+!SURFTAB1|Integer|Drawing|6
+Sets the number of tabulations to be generated for the RULESURF and TABSURF commands. Also sets the mesh density in the M direction for the REVSURF and EDGESURF commands.
+!SURFTAB2|Integer|Drawing|6
+Sets the mesh density in the N direction for the REVSURF and EDGESURF commands.
+!SURFTYPE|Integer|Drawing|6
+Controls the type of surface-fitting to be performed by the Smooth option of the PEDIT command.\n\n5\tQuadratic B-spline surface\n6\tCubic B-spline surface\n8\tBezier surface
+!SURFU|Integer|Drawing|6
+Sets the surface density for PEDIT Smooth in the M direction.
+!SURFV|Integer|Drawing|6
+Sets the surface density for PEDIT Smooth in the N direction.
+#SYSCODEPAGE|String|Not saved|
+Indicates the system code page specified in the acad.xmx file. Codes are as follows:\n\nascii\tdos860\tdos932\tiso8859-7\nbig5\tdos861\tgb2312\tiso8859-8\ndos437\tdos863\tiso8859-1\tiso8859-9\ndos850\tdos864\tiso8859-2\tjohab\ndos852\tdos865\tiso8859-3\tksc5601\ndos855\tdos866\tiso8859-4\tmac-roman\ndos857\tdos869\tiso8859-6\n\nAsian character set names according to ANSI code pages are as follows:\n\nName\tCharSet Name\tANSI code page\n\nChinese (Simplified)\tGB2312-80\tCP936\nChinese (Traditional)\tBig-5\tCP950\nJapanese\tShift-JIS\tCP932\nKorean (Wansung)\tKS C-5601-1987\tCP949\nKorean (Johab)\tKS C-5601-1992\tCP1361
+!TABLEINDICATOR|Integer|Registry|1
+Controls whether the row numbers (along the left) and column letters (above) are displayed around the table object when the in-place text editor is in use during the editing of a cell.\n\n0\tOff\n1\tOn
+!TABMODE|Integer|Not saved|0
+Controls the use of the tablet. For more information on using and configuring a tablet, see the command TABLET.\n\n0\tTurns off Tablet mode\n1\tTurns on Tablet mode
+#TARGET|3D point|Drawing|0.0000,0.0000,0.0000
+Stores the location (as a UCS coordinate) of the target point for the current viewport.
+!TBCUSTOMIZE|Integer|Registry|1
+Controls whether the CUSTOMIZE command is enabled or disabled for tool palette group customization, and if the Customize option from the toolbar shortcut menu is displayed or not.\n\n0\tDisables access to customization\n1\tEnables access to customization
+#TDCREATE|Real|Drawing|
+Stores the local time and date the drawing was created.
+#TDINDWG|Real|Drawing|
+Stores the total editing time.
+#TDUCREATE|Real|Drawing|
+Stores the universal time and date the drawing was created.
+#TDUPDATE|Real|Drawing|
+Stores the local time and date of the last update/save.
+#TDUSRTIMER|Real|Drawing|
+Stores the user-elapsed timer.
+#TDUUPDATE|Real|Drawing|
+Stores the universal time and date of the last update/save.
+!TEMPOVERRIDES|Integer|Registry|1
+Controls whether temporary override keys are allowed or not. A temporary override key is a key that when held down acts as a setting toggle to turn it on or off based on its current setting. The affect only lasts until the key is released. Temporary override keys are created in the Customize User Interface tool or CUI.\n\n0\tOff\n1\tOn
+#TEMPPREFIX|String|Not saved|"C:\Documents and Settings\<user name>\Local Settings\Temp\"
+Contains the directory name (if any) configured for placement of temporary files, with a path separator appended.
+!TEXTEVAL|Integer|Not saved|0
+Controls the method of evaluation of text strings.\n\n0\tAll responses to prompts for text strings and attribute values are taken literally\n1\tText starting with an opening parenthesis [ ( ] or an exclamation mark (!) is evaluated as an AutoLISP expression, as for nontextual input\n\nThe TEXT command takes all input literally regardless of the setting of TEXTEVAL.
+!TEXTFILL|Integer|Registry|1
+Controls the filling of TrueType fonts while plotting, exporting with the PSOUT command, and rendering.\n0\tOutputs text as outlines\n1\tOutputs text as filled images
+!TEXTQLTY|Integer|Not saved|50
+Sets the resolution tesselation fineness of text outlines for TrueType fonts while plotting, exporting with the PSOUT command, and rendering. 0 represents no effort to refine the smoothness of the text; 100 represents a maximum effort to smooth text characters. Values represent dots-per-inch. Lower values decrease resolution and increase plotting speed. Higher values increase resolution and decrease plotting speed.
+!TEXTSIZE|Real|Drawing|0.2000
+Sets the default height for new text objects drawn with the current text style (has no effect if the style has a fixed height).
+!TEXTSTYLE|String|Drawing|"Standard"
+Sets the name of the current text style.
+!THICKNESS|Real|Drawing|0.0000
+Sets the current 3D solid thickness.
+!TILEMODE|Integer|Drawing|1
+Makes the Model tab or the last layout tab current.\n\n0\tMakes the last active layout tab (paper space) active\n1\tMakes the Model tab active
+!TIMEZONE|Enum|Drawing|-8000
+Sets the time zone for the sun in the drawing. The values in the table are expressed as hours and minutes away from Greenwich Mean Time. The geographic location you set also sets the time zone. If the time zone is not accurate, you can correct it in the Geographic Location dialog box or set the TIMEZONE system variable.\n\n-12000\tInternational Date Line West\n-11000\tMidway Island, Samoa\n-10000\tHawaii\n-9000\tAlaska\n-8000\tPacific Time (US & Canada), Tijuana\n-7000\tArizona\n-7000\tChihuahua, La Paz, Mazatlan\n-7000\tMountain Time (US & Canada)\n-6000\tCentral America\n-6000\tCentral Time (US & Canada)\n-6000\tGuadalajara, Mexico City, Monterrey\n-6000\tSaskatchewan\n-5000\tBogota, Lima, Quito\n-5000\tEastern Time (US & Canada)\n-5000\tIndiana (East)\n-4000\tAtlantic Time (Canada)\n-4000\tCaracas, La Paz\n-4000\tSantiago\n-3000\tNewfoundland\n-3000\tBrasilia\n-3000\tBuenos Aires, Georgetown\n-3000\tGreenland\n-2000\tMid-Atlantic\n-1000\tAzores\n-1000\tCape Verde Is.\n0000\tCasablanca, Monrovia\n-0000\tDublin, Edinburgh, Lisbon\n+1000\tAmsterdam, Berlin, Bern, Rome, Stockholm\n+1000\tBelgrade, Bratislava, Budapest, Ljubljana\n+1000\tBrussels, Madrid, Copenhagen, Paris\n+1000\tSarajevo, Skopje, Warsaw, Zagreb\n+1000\tWest Central Africa\n+2000\tAthens, Beirut, Istanbul, Minsk\n+2000\tBucharest\n+2000\tCairo\n+2000\tHarare, Pretoria\n+2000\tHelsinki, Kyiv, Sofia, Talinn, Vilnius\n+2000\tJerusalem\n+3000\tBaghdad\n+3000\tKuwait, Riyadh\n+3000\tMoscow, St. Petersburg, Volgograd\n+3000\tNairobi\n+3300\tTehran\n+4000\tAbu Dhabi, Muscat\n+4000\tBaku, Tbilisi, Yerevan\n+4300\tKabul\n+5000\tEkaterinburg\n+5000\tIslamabad, Karachi, Tashkent\n+5300\tChennai, Kolkata, Mumbai, New Delhi\n+5450\tKathmandu\n+6000\tAlmaty, Novosibirsk\n+6000\tAstana, Dhaka\n+6000\tSri Jayawardenepura\n+6300\tRangoon\n+7000\tBangkok, Hanoi, Jakarta\n+7000\tKrasnoyarsk\n+8000\tBeijing, Chongqing, Hong Kong, Urumqi\n+8000\tIrkutsk, Ulaan Bataar\n+8000\tKuala Lumpur, Singapore\n+8000\tPerth\n+8000\tTaipei\n+9000\tOsaka, Sapporo, Tokyo\n+9000\tSeoul\n+9000\tYakutsk\n+9300\tAdelaide\n+9300\tDarwin\n+10000\tBrisbane\n+10000\tCanberra, Melbourne, Sydney\n+10000\tGuam, Port Moresby\n+10000\tHobart\n+10000\tVladivostok\n+11000\tMagadan, Solomon Is., New Caledonia\n+12000\tAuckland, Wellington\n+12000\tFiji, Kamchatka, Marshall Is.\n+13000\tNuku’alofa
+!TOOLTIPMERGE|Integer|Registry|0
+Controls whether drafting tools are combined into a single tooltip.\n\n0\tOff\n1\tOn
+!TOOLTIPS|Integer|Registry|1
+Controls the display of tooltips.\n\n0\tTurns off the display of tooltips\n1\tTurns on the display of tooltips
+#TPSTATE|Integer|Not saved|0
+Indicates the display status of the Tool Palettes Window.\n\n0\tTool Palettes Window is not active\n1\tTool Palettes Window is active
+!TRACEWID|Real|Drawing|0.0500
+Sets the default trace width.
+!TRACKPATH|Integer|Registry|0
+Controls the display of polar and object snap tracking alignment paths.\n\n0\tDisplays full screen object snap tracking path\n1\tDisplays object snap tracking path only between the alignment point and From point to cursor location\n2\tDoes not display polar tracking path\n3\tDoes not display polar or object snap tracking paths
+!TRAYICONS|Integer|Registry|1
+Controls whether or not the notification icons can be displayed in the status bar area.\n\n0\tIcons do not appear in the tray\n1\tIcons are allowed to be displayed in the tray
+!TRAYNOTIFY|Integer|Registry|1
+Controls whether or not notification balloons are displayed for the running services in the status bar tray.\n\n0\tNo notification balloons are displayed\n1\tNotification balloons are displayed
+!TRAYTIMEOUT|Integer|Registry|0
+Controls the time interval that notification balloons are displayed.  Valid range of values is 0 to 10.
+!TREEDEPTH|Integer|Drawing|3020
+Specifies the maximum depth, that is, the number of times the tree-structured spatial index can divide into branches.\n\n0\tSuppresses the spatial index entirely, eliminating the performance improvements it provides in working with large drawings. This setting assures that objects are always processed in database order, making it unnecessary ever to set SORTENTS.\n>0\tTurns on TREEDEPTH. An integer of up to four digits is valid. The first two digits refer to model space, and the second two digits refer to paper space.\n<0\tTreats model space objects as 2D (Z coordinates are ignored), as is always the case with paper space objects. Such a setting is appropriate for 2D drawings and makes more efficient use of memory without loss of performance.\nNOTE You cannot use TREEDEPTH transparently.
+!TREEMAX|Integer|Registry|10000000
+Limits memory consumption during drawing regeneration by limiting the number of nodes in the spatial index (oct-tree).\n\nBy imposing a fixed limit with TREEMAX, you can load drawings created on systems with more memory than your system and with a larger TREEDEPTH than your system can handle. These drawings, if left unchecked, have an oct-tree large enough to eventually consume more memory than is available to your computer. TREEMAX also provides a safeguard against experimentation with inappropriately high TREEDEPTH values.\n\nThe initial default for TREEMAX is 10000000 (10 million), a value high enough to effectively disable TREEMAX as a control for TREEDEPTH. The value to which you should set TREEMAX depends on your system's available RAM. You get about 15,000 oct-tree nodes per megabyte of RAM.\n\nIf you want an oct-tree to use up to, but no more than, 2 megabytes of RAM, set TREEMAX to 30000 (2 x 15,000). If AutoCAD runs out of memory allocating oct-tree nodes, restart AutoCAD, set TREEMAX to a smaller number, and try loading the drawing again.\n\nAutoCAD might occasionally run into the limit you set with TREEMAX. Follow the resulting prompt instructions. Your ability to increase TREEMAX depends on your computer's available memory.
+!TRIMMODE|Integer|Registry|1
+Controls whether AutoCAD trims selected edges for chamfers and fillets.\n\n0\tLeaves selected edges intact\n1\tTrims selected edges to the endpoints of chamfer lines and fillet arcs
+!TSPACEFAC|Real|Not saved|1.0000
+Controls the multiline text line spacing distance measured as a factor of text height. Valid values are 0.25 to 4.0.
+!TSPACETYPE|Integer|Not saved|1
+Controls the type of line spacing used in multiline text. At Least adjusts line spacing based on tallest characters in a line. Exactly uses the specified line spacing, regardless of individual character sizes.\n\n1\tAt Least\n2\tExactly
+!TSTACKALIGN|Integer|Drawing|1
+Controls the vertical alignment of stacked text.\n\n0\tBottom aligned\n1\tCenter aligned\n2\tTop aligned
+!TSTACKSIZE|Integer|Drawing|70
+Controls the percentage of stacked text fraction height relative to selected text's current height. Valid values are from 25 to 125.
+!UCSAXISANG|Integer|Registry|90
+Stores the default angle when rotating the UCS around one of its axes using the X, Y, or Z options of the UCS command. Its value must be entered as an angle in degrees (valid values are: 5, 10, 15, 18, 22.5, 30, 45, 90, 180).
+!UCSBASE|String|Drawing|"World"
+Stores the name of the UCS that defines the origin and orientation of orthographic UCS settings. Valid values include any named UCS.
+!UCSDETECT|Integer|Drawing|1
+Controls whether dynamic UCS acquisition is active or not.\n\n0\tNot active\n1\tActive
+!UCSFOLLOW|Integer|Drawing (viewport specific)|0
+Generates a plan view whenever you change from one UCS to another. Set UCSFOLLOW separately for each viewport. If UCSFOLLOW is on for a particular viewport, AutoCAD generates a plan view in that viewport whenever you change coordinate systems. Once the new UCS has been established, you can use DVIEW, PLAN, VIEW, or VPOINT to change the view of the drawing. It will change to a plan view again the next time you change coordinate systems.\n\n0\tUCS does not affect the view\n1\tAny UCS change causes a change to the plan view of the new UCS in the current viewport\n\nThe setting of UCSFOLLOW is maintained separately for paper space and model space and can be accessed in either, but the setting is ignored while in paper space (it is always treated as if set to 0). Although you can define a non-world UCS in paper space, the view remains in plan view to the world coordinate system.
+!UCSICON|Integer|Drawing (viewport specific)|3
+Displays the UCS icon for the current viewport using bitcode. UCSICON is both a command and a system variable. It is the sum of the following:\n\n0\tNo icon displayed\n1\tOn; icon is displayed\n2\tOrigin; if icon is displayed, the icon floats to the UCS origin if possible\n3\tOn and displayed at origin.\n\nThe UCSICON command controls the visibility and placement of the UCS icon. Because entering ucsicon at the Command prompt invokes the UCSICON command, you must use the SETVAR command to access the UCSICON system variable.
+#UCSNAME|String|Drawing (viewport specific)|
+Stores the name of the current coordinate system for the current viewport in the current space. Returns a null string if the current UCS is unnamed.
+#UCSORG|3D point|Drawing (viewport specific)|
+Stores the origin point of the current coordinate system for the current viewport in the current space. This value is always stored as a world coordinate.
+!UCSORTHO|Integer|Registry|1
+Determines whether the related orthographic UCS setting is restored automatically when an orthographic view is restored.\n\n0\tSpecifies that the UCS setting remains unchanged when an orthographic view is restored\n1\tSpecifies that the related orthographic UCS setting is restored automatically when an orthographic view is restored
+!UCSVIEW|Integer|Registry|1
+Determines whether the current UCS is saved with a named view.\n\n0\tDoes not save current UCS with a named view\n1\tSaves current UCS whenever a named view is created
+!UCSVP|Integer|Drawing (viewport specific)|1
+Determines whether the UCS in active viewports remains fixed or changes to reflect the UCS of the currently active viewport.\n\n0\tUnlocked; UCS reflects the UCS of the current viewport\n1\tLocked; UCS stored in viewport, and is independent of the UCS of the current viewport
+#UCSXDIR|3D point|Drawing (viewport specific)|1.0000,0.0000,0.0000
+Stores the X direction of the current UCS for the current viewport in the current space.
+#UCSYDIR|3D point|Drawing (viewport specific)|0.0000,1.0000,0.0000
+Stores the Y direction of the current UCS for the current viewport in the current space.
+#UNDOCTL|Integer|Not saved|21
+Stores a bitcode indicating the state of the Auto and Control options of the UNDO command. It's the sum of the following values:\n\n0\tUNDO is turned off\n1\tUNDO is turned on\n2\tOnly one command can be undone\n4\tAuto is turned off\n8\tA group is currently active
+#UNDOMARKS|Integer|Not saved|0
+Stores the number of marks placed in the UNDO control stream by the Mark option. The Mark and Back options are not available if a group is currently active.
+!UNITMODE|Integer|Drawing|0
+Controls the display format for units.\n\n0\tDisplays fractional, feet-and-inches, and surveyor's angles as previously set\n1\tDisplays fractional, feet-and-inches, and surveyor's angles in input format
+!UPDATETHUMBNAIL|Integer|Drawing|15
+Controls when and which thumbnail previews are to be updated stored as a bitcode. The value is the sum of the following:.\n\nThumbnails to update:\n0\tThumbnails are not updated for sheet views, model views or sheets\n1\tUpdate only sheet view thumbnail previews\n2\tUpdate only model view thumbnail previews\n4\tUpdate only sheet thumbnail previews\n\nWhen thumbnails should be updated:\n0\tUpdate thumbnails manually - User initiated\n8\tUpdate thumbnails when accessed\n16\tUpdate thumbnails when saving drawing
+!USERI1|Integer|Drawing|0
+Used for storage and retrieval of user-defined integer values.
+!USERI2|Integer|Drawing|0
+Used for storage and retrieval of user-defined integer values.
+!USERI3|Integer|Drawing|0
+Used for storage and retrieval of user-defined integer values.
+!USERI4|Integer|Drawing|0
+Used for storage and retrieval of user-defined integer values.
+!USERI5|Integer|Drawing|0
+Used for storage and retrieval of user-defined integer values.
+!USERR1|Real|Drawing|0.0000
+Used for storage and retrieval of user-defined real numbers.
+!USERR2|Real|Drawing|0.0000
+Used for storage and retrieval of user-defined real numbers.
+!USERR3|Real|Drawing|0.0000
+Used for storage and retrieval of user-defined real numbers.
+!USERR4|Real|Drawing|0.0000
+Used for storage and retrieval of user-defined real numbers.
+!USERR5|Real|Drawing|0.0000
+Used for storage and retrieval of user-defined real numbers.
+!USERS1|String|Not saved|""
+Used for storage and retrieval of user-defined text string data.
+!USERS2|String|Not saved|""
+Used for storage and retrieval of user-defined text string data.
+!USERS3|String|Not saved|""
+Used for storage and retrieval of user-defined text string data.
+!USERS4|String|Not saved|""
+Used for storage and retrieval of user-defined text string data.
+!USERS5|String|Not saved|""
+Used for storage and retrieval of user-defined text string data.
+#VIEWCTR|3D point|Drawing|
+Stores the center of view in the current viewport. Expressed as a UCS coordinate.
+#VIEWDIR|3D vector|Drawing|
+Stores the viewing direction in the current viewport expressed in UCS coordinates. This describes the camera point as a 3D offset from the target point.
+#VIEWMODE|Integer|Drawing|0
+Controls the View mode for the current viewport using bitcode. The value is the sum of the following:\n\n0\tTurned off.\n1\tPerspective view active.\n2\tFront clipping on.\n4\tBack clipping on.\n8\tUCS Follow mode on.\n16\tFront clip not at eye. If on, the front clip distance (FRONTZ) determines the front clipping plane. If off, FRONTZ is ignored, and the front clipping plane is set to pass through the camera point (vectors behind the camera are not displayed). This flag is ignored if the front clipping bit (2) is off.
+#VIEWSIZE|Real|Drawing|
+Stores the height of the view in the current viewport. Expressed in drawing units.
+#VIEWTWIST|Real|Drawing|0.0000
+Stores the view twist angle for the current viewport.
+!VISRETAIN|Integer|Drawing|1
+Controls the visibility, color,  linetype, lineweight, and plot styles (if PSTYLEPOLICY is set to 0) of xref-dependent layers and specifies whether nested xref path changes are saved.\n\n0\tThe layer table, as stored in the reference drawing (xref) takes precedence. Changes made to xref-dependent layers in the current drawing are valid in the current session only and are not saved with the drawing. When the current drawing is reopened, the layer table is reloaded from the reference drawing and the current drawing reflects those settings. The layer settings affected are On, Off, Freeze, Thaw, Color,  Ltype, LWeight, and PStyle (if PSTYLEPOLICY is set to 0). This setting also specifies that changes made to the paths of nested xrefs are for the current session only and are not saved with the drawing.\n1\tXref-dependent layer changes made in the current drawing take precedence. Layer settings are saved with the current drawing's layer table and persist from session to session. Nested xref path changes are saved with the current drawing and persist from session to session.
+#VPMAXIMIZEDSTATE|Integer|Not saved|0
+Indicates that a viewport is in the maximized state.\n\n0\tNo viewport is currently maximized\n1\tA viewport is maximized
+!VSBACKGROUNDS|Integer|Drawing|1
+Controls whether backgrounds are displayed in the visual style applied to the current viewport.\n\n0\tOff\n1\tOn
+#VSEDGECOLOR|String|Drawing|"ByEntity"
+Sets the color of edges in the visual style in the current viewport. The initial value is 7 (ACI Black).
+!VSEDGEJITTER|Integer|Drawing|-2
+Controls the degree to which lines are made to appear as though sketched with a pencil. Turn off the jitter effect by preceding the setting with a minus sign.\n\nNote: Plot styles are not available for objects with the Jitter edge modifier applied.\n\n1\tLow\n2\tMedium\n3\tHigh
+!VSEDGEOVERHANG|Integer|Drawing|-6
+Makes lines extend beyond their intersection, for a hand-drawn effect. The range is 1 to 100 pixels. Turn off the overhang effect by preceding the setting with a minus sign.
+!VSEDGES|Integer|Drawing|1
+Controls the types of edges that are displayed in the viewport.\n\n0\tNo edges are displayed\n1\tIsolines are displayed\n2\tFacet edges are displayed
+!VSEDGESMOOTH|Integer|Drawing|1
+Specifies the angle at which crease edges are displayed. The range is 0 to 180.
+!VSFACECOLORMODE|Integer|Drawing|0
+Controls how the color of faces is calculated.\n\n0\tNormal: Does not apply a face color modifier\n1\tMonochrome: Displays all faces in the color that is specified in the VSMONOCOLOR system variable\n2\tTint: Uses the color that is specified in the VSMONOCOLOR system variable to shade all faces by changing the hue and saturation values of the color.\n3\tDesaturate: Softens the color by reducing its saturation component by 30 percent
+!VSFACEHIGHLIGHT|Real|Drawing|-30
+Controls the display of specular highlights on faces without materials in the current viewport. The range is -100 to 100. The higher the number, the larger the highlight. Objects with materials attached ignore the setting of VSFACEHIGHLIGHT when VSMATERIALMODE is on.
+!VSFACEOPACITY|Real|Drawing|-60
+Controls the transparency of faces in the current viewport. The range is -100 to 100. At 100, the face is completely opaque. At 0, the face is completely transparent. Negative values set the transparency level but turn off the effect in the drawing.
+!VSFACESTYLE|Integer|Drawing|0
+Controls how faces are displayed in the current viewport.\n\n0\tNo style applied\n1\tReal: as close as possible to how the face would appear in the real world\n2\tGooch: uses cool and warm colors instead of dark and light to enhance the display of faces that might be shadowed and difficult to see in a realistic display
+!VSHALOGAP|Integer|Drawing|0
+Sets the halo gap in the visual style applied to the current viewport. The range is 0 to 100.
+!VSHIDEPRECISION|Integer|Not saved|0
+Controls the accuracy of hides and shades in the visual style applied to the current viewport.
+#VSINTERSECTIONCOLOR|Integer|Drawing|"7 (white)"
+Specifies the color of intersection polylines in the visual style applied to the current viewport. The initial value is 7, which is a special value that inverts the color (black or white) based on the background color. Value 0 designates BYBLOCK, value 256 designates BYLAYER, and value 257 designates BYENTITY. Values 1-255 designate an AutoCAD Color Index (ACI) color. True Colors and Color Book colors are also available.\n\nNote: INTERSECTIONCOLOR controls the color of intersection polylines when the visual style is set to 2D Wireframe.
+!VSINTERSECTIONEDGES|Integer|Drawing|0
+Controls the display of intersection edges in the visual style applied to the current viewport.\n\nNote INTERSECTIONDISPLAY controls the color of intersection polylines when the visual style is set to 2D Wireframe.\n\n0\tOff\n1\tOn
+!VSINTERSECTIONLTYPE|Integer|Drawing|1
+Sets the linetype for intersection lines in the visual style applied to the current viewport. The range is 1 to 11.\n\n0\tOff\n1\tSolid\n2\tDashed\n3\tDotted\n4\tShort Dash\n5\tMedium Dash\n6\tLong Dash\n7\tDouble Short Dash\n8\tDouble Medium Dash\n9\tDouble Long Dash\n10\tMedium Long Dash\n11\tSparse Dot
+!VSISOONTOP|Integer|Drawing|0
+Displays isolines on top of shaded objects in the visual style applied to the current viewport.\n\n0\tOff\n1\tOn
+!VSLIGHTINGQUALITY|Integer|Drawing|1
+Sets the lighting quality in the current viewport.\n\n0\tShows facets\n1\tAppears smooth
+!VSMATERIALMODE|Integer|Drawing|0
+Controls the display of materials in the current viewport.\n\n0\tNo materials are displayed\n1\tMaterials are displayed, textures are not displayed\n2\tMaterials and textures are displayed
+#VSMAX|3D point|Drawing|
+Stores the upper-right corner of the current viewport's virtual screen. Expressed as a UCS coordinate.
+#VSMIN|3D point|Drawing|
+Stores the lower-left corner of the current viewport's virtual screen. Expressed as a UCS coordinate.
+!VSMONOCOLOR|String|Drawing|"RGB:255,255,255"
+Sets the color for monochrome and tint display of faces in the visual style applied to the current viewport. The initial value is white.
+!VSOBSCUREDCOLOR|String|Drawing|"BYENTITY"
+Specifies the color of obscured lines in the visual style applied to the current viewport. The initial value is BYENTITY.
+!VSOBSCUREDEDGES|Integer|Drawing|1
+Controls whether obscured (hidden) edges are displayed.\n\n0\tOff\n1\tOn
+!VSOBSCUREDLTYPE|Integer|Drawing|1
+Specifies the linetype of obscured lines in the visual style applied to the current viewport. The range is 1 to 11.\n\n0\tOff\n1\tSolid\n2\tDashed\n3\tDotted\n4\tShort Dash\n5\tMedium Dash\n6\tLong Dash\n7\tDouble Short Dash\n8\tDouble Medium Dash\n9\tDouble Long Dash\n10\tMedium Long Dash\n11\tSparse Dot
+!VSSHADOWS|Integer|Drawing|0
+Controls whether a visual style displays shadows.\n\nNote: To display full shadows, hardware acceleration is required. When Geometry Acceleration is off, full shadows cannot be displayed. (To access these settings, enter 3dconfig at the Command prompt. In the Adaptive Degradation and Performance Tuning dialog box, click Manual Tune.)\n\n0\tNo shadows are displayed\n1\tGround shadows only are displayed\n2\tFull shadows are displayed
+!VSSILHEDGES|Integer|Drawing|0
+Controls display of silhouette edges of solid objects in the visual style applied to the current viewport.\n\n0\tOff\n1\tOn
+!VSSILHWIDTH|Integer|Drawing|5
+Specifies the width in pixels of silhouette edges in the current viewport. The range is 1 to 25.
+#VSSTATE|Integer|Not saved|0
+Indicates whether the Visual Styles window is open.\n\n0\tClosed\n1\tOpen
+!VTDURATION|Integer|Registry|750
+Controls how long the smooth view transition takes from start to end. The value specified is in milliseconds and must be within the range of 0 - 5000. The higher the number the longer it takes to perform the pan/zoom or view change operation.
+!VTENABLE|Integer|Registry|3
+Controls when panning/zooming, view angle changes and scripts utilize smooth view transitions. The valid range is 0 - 7.\n\n0\tOff\n1\tPanning and zooming only\n2\tView angle changes only\n3\tPanning/zooming and view angle changes\n4\tDuring scripts only\n5\tPanning/zooming and scripts\n6\tView angle changes and scripts\n7\tPanning/zooming, view angle changes and scripts
+!VTFPS|Integer|Registry|7
+Controls the minimum speed of a smooth view transition. The value specified is in frames per second. If the transition can't maintain this speed, an instant transition is performed. The value must be within the range of 1.0 - 30.0.
+!WHIPARC|Integer|Registry|0
+Controls whether the display of circles and arcs is tesselated or smooth.\n\n0\tCircles and arcs are tesselated, causing these objects to display as a series of vectors.\n1\tCircles and arcs are not tesselated, causing these objects to display as true circles and arcs.
+!WHIPTHREAD|Integer|Registry|1
+Specifies how AutoCAD will use additional processors on the machine.  This system variable has no effect on machines with single processors.\n\n0\tNo multithreading is used\n1\tRegeneration only is carried out by multiple processors\n2\tRedraw only is carried out by multiple processors\n3\tRegeneration and Redraw are carried out by multiple processors
+!WINDOWAREACOLOR|Integer|Registry|5
+Controls the fill color used during a window selection. Valid range is 1 - 255.
+!WMFBKGND|Integer|Not saved|Off (0)
+Controls the background and the border of the output Windows metafile resulting from the WMFOUT command.\n\nOff (0)\tThe output Windows metafile is transparent. It has no background and no borders.\nOn (1)\tThe output Windows metafile has a background color that's the same as the AutoCAD current background color and a border that's the reverse of the current AutoCAD background color.
+!WMFFOREGND|Switch|Not saved|Off (0)
+Controls how the foreground color assignment to AutoCAD objects of a WMF file or copyclip is created and displayed in other applications.\n\nOff (0)\tForeground and background colors are swapped in order to ensure that the foreground color is darker than the background color\nOn (1)\tForeground and background colors are swapped in order to ensure that the foreground color is lighter than the background color
+#WORLDUCS|Integer|Not saved|1
+Indicates whether the UCS is the same as the WCS.\n\n0\tUCS differs from the WCS\n1\tUCS matches the WCS
+!WORLDVIEW|Integer|Drawing|1
+Determines whether input to the 3DORBIT, DVIEW, and VPOINT commands is relative to the WCS (default), the current UCS, or the UCS specified by the UCSBASE system variable.\n\n0\tUCS remains unchanged\n1\tUCS changes to the WCS for the duration of the DVIEW or VPOINT commands; the DVIEW and VPOINT command input is relative to the current UCS\n2\tUCS changes relative to the UCS specified by the UCSBASE system variable
+#WRITESTAT|Integer|Not saved|1
+Indicates whether a drawing file is read-only or can be written to. For developers who need to determine write status through AutoLISP.\n\n0\tCan't write to the drawing\n1\tCan write to the drawing
+#WSCURRENT|String|Registry|
+Returns the current Workspace and allows you to specify a new Workspace name to set current.
+!XCLIPFRAME|Integer|Drawing|0
+Controls the visibility of xref clipping boundaries.\n\n0\tClipping boundary is not visible\n1\tClipping boundary is visible
+!XEDIT|Integer|Drawing|1
+Controls whether the current drawing can be edited in-place when being referenced by another drawing.\n\n0\tCan't use in-place reference editing\n1\tCan use in-place reference editing
+!XFADECTL|Integer|Registry|50
+Controls the fading intensity for references being edited in-place.\n\n0\t0 percent fading, minimum value\n90\t90 percent fading, maximum value
+!XLOADCTL|Integer|Registry|2
+Turns xref demand loading on and off and controls whether it opens the original drawing or a copy.\n\n0\tTurns off demand loading; entire drawing is loaded\n1\tTurns on demand loading, reference file is kept open\n2\tTurns on demand loading; a copy of the reference file is opened\n\nWhen XLOADCTL is set to 2, the reference file copy is stored in the AutoCAD temporary files directory (defined by the OPTIONS command) or in a user-specified directory.
+!XLOADPATH|String|Registry|"C:\DOCUME~1\<user name>\LOCALS~1\Temp\"
+Creates a path for storing temporary copies of demand-loaded xref files. For more information, see XLOADCTL.
+!XREFCTL|Integer|Registry|0
+Controls whether AutoCAD writes external reference log (XLG) files.\n\n0\tDoes not write log files\n1\tWrites log files
+!XREFNOTIFY|Integer|Registry|2
+Controls the notifications for the Xrefs that are referenced to the open file.\n\n0\tNotifications are disabled\n1\tEnables Xref notification system.  Activates the status bar tray icon when a drawing is opened that contains Xrefs.  If the drawing is missing an Xref the icon is changed to include a yellow alert exclamation symbol (!).\n2\tEnables Xref notification system.  Includes the same as value 1and also includes the displaying of balloon messages.
+!XREFTYPE|Integer|Registry|0
+Controls the default reference type when attaching or overlaying a Xref.\n\n0\tAttachment is set as the default xref type\n1\tOverlay is set as the default xref type
+!ZOOMFACTOR|Integer|Registry|60
+Accepts an integer between 3 and 100 as valid values.  The higher the number, the more incremental the change applied by each mouse-wheel's forward/backward movement.
+!ZOOMWHEEL|Integer|Registry|0
+Toggles the direction of transparent zoom operations when you scroll the middle mouse wheel.\n\n0\tMoves wheel forward zooms in; moving wheel backwards zooms out\n1\tMove wheel forward zooms out; moving wheel backwards zooms in

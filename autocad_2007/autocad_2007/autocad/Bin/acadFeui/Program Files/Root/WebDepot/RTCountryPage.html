@@ -1,0 +1,264 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTCountryPage+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+			A {cursor:hand;}
+		</STYLE>
+			<script><!--
+			var filler = 130;
+			
+			function OnLoad() {
+				
+				if (noUpgrade == "y" ||			//	doesn't support upgrade
+					upgradeRequired == "n") {	//	Ereg doesn't require upgrade serial number
+					return;
+				}
+
+				switch (upgradeRequired) {
+					case "0" :	//	no initialization from Ereg.  
+								//	Maybe there is no Internet connection or choose not to use Internet connection.
+						if (upgrade == "y") {
+							document.RTForm.upgraderadio.checked = true;
+						} else {
+							document.RTForm.upgraderadio.checked = false;
+						}
+						break;
+					case "y" :	//	Ereg required an upgrade serial number
+						document.RTForm.upgraderadio.checked = true;
+						document.RTForm.upgraderadio.disabled = true;
+						break;
+				}
+				selectUpgrade();
+			}
+			
+			function selectCustomerTypeRadio (curRadio) {
+				  for (i=0; i<document.RTForm.customertype.length; i++) {
+					if (i == curRadio) {
+						document.RTForm.customertype[i].checked = true;
+					} else {
+						document.RTForm.customertype[i].checked = false;
+					}
+				  }
+			}
+			
+			function resetContactInfo() {
+				country = document.RTForm.country.value;
+				SetCountryParms();
+				document.RTForm.formWebData.value = xmsgFormWebData;
+				document.RTForm.formEmailData.value = xmsgFormEmailData;
+				document.RTForm.formFaxData.value = xmsgFormFaxData;
+				document.RTForm.formMailData.value = xmsgFormMailData;
+				document.RTForm.formMailDataRegister.value = xmsgFormMailDataRegister;
+				document.RTForm.formCallData.value = xmsgFormCallData;
+				document.RTForm.formStPrRegData.value = InsertStPrRegText;
+
+				location.href="RTUserInfo.html" + "?p=" + escape(userTempPath);
+			}
+
+			function selectUpgradeText () {
+				if (document.RTForm.upgraderadio.checked) {
+					document.RTForm.upgraderadio.checked = false;
+					szSerialNumber = document.RTForm.osernum[0].value + "-" + document.RTForm.osernum[1].value;
+				} else {
+					document.RTForm.upgraderadio.checked = true;
+				}
+				selectUpgrade();
+			}
+			
+			//	change the contents of upgrade layer
+			function selectUpgrade () {
+				var sHTML = "";
+				var cursel = 0;
+				if (document.RTForm.upgraderadio.checked) {
+
+					var xmsgTab1 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+					var xmsgTab2 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+					var xmsgSelRadio = "<input type=\"radio\" name=\"selradio\">&nbsp;";
+					count = 0;
+
+					//	Title for previous serial number
+					sHTML = xmsgTab1 + xmsgRedStar + xmsgHelpUpgradeRequiredTitle + "&nbsp;";
+					sHTML += "<a onclick=\"OpenLocalHERE('RTUpgradeRequiredHelp.html', 600, 220);\"><img src=\"RTHelp.gif\"></a>";
+					sHTML += "<br>";
+					
+					var maxProd = prevProdInfo.length;
+					var curHTML = "";
+					for (i = 0; i < maxProd; i++) {
+						curHTML += xmsgTab2;
+						curHTML += xmsgSelRadio; 
+						curHTML += "<a onclick=\"selectSelRadio("+i+");\">" +
+								 prevProdInfo[i] + "</a><br>";
+						//	default previous serial number selection
+						if (szSerialNumber != "" &&
+							prevProdInfo[i].search(szSerialNumber) != (-1)) {
+							cursel = i;
+						}
+					}
+					
+					sHTML += curHTML;
+					
+					//	chance to type in serial number
+					sHTML += xmsgTab2;
+					sHTML += xmsgSelRadio; 
+					sHTML += UpgradeSerialBlock + "<br>";
+					
+				}
+				upgradeLayer.innerHTML = sHTML;
+				
+				if (document.RTForm.upgraderadio.checked) { 
+					if (szSerialNumber != "") {
+						var sernumArray = szSerialNumber.split("-");
+						document.RTForm.osernum[0].value = sernumArray[0];
+						document.RTForm.osernum[1].value = sernumArray[1];
+						
+						if (prevProdInfo.length == 0) {
+							document.RTForm.selradio.checked = true;
+						} else {
+							document.RTForm.selradio[prevProdInfo.length].checked = true;
+						}
+					} else {
+						if (prevProdInfo.length == 0) {
+							document.RTForm.selradio.checked = true;
+						} else {
+							document.RTForm.selradio[cursel].checked = true;
+						}
+					}
+				}
+			}
+			
+			function selectSelRadio (curRadio) {
+				  for (i=0; i<document.RTForm.selradio.length; i++) {
+					if (i == curRadio) {
+						document.RTForm.selradio[i].checked = true;
+					} else {
+						document.RTForm.selradio[i].checked = false;
+					}
+				  }
+			}
+
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+			document.onkeydown = goBackKey;
+			
+			function goBackKey(e) {
+				if (event.keyCode == 8) {
+					event.keyCode = 0;
+					location.href=rtcountryreturnpage + "?p=" + escape(userTempPath);
+				}
+			}
+
+		//-->
+			</script>
+			<script><!--
+        document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body onload="OnLoad()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Insert New Serial Number Text -->
+			<script><!--
+				if (rtbuymode == "n" && sernum == "000-00000000") {
+					document.writeln('<b>'+xmsgNewSernum1+'</b>');
+					document.writeln('<p>'+xmsgNewSernum4+'</p>');
+					document.writeln(NewSerialBlock);
+					document.writeln(NewSerialBlock2);
+					filler = 0;
+				} // -->
+			</script>
+			<!--CountryPage Info -->
+			<b>
+				<script><!--
+				if (reqtype == 3) {
+					document.writeln(xmsgNSACountryHdr);
+				} else {
+					document.writeln(xmsgCountryHdr);
+				}
+				// -->
+				</script>
+			</b>
+			<p>
+				<script><!--
+				document.writeln(xmsgCountryRegTo);// -->
+				</script>
+				<br>
+				<input type="radio" value="c" name="customertype" checked> <a onclick="selectCustomerTypeRadio(0);">
+					<script><!--
+					document.writeln(xmsgCountryComp);// -->
+					</script>
+				</a>
+				<br>
+				<input type="radio" value="i" name="customertype"> <a onclick="selectCustomerTypeRadio(1);">
+					<script><!--
+					document.writeln(xmsgCountryIndiv);// -->
+					</script>
+				</a>
+			</p>
+			<!--Insert Country Select Pulldown -->
+			<script><!--
+				document.writeln(CountryHTML);// -->
+			</script>
+			<p>
+				<script><!--
+				if (noUpgrade != "y" &&
+					upgradeRequired != "n") {
+					document.writeln("<input type=\"checkbox\" name=\"upgraderadio\"  onclick=\"selectUpgrade()\">");
+					if (upgradeRequired == "y") {
+						document.writeln("<font color=\""+xmsgDisableColor+"\">");
+					} else {
+						document.writeln("<a onclick=\"selectUpgradeText();\">");
+					}
+					document.writeln(xmsgCountryUpgrade);
+					if (upgradeRequired == "y") {
+						document.writeln("</font>");
+					} else {
+						document.writeln("</a>");
+					}
+					document.writeln("<a onclick=\"OpenLocalHERE('RTUpgradeHelp.html', 500, 200);\"><img src=\"RTHelp.gif\"></a>");
+					document.writeln("<br><br>");
+				}
+				// -->
+				</script>
+				<span id="upgradeLayer"></span>
+			<p></p>
+			<script><!--
+			FillUpBlankSpaces(filler);// -->
+			</script>
+			<script><!--
+				StartNavigationButtons();
+				
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="'+ rtcountryreturnpage + "?p=" + escape(userTempPath) + '"\'>');
+				document.writeln('<input type="button" value="'+xmsgNext+'" onclick=resetContactInfo()>');
+				document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+
+				document.writeln('<input type="hidden" name="formWebData" value="'+xmsgFormWebData+'">');
+				document.writeln('<input type="hidden" name="formEmailData" value="'+xmsgFormEmailData+'">');
+				document.writeln('<input type="hidden" name="formFaxData" value="'+xmsgFormFaxData+'">');
+				document.writeln('<input type="hidden" name="formMailData" value="'+xmsgFormMailData+'">');
+				document.writeln('<input type="hidden" name="formMailDataRegister" value="'+xmsgFormMailDataRegister+'">');
+				document.writeln('<input type="hidden" name="formCallData" value="'+xmsgFormCallData+'">');
+				document.writeln('<input type="hidden" name="formStPrRegData" value="'+InsertStPrRegText+'">');
+				EndNavigationButtons();
+				// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

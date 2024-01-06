@@ -1,0 +1,107 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgNSARTBegin+'</title>');
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script><!--
+		function onLoad() {
+			if (nointernet == "y") {
+				document.RTForm.nointernet.checked = 1;
+			} else {
+				document.RTForm.nointernet.checked = 0;
+			}
+			// can't set focus on "Next" button because IE will automatically scroll to "Next" button and ignore company logo and so on.
+		//	document.RTForm.next.focus();
+		}
+		
+		function onNext() {
+			location.href="NSA_RTEditServerAndSeat.html?p=" + escape(userTempPath);
+		}
+		
+		function onCheckBox() {
+			if (document.RTForm.nointernet.checked) {
+				document.RTForm.nointernet.checked = false;
+			} else {
+				document.RTForm.nointernet.checked = true;
+			}
+		}
+		
+		//	disable "Back" button
+		document.onkeydown = noBackKey;
+		
+		function noBackKey(e) {
+			if (event.keyCode == 8) {
+				event.keyCode = 0;
+			}
+		}
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+			<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+	</head>
+	<body onload="onLoad()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" enctype="multipart/form-data">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<script><!--
+			document.writeln('<input type="hidden" name="prodlang" value="'+xmsgProductLanguage+'">');
+		// -->
+			</script>
+			<b>
+				<script><!--
+			document.writeln(xmsgNSARTBeginTitle);// -->
+				</script>
+			</b>
+			<p>
+				<script><!--
+			document.writeln(xmsgNSARTBeginMsg1);
+			document.writeln(format(xmsgNSARTBeginMsg2, product));
+			document.writeln(xmsgNSARTBeginMsg3);
+			// -->
+				</script>
+			</p>
+			<table width="600" border="0" cellpadding="0" cellspacing="0" ID="Table1">
+				<tr>
+					<td valign="top"><input type="checkbox" name="nointernet" ID="Checkbox1"></td>
+					<td><font size="1"><a onclick="onCheckBox();">
+								<script><!--
+						document.writeln(xmsgNSARTBeginNoInternet);// -->
+								</script>
+							</a></font>
+					</td>
+				</tr>
+			</table>
+			<script><!--
+			FillUpBlankSpaces(30);
+			StartNavigationButtons();
+						
+			document.writeln('<input type="button" name="next" value="'+xmsgNext+'" onclick="onNext();">');
+			document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

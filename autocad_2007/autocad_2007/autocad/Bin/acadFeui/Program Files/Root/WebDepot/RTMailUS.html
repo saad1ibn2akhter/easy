@@ -1,0 +1,370 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTMailUS+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+			A {cursor:hand;}
+		</STYLE>
+			<script><!--
+		SetCountryParms();// -->
+			</script>
+			<script><!--
+        document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+			<script><!--		
+		// clicked on the text beside the radio will select the associated radio button
+		function selectRadio (curRadio) {
+			for (i=0; i<document.RTForm.selradio.length; i++) {
+				if (i == curRadio) {
+					document.RTForm.selradio[i].checked = true;
+				} else {
+					document.RTForm.selradio[i].checked = false;
+				}
+			}
+		}
+		
+		function DisplayError(field) {
+			alert(format(xmsgNotEnterErrorMsg, field));
+		}
+		
+		function PrintAddress() {
+			if (country == "JP") {
+				document.writeln(xmsgJPAddress);
+			} else {
+				document.writeln(xmsgAddress);
+			}
+			document.writeln('&nbsp<font color="'+xmsgDisableColor+'">'+add1+'</font><br>');
+			if (add2 != "") {
+				if (country == "JP") {
+					document.writeln(xmsgJPAddress2);
+				} else {
+					document.writeln(xmsgAddress2);
+				}
+				document.writeln('&nbsp<font color="'+xmsgDisableColor+'">'+add2+'</font><br>');
+			}
+			if (add3 != "") {
+				if (country == "JP") {
+					document.writeln(xmsgJPAddress3);
+				} else {
+					document.writeln(xmsgAddress3);
+				}
+				document.writeln('&nbsp<font color="'+xmsgDisableColor+'">'+add3+'</font><br>');
+			}
+		}
+		
+		function PrintCity() {
+			document.writeln(xmsgCity+'&nbsp<font color="'+xmsgDisableColor+'">'+city+'</font><br>');
+		}
+		
+		function PrintStateProvince() {
+			if (InsertStPrRegText != "") {
+				document.writeln(InsertStPrRegText+'&nbsp<font color="'+xmsgDisableColor+'">'+statelong+'</font><br>');
+			} 
+		}
+		
+		function PrintZipcodePostcode() {
+			if (zip != "") {
+				if (InsertZipPostTextConfirm == PostHTMLConfirm) {
+					document.writeln(xmsgPostCode+'&nbsp<font color="'+xmsgDisableColor+'">'+zip+'</font><br>');
+				} else { if(InsertZipPostTextConfirm == ZipHTMLConfirm)
+					document.writeln(xmsgZipCode+'&nbsp<font color="'+xmsgDisableColor+'">'+zip+'</font><br>');
+				} 
+			}
+		}
+		// -->
+			</script>
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<b>
+				<script><!--
+			document.writeln(xmsgRegmethod5);// -->
+				</script>
+			</b>
+			<br>
+			<script><!--
+			document.writeln(xmsgRegmethod6+'<br><br>');// -->
+			</script>
+			<p><script><!--
+			if (xmsgFormMailDataRegister != "") {
+					document.writeln(xmsgFormMailDataRegister);
+			} else { if (xmsgFormMailData != "")
+					document.writeln(xmsgFormMailData);
+			} // Redundent checking in case RTResource is wrong -->
+				</script></p>
+			<script><!--
+			document.writeln("<p>"+xmsgRegmethod3);
+			// -->
+			</script>
+			<table ID="Table1">
+				<script><!--
+			//	email section
+			document.writeln("<tr><td><input type=radio name=selradio ");
+			var clickmsg = "";
+			if (email == "") {
+				clickmsg = "onclick=\"selectRadio(0);DisplayError(\'"+xmsgAnEmail+"\');\"";
+			} else {
+				clickmsg = "onclick=\"selectRadio(0);\"";
+				document.writeln("checked ");
+			}
+			document.writeln(clickmsg);
+			document.writeln("></td>");
+			document.writeln("<td><a "+clickmsg+">"+xmsgEmailTo);
+			if (email=="") {
+				document.writeln(xmsgNotEntered);
+			} else {
+				document.writeln(email);
+			}
+			document.writeln("</a></td></tr>");
+			
+			//	fax section
+			document.writeln("<tr><td><input type=radio name=selradio ");
+			var clickmsg = "";
+			if (fax == "") {
+				clickmsg = "onclick=\"selectRadio(1);DisplayError(\'"+xmsgAFax+"\');\"";
+			} else {
+				clickmsg = "onclick=\"selectRadio(1);\"";
+				if (email == "") {
+					document.writeln("checked ");
+				}
+			}
+			document.writeln(clickmsg);
+			document.writeln("></td>");
+			document.writeln("<td><a "+clickmsg+">"+xmsgFaxTo);
+			if (fax=="") {
+				document.writeln(xmsgNotEntered);
+			} else {
+				document.writeln(fax);
+			}
+			document.writeln("</a></td></tr>");
+			
+			//	mail section
+			document.writeln("<tr><td><input type=radio name=selradio ");
+			var clickmsg = "onclick=\"selectRadio(2);\"";
+			
+			var fulladdress = "";			
+			if (customertype == "c") {
+				fulladdress = comp;
+				if (country == "JP") {
+					fulladdress += ", "+compkat;
+				}
+			}
+			if ((country == "JP") &&
+				(dept != "")) {
+				if (fulladdress != "") {
+					fulladdress += ", ";
+				}
+				fulladdress += dept;
+			}
+			if ((SalutationBlock != "") &&
+				(sallong != "")) {
+				if (fulladdress != "") {
+					fulladdress += ", ";
+				}
+				fulladdress += sallong;
+			}
+			if (country == "JP") {
+				if (fulladdress != "") {
+					fulladdress += ", ";
+				}
+				fulladdress += fname + ", " + lname;
+			} else {
+				if (xmsgReverseNameField == true) {
+					if (fulladdress != "") {
+						fulladdress += ", ";
+					}
+					fulladdress += fname + " " + lname;
+				} else {
+					if (fulladdress != "") {
+						fulladdress += ", ";
+					}
+					fulladdress += lname + " " + fname;
+				}
+			}
+			if (xmsgReverseAddressLayout) {
+				if (zip != "") {
+					if (fulladdress != "") {
+						fulladdress += ", ";
+					}
+					fulladdress += zip;
+				}
+				if (InsertStPrRegText != "") {
+					if (fulladdress != "") {
+						fulladdress += ", ";
+					}
+					fulladdress += statelong;
+				}
+				if (fulladdress != "") {
+					fulladdress += ", ";
+				}
+				fulladdress += city;
+				fulladdress += ", " + add1;
+				if (add2 != "") {
+					fulladdress += ", " + add2;
+				}
+				if (add3 != "") {
+					fulladdress += ", " + add3;
+				}
+			} else {
+				fulladdress += ", " + add1;
+				if (add2 != "") {
+					fulladdress += ", " + add2;
+				}
+				if (add3 != "") {
+					fulladdress += ", " + add3;
+				}
+				fulladdress += ", " + city;
+				if (InsertStPrRegText != "") {
+					fulladdress += ", " + statelong;
+				}
+				if (zip != "") {
+					fulladdress += ", " + zip;
+				}
+			}
+			fulladdress += ", " + countrylong;
+			
+			clickmsg = "onclick=\"selectRadio(2);\"";
+			if (email == "" && fax == "") {
+				document.writeln("checked ");
+			}
+			document.writeln(clickmsg);
+			document.writeln("></td>");
+			document.writeln("<td><a "+clickmsg+">"+xmsgMailTo);
+			document.writeln(fulladdress);
+			document.writeln("</a></td></tr>");
+			
+			// -->
+				</script>
+				</td>
+			</table>
+			</p>
+			<script src="RTServerInfoBlock.js"></script>
+			<script><!--
+				//	Custom ID
+				if (country == "JP" && custid != "") {
+					document.writeln(xmsgCustIDTitle1+'&nbsp<font color="'+xmsgDisableColor+'">'+custid+'</font><br>');
+				} else {
+					//	Company name
+					if (customertype == "c") {
+						document.writeln(xmsgCompanyName2+'&nbsp<font color="'+xmsgDisableColor+'">'+comp+'</font><br>');
+						if (country == "JP") {
+						document.writeln(xmsgKatakana+'&nbsp<font color="'+xmsgDisableColor+'">'+compkat+'</font><br>');
+						}
+					}
+				}
+				
+				//	Department
+				if ((country == "JP") &&
+					(dept != "")) {
+					document.writeln(xmsgDepartment2+'&nbsp<font color="'+xmsgDisableColor+'">'+dept+'</font><br>');
+				}
+
+				//	First name and Last name
+				if (country == "JP") {
+					DisplayConfirmJapanNames(false);
+				} else {
+					if (xmsgReverseNameField == true) {
+						document.writeln(xmsgLastname+'&nbsp<font color="'+xmsgDisableColor+'">'+lname+'</font><br>'
+										+xmsgFirstname+'&nbsp<font color="'+xmsgDisableColor+'">'+fname+'</font><br>');
+					} else {
+						document.writeln(xmsgFirstname+'&nbsp<font color="'+xmsgDisableColor+'">'+fname+'</font><br>'
+										+xmsgLastname+'&nbsp<font color="'+xmsgDisableColor+'">'+lname+'</font><br>');
+					}
+				}
+				
+				//	Salutation
+				if ((SalutationBlock != "") &&
+					(sallong != "")) {
+					document.writeln(xmsgSalutation+'&nbsp<font color="'+xmsgDisableColor+'">'+sallong+'</font><br>');
+				}
+				
+				if (xmsgReverseAddressLayout) {
+					//	ZIP/Postal code
+					PrintZipcodePostcode();
+
+					//	State/Province/Region
+					PrintStateProvince();
+
+					//	City
+					PrintCity();
+					
+					//	Address
+					PrintAddress();
+				} else {
+					//	Address
+					PrintAddress();
+					
+					//	City
+					PrintCity();
+
+					//	State/Province/Region
+					PrintStateProvince();
+					
+					//	ZIP/Postal code
+					PrintZipcodePostcode();
+				}
+				
+				//	Country
+				document.writeln(xmsgCountry+'&nbsp<font color="'+xmsgDisableColor+'">'+countrylong+'</font><br>');
+
+				//	Phone
+				if (phone != "") {
+					document.writeln(xmsgPhone+'&nbsp<font color="'+xmsgDisableColor+'">'+phone+'</font><br>');
+				}
+				
+				//	Fax
+				if (fax != "") {
+					document.writeln(xmsgFax+'&nbsp<font color="'+xmsgDisableColor+'">'+fax+'</font><br>');
+				}
+				
+				//	Email
+				if (email != "") {
+					document.writeln(xmsgEmail+'&nbsp<font color="'+xmsgDisableColor+'">'+email+'</font><br>');
+				}
+				
+				//	Marketing question
+				if (appusagelong != "") {
+					document.writeln(xmsgAppUsage+'&nbsp<font color="'+xmsgDisableColor+'">'+appusagelong+'</font><br>');
+				}
+				
+				//	Dealer
+				if (dealer != "") {
+					document.writeln(xmsgDealer+'&nbsp<font color="'+xmsgDisableColor+'">'+dealer+'</font><br>');
+				}
+				
+				//	Department
+				if ((country != "JP") &&
+					(dept != "")) {
+					document.writeln(xmsgDepartment2+'&nbsp<font color="'+xmsgDisableColor+'">'+dept+'</font><br>');
+				}
+				document.writeln(RegInfoConfirm1);
+				
+				StartNavigationButtons();
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+				document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+				document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

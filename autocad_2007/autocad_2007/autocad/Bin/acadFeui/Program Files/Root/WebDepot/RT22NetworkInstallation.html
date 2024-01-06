@@ -1,0 +1,54 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRT22NetworkInstallation+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Registration Error Info -->
+			<table ID="Table1">
+				<tr align="center">
+					<td><img src="RTError.gif"></td>
+					<td><b><script><!--
+				document.writeln(xmsgRegErrorHdr);
+				document.writeln(" (" + rterrnum + ')');// -->
+							</script></b></td>
+				</tr>
+			</table>
+			<p>
+				<script><!--
+			document.writeln(xmsgRegErrorNetwork);// -->
+				</script>
+			</p>
+			<script><!--
+			FillUpBlankSpaces(90);
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgExit+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

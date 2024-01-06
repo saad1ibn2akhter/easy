@@ -1,0 +1,85 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTEmail+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+			A {cursor:hand;}
+		</STYLE>
+			<script><!--
+			SetCountryParms();
+			
+			//	Get the actual folder which contain this specified xml file
+			var tmpvalue = emailxmlfolder.lastIndexOf("\\");
+			var xmlFolder = emailxmlfolder.substring(0, tmpvalue);
+			var xmlFilename = emailxmlfolder.substring(tmpvalue+1);
+			// Email Attachment Block
+			var EmailAttachmentBlock = '<a href="' + xmlFolder + '" target=_blank>'+  xmlFolder + '</a>'; 
+
+			document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');
+
+			function OnLoad() {
+				if (emailstatus == "2") {
+					OpenLocalHERE('RTEmailError.html', 470, 300);
+				}
+			}
+		// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body onload="OnLoad();">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<script><!--
+			document.writeln("<b>"+xmsgRegmethod9+"</b>");
+			document.writeln("<p>"+format(xmsgRegmethod13, xmlFilename)+"</p>");
+			document.writeln("<p>");
+			xmsgAccessHereMsg = xmsgRegmethod14;
+			AccessOtherMethod(gotoVirtualPage("RTSendEmail.html"));
+			document.writeln("</p>");
+			document.writeln("<p>"+ xmsgRegmethod15 + "</p>");
+			document.writeln("<p>"+ xmsgRegmethod10 + "</p>");
+			document.writeln("<p>"+ EmailAttachmentBlock + "\\" + xmlFilename + "</p>");
+			document.writeln(RegInfoConfirm);
+			if (reqtype != 4 &&
+				reqtype != 3) {
+				document.writeln("<p>"+ xmsgRegmethod16 + "</p>");
+				document.writeln("<p>");
+				xmsgAccessHereMsg = xmsgAccessFaxMsg;
+				AccessOtherMethod("RTFaxUS.html?p="+escape(userTempPath));
+				document.writeln('<br>');
+				xmsgAccessHereMsg = xmsgAccessMailMsg;
+				AccessOtherMethod("RTMailUS.html?p="+escape(userTempPath));
+				document.writeln("</p>");
+			}
+			// -->
+			</script>
+			<script><!--
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+			document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+			document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>');
+			
+			document.writeln('<input type="hidden" name="formEmailData" value="'+xmsgFormEmailXMLData+'">');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

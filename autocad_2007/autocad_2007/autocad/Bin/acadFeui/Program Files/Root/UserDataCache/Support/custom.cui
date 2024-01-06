@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose customization and migration functionality.
+If you need to change information in the customization file, use the Customize User Interface dialog box in the product.
+To access the Customize User Interface dialog box, click the Tools menu > Customize > Interface, or enter CUI on the command line. 
+-->
+<CustSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FileVersion MajorVersion="0" MinorVersion="3" IncrementalVersion="2" UserVersion="0" />
+  <MenuGroup Name="CUSTOM">
+    <MacroGroup Name="CUSTOMMacros" />
+    <MenuRoot>
+      <AcceleratorRoot />
+      <OverrideRoot />
+      <MouseButtonRoot />
+      <DigitizerButtonRoot />
+      <PopMenuRoot />
+      <ToolbarRoot />
+      <ScreenMenuRoot />
+      <ImageMenuRoot />
+      <TabletMenuRoot />
+    </MenuRoot>
+  </MenuGroup>
+</CustSection>

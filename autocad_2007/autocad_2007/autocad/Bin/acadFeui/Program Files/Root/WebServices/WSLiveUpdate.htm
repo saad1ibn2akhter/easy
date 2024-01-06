@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="WSLiveUpdateExtStyle.css" />
+        <title>Live Update Status</title>
+        <META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+        <script SRC="WSXMLUtil.js" LANGUAGE="JavaScript"></script>
+        <script SRC="xmsg_WSLiveUpdateExt.js" LANGUAGE="JavaScript"></script>
+        <script language="JavaScript1.2" type="text/javascript">
+		// global variables
+		// modify this to get the right path from the opener
+		var dataFile = window.opener.CommCntrDataFilePath;
+		// get the landing page formatter from parent window method by passing channel id and type
+		var channelCollectionObj = window.opener.channelCollection;
+		var pageFormatXSL = channelCollectionObj.getChannelLandingPageFormatter("2052111-2049661", "1");
+		
+		function getPageContent() {
+			return getTransformedResult(dataFile,pageFormatXSL);	
+		}
+
+		function displayPage() {
+			displayPageContent();
+		}
+
+		function displayPageContent() {
+			if(document.getElementById("pageContent")) {
+				var content = getPageContent();
+				if(content=="") {
+					// using the existing LiveUpdate error page if some error occurs during getting the page content...
+					var err_win = window.open("WSLU_Errors.htm", "_self"); // show in live update page window istead of new window.
+					err_win.opener.WSDocErrorType = 1
+					err_win.opener.WSLUErrorType = 0x2;	// new error type added
+				} else {
+					document.getElementById("pageContent").innerHTML= content;
+				}
+			} else {
+				// should not happen at all, but..
+				alert(xmsg_missing_page_content_element);	
+			}
+		}
+
+		var WSLUErrorType = 0;
+		var WSDocErrorType = 1;
+
+		// Now call the function inside the caller
+		function CallerDoApplyPatch(prodCode, patchLoc) {
+			WSLUErrorType = window.opener.doApplyPatch(prodCode, patchLoc);
+			if (WSLUErrorType != 0)
+	    			window.open("WSLU_Errors.htm", "_blank");
+		}
+        </script>
+    </head>
+    <body onload="displayPage();">
+	<div id="pageContent"></div>
+    </body>
+</html>

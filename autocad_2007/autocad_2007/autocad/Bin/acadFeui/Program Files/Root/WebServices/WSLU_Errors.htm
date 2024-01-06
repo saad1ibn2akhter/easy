@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="WSLiveUpdateExtStyle.css" />
+        <title>Live Update Errors</title>
+        <META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+        <script SRC="xmsg_WSLU_Errors.js" LANGUAGE="JavaScript"></script>
+        <script language="JavaScript1.2" type="text/javascript">
+	
+	// document error types
+	var nLUErrType = 1;
+	var nLULicenseErrType = 2;
+	var nExtLicenseErrType = 3;
+	var nRefreshErrType = 4;
+	
+	// live update patch errors
+	var wsLuFlagsNone				= 0;
+	var wsLuLandingPageError		= 0x2;
+	var wsLuPatchlistCorrupt		= 0x4;
+	var wsLuPatchlistDownloadError	= 0x8;
+	var wsLuPatchDownloadError		= 0x10;
+	var wsLuPatchApplyError			= 0x20;
+	var wsLuUnknownError			= 0x80;
+
+	// limited rights errors
+	var WS_MsiCanInstall_None		= 0;
+	var WS_MsiCanInstall_Yes		= 1;
+	var WS_MsiCanInstall_MsiDisabled = 2;
+	var WS_MsiCanInstall_NoHKLMPermission = 4;
+	var WS_MsiCanInstall_NotElevated = 8;
+	
+	// refresh errors
+	// this is in WSCommCntr.idl, i only use the last few ones
+	/* typedef enum WSNewDataType { WS_NewData_None=0, WS_NewData_Patch=1, 
+									WS_NewData_Extension=2, WS_NewData_Channel=4, 
+									WS_NewData_Message=8, WS_NewData_Wizard=16, 
+									WS_NewData_NetworkError=32, WS_NewData_ServerError=64, 
+									WS_NewData_UnknownError=128, 
+									WS_NewData_UnknownProdLoc=256, WS_NewData_UnknownCountry=512} WSNewDataType;
+	*/
+	var WS_NewData_UnknownProdLoc = 256;
+	var WS_NewData_UnknownCountry = 512;
+
+	// get the document typep from the opener
+	var docErrType = window.opener.WSDocErrorType;
+	//alert(docErrType);
+
+function changeContent() 
+{
+    if (document.all)
+    {
+		var strTitle;
+		var strDesc;
+
+		//alert(errorMsgType);
+		// decide what type of error document this is
+		// then decide on the error to display
+		switch (docErrType)	
+		{
+			case (nLUErrType):
+				var errorMsgType = window.opener.WSLUErrorType;
+				switch (errorMsgType)
+				{
+
+					case wsLuLandingPageError:
+						strTitle = xmsg_pageContentError_Title;
+						strDesc = xmsg_pageContentError_Desc+ "<br><br>" + xmsg_applRestartInstruct;
+						break;
+
+					case wsLuPatchlistCorrupt:
+						strTitle = xmsg_patchlistCorrupt_Title;
+						strDesc = xmsg_patchlistCorrupt_Desc + "<br><br>" + xmsg_applRestartInstruct + "<br><br>" + xmsg_networkAdminInfo;
+						break;
+						
+					case wsLuPatchlistDownloadError:
+						strTitle = xmsg_patchlistDownloadErr_Title;
+						strDesc = xmsg_patchlistDownload_Desc + "<br><br>" + xmsg_applRestartInstruct + "<br><br>" + xmsg_networkAdminInfo;
+						break;
+
+					case wsLuPatchDownloadError:
+						strTitle = xmsg_patchDownloadErr_Title;
+						strDesc = xmsg_patchDownload_Desc + "<br><br>" + xmsg_computerRestartInstructLong;
+						break;
+						
+					case wsLuPatchApplyError:
+						strTitle = xmsg_patchApplyErr_Title;
+						strDesc = xmsg_patchApplyErr_Desc + "<br><br>" + xmsg_computerRestartInstructShort;
+						break;
+					
+					case wsLuFlagsNone:
+					case wsLuUnknownError:
+						strTitle = xmsg_unknownErr_Title;
+						strDesc = xmsg_unknownErr_Desc + "<br><br>" + xmsg_computerRestartInstructShort;
+						break;
+				}
+				break;
+			
+			case nLULicenseErrType:
+				var LULicenseErrMsgType = window.opener.WSLUInstallErrType;
+				if (LULicenseErrMsgType != WS_MsiCanInstall_Yes)
+				{
+					strTitle = xmsg_limitedRights_Title;
+					strDesc = xmsg_limitedRightsErr_Desc;
+				}
+				break;
+				
+			case nExtLicenseErrType:
+				var ExtLicenseErrMsgType = window.opener.WSExtInstallErrType;
+				if (LULicenseErrMsgType != WS_MsiCanInstall_Yes)
+				{
+					strTitle = xmsg_limitedRights_Title;
+					strDesc = xmsg_limitedRightsErr_Desc;
+				}
+				break;
+			
+			case nRefreshErrType:
+				var RefreshErrMsgType = window.opener.WSRefreshErrType;
+				switch (RefreshErrMsgType)
+				{
+					case WS_NewData_UnknownCountry:
+						strTitle = xmsg_errNoInfoCountry_Title;
+						strDesc = xmsg_errNoInfoCountry_Desc;
+						break;
+
+					case WS_NewData_UnknownProdLoc:
+						strTitle = xmsg_errNoInfo_Title;
+						strDesc = xmsg_errNoInfo_Desc;
+						break;
+				}
+				break;
+		}
+			
+        document.all('ErrorTitle').innerHTML = strTitle;
+        document.all('ErrorMsg').innerHTML = strDesc;
+    }
+}
+
+
+
+
+        </script>
+    </head>
+    <body onload="changeContent()">
+        <table border='0' cellpadding='3' cellspacing='3' width='775' ID="Table1">
+            <tr>
+                <td><img src='ext_adsklogo.gif'/></td>
+            </tr>
+            <tr>
+                <td>
+                    <table border='0' cellpadding='0' cellspacing='0' width='775' ID="Table2">
+                        <tr>
+                            <td>
+                                <table border='0' cellpadding='0' cellspacing='0' width='256' ID="Table3">
+                                    <tr>
+                                        <td bgcolor='#cccccc'><img src='ext_clear.gif' width='10' height='1'/></td>
+                                    </tr>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td bgcolor='#ffffff'><img src='ext_clear.gif' width='3' height='1'/></td>
+                <td>
+                    <table border='0' cellpadding='0' cellspacing='0' width='516' ID="Table4">
+                        <tr>
+                            <td bgcolor='#cccccc'><img src='ext_clear.gif' width='10' height='1'/></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            </td> </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td bgcolor='#ffffff'><img src='ext_clear.gif' width='3' height='1'/></td>
+                <td>
+                    <table border='0' cellpadding='0' cellspacing='0' width='516' ID="Table5">
+                        <tr>
+                            <td align="left">
+                                <br/>
+                                <div id="ErrorTitle" class='pageSubHeader'></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">
+                                <div id="ErrorMsg" class='pageBodyText'></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+[Options]
+ResultLimit=15
+RankStyle=1
+TabSource=aw.awTab.htm
+Language=0
+EnableSubset=1
+SynonymFile=ac.rul
+
+[Files]
+Count=8
+1="acad_aug.chm"
+2="acad_acr.chm"
+3="acad_dpg.chm"
+4="acad_sig.chm"
+5="adsk_slg.chm"
+6="acad_nag.chm"
+7="adsk_nlg.chm"
+8="acad_acg.chm"
+
+[Subsets]
+Default=1
+acad161_Default=1
+acad_aug_Default=3
+acad_acr_Default=4
+acad_dpg_Default=5
+acad_sig_Default=6
+adsk_slg_Default=6
+acad_nag_Default=7
+adsk_nlg_Default=7
+acad_acg_Default=8
+
+ShowBookCode=0
+Count=8
+1=1,2,3,4,5,6,7,8:User documentation set
+2=0:---
+3=1:User's Guide [AUG]
+4=2:Command Reference [ACR]
+5=3:Driver and Peripheral Guide [DPG]
+6=4,5:Stand-Alone Installation Guides [SIG,SLG]
+7=6,7:Network Installation Guides [NAG,NLG]
+8=8:Customization Guide [ACG]
+
+[MySection]
+LastSeed=how do i create a line?
+NumValue=12345

@@ -1,0 +1,76 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script><!--
+			var tp = unescape(location.search);
+			var tempPathS = tp.search("&p=");
+			if (tempPathS != (-1)) {
+				var encodedUserTempPath = tp.substring(tempPathS+3);
+			} else {
+				var encodedUserTempPath = tp.substr(3);
+			}
+			var userTempPath = unescape(encodedUserTempPath);
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTAuthConfirmed+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+		<script><!--
+        document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');
+        if (country != "") {
+			SetCountryParms();
+		}
+		// -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<script><!--
+				document.writeln("<p><b>" + xmsgRegAuthInfo6+ "</b></p>");
+				document.writeln("<p>" + xmsgRegAuthInfo7 + "</p>");
+				
+				// Insert Customer ID information if Customer ID exists
+				if (country == "JP" &&
+					custid != "") {
+					document.writeln('<p><b>'+xmsgCustIDMainTitle+'</b></p><p>\
+						<table border="0" cellpadding="0" cellspacing="1">\
+						<tr>\
+						<td>'+xmsgCustIDTitle1+'&nbsp;</td>\
+		 				<td><font color="'+xmsgDisableColor+'">'+custid+'</font></td>\
+						</tr>\
+						</table></p>');
+				}
+				
+				//	Insert authcode or license block
+				if (reqtype == 4) {
+					document.writeln(HostIDBlock);
+					document.writeln(FlexlmLicenseBlock);
+				} else {
+					if (auth != "") document.writeln(authConfirm);
+				}
+				
+				document.writeln(RegInfoConfirm1);
+				
+				StartNavigationButtons();
+				
+				document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+				document.writeln('<input type="button" value="'+xmsgFinish+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

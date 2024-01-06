@@ -1,0 +1,20 @@
+<Catalog>
+   <ItemID idValue="{41E79DC7-4705-4d81-BE25-D71A70D71F86}"/>
+   <StockTools>
+      <StockTool>
+         <!--Visual Styles tool-->
+         <ItemID idValue="{484CA208-33CB-40a6-B318-595E29496858}"/>
+         <Properties>
+            <ItemName src="AcTpCatalogRes.dll" resource="192"/>
+         </Properties>
+         <Object>
+            <ComClass>
+               <CLSID idValue="{484CA208-33CB-40a6-B318-595E29496858}"/>
+            </ComClass>
+            <Module>
+               <File>AcVisualStylesManager.arx</File>
+            </Module>
+         </Object>
+      </StockTool>
+   </StockTools>
+</Catalog>

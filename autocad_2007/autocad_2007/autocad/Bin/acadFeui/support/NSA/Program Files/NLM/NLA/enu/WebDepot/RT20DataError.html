@@ -1,0 +1,102 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+
+			var i = document.URL.lastIndexOf("/");
+			var j = document.URL.lastIndexOf("\\");
+			var curPath = document.URL.substring(i+1, j+1);
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRT20DataError+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');
+
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+			document.onkeydown = gotoPrevPage;
+
+            // -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Registration Error Info -->
+			<table ID="Table1">
+				<tr align="center">
+					<td><img src="RTError.gif"></td>
+					<td><b><script><!--
+				if (reqtype=="3") {
+					document.writeln(xmsgLicErrorHdr);
+				} else {
+					document.writeln(xmsgRegErrorHdr);
+				}
+				document.writeln(" (" + rterrnum + ')');// -->
+							</script></b></td>
+				</tr>
+			</table>
+			<p>
+				<script><!--
+			document.writeln(xmsgRegErrorData);// -->
+				</script>
+			</p>
+			<script><!--
+			var defaulturl;
+			//	Try again
+			if (country == "JP" && custid != "") {
+				defaulturl = "RTCustIDConfirm.html" + "?p=" + escape(userTempPath);
+			} else {
+				defaulturl = rtAuthReturnPage + "?p=" + escape(userTempPath);
+			}
+			document.writeln("<p><a href=\""+ defaulturl +"\">");
+			document.writeln(xmsgTryAgain);
+			document.writeln("</a><br>");
+			
+				//	Use another method
+			defaulturl = szRTEmail + "?p=" + escape(userTempPath);
+			document.writeln("<a href=\""+ defaulturl +"\">");
+			if (reqtype == 3) {
+				document.writeln(xmsgOtherMethodMsg1NSA);
+			} else {
+				document.writeln(xmsgOtherMethodMsg1);
+			}
+			document.writeln("</a><br>");
+			
+			//	Contact Autodesk
+			defaulturl = "RTContactAutodesk.html?p=" + escape(userTempPath);
+			document.writeln("<a href=\""+ defaulturl +"\">");
+			document.writeln(xmsgContactAutodesk);
+			document.writeln("</a></p>");
+
+			// -->
+			</script>
+			<script><!--
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-2)"\'>');
+			document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+			document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

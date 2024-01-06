@@ -1,0 +1,80 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+		<script><!--
+        document.writeln('<title>'+xmsgRTAuthConfirmed+'</title>');
+        document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<b>
+			<script><!--
+			document.writeln(xmsgLicAuthConfirmHdr1);// -->
+			</script>
+			</b>
+			<p>
+			<script><!--
+			document.writeln(xmsgLicAuthConfirmMsg1);// -->
+			</script>
+			</p>
+			<!--Insert Customer ID information if Customer ID exists -->
+			<script><!--
+			if (country == "JP" &&
+				custid != "") {
+				document.writeln('<hr><b>'+xmsgCustIDMainTitle+'</b><p>\
+					<table border="0" cellpadding="0" cellspacing="1">\
+					<tr>\
+					<td>'+xmsgCustIDTitle1+'&nbsp;</td>\
+		 			<td><font color="'+xmsgDisableColor+'">'+custid+'</font></td>\
+					</tr>\
+					</table><br>');
+			}
+			//-->
+			</script>
+			<p>
+			<script><!--
+			document.writeln("<b>"+xmsgLicAuthConfirmDate+"</b>&nbsp;&nbsp;");
+			var today = new Date();
+			document.writeln(today.toLocaleDateString()+"<br>");
+		//-->
+			</script>
+			<script src="RTServerInfoBlock.js"></script>
+			</p>
+			<!--Section Break-->
+			<p>
+			<script><!--
+			document.writeln(xmsgLicPathMsg2+"<font color=\""+xmsgDisableColor+"\">");
+			for (i = 0; i < szTotalServerCount; i++) {
+				document.writeln("<br>"+szLicSavePath[i]);
+			}
+			document.writeln("</font><hr>"+RegInfoConfirm);
+			// -->
+			</script>
+			</p>
+			<script><!--
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+			document.writeln('<input type="button" value="'+xmsgDone+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

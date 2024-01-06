@@ -1,0 +1,52 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTRegConfirmed+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<form name="RTForm">
+			<script src="RTHeader.js"></script>
+			<script src="RTNavigation.js"></script>
+			<form name="RTForm" ID="Form1">
+				<!--Begin Software Information table -->
+				<script src="RTSoftwareSection.js"></script>
+				<!--Begin Reg Info Header-->
+				<p><b><script><!--
+				document.writeln(xmsgRegAuthInfo1);// -->
+						</script></b></p>
+				<!--Insert Software Text -->
+				<script><!--
+				document.writeln(xmsgRegAuthInfo9);// -->
+				</script>
+				<script><!--
+				document.writeln(RegInfoConfirm);// -->
+				</script>
+				<!--Insert Buttons-->
+				<script><!--
+			FillUpBlankSpaces(90);
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgDone+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+				</script>
+			</form>
+			<script src="RTFooter.js"></script>
+	</body>
+</html>

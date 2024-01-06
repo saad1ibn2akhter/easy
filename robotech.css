@@ -1,0 +1,39 @@
+body{
+	margin:100px;
+}
+.box{
+	color:transparent 50px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
+	font-family: monospace;    
+	text-shadow: 3px 3px 3px violet;
+	width:300px;
+	height: 300px;
+	background-color: pink;
+
+	/*transition-duration: 1000ms;
+	transition-property:background,transform;
+	transition-timing-function: ease;
+	transition-delay: 0.5s;
+	*/
+	transition:1s background ease-in,500ms,ease-out 1s;
+	box-shadow: 20px 20px 20px violet;
+}
+.box:hover{
+
+	resize: width:100;
+	resize: height:100;
+	box-shadow: 30px 30px 30px lightgreen;
+	background:yellow; 
+	transform: rotate(360deg);
+}
+.box p{
+	color:red;
+	visibility: hidden;
+	transition: color 0.5s ease;
+}
+.box p:hover{
+	color: pink;
+	visibility: visible;
+}

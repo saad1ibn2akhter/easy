@@ -1,0 +1,16 @@
+:Base Drvrpgl2.hlp>main
+:Title HDI ドライバーのヘルプ
+1 概要
+2 HDIドライバーについて=ＨＤＩドライバについて
+1 デバイスとドキュメントの設定
+2 ［用紙］グループ=IDH_SETTING_SOURCE
+2 ［グラフィックス］グループ=IDH_GROUP_GRAPHICS
+2 カスタム プロパティ=カスタム・プロパテイ設定
+2 ［位置合わせとユーザ定義用紙サイズ］=IDH_SETTING_CUSTOM_PAPER_SIZE
+1 用紙について
+2 用紙サイズについて=IDH_PAPER_SIZE
+2 機種による給紙方法と給紙トレイの違い=IDH_SETTING_PAPER_TRAY
+1 リファレンス
+2 プリンタードライバーをバージョンアップするには=IDH_HOW_VERUP
+2 プリンタードライバーのバージョンを確認するには=IDH_HOW_CONFIRM_VERSION
+2 こんなときには=IDH_TROUBLE

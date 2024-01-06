@@ -1,0 +1,24 @@
+		<STYLE>
+ body { 
+ margin-top:0px;
+ margin-left:0px;
+ margin-right:0px;
+ margin-bottom:0px;
+ }
+ td
+ {
+ font: 8pt arial ;
+ } 
+ a:link    {text-decoration: none; color:#000000; background-color:transparent}
+ a:visited {text-decoration: none; color:#000000; background-color:transparent}
+ a:active  {text-decoration: none; color:#000000; background-color:transparent}
+ a:hover   {text-decoration: underline; color:#003366; background-color:transparent}
+
+ .tabTitle
+ {
+ font: 8pt arial;
+ font-weight:bold;
+ color:#ffffff;
+ background-color:#b3b3b3;
+	}
+</STYLE>

@@ -1,0 +1,160 @@
+<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="rteregconfdata.js"></script>
+		<script><!--
+			var encodedUserTempPath = unescape(location.search).substr(3);
+			var userTempPath = unescape(encodedUserTempPath);
+
+			//	change "%20"s to spaces 
+			while (userTempPath.indexOf("%20") != (-1)) {
+				userTempPath = userTempPath.replace("%20", " ");
+			}
+
+            document.writeln('<script src=\"'+userTempPath+'RTResource.js\"></script>');
+            document.writeln('<script src=\"'+userTempPath+'RTResStrings.js\"></script>');
+            document.writeln('<script src=\"'+userTempPath+'RTCountry.js\"></script>');
+            document.writeln('<script src=\"'+userTempPath+'RTVersion.js\"></script>');
+            document.writeln('<link rel=\"stylesheet\" href=\"'+userTempPath+'RTStyle1.css\" type=\"text/css\">');
+		// -->
+		</script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTConnect+'</title>');// -->
+		// -->
+		</script>
+		<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');
+            
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+            if (betamode == "y") {
+				document.onkeydown = gotoPrevPage;
+            }
+
+            // -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script><!--
+		iconlocation = userTempPath;
+		document.writeln('<script src=\"'+userTempPath+'RTHeader.js\"></script>');
+		document.writeln('<script src=\"'+userTempPath+'RTNavigation.js\"></script>');
+		// -->
+		</script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script><!--
+			document.writeln('<script src=\"'+userTempPath+'RTSoftwareSection.js\"></script>');
+			// -->
+			</script>
+			<!--Connect Info -->
+			<p><b>
+					<script><!--
+					document.writeln(xmsgConnectHdr);// -->
+					</script>
+				</b>
+			</p>
+			<script><!--
+				document.writeln('<p>'+xmsgConnectTxt+'</p>');
+				document.writeln('<p>'+xmsgConnectTxt2+'</p>');
+				document.writeln('<p>'+xmsgConnectTxt3+'</p>');
+			// -->
+			</script>
+			<script><!--
+				// get the current location
+				var encodedCurrentPath;
+				if (location.pathname.charAt(1) == "\\") {
+					encodedCurrentPath = unescape(location.pathname).substr(3);
+				} else {
+					encodedCurrentPath = unescape(location.pathname).substr(1);
+				}
+				var endOfSlash = encodedCurrentPath.lastIndexOf("\\");
+				encodedCurrentPath = encodedCurrentPath.substring(0, endOfSlash+1);
+				
+				//	Use another method
+				var otherMethodURL;
+				
+				if (rtbuymode == "n") {
+					otherMethodURL = userTempPath + szRTEmail + "?p=" + escape(encodedCurrentPath);
+					document.writeln("<a href=\""+ otherMethodURL +"\">");
+					if (reqtype == 3) {
+						document.writeln(xmsgOtherMethodMsg1NSA);
+					} else {
+						document.writeln(xmsgOtherMethodMsg1);
+					}
+				} else {
+					otherMethodURL = userTempPath + "RTPurchaseOffline.html?p=" + escape(encodedCurrentPath);
+					document.writeln("<a href=\""+ otherMethodURL +"\">");
+					document.writeln(xmsgRegPurchError3);
+				}
+				document.writeln("</a><p>");
+				
+				//	Contact Autodesk
+				document.writeln('<p>'+xmsgContactAutodeskLink+'</p>');
+				otherMethodURL = userTempPath + "RTContactAutodesk.html?p=" + escape(encodedCurrentPath);
+				document.writeln("<a href=\""+ otherMethodURL +"\">");
+				document.writeln(xmsgContactAutodesk);
+				document.writeln("</a><p>");
+				
+                // Functions to let users see movement while waiting
+                // for backend connections.
+                function StartAni() {
+					//	set product language
+					document.submit.prodlang.value = xmsgProductLanguage;
+
+                    document.body.style.cursor = "wait";
+                    sequence = new Array (wait0, wait1, wait2, wait3, wait4, wait5);
+                    currentSequence=0;
+                    waitdiv.style.display = "block";
+                    sequence[currentSequence].style.visibility="visible";
+                    iTimerID = window.setInterval("Animate()", 1500);
+                    document.submit.submit();
+                    document.submit.submitbutn.disabled = true;
+                }
+                
+                function Animate() {
+                    currentSequence++;
+                    if (currentSequence >= 6) {
+                        do {
+                            currentSequence -= 1;
+                            sequence[currentSequence].style.visibility = "hidden";
+                        } while (currentSequence > 0);
+                    }
+                    sequence[currentSequence].style.visibility = "visible";
+                }
+				// -->
+			</script>
+			<!-- Fill up the blank spaces -->
+			<script><!--
+				var filler = 59;
+				if (upgrade == "y" && osernum != "") {
+					filler = 42;
+				}
+				FillUpBlankSpaces(filler);
+			// -->
+			</script>
+		</form>
+		<!--EREG INSERT LOCATION-->
+		<!--EREG DATA INSERT LOCATION-->
+		<!--END EREG INSERT LOCATION-->
+		<center><DIV id="waitdiv" style="position:relative; display:none">
+				<font size="2"><b>
+						<script><!--
+						document.writeln(xmsgConnectHdr1);// -->
+						</script>
+						&nbsp;</b></font> <font size="4" color="0067cc"><b>
+						<span id="wait0" style="position:relative; visibility:hidden;">.&nbsp;</span>
+						<span id="wait1" style="position:relative; visibility:hidden;">.&nbsp;</span>
+						<span id="wait2" style="position:relative; visibility:hidden;">.&nbsp;</span>
+						<span id="wait3" style="position:relative; visibility:hidden;">.&nbsp;</span>
+						<span id="wait4" style="position:relative; visibility:hidden;">.&nbsp;</span>
+						<span id="wait5" style="position:relative; visibility:hidden;">.&nbsp;</span>
+					</b></font>
+			</DIV>
+		</center>
+		<script><!--
+		document.writeln('<script src=\"'+userTempPath+'RTFooter.js\"></script>');
+		// -->
+		</script>
+	</body>
+</html>

@@ -1,0 +1,261 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="STGsans80" />
+    <meta name="LASTUPDATED" content="05/25/05 11:24:02" />
+    <title>Troubleshooting Guide</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="contents" title="Table of Contents" href="TOC.htm" />
+<link rel="index" title="Index" href="IX.htm" />
+<link rel="first" title="First" href="TOC.htm" />
+<link rel="last" title="Last" href="IX.htm" />
+<link rel="previous" title="Previous" href="chap10.htm" />
+<link rel="next" title="Next" href="chap12.htm" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <table id="SummaryNotReq1" width="220" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq1" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap10.htm"><img id="LongDescNotReq2" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap12.htm"><img id="LongDescNotReq3" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq4" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <img border="0" src="graphics/FLEXnetPubl.gif">
+    </p>
+    <hr align="left" />
+
+    <blockquote>
+<a name="wp916242"> </a><h2 class="pAppTitle">
+Troubleshooting Guide
+</h2>
+<a name="wp916818"> </a><h2 class="pAppNum">
+<p align=right> Appendix C</p>
+</h2>
+<hr /><a name="wp896089"> </a><p class="pBody">
+This appendix documents areas of FLEXnet Licensing that have given customers difficulty in the past.
+</p>
+<a name="wp896091"> </a><h3 class="pHeading2">
+	General Troubleshooting Hints
+</h3>
+<a name="wp896092"> </a><p class="pBody">
+The following are tips for debugging:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp896093"> </a><div class="pSmartList1"><li>When you start the license server system be sure that you direct the output into a local log file where you can examine it. The log file often contains useful information. Examine it when you have a problem, and be prepared to answer questions about it when you talk to a support person.</li></div>
+<a name="wp896094"> </a><div class="pSmartList1"><li>If the license server system appears to have started correctly (which you can determine from the log file), try running <code class="cCode">lmstat -a</code> and <code class="cCode">lmdiag</code> to see if that program has the same problem as your application.</li></div>
+<a name="wp896100"> </a><div class="pSmartList1"><li>If your application is v4.1 or later (v5 or later on Windows), you can use the <code class="cCode">FLEXLM_DIAGNOSTICS</code> environment variable. Set <code class="cCode">FLEXLM_DIAGNOSTICS</code> to 1, 2, or 3. A setting of 3 gives more information than 2, 2 gives more information than 1 (in particular, the feature name that was denied). See <a href="chap11.htm#wp896119">&quot;FLEXLM_DIAGNOSTICS&quot; </a> for more information.</li></div>
+<a name="wp896101"> </a><div class="pSmartList1"><li>When you talk to a support person, be prepared with answers to the following questions:</li></div>
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp896102"> </a><div class="pSmartList2"><li>What kind of machine is your license server system running on? </li></div>
+<a name="wp916555"> </a><div class="pSmartList2"><li>What version of the operating system? </li></div>
+<a name="wp916556"> </a><div class="pSmartList2"><li>What machine and operating system is the application running on?</li></div>
+<a name="wp896106"> </a><div class="pSmartList2"><li>What version of FLEXnet Licensing does the FLEXenabled application use? </li></div>
+<a name="wp916566"> </a><p class="pIndented3Relative">
+Use the <code class="cCode">lmver</code> script, or, on UNIX, execute the following command on your <code class="cCode">lmgrd</code>, vendor daemon, and application:
+</p>
+<a name="wp896107"> </a><p class="pIndented3CodeRelative">
+<code class="cCode">strings </code><code class="cCodeEmphasis">binary_name</code><code class="cCode"> | grep Copy</code>
+</p>
+<a name="wp896108"> </a><p class="pIndented3Relative">
+Alternatively, <code class="cCode">lmgrd -v</code> gives the <code class="cCode">lmgrd</code> version, and this works with the vendor daemon also.
+</p>
+<a name="wp896109"> </a><div class="pSmartList2"><li>What error or warning messages appear in the log file? </li></div>
+<a name="wp916576"> </a><div class="pSmartList2"><li>Did the server start correctly? </li></div>
+<a name="wp916577"> </a><p class="pIndented3Relative">
+Look for a message such as: 
+</p>
+<a name="wp896110"> </a><p class="pIndented3CodeRelative">
+<code class="cCode">server xyz started for: feature1 feature2</code>.
+</p>
+<a name="wp896111"> </a><div class="pSmartList2"><li>What is the output from running <code class="cCode">lmstat -a</code>?</li></div>
+<a name="wp896115"> </a><div class="pSmartList2"><li>Are you running other FLEXenabled products? </li></div>
+<a name="wp916587"> </a><div class="pSmartList2"><li>Are you using a combined license file or separate license files?</li></div>
+<a name="wp896116"> </a><div class="pSmartList2"><li>Are you using a three-server redundant license server system (multiple SERVER lines in your license file)?</li></div>
+</ul></div>
+</ul></div>
+<a name="wp896119"> </a><h3 class="pHeading2">
+	FLEXLM_DIAGNOSTICS
+</h3>
+<blockquote>
+<hr width=75% />
+<a name="wp896123"> </a><p class="pBodyNoteRelative">
+<b class="cNote"> Note 	 </b> The ability for FLEXnet Licensing to produce diagnostic output is controlled by your software vendor.
+The ability for FLEXnet Licensing to produce diagnostic output is controlled by your software vendor.
+</p>
+<hr width=75% />
+</blockquote><a name="wp896124"> </a><p class="pBody">
+<code class="cCode">FLEXLM_DIAGNOSTICS</code> is an environment variable that causes the application to produce diagnostic information when a checkout is denied. The format of the diagnostic information may change over time.
+</p>
+<a name="wp896131"> </a><p class="pBody">
+On UNIX, the diagnostic output goes to stderr.
+</p>
+<a name="wp896132"> </a><p class="pBody">
+On Windows, the output is a file in the current directory called <code class="cCode">flex</code><code class="cCodeEmphasis">pid</code><code class="cCode">.log</code>, where <code class="cCodeEmphasis">pid</code> is the application&#39;s process ID.
+</p>
+<a name="wp896133"> </a><h4 class="pHeading3">
+	Level 1 Content
+</h4>
+<a name="wp896137"> </a><p class="pBody">
+If <code class="cCode">FLEXLM_DIAGNOSTICS</code> is set to 1, then the standard FLEXnet Licensing error message is be presented, plus a complete list of license files that the application tried to use. For example:
+</p>
+<a name="wp896138"> </a><p class="pIndented1CodeRelative">
+setenv FLEXLM_DIAGNOSTICS 1<br />FLEXlm checkout error: Cannot find license file (-1,73:2) No such file or directory<br />license file(s):  /usr/myproduct/licenses/testing.lic license.lic
+</p>
+<a name="wp896139"> </a><h4 class="pHeading3">
+	Level 2 Content
+</h4>
+<a name="wp905913"> </a><p class="pBody">
+If <code class="cCode">FLEXLM_DIAGNOSTICS</code> is set to 2, then, in addition to level 1 output, the checkout arguments are presented. For example:
+</p>
+<a name="wp905914"> </a><p class="pIndented1CodeRelative">
+setenv FLEXLM_DIAGNOSTICS 2<br />FLEXlm checkout error: No such feature exists (-5,116:2) No such file or directory<br />license file(s):  /usr/myproduct/licenses/testing.lic license.lic<br />lm_checkout(&quot;f1&quot;, 1.0, 1, 0x0, ..., 0x4000)
+</p>
+<a name="wp896142"> </a><p class="pBody">
+Note that the error message actually contains two separate problems, which both occurred during the checkout: 
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp896143"> </a><div class="pSmartList1"><li>There&#39;s no such feature in the license it did find</li></div>
+<a name="wp896144"> </a><div class="pSmartList1"><li>It was unable to find the other license file, which is what produces the message &quot;No such file or directory&quot;</li></div>
+</ul></div>
+<a name="wp896145"> </a><p class="pBody">
+Following is a description of the arguments to <code class="cGUI">lm_checkout()</code>
+</p>
+<a name="wp896146"> </a><p class="pIndented2CodeRelative">
+lm_checkout(<code class="cCodeEmphasis">feature</code>, <code class="cCodeEmphasis">version</code>, <code class="cCodeEmphasis">num_lic</code>, <code class="cCodeEmphasis">queue_flag</code>, <code class="cCodeEmphasis">...</code>, <code class="cCodeEmphasis">dupgroup_mask</code>)
+</p>
+<a name="wp896147"> </a><p class="pBody">
+where:
+</p>
+<a name="wp896169"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="1" cellpadding="10" id="wp896150table896148">
+  <caption></caption>
+  <tr align="left">    <td><a name="wp896150"> </a><div class="pCellBody">
+<code style="font-style: italic; font-weight: normal; text-decoration: none; vertical-align: baseline" class="cCodeEmphasis">feature</code>
+</div>
+</td>
+    <td><a name="wp896152"> </a><div class="pCellBody">
+The requested feature.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp896154"> </a><div class="pCellBody">
+<code class="cCodeEmphasis">version</code>
+</div>
+</td>
+    <td><a name="wp896156"> </a><div class="pCellBody">
+The requested version. The license file must contain a version &gt;= the requested version.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp896158"> </a><div class="pCellBody">
+<code class="cCodeEmphasis">num_lic</code>
+</div>
+</td>
+    <td><a name="wp896160"> </a><div class="pCellBody">
+Number of licenses requested. Usually 1.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp896162"> </a><div class="pCellBody">
+<code class="cCodeEmphasis">queue_flag</code>
+</div>
+</td>
+    <td><a name="wp896164"> </a><div class="pCellBody">
+If 0, no queueing<br />If 1, queue for license (&quot;blocking&quot; queue)<br />If 2, queue for licenses, but return to application (&quot;non-blocking&quot; queue)
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp896166"> </a><div class="pCellBody">
+<code class="cCodeEmphasis">dupgroup_mask</code>
+</div>
+</td>
+    <td><a name="wp896168"> </a><div class="pCellBody">
+Indicates duplicate grouping, also called license sharing. User, host, and display are as shown by <code class="cCode">lmstat -a</code>.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp896174"> </a><h4 class="pHeading3">
+	Level 3 Content (v6.0+ only)
+</h4>
+<a name="wp896175"> </a><p class="pBody">
+If <code class="cCode">FLEXLM_DIAGNOSTICS</code> is set to 3, then, in addition to level 1 and 2 output, if a checkout is successful, information is printed explaining how the license was granted:
+</p>
+<a name="wp896176"> </a><p class="pIndented2CodeRelative">
+setenv FLEXLM_DIAGNOSTICS 3<br /><code class="cCodeEmphasis">app<br /></code>Checkout succeeded: f0/14263EAEA8E0<br />License file: ./servtest.lic<br />No server used<br /><code class="cCodeEmphasis">app2<br /></code>Checkout succeeded: f1/BC64A7B120AE<br />License file: @localhost<br />License Server System: @localhost<br /><code class="cCodeEmphasis">app3<br /></code>Checkout succeeded: f1/BC64A7B120AE<br />License file: servtest.lic<br />License Server System: @speedy
+</p>
+<a name="wp896177"> </a><p class="pBody">
+Note that the feature name and license key are printed, along with the license file location (or host name if <code class="cCode">@</code><code class="cCodeEmphasis">host</code> were used) and host name of the server, where applicable.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table align="right" border="0" cellspacing="0" cellpadding="0">
+    <td align="right" width="200" height="85">
+    <map name="FPMap0">
+    <area href="http://www.macrovision.com" shape="rect" coords="4, 0, 199, 33">
+    <area href="http://www.macrovision.com" shape="rect" coords="1, 40, 199, 57"></map><img border="0" src="graphics/gsitoplogo.gif" usemap="#FPMap0" /></td>
+    <td align="right" width="200" height="85">
+    <map name="FPMap1">
+    <area href="mailto:support@macrovision.com" shape="rect" coords="9, 70, 151, 99"></map><img border="0" src="graphics/footerAddress.gif" usemap="#FPMap1" /></td>
+</table>
+         
+ <p>&nbsp;</p>
+ 
+   <table id="SummaryNotReq2" width="220" border="0" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq5" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap10.htm"><img id="LongDescNotReq6" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap12.htm"><img id="LongDescNotReq7" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq8" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+      <table align="left">
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2"><i>
+        FLEXnet </i></font><i><font face="Verdana" size="2">Licensing End User 
+        Guide</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">Version 10.8</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">May 2005</font></i></td>
+      </tr>
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2">
+        <a href="cpyrt.htm">copyright</a></font></td>
+      </tr>
+    </table>
+
+    
+  </body>
+</html>

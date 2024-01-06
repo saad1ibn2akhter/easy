@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<!DOCTYPE ERRORTABLES [
+  <!ELEMENT ERRORTABLES (TABLE+)>
+    <!ATTLIST ERRORTABLES VERSION CDATA #REQUIRED>
+    <!ATTLIST ERRORTABLES MIN_ADLM_VERSION CDATA #REQUIRED>
+  <!ELEMENT TABLE (NAME, ERROR+)>
+    <!ATTLIST TABLE VENDORID CDATA #REQUIRED>
+  <!ELEMENT NAME (#PCDATA)>
+  <!ELEMENT ERROR (DESCRIPTION+)>
+    <!ATTLIST ERROR CODE CDATA #REQUIRED>
+  <!ELEMENT DESCRIPTION (#PCDATA)>
+]>
+
+<!-- These are comments for the errors from each technology's header file -->
+<ERRORTABLES VERSION="2.0.0.0" MIN_ADLM_VERSION="5.0.0.4">
+
+<TABLE VENDORID="0">
+    <NAME>ADLM</NAME>
+    <ERROR CODE="0">
+        <DESCRIPTION>License is OK</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1">
+        <DESCRIPTION>Component internal / programming error</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="2">
+        <DESCRIPTION>An operation is cancelled</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="3">
+        <DESCRIPTION>The system is out of memory, eg, cannot allocate memory</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="4">
+        <DESCRIPTION>The feature is not implemented</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="5">
+        <DESCRIPTION>Error loading a library</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="7">
+        <DESCRIPTION>Drivers for the technology is not loaded</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="8">
+        <DESCRIPTION>License is not present</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="9">
+        <DESCRIPTION>License is present but not installed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="10">
+        <DESCRIPTION>License is corrupt (format is not recognizable) &amp; must be replaced</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="11">
+        <DESCRIPTION>License is not usable but may be repaired by a repair code</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="12">
+        <DESCRIPTION>License has expired and usage cannot be continued</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="13">
+        <DESCRIPTION>The clock was wound back</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="14">
+        <DESCRIPTION>License is present but it is inactive, perhaps transferred</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="15">
+        <DESCRIPTION>The same license has been installed previously</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="16">
+        <DESCRIPTION>An error has occurred while performing file operations</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="17">
+        <DESCRIPTION>An error has occurred while performing system operations</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="18">
+        <DESCRIPTION>License file currently used by another application</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="19">
+        <DESCRIPTION>License system is performing a blocked operation, eg, file write</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="20">
+        <DESCRIPTION>Invalid license type</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="21">
+        <DESCRIPTION>Error creating a license instance</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="22">
+        <DESCRIPTION>Error creating an initializer</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="23">
+        <DESCRIPTION>Argument to a function is bad</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="24">
+        <DESCRIPTION>License is not authorized before this action</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="25">
+        <DESCRIPTION>No local drives were found on the machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="26">
+        <DESCRIPTION>No local drives suitable for the anchor were found on the machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="27">
+        <DESCRIPTION>Access to a file or an object is denied by the OS</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="28">
+        <DESCRIPTION>There is a generic unexpected OS error</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="29">
+        <DESCRIPTION>Insufficient rights to do an operation</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1000">
+        <DESCRIPTION>Maps to window error ERROR_FILE_NOT_FOUND</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1001">
+        <DESCRIPTION>Maps to window error ERROR_PATH_NOT_FOUND</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1002">
+        <DESCRIPTION>Maps to window error ERROR_BAD_FORMAT</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1003">
+        <DESCRIPTION>Maps to window error ERROR_BAD_EXE_FORMAT</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1200">
+        <DESCRIPTION>Network server is down</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1201">
+        <DESCRIPTION>Try to borrow more than max. borrow hours</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1202">
+        <DESCRIPTION>No license is available for borrowing</DESCRIPTION>
+    </ERROR>
+</TABLE>
+
+<TABLE VENDORID="1">
+    <NAME>SAFECAST</NAME>
+    <ERROR CODE="0">
+        <DESCRIPTION>Licence is in its normal usable state</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="1">
+        <DESCRIPTION>Internal program error</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="2">
+        <DESCRIPTION>Out of memory</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="3">
+        <DESCRIPTION>Licence not present on this system</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="4">
+        <DESCRIPTION>Licence is present but not installed (requires helpdesk transaction)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="5">
+        <DESCRIPTION>Licence is corrupt, and must be re-installed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="6">
+        <DESCRIPTION>Licence is corrupt, but can be fixed with CdaGroupHelpdeskLicenceRepair</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="7">
+        <DESCRIPTION>A file I/O error occured when accessing licence</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="8">
+        <DESCRIPTION>A system I/O error occured when accessing licence</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="9">
+        <DESCRIPTION>Response/request code mistyped (check digit error)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="10">
+        <DESCRIPTION>The HGROUP handle used in an API call is not valid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="11">
+        <DESCRIPTION>Licence file is full (too much application data)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="12">
+        <DESCRIPTION>No local drives were found on the machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="13">
+        <DESCRIPTION>No local drives suitable for anchor were found on machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="14">
+        <DESCRIPTION>The licence has expired</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="15">
+        <DESCRIPTION>The machine's clock has been wound back</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="16">
+        <DESCRIPTION>Invalid licence number</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="17">
+        <DESCRIPTION>Invalid CdaCONFIGDATA structure</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="18">
+        <DESCRIPTION>String contains invalid characters</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="19">
+        <DESCRIPTION>String checksum is incorrect</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="20">
+        <DESCRIPTION>The RTS running or installed is too old for this application</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="21">
+        <DESCRIPTION>The section cannot be found in the INI file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="22">
+        <DESCRIPTION>The keyword cannot be found in the specified section of the INI file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="23">
+        <DESCRIPTION>The buffer supplied is too small</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="24">
+        <DESCRIPTION>The helpdesk licence segment is not installed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="25">
+        <DESCRIPTION>The helpdesk licence segment is corrupt</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="26">
+        <DESCRIPTION>Invalid syntax in INI keyword line</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="27">
+        <DESCRIPTION>Unable to open INI file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="28">
+        <DESCRIPTION>Action not valid at this time</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="29">
+        <DESCRIPTION>The RTS has not been loaded and initialised</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="30">
+        <DESCRIPTION>The C-Dilla licence system is full (too many licences installed on machine)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="31">
+        <DESCRIPTION>Unable to start specified task (system error)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="32">
+        <DESCRIPTION>The requested resource is already in use and multiple use is not allowed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="33">
+        <DESCRIPTION>The subgroup Id specified is outside the range supported</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="35">
+        <DESCRIPTION>Unable to open the group information file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="36">
+        <DESCRIPTION>Error reading the group information file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="38">
+        <DESCRIPTION>No request outstanding</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="39">
+        <DESCRIPTION>The specified meter number of is out of range or does not exist</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="40">
+        <DESCRIPTION>The meter specified meter cannot be decremented, it is empty</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="42">
+        <DESCRIPTION>Invalid confirmation data or algorithum</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="43">
+        <DESCRIPTION>First function argument of is invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="44">
+        <DESCRIPTION>Second function argument is invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="45">
+        <DESCRIPTION>Third function argument is invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="46">
+        <DESCRIPTION>Fourth function argument is invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="47">
+        <DESCRIPTION>Fifth function argument is invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="48">
+        <DESCRIPTION>Response/request code mistyped OR for a different licence number</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="49">
+        <DESCRIPTION>Confirmation of API call failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="50">
+        <DESCRIPTION>Response code is a user defined and cannot be processed by this function</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="51">
+        <DESCRIPTION>Invalid date</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="52">
+        <DESCRIPTION>The RTS running is older than the last RTS to update the licence</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="53">
+        <DESCRIPTION>File not found</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="54">
+        <DESCRIPTION>Unable to install licence, has previously been installed on this machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="55">
+        <DESCRIPTION>An internal transaction type was used in an API function</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="56">
+        <DESCRIPTION>An error occurred when writing to a file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="57">
+        <DESCRIPTION>Processes exclusion list full</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="58">
+        <DESCRIPTION>Cannot create new licence, one already exists</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="64">
+        <DESCRIPTION>Operation was cancelled by the user</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="66">
+        <DESCRIPTION>Error accessing resistry</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="68">
+        <DESCRIPTION>Local licence required for this operation</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="72">
+        <DESCRIPTION>Error using obtaining or dialog resource</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="73">
+        <DESCRIPTION>Action not allowed by API security configuration</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="78">
+        <DESCRIPTION>The licence is in use by another application</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="79">
+        <DESCRIPTION>The requested action has failed because the attempt was made in an inappropriate process</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="80">
+        <DESCRIPTION>Cannot create new file, one already exists</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="81">
+        <DESCRIPTION>Licence cannot be accessed because it has already  been used in an incompatible mode. System restart required</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="82">
+        <DESCRIPTION>Action not allowed by API as the operating system has changed. RTS needs to be installed for new OS</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="83">
+        <DESCRIPTION>Error reading from a file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="84">
+        <DESCRIPTION>The data in a file is inconsistent or corrupt</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="85">
+        <DESCRIPTION>File space cannot be found to satisfy the request</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="86">
+        <DESCRIPTION>The specified item does not exist</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="87">
+        <DESCRIPTION>The licence has been exported</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="88">
+        <DESCRIPTION>Mic string is not valid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="89">
+        <DESCRIPTION>Export/import by code is not sufficient</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="90">
+        <DESCRIPTION>Supplied data is not destined for this machine</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="91">
+        <DESCRIPTION>The supplied import data is obsolete</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="92">
+        <DESCRIPTION>Error when creating a file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="93">
+        <DESCRIPTION>Internl error returned when the RTS is in a busy state due to a file write</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="94">
+        <DESCRIPTION>Access to file or other object denied by OS</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="95">
+        <DESCRIPTION>OS error other than those handled explicitly</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="96">
+        <DESCRIPTION>The licence has been deactivated</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="97">
+        <DESCRIPTION>The API Library used does not match the toolkit protection version</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="98">
+        <DESCRIPTION>The component installer has been incorrectly used</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="99">
+        <DESCRIPTION>The service could not be started by the current account, set to autostart</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="100">
+        <DESCRIPTION>Licence is trial licence</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="101">
+        <DESCRIPTION>The branded licence file path is too long</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="102">
+        <DESCRIPTION>Configurations with different PublisherName or LicenseSubFolder can't be opened by the same process</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="103">
+        <DESCRIPTION>The NT service has had its configuration tampered with and will not be able to run properly</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="104">
+        <DESCRIPTION>The configured unresticted use date has passed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="255">
+        <DESCRIPTION>Attempt to use an API function which is not currently implemented</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="34">
+        <DESCRIPTION>Group information file not found</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="37">
+        <DESCRIPTION>Unable find a local CD-ROM drive with MSCDEX support</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="59">
+        <DESCRIPTION>Not joined Network licence</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="60">
+        <DESCRIPTION>Network licence not found</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="61">
+        <DESCRIPTION>Network licence error occured</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="62">
+        <DESCRIPTION>Network licence corrupt</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="63">
+        <DESCRIPTION>Network licence is full</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="65">
+        <DESCRIPTION>No network licence path is stored</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="67">
+        <DESCRIPTION>Network licence required for this operation</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="69">
+        <DESCRIPTION>Network Licence is joined too but not installed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="70">
+        <DESCRIPTION>Network licence time problem</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="71">
+        <DESCRIPTION>Network licence file is busy</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="74">
+        <DESCRIPTION>Request has been made to NLC, but has not been granted yet</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="75">
+        <DESCRIPTION>Network licence file version not compatable with RTS</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="76">
+        <DESCRIPTION>Number of users allowed for this login id would be exceeded</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="77">
+        <DESCRIPTION>CD found in drive is not the correct volume</DESCRIPTION>
+    </ERROR>
+</TABLE>
+
+<TABLE VENDORID="5">
+    <NAME>FLEXLM</NAME>
+    <ERROR CODE="0">
+        <DESCRIPTION>The was no error</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-1">
+        <DESCRIPTION>Can't find license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-2">
+        <DESCRIPTION>License file corrupted</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-3">
+        <DESCRIPTION>Cannot connect to a license server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-4">
+        <DESCRIPTION>Maximum number of users reached</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-5">
+        <DESCRIPTION>No such feature exists</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-6">
+        <DESCRIPTION>No TCP/IP service FLEXlm</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-7">
+        <DESCRIPTION>No socket to talk to server on</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-8">
+        <DESCRIPTION>Bad encryption code</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-9">
+        <DESCRIPTION>Hostid doesn't match license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-10">
+        <DESCRIPTION>Software Expired</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-11">
+        <DESCRIPTION>Bad date in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-12">
+        <DESCRIPTION>Bad return from server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-13">
+        <DESCRIPTION>No servers specified in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-14">
+        <DESCRIPTION>Bad SERVER hostname in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-15">
+        <DESCRIPTION>Cannot connect to server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-16">
+        <DESCRIPTION>Cannot read from server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-17">
+        <DESCRIPTION>Cannot write to server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-18">
+        <DESCRIPTION>Server does not support this feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-19">
+        <DESCRIPTION>Error in select system call</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-20">
+        <DESCRIPTION>Application server busy (connecting)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-21">
+        <DESCRIPTION>Config file doesn't support this version</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-22">
+        <DESCRIPTION>Feature checkin failed at daemon end</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-23">
+        <DESCRIPTION>Server busy/new server connecting</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-24">
+        <DESCRIPTION>Users already in queue for this feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-25">
+        <DESCRIPTION>Version not supported at server end</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-26">
+        <DESCRIPTION>Request for more licenses than supported</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-27">
+        <DESCRIPTION>Cannot read /dev/kmem</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-28">
+        <DESCRIPTION>Cannot read /vmunix</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-29">
+        <DESCRIPTION>Cannot find ethernet device</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-30">
+        <DESCRIPTION>Cannot read license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-31">
+        <DESCRIPTION>Start date for feature not reached</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-32">
+        <DESCRIPTION>No such attr for lm_set_attr/ls_get_attr</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-33">
+        <DESCRIPTION>Bad encryption handshake with server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-34">
+        <DESCRIPTION>Clock difference too large between client/server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-35">
+        <DESCRIPTION>We are in the queue for this feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-36">
+        <DESCRIPTION>Feature database corrupted in daemon</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-37">
+        <DESCRIPTION>dup_select mismatch for this feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-38">
+        <DESCRIPTION>User/host on EXCLUDE list for feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-39">
+        <DESCRIPTION>User/host not in INCLUDE list for feature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-40">
+        <DESCRIPTION>Cannot allocate dynamic memory</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-41">
+        <DESCRIPTION>Feature never checked out (lm_status())</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-42">
+        <DESCRIPTION>Invalid parameter</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-43">
+        <DESCRIPTION>No FLEXlm key data</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-44">
+        <DESCRIPTION>Invalid FLEXlm key data</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-45">
+        <DESCRIPTION>FLEXlm function not available</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-46">
+        <DESCRIPTION>FLEXlm software is demonstration version</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-47">
+        <DESCRIPTION>Clock check not available in daemon</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-48">
+        <DESCRIPTION>FLEXlm platform not enabled</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-49">
+        <DESCRIPTION>Date too late for binary format</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-50">
+        <DESCRIPTION>FLEXlm key data has expired</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-51">
+        <DESCRIPTION>FLEXlm not initialized</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-52">
+        <DESCRIPTION>Server did not respond to message</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-53">
+        <DESCRIPTION>Request rejected by vendor-defined filter</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-54">
+        <DESCRIPTION>No FEATURESET line present in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-55">
+        <DESCRIPTION>Incorrect FEATURESET line in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-56">
+        <DESCRIPTION>Cannot compute FEATURESET line</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-57">
+        <DESCRIPTION>socket() call failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-58">
+        <DESCRIPTION>setsockopt() failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-59">
+        <DESCRIPTION>message checksum failure</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-60">
+        <DESCRIPTION>server message checksum failure</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-61">
+        <DESCRIPTION>Cannot read license file from server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-62">
+        <DESCRIPTION>Network software (tcp/ip) not available</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-63">
+        <DESCRIPTION>Not a license administrator</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-64">
+        <DESCRIPTION>lmremove request too soon</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-65">
+        <DESCRIPTION>Bad VENDORCODE struct passed to lm_init()</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-66">
+        <DESCRIPTION>FLEXlm include file/library mismatch</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-67">
+        <DESCRIPTION>No licenses to borrow</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-68">
+        <DESCRIPTION>License BORROW support not enabled</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-69">
+        <DESCRIPTION>FLOAT_OK can't run standalone on SERVER</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-70">
+        <DESCRIPTION>Meter already being updated for another counter</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-71">
+        <DESCRIPTION>Invalid TZ environment variable</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-72">
+        <DESCRIPTION>Old-style vendor keys (3-word)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-73">
+        <DESCRIPTION>Local checkout filter requested request</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-74">
+        <DESCRIPTION>Attempt to read beyond the end of LF path</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-75">
+        <DESCRIPTION>VMS SYS$SETIMR call failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-76">
+        <DESCRIPTION>Internal FLEXlm error -- Please report</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-77">
+        <DESCRIPTION>Version number must be string of dec float</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-78">
+        <DESCRIPTION>FLEXadmin API functions not available</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-79">
+        <DESCRIPTION>FLEXlm internal error -79</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-80">
+        <DESCRIPTION>FLEXlm internal error -80</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-81">
+        <DESCRIPTION>FLEXlm internal error -81</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-82">
+        <DESCRIPTION>Invalid PACKAGE line in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-83">
+        <DESCRIPTION>Server FLEXlm version older than client's</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-84">
+        <DESCRIPTION>Incorrect number of USERS/HOSTS INCLUDED in options file -- see server log</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-85">
+        <DESCRIPTION>Server doesn't support this request</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-86">
+        <DESCRIPTION>This license object already in use (Java only)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-87">
+        <DESCRIPTION>Checkout exceeds MAX specified in options file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-88">
+        <DESCRIPTION>System clock has been set back</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-89">
+        <DESCRIPTION>This platform not authorized by license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-90">
+        <DESCRIPTION>Future license file format or misspelling in license file</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-91">
+        <DESCRIPTION>ENCRYPTION_SEEDs are non-unique</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-92">
+        <DESCRIPTION>Server removed during reread, or server hostid mismatch with license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-93">
+        <DESCRIPTION>This feature is available in a different license pool</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-94">
+        <DESCRIPTION>Attempt to generate license with incompatible attributes</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-95">
+        <DESCRIPTION>Network connect to THIS_HOST failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-96">
+        <DESCRIPTION>Server node is down or not responding</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-97">
+        <DESCRIPTION>The desired vendor daemon is down</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-98">
+        <DESCRIPTION>The FEATURE line can't be converted to decimal format</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-99">
+        <DESCRIPTION>The decimal format license is typed incorrectly</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-100">
+        <DESCRIPTION>Cannot remove a lingering license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-101">
+        <DESCRIPTION>All licenses are reserved for others</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-102">
+        <DESCRIPTION>A FLEXid borrow error occurred</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-103">
+        <DESCRIPTION>Terminal Server remote client not allowed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-104">
+        <DESCRIPTION>Cannot borrow that long</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-105">
+        <DESCRIPTION>Feature already returned to server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-106">
+        <DESCRIPTION>License server out of network connections</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-107">
+        <DESCRIPTION>Can't borrow a PACKAGE component</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-108">
+        <DESCRIPTION>Licenses all borrowed or meter empty</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-109">
+        <DESCRIPTION>No Borrow Meter Found</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-110">
+        <DESCRIPTION>Dongle not attached, or can't read dongle</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-111">
+        <DESCRIPTION>lmgr.res, Windows Resource file, not linked</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-112">
+        <DESCRIPTION>Missing Dongle Driver</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-113">
+        <DESCRIPTION>2 FLEXlock checkouts attempted</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-114">
+        <DESCRIPTION>SIGN= attribute required, but missing from license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-115">
+        <DESCRIPTION>Error in Public Key package</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-116">
+        <DESCRIPTION>TRL not supported for this platform</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-117">
+        <DESCRIPTION>BORROW failed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-118">
+        <DESCRIPTION>BORROW period has expired</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-119">
+        <DESCRIPTION>lmdown and lmreread must be run on license server node</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-120">
+        <DESCRIPTION>Cannot lmdown the server when licenses are borrowed</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-121">
+        <DESCRIPTION>FLOAT_OK license must have exactly one dongle hostid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-122">
+        <DESCRIPTION>Unable to delete local borrow info</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-123">
+        <DESCRIPTION>Support for returning a borrowed license early is not enabled</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-124">
+        <DESCRIPTION>Error returning borrowed license on server</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-125">
+        <DESCRIPTION>Error when trying to just checkout a PACKAGE(BUNDLE)</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-126">
+        <DESCRIPTION>Composite Hostid not initialized</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-127">
+        <DESCRIPTION>An item needed for Composite Hostid missing or invalid</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-128">
+        <DESCRIPTION>Error, borrowed license doesn't match any known server license</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-129">
+        <DESCRIPTION>A null pointer was detected</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-130">
+        <DESCRIPTION>A bad handle was used</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-131">
+        <DESCRIPTION>An emptstring was detected</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-132">
+        <DESCRIPTION>Tried to asscess memory that we shouldn't have</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-133">
+        <DESCRIPTION>Operation is not supported yet</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-134">
+        <DESCRIPTION>The job handle was NULL</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-135">
+        <DESCRIPTION>Error enabling event log</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-136">
+        <DESCRIPTION>Event logging is disabled</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-137">
+        <DESCRIPTION>Error writing to event log</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-138">
+        <DESCRIPTION>Internal error. An invalid array index was used.</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-139">
+        <DESCRIPTION>A timeout has occured</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-140">
+        <DESCRIPTION>A bad command was found in a message</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-141">
+        <DESCRIPTION>Error writing to socket.  Peer has closed socket</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-142">
+        <DESCRIPTION>Attempting to generate version specific license tied to a single hostid, which is composite</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-143">
+        <DESCRIPTION>Version specific signatures are not supported for uncounted licenses</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-144">
+        <DESCRIPTION>License template contains redudant signature specifiers</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-145">
+        <DESCRIPTION>Bad V71_LK signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-146">
+        <DESCRIPTION>Bad V71_SIGN signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-147">
+        <DESCRIPTION>Bad V80_LK signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-148">
+        <DESCRIPTION>Bad V80_SIGN signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-149">
+        <DESCRIPTION>Bad V81_LK signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-150">
+        <DESCRIPTION>Bad V81_SIGN signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-151">
+        <DESCRIPTION>Bad V81_SIGN2 signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-152">
+        <DESCRIPTION>Bad V84_LK signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-153">
+        <DESCRIPTION>Bad V84_SIGN signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-154">
+        <DESCRIPTION>Bad V84_SIGN2 signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-155">
+        <DESCRIPTION>License key required but missing from the license certificate</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-156">
+        <DESCRIPTION>Bad AUTH={} signature</DESCRIPTION>
+    </ERROR>
+    <ERROR CODE="-157">
+        <DESCRIPTION>Specified operation is not allowed</DESCRIPTION>
+    </ERROR>
+
+</TABLE>
+</ERRORTABLES>

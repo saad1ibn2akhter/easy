@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+<Migration FileVersion="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AppProfile>
+        <VersionName>AutoCAD Rio</VersionName>
+        <Release>R17.0</Release>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\EmergencyFont</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_ALT_FONT_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\XrefLoadPath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_XREFLOAD_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\FontMappingFile</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_FONTMAP_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\LogFilePath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_LOG_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\PSOUT_PrologFileName</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PSOUT_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\MainDictionary</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_MAIN_DICT_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\CustomDictionary</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_CUST_DICT_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\MTextEditor</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_TEXT_EDITOR_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ACAD</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_SUPPORT_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\Support</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_SUPPORT_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ProfileStorage</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\PrinterStyleSheetDir</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PLOT_STYLE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\TemplatePath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_TEMPLATE_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\RegisteredToolsPath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_REGTOOLS_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\PrinterDescDir</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PRINTER_DESC_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\PrinterConfigDir</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PRINTER_CONFIG_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ToolPalettePath</SrcRegKey>
+            <Action>IGNORE</Action>
+            <LogString>LOG_TOOL_PALLETTE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ColorBookLocation</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_COLOR_BOOK_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ACADHELP</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>        
+        <TransRule>
+            <SrcRegKey>General\HELP</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>        
+        <TransRule>
+            <SrcRegKey>General\ACADDRV</SrcRegKey>
+            <Action>IGNORE</Action>
+            <LogString>LOG_DRIVER_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\DRIVER</SrcRegKey>
+            <Action>IGNORE</Action>
+            <LogString>LOG_DRIVER_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ACADHELP</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_HELP_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\DefaultConfig</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_DEFAULT_CONFIG_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\LastModifiedConfig</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\MRUConfig</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ACADLOGFILE</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\AVEMAPS</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_AVEMAPS_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\DatabaseWorkSpacePath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_DB_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\IDropFilePath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_IDROP_LOCATION_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\ACADPLCMD</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PLCMD_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\QnewTemplate</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_QNEW_TEMPLATE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\MenuFile</SrcRegKey>
+            <Action>IGNORE</Action>
+            <LogString>LOG_MENU_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\EnterpriseMenuFile</SrcRegKey>
+            <Action>IGNORE</Action>
+            <LogString>LOG_ENTERPRISE_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\TempDirectory</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_TEMP_LOCATION_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\PlotSpoolerDirectory</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PS_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\NetLocation</SrcRegKey>
+            <Action>COPY</Action>
+            <LogString>LOG_NETLOCATION_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\DefaultPlotToFile</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PLOTTO_FILE_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>RefSearchPath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_PROJECT_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Editor Configuration\SaveFilePath</SrcRegKey>
+            <Action>MIGRATE</Action>
+            <LogString>LOG_SAVEFILE_PATH_CHANGE</LogString>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\OpaqueMode</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>Menus</SrcRegKey>
+            <Action>IGNORE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General Configuration\Use TODAY as Startup dialog</SrcRegKey>
+            <Action>MIGRATE</Action>
+        </TransRule>
+        <TransRule>
+            <SrcRegKey>General\NoStartUpDialog</SrcRegKey>
+            <Action>MIGRATE</Action>
+        </TransRule>
+    </AppProfile>
+</Migration>

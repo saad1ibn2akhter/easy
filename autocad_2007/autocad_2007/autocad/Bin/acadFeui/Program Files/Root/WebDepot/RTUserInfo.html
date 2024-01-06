@@ -1,0 +1,405 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTUserInfo+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+		SELECT#FULLSIZE {
+			width: 514px;
+				}
+		
+		SELECT#Gray	{
+			width: 514px;
+			color:#0067cc;
+				}
+		A {cursor:hand;}
+		//--></STYLE>
+			<script><!--
+			SetCountryParms();// -->
+			</script>
+			<script><!--
+	            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<script><!--
+			
+			var save_osernum = osernum;
+			var xmsgTab= "&nbsp;&nbsp;&nbsp;&nbsp;";
+
+			function InitMQLayers() {
+				var sHTML = "";
+				
+				if (optionalmq == "y") {
+					//	all the layers should be empty
+					AppUsageAnswer.innerHTML = sHTML;
+					AppUsageAnswerA.innerHTML = sHTML;
+					AppUsageAnswerB.innerHTML = sHTML;
+					AppOtherInfoLayer.innerHTML = sHTML;
+				} else {
+					//	first Marketing Question
+					sHTML = xmsgTab + xmsgAppUsageQ2 + "<br>";
+					sHTML += xmsgTab + AppUsageHTML + "<br><br>";
+					AppUsageAnswer.innerHTML = sHTML;
+					
+					appusageArray = appusage.split(',', 3);
+					
+					for (i = 0; i < document.RTForm.appusage.length; ++i) {
+						if (document.RTForm.appusage.options[i].value == appusageArray[0]) {
+							document.RTForm.appusage.selectedIndex = i;
+							break;
+						}
+					}
+					
+					//	set the options for question 2 and question 3.
+					onChangeAppUsage();	
+								
+					//	set default selection for question 2
+					if (typeof(appusageArray[1]) != "undefined") {
+						for (i = 0; i < document.RTForm.appusageA.length; ++i) {
+							if (document.RTForm.appusageA.options[i].value == appusageArray[1]) {
+								document.RTForm.appusageA.selectedIndex = i;
+								break;
+							}
+						}
+					}
+					
+					//	set default selection for question 3
+					if (typeof(appusageArray[2]) != "undefined") {
+						for (i = 0; i < document.RTForm.appusageB.length; ++i) {
+							if (document.RTForm.appusageB.options[i].value == appusageArray[2]) {
+								document.RTForm.appusageB.selectedIndex = i;
+								break;
+							}
+						}
+					}			
+					
+					//	dealer block
+					sHTML = xmsgTab + xmsgDealer + "<br>";
+					sHTML += xmsgTab;
+					sHTML += "<input type=\"text\" name=\"dealer\" size=\"82\" maxlength=\"40\">";
+					sHTML += "<br><br>";
+					
+					//	department block - Only if the country is not Japan
+					if (country != "JP") {
+						sHTML += xmsgTab + xmsgDepartment + "<br>";
+						sHTML += xmsgTab;
+						sHTML += "<input type=\"text\" name=\"dept\" size=\"82\" maxlength=\"40\">";
+						sHTML += "<br><br>";
+					}
+					
+					AppOtherInfoLayer.innerHTML = sHTML;
+					document.RTForm.dealer.value = dealer;
+					if (country != "JP") {
+						document.RTForm.dept.value = dept;
+					}
+				}
+			}
+			
+			function SetMQSection()
+			{
+				if (document.RTForm.mq.checked) {
+					optionalmq = "n";
+				} else {
+					optionalmq = "y";
+					
+					//	retrieve Marketing Questions
+					if (typeof(document.RTForm.appusage) != "undefined") {
+						i = document.RTForm.appusage.selectedIndex;
+						appusage = document.RTForm.appusage.options[i].value;
+						appusage += ",";
+						i = document.RTForm.appusageA.selectedIndex;
+						appusage += document.RTForm.appusageA.options[i].value;
+						appusage += ",";
+						i = document.RTForm.appusageB.selectedIndex;
+						appusage += document.RTForm.appusageB.options[i].value;
+					}
+					
+					//	retrieve Dealer
+					if (typeof(document.RTForm.dealer) != "undefined") {
+						dealer = document.RTForm.dealer.value;
+					}
+					
+					//	retrieve Department if the country is not Japan
+					if (country != "JP" &&
+						typeof(document.RTForm.dept) != "undefined") {
+						dept = document.RTForm.dept.value;
+					}
+				}
+				InitMQLayers();
+			}
+			
+			function PickMQText() {
+				if (document.RTForm.mq.checked) {
+					document.RTForm.mq.checked = false;
+				} else {
+					document.RTForm.mq.checked = true;
+				}
+				SetMQSection();
+			}
+			
+			function InitMQSection()
+			{
+				if (optionalmq == "n") {
+					document.RTForm.mq.checked = true;
+				} else {
+					document.RTForm.mq.checked = false;
+				}
+				InitMQLayers();
+			}
+			
+			function PrintAddress1() {
+				document.writeln("<p>");
+				if (country == "JP") {
+					document.writeln(xmsgRedStar+xmsgJPAddress+"<br>");
+				} else {
+					document.writeln(xmsgRedStar+xmsgAddress+"<br>");
+				}
+				document.writeln("<input type=\"text\" name=\"add1\" size=\"82\" maxlength=\"35\">");
+				document.writeln("</p>");
+			}
+			
+			function PrintAddress2() {
+				document.writeln("<p>");
+				if (country == "JP") {
+					document.writeln(xmsgRedStar);
+					document.writeln(xmsgJPAddress2+"<br>");
+				} else {
+					document.writeln(xmsgAddress2+"<br>");
+				}
+				document.writeln("<input type=\"text\" name=\"add2\" size=\"82\" maxlength=\"35\">");
+				document.writeln("</p>");
+			}
+			
+			function PrintAddress3() {
+				document.writeln("<p>");
+				if (country == "JP") {
+					if (customertype == "c") {
+						document.writeln(xmsgRedStar);
+					}
+					document.writeln(xmsgJPAddress3+"<br>");
+				} else {
+					document.writeln(xmsgAddress3+"<br>");
+				}
+				document.writeln("<input type=\"text\" name=\"add3\" size=\"82\" maxlength=\"35\">");
+				document.writeln("</p>");
+			}
+			
+			function PrintCity() {
+				document.writeln(xmsgRedStar+xmsgCity);
+				document.writeln("<br>");
+				document.writeln("<input type=\"text\" name=\"city\" size=\"82\" maxlength=\"25\">");
+				document.writeln("</p>");
+			}
+			
+			function PrintStateProvince() {
+				if (InsertStPrRegText != "") {
+					document.writeln(xmsgRedStar+InsertStPrRegText);
+					document.writeln(InsertStPrRegSelect);
+					document.writeln("</p>");
+				}
+			}
+			
+			function PrintZipcodePostcode() {
+				document.writeln('<p>');
+				if (InsertStPrRegText != "") {
+					document.writeln(xmsgRedStar);
+				}
+				document.writeln(InsertZipPostText+'<br>');
+				document.writeln(InsertZipPostField);
+				document.writeln('</p>');
+			}
+		// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body onload="InitMQSection();">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Begin Reg Info Header-->
+			<script><!--
+				document.writeln(InsertRegInfo);
+				// -->
+			</script>
+			<p><table>
+					<tr>
+						<td><img src="RTError.gif">&nbsp;&nbsp;</td>
+						<td><script><!--
+						document.writeln(xmsgRegInfoMsg2);
+						// -->
+							</script></td>
+					</tr>
+				</table>
+			</p>
+			<!--Insert Customer ID information if Customer ID exists in Buy online case -->
+			<script><!--
+			if (country == "JP" && 
+				rtbuymode == "y" &&
+				custid != "") {
+				document.writeln('<p>\
+				<table border="0" cellpadding="0" cellspacing="1">\
+					<tr>\
+					<td>'+xmsgCustIDTitle1+'&nbsp;</td>\
+		 			<td><font color="'+xmsgDisableColor+'">'+custid+'</font></td>\
+					</tr>\
+					</table></p>');
+			}
+			// -->
+			</script>
+			<!--Insert either company or contact name text block -->
+			<script><!--
+			//	company name information
+			if (customertype == "c") {
+				if (country == "JP") {
+					document.writeln(InsertCompanyJPBlock);
+					document.writeln('<p>'+xmsgRedStar+xmsgKatakana+'</font><br>\
+							<input type="text" name="compkat" size="82" maxlength="80"></p>');
+				} else {
+					document.writeln(InsertCompanyBlock);
+				}
+			}
+			
+			//	Department field for Japan
+			if (country == "JP" &&
+				customertype == "c") {
+				document.writeln('<p>' + xmsgDepartment + '<br>');
+				document.writeln('<input type=\"text\" name=\"dept\" size=\"82\" maxlength=\"40\">');
+				document.writeln('</p>');
+				document.RTForm.dept.value = dept;
+			}
+			
+			//	Insert first name and last name
+			if (country == "JP") {
+				document.writeln('<table width=550 border="0" cellpadding="0" cellspacing="0">');
+				document.writeln('<tr><td>'+xmsgRedStar+xmsgLastnameKanji+'</td>');
+				document.writeln('<td>'+xmsgRedStar+xmsgFirstnameKanji+'</td></tr>');
+				document.writeln('<tr><td><input type="text" name="fname" size="36" maxlength="20"></td>');
+				document.writeln('<td><input type="text" name="fname" size="36" maxlength="20"></td></tr>');
+				document.writeln('<tr><td>&nbsp;</td><td>&nbsp;</td></tr>');
+				document.writeln('<tr><td>'+xmsgRedStar+xmsgLastnameFurigana+'</td>');
+				document.writeln('<td>'+xmsgRedStar+xmsgFirstnameFurigana+'</td></tr>');
+				document.writeln('<tr><td><input type="text" name="lname" size="36" maxlength="20"></td>');
+				document.writeln('<td><input type="text" name="lname" size="36" maxlength="20"></td></tr>');
+				document.writeln('</table>');
+			} else {
+				if (xmsgReverseNameField == true) {
+ 					document.writeln(InsertReverseNameBlock);
+				} else {
+ 					document.writeln(InsertNameBlock);
+ 				}
+ 			}
+			if (SalutationBlock != "") {
+				document.writeln('<p>'+xmsgSalutation+'<br>'+SalutationBlock+'</p>');
+			}
+			// -->
+			</script>
+			<script><!--
+			if (xmsgReverseAddressLayout) {
+				//zipcode / postcode
+				PrintZipcodePostcode();
+
+				//<!--Insert State/Province/Region text if needed, zip/postal code for sure -->
+				PrintStateProvince();
+
+				//<!--Insert City-->
+				PrintCity();
+
+				//<!--Insert Address-->
+				PrintAddress1();
+				PrintAddress2();
+				PrintAddress3();
+			} else {
+				//<!--Insert Address-->
+				PrintAddress1();
+				PrintAddress2();
+				PrintAddress3();
+				
+				//<!--Insert City-->
+				PrintCity();
+				
+				//<!--Insert State/Province/Region text if needed, zip/postal code for sure -->
+				PrintStateProvince();
+				
+				//zipcode / postcode
+				PrintZipcodePostcode();
+			}
+			// -->
+			</script>
+			<script><!--
+				document.writeln('<p>'+xmsgRedStar+xmsgUserContactMsg+'</p>');
+				// -->
+			</script>
+			<!--Insert email-->
+			<script><!--
+				document.writeln('<p>'+xmsgTab+xmsgEmail+'<br>');
+				document.writeln(xmsgTab+xmsgTab+'<input type="text" name="email" size="70" maxlength="70" ID="Text1">');
+				document.writeln('</p>');
+				// -->
+			</script>
+			<!--Insert Phone Number -->
+			<script><!--
+				document.writeln('<p>'+xmsgTab+xmsgPhone+'<br>');
+				document.writeln(xmsgTab+xmsgTab+xmsgArea+'<input type="text" name="phonearea" size="5" maxlength="5">'+
+								 xmsgTab+xmsgNumber+'<input type="text" name="phonenumber" size="22" maxlength="22">');
+				if (showExtFlag) {		
+					document.writeln(xmsgTab+xmsgExt+'<input type="text" name="phoneext" size="10" maxlength="10">');
+				}
+				document.writeln('</p>');
+				// -->
+			</script>
+			<!--Insert Fax Number -->
+			<script><!--
+				document.writeln('<p>'+xmsgTab+xmsgFax+'<br>');
+				document.writeln(xmsgTab+xmsgTab+xmsgArea+'<input type="text" name="faxarea" size="5" maxlength="5">'+
+							xmsgTab+xmsgNumber+'<input type="text" name="faxnumber" size="22" maxlength="22">');
+				if (showExtFlag) {		
+					document.writeln(xmsgTab+xmsgExt+'<input type="text" name="faxext" size="10" maxlength="10">');
+				}
+				document.writeln('</p>');
+				// -->
+			</script>
+			<!--Insert App Usage-->
+			<script><!--
+				document.writeln("<p>" + xmsgAppUsageQ1);
+				document.writeln("<br>");
+				document.writeln("<input type=\"checkbox\" name=\"mq\" onclick=\"SetMQSection();\">");
+				document.writeln("<a onclick=\"PickMQText();\">");
+				document.writeln(xmsgAppUsageRequired+"</a></p>");
+				// -->
+			</script>
+			<span id="AppUsageAnswer"></span>
+			<span id="AppUsageAnswerA"></span>
+			<span id="AppUsageAnswerB"></span>
+			<!--Insert Dealer and Department -->
+			<span id="AppOtherInfoLayer"></span>
+			<script><!--
+				
+				//	Privacy Statement		
+				document.writeln('<p><font size="1">'+xmsgPrivacy()+'</font></p>');
+					
+				StartNavigationButtons();
+				
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'> ');
+				document.writeln('<input type="button" value="'+xmsgNext+'" onclick=\'location.href="RTConfirm.html" + "?p=" + escape(userTempPath)\'> ');
+				document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'> ');
+				EndNavigationButtons();
+				// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

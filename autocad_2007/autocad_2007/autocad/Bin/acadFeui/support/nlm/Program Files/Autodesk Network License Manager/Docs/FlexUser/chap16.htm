@@ -1,0 +1,273 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="STGsans80" />
+    <meta name="LASTUPDATED" content="05/25/05 11:24:05" />
+    <title>IPv6 Support in FLEXnet Licensing</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="contents" title="Table of Contents" href="TOC.htm" />
+<link rel="index" title="Index" href="IX.htm" />
+<link rel="first" title="First" href="TOC.htm" />
+<link rel="last" title="Last" href="IX.htm" />
+<link rel="previous" title="Previous" href="chap15.htm" />
+<link rel="next" title="Next" href="chap17.htm" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <table id="SummaryNotReq1" width="220" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq1" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap15.htm"><img id="LongDescNotReq2" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap17.htm"><img id="LongDescNotReq3" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq4" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <img border="0" src="graphics/FLEXnetPubl.gif">
+    </p>
+    <hr align="left" />
+
+    <blockquote>
+<a name="wp916895"> </a><h2 class="pAppTitle">
+IPv6 Support in FLEXnet Licensing
+</h2>
+<a name="wp922985"> </a><h2 class="pAppNum">
+<p align=right> Appendix H</p>
+</h2>
+<hr /><a name="wp923322"> </a><p class="pBody">
+Internet Protocol version 6 (IPv6) is a suite of standard protocols that is the next generation of network layer protocols for the internet. This chapter describes IPv6 support in FLEXnet Licensing. FLEXnet Licensing can support a heterogeneous mixture of IPv4-only, IPv6-only, and dual IPv4/IPv6 machines in both client (machine on which the FLEXenabled product resides) and server (machine on which the FLEXnet license server system resides) roles.
+</p>
+<a name="wp923810"> </a><p class="pBody">
+An IPv6 address can be used as a FLEXnet Licensing hostid in these contexts within the FLEXnet Licensing paradigm:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp923814"> </a><div class="pSmartList1"><li>In a license file SERVER line to specify the license server system machine</li></div>
+<a name="wp923815"> </a><p class="pIndented2Relative">
+An IPv6 address is used as a hostid to define which machine is authorized to run a license server system that serves licenses to your publisher&#39;s FLEXenabled product. See <a href="chap10.htm#wp920358">&quot;SERVER Lines&quot; </a> for information on how IP addresses can be used in SERVER lines.
+</p>
+<a name="wp923819"> </a><div class="pSmartList1"><li>In license file FEATURE and INCREMENT lines</li></div>
+<a name="wp923820"> </a><p class="pIndented2Relative">
+An IPv6 address is used to lock the feature to a particular machine. See <a href="chap9.htm">Appendix A, &quot;Hostids for FLEXnet Licensing-Supported Platforms,&quot; </a>for more information on how IP addresses can be used as hostids.
+</p>
+<a name="wp923821"> </a><div class="pSmartList1"><li>In an options file to specify host restrictions</li></div>
+<a name="wp923822"> </a><p class="pIndented2Relative">
+An IPv6 address can be used in a HOST type specification with these keywords to specify the restriction: EXCLUDE, EXCLUDEALL, EXCLUDE_BORROW, INCLUDE, INCLUDEALL, INCLUDE_BORROW, MAX, and RESERVE. Additionally, it can be used in a HOST_GROUP keyword. See <a href="chap5.htm#wp894551">&quot;Feature Specification&quot; </a>for more information on how IP addresses can be used in this context.
+</p>
+</ul></div>
+<a name="wp923805"> </a><h3 class="pHeading2">
+	FLEXnet Licensing IPv6 Support
+</h3>
+<a name="wp923856"> </a><p class="pBody">
+In order for you to take advantage of IPv6 support in FLEXnet Licensing, you need to determine the level of support your publisher provides. Consult <a href="chap16.htm#wp924546">Table H-1</a>for the possible client (machine on which the FLEXenabled product resides) and server (machine on which the FLEXnet license server system resides) combinations supported by FLEXnet Licensing. Of these supported configurations, find out from your publisher the ones that he specifically supports.
+</p>
+<a name="wp924647"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="1" cellpadding="10" id="wp924546table924543">
+  <caption><a name="wp924546"> </a><div class="pTableTitle">
+Table H-1: 	Client/Server Compatibility Matrix
+</div>
+</caption>
+  <tr align="left">    <td colspan="2" rowspan="2">&#160;</td>
+    <td colspan="4" rowspan="1"><a name="wp924565"> </a><div class="pCellHeading">
+FLEXnet License Server Machine
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp924577"> </a><div class="pCellHeading">
+IPv4-only 
+</div>
+</td>
+    <td><a name="wp924579"> </a><div class="pCellHeading">
+Dual IPv4/IPv6<br />Stack
+</div>
+</td>
+    <td><a name="wp924581"> </a><div class="pCellHeading">
+IPv6-only
+</div>
+</td>
+    <td><a name="wp924583"> </a><div class="pCellHeading">
+No server
+</div>
+</td>
+</tr>
+  <tr align="left">    <td colspan="1" rowspan="5"><a name="wp924588"> </a><div class="pCellHeading">
+FLEXenabled Application Machine
+</div>
+</td>
+    <td><a name="wp924590"> </a><div class="pCellHeading">
+IPv4-only
+</div>
+</td>
+    <td colspan="1" rowspan="3"><a name="wp924592"> </a><div class="pCellBody">
+Use IPv4 addresses only.
+</div>
+</td>
+    <td><a name="wp924594"> </a><div class="pCellBody">
+Use IPv4 addresses only.
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924596"> </a><div class="pCellBody">
+Not supported.
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924598"> </a><div class="pCellBody">
+Use IPv4 addresses only.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp924602"> </a><div class="pCellHeading">
+Dual Stack, uses IPv4 address only
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924606"> </a><div class="pCellBody">
+Use IPv4, IPv6, or both addresses.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp924614"> </a><div class="pCellHeading">
+Dual Stack, uses both IPv4 and IPv6 addresses
+</div>
+</td>
+    <td colspan="1" rowspan="3"><a name="wp924620"> </a><div class="pCellBody">
+Use IPv6 addresses only.
+</div>
+</td>
+    <td><a name="wp924662"> </a><div class="pCellBody">
+Use IPv4, IPv6, or both addresses.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp924626"> </a><div class="pCellHeading">
+Dual Stack, uses IPv6 address only
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924628"> </a><div class="pCellBody">
+Not supported.
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924630"> </a><div class="pCellBody">
+Use IPv6 addresses only.
+</div>
+</td>
+    <td colspan="1" rowspan="2"><a name="wp924672"> </a><div class="pCellBody">
+Use IPv6 addresses only.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp924638"> </a><div class="pCellHeading">
+IPv6-only
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp924519"> </a><h5 class="pHeading4">
+IPv6-Aware FLEXnet Licensing Components
+</h5>
+<a name="wp924520"> </a><p class="pBody">
+Your publisher needs to provide IPv6-aware components. These components are used on IPv6-only and dual IPv4/IPv6 machines; they will not work on IPv4-only machines. Consult your publisher&#39;s installation instructions for specific details on how these components are packaged. 
+</p>
+<a name="wp923990"> </a><h5 class="pHeading4">
+What to Tell Your Publisher
+</h5>
+<a name="wp923994"> </a><p class="pBody">
+You need to survey your environment to determine your IPv4-only, IPv6-only, and dual IPv4/IPv6 machines that are involved in your FLEXnet Licensing ecosystem. Provide your publisher with the hostids for those machines you plan to host the FLEXenabled product and those you plan to host the FLEXnet licenser server system.
+</p>
+<a name="wp924038"> </a><p class="pBody">
+With this information, your publisher can create license certificates locked to the appropriate machines.
+</p>
+<a name="wp924039"> </a><h3 class="pHeading2">
+	Using IPv6 Addresses in the Options File
+</h3>
+<a name="wp924046"> </a><p class="pBody">
+Both IPv6 and IPv4 addresses can be used in the HOST_GROUP keyword and options file type specifications. To specify restrictions for dual IPv4/IPv6 machines, consider specifying both addresses. The wildcard character, &quot;<code class="cCode">*</code>,&quot; may be used in place of an entire field or on a byte-by-byte basis to specify a range of addresses without having to list them all. See <a href="chap5.htm#wp917613">&quot;Type Specification&quot; </a>
+</p>
+<a name="wp924764"> </a><p class="pBody">
+for further information.
+</p>
+<table>
+<tr>
+  <td colspan=2><hr color=#006666 width=600 /> </td>
+</tr>
+<tr>
+  <td width=50> <img src="graphics/BALL.gif"> </td>
+  <td align=left valign=middle> <h3 class="pHeading2">FLEXnet Licensing Version Notes </h3></td>
+</tr>
+</table>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp924074"> </a><div class="pSmartList1"><li>IPv6 address support introduced in FLEXnet Licensing v10.8.</li></div>
+</ul></div>
+<table>
+<tr>
+<td>
+<hr color=#006666 align=left width=600/>
+</td>
+</tr>
+</table>
+    </blockquote>
+
+    <hr />
+
+    <table align="right" border="0" cellspacing="0" cellpadding="0">
+    <td align="right" width="200" height="85">
+    <map name="FPMap0">
+    <area href="http://www.macrovision.com" shape="rect" coords="4, 0, 199, 33">
+    <area href="http://www.macrovision.com" shape="rect" coords="1, 40, 199, 57"></map><img border="0" src="graphics/gsitoplogo.gif" usemap="#FPMap0" /></td>
+    <td align="right" width="200" height="85">
+    <map name="FPMap1">
+    <area href="mailto:support@macrovision.com" shape="rect" coords="9, 70, 151, 99"></map><img border="0" src="graphics/footerAddress.gif" usemap="#FPMap1" /></td>
+</table>
+         
+ <p>&nbsp;</p>
+ 
+   <table id="SummaryNotReq2" width="220" border="0" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq5" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap15.htm"><img id="LongDescNotReq6" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap17.htm"><img id="LongDescNotReq7" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq8" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+      <table align="left">
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2"><i>
+        FLEXnet </i></font><i><font face="Verdana" size="2">Licensing End User 
+        Guide</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">Version 10.8</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">May 2005</font></i></td>
+      </tr>
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2">
+        <a href="cpyrt.htm">copyright</a></font></td>
+      </tr>
+    </table>
+
+    
+  </body>
+</html>

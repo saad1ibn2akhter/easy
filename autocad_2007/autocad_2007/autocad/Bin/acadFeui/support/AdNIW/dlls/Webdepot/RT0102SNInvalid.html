@@ -1,0 +1,113 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRT010203071213CannotCompErrA+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script><!--
+	    var defaulturl;
+	    // setdefurl() is called on page load & puts the selected radio button
+	    // value (an html page) into the variable defaulturl.  The Next button
+	    // uses defaulturl to go to the proper page.
+	    function setdefurl() {
+		      for (i=0; i<document.RTForm.selradio.length; i++) {
+			    if (document.RTForm.selradio[i].checked) {
+			      defaulturl = document.RTForm.selradio[i].value + "?p=" + escape(userTempPath);
+			    }
+		      }
+	    }
+	    // seturl() is called on radio button click to update defaulturl
+	    // at runtime.  The Next button uses defaulturl to go to the proper page.
+	    function seturl (url) {
+	        defaulturl = url + "?p=" + escape(userTempPath);
+	      }
+		
+		// clicked on the text beside the radio will select the associated radio button
+		function selectRadio (curRadio) {
+		      for (i=0; i<document.RTForm.selradio.length; i++) {
+				if (i == curRadio) {
+					document.RTForm.selradio[i].checked = true;
+					defaulturl = document.RTForm.selradio[i].value + "?p=" + escape(userTempPath);
+				} else {
+					document.RTForm.selradio[i].checked = false;
+				}
+		      }
+		}
+		  
+		//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+		document.onkeydown = gotoPrevPage;
+
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Registration Error Info -->
+			<table ID="Table1">
+				<tr align="center">
+					<td><img src="RTError.gif"></td>
+					<td><b><script><!--
+				document.writeln(xmsgRegError1_2Hdr);
+				document.writeln(" (" + rterrnum + ')');// -->
+							</script></b></td>
+				</tr>
+			</table>
+			<script><!--
+			document.writeln(xmsgRegError1_2Msg);
+			
+			//	Use another method
+			var otherMethodURL = szRTEmail + "?p=" + escape(userTempPath);
+			document.writeln("<p><a href=\""+ otherMethodURL +"\">");
+			if (reqtype == 3) {
+				document.writeln(xmsgOtherMethodMsg1NSA);
+			} else {
+				document.writeln(xmsgOtherMethodMsg1);
+			}
+			document.writeln("</a><br>");
+			
+			//	Contact Autodesk
+			otherMethodURL = "RTContactAutodesk.html?p=" + escape(userTempPath);
+			document.writeln("<a href=\""+ otherMethodURL +"\">");
+			document.writeln(xmsgContactAutodesk);
+			document.writeln("</a></p>");
+			
+			document.writeln(xmsgRegError1_2Msg2);
+
+			document.writeln("<p>"+xmsgFormWebData2+"</p>");
+			// -->
+			</script>
+			<script><!--
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-2)"\'>');
+			document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+			document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

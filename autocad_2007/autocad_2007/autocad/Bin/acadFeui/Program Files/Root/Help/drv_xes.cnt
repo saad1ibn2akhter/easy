@@ -1,0 +1,45 @@
+:Base DRV_XES.hlp
+:Title Xerox Wide Format HDI Driver Custom Properties
+1 Xerox Wide Format Plotter Configuration
+2 Xerox Wide Format Plotter Configuration Information
+3 Overview=Install_ID
+3 Supported Printers=Supported_Printers
+3 Standard Features=Standard_Features
+3 Installation=Installation
+2 Xerox Wide Format Custom Properties Dialog Box
+3 Overview=XESCustomPropertiesDialog
+3 Override Device Settings=Override_Device_Settings
+3 Edit Custom Properties=Edit_Custom_Properties
+3 Gamma Correction=Gamma_Correction
+3 Firmware Version=Firmware_Version
+3 Use Metric Units=Metric_Units
+2 Xerox Wide Format Options Tab
+3 Overview=Options_ID
+3 Owner=Owner
+3 Mirror Image=Mirror_Image
+3 Document Type=Document Type
+3 Banner=Banner
+3 Finishing=Finishing_ID
+2 Xerox Wide Format Label Tab
+3 Overview=Label_ID
+3 Label Choice=Label_Choice
+3 User Label Includes=User_Label_Includes
+3 User Label Position=User_Label_Position
+3 Label Size=Label_Size
+3 Label Shading=Label_Shading
+3 Other Comments to include on plot=Other_Comments
+2 Xerox Wide Format Raster Stamp Tab
+3 Overview=Raster_ID
+3 Raster Stamp Selection=Raster_Stamp_Selection
+3 Edit Stamp Names=Edit_Stamp_Names
+3 Scaling Factor=Scaling_Factor
+3 Raster Stamp Placement=Raster_Stamp_Placement
+2 Xerox Wide Format Edit Stamp Names Dialog Box
+3 Overview=Edit_Stamp_ID
+2 Xerox Wide Format Advanced Tab
+3 Overview=Advanced_ID
+3 Printer Accounting Options=Account_Action_ID
+3 Mismatch Mode Actions=Mismatch_Action_ID
+3 Plot Nesting Options=Nesting_ID
+3 Rendering=Rendering
+3 Enter Account Numbers=Enter_Account_ID

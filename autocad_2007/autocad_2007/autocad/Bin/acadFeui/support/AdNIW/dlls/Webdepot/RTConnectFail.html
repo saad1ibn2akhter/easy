@@ -1,0 +1,166 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<script src="RTTempPath.js"></script>
+	<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+
+			var i = document.URL.lastIndexOf("/");
+			var j = document.URL.lastIndexOf("\\");
+			var curPath = document.URL.substring(i+1, j+1);
+		// -->
+	</script>
+	<script src="RTResource.js"></script>
+	<script src="RTResStrings.js"></script>
+	<script src="RTCountry.js"></script>
+	<script src="RTVersion.js"></script>
+	<script><!--
+            document.writeln('<title>'+xmsgRTConnectFail+'</title>');// -->
+		// -->
+	</script>
+	<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	<head>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script><!--
+		    SetCountryParms();// -->
+			</script>
+			<script><!--
+	    var defaulturl;
+	    var previousurl;
+	    
+	    if (rtconnectfailpage == "RTConnectLive.html") {
+			previousurl = "file://" + userTempPath + rtconnectfailpage + "?p=" + escape(curPath);
+	    } else {
+			previousurl = rtconnectfailpage + "?p=" + escape(userTempPath);
+	    }
+	    
+	    function goBack() {
+			location.href="javascript:history.go(-1)";
+	    }
+	    
+	    // setdefurl() is called on page load & puts the selected radio button
+	    // value (an html page) into the variable defaulturl.  The Next button
+	    // uses defaulturl to go to the proper page.
+	    function setdefurl() {
+			  //	make sure one of the radio buttons is selected
+			  onInitRadioButton(1);
+
+		      for (i=0; i<document.RTForm.selradio.length; i++) {
+			    if (document.RTForm.selradio[i].checked) {
+					if (i == 0) {
+						if (rtAuthReturnPage == "RTConnectLive.html") {
+							defaulturl = "file://" + userTempPath + document.RTForm.selradio[i].value + "?p=" + escape(curPath);
+						} else {
+							defaulturl = rtAuthReturnPage + "?p=" + escape(userTempPath);
+						}
+					} else {
+						defaulturl = document.RTForm.selradio[i].value + "?p=" + escape(userTempPath);
+					}
+			    }
+		      }
+	    }
+	    // seturl() is called on radio button click to update defaulturl
+	    // at runtime.  The Next button uses defaulturl to go to the proper page.
+	    function seturl (url) {
+			if (url == "RTConnectLive.html") {
+				defaulturl = "file://" + userTempPath + url + "?p=" + escape(curPath);
+			} else {
+				defaulturl = url + "?p=" + escape(userTempPath);
+			}
+	      }
+		
+		// clicked on the text beside the radio will select the associated radio button
+		function selectRadio (curRadio) {
+		      for (i=0; i<document.RTForm.selradio.length; i++) {
+				if (i == curRadio) {
+					document.RTForm.selradio[i].checked = true;
+					if (i == 0) {
+						defaulturl = "file://" + userTempPath + document.RTForm.selradio[i].value + "?p=" + escape(curPath);
+					} else {
+						defaulturl = document.RTForm.selradio[i].value + "?p=" + escape(userTempPath);
+					}
+				} else {
+					document.RTForm.selradio[i].checked = false;
+				}
+		      }
+		}
+		  
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+	</head>
+	<body onload="setdefurl()">
+		<form name="RTForm">
+			<table width="560" border="0" cellpadding="0" cellspacing="0" ID="Table1">
+				<script src="RTHeader.js"></script>
+				<tr>
+					<td width="21"></td>
+					<td width="1"></td>
+					<td width="538" valign="top" align="left">
+						<!--Begin Software Information table -->
+						<script src="RTSoftwareSection.js"></script>
+						<hr>
+						<img height="30" width="29" src="RTError.gif"> <b>
+							<script><!--
+					document.writeln(xmsgRegConnError);// -->
+							</script>
+						</b>
+						<p>
+							<script><!--
+					document.writeln(xmsgRegConnErrorTxt);// -->
+							</script>
+						</p>
+						<p><input type="radio" value="RTConnectLive.html" name="selradio" checked onclick="seturl('RTConnectLive.html');">
+							<a onclick="selectRadio(0);">
+								<script><!--
+					document.writeln(xmsgTryAgain);// -->
+								</script>
+							</a>
+						</p>
+						<p>
+							<script><!--
+					document.writeln("<input type=\"radio\" value=\""+ szRTEmail +"\" name=\"selradio\" checked onclick=\"selectRadio(1);\">");
+							// -->
+							</script>
+							<a onclick="selectRadio(1);">
+								<script><!--
+					document.writeln(xmsgUseOtherMethod);// -->
+								</script>
+							</a>
+						</p>
+						<p><input type="radio" value="RTContactAutodesk.html" name="selradio" onclick="seturl('RTContactAutodesk.html');">
+							<a onclick="selectRadio(2);">
+								<script><!--
+					document.writeln(xmsgContactAutodesk);// -->
+								</script>
+							</a>
+						</p>
+						<p><hr>
+						</p>
+						<!--Table Footer -->
+						<table width="516" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td valign="top" align="center">
+									<script><!--
+					document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'goBack()\'>');
+					document.writeln('<input type="button" value="'+xmsgNext+'" onclick="setdefurl(); location.href=defaulturl">');
+					document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>  ');
+					// -->
+									</script>
+								</td>
+							</tr>
+							<script><!--
+						document.writeln(xmsgVersionBlock);// -->
+							</script>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

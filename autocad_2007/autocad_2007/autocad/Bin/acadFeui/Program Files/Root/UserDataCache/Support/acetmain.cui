@@ -1,0 +1,1527 @@
+<?xml version="1.0"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose customization and migration functionality.
+If you need to change information in the customization file, use the Customize User Interface dialog box in the product.
+To access the Customize User Interface dialog box, click the Tools menu > Customize > Interface, or enter CUI on the command line. 
+-->
+<CustSection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileVersion MajorVersion="0" MinorVersion="3" IncrementalVersion="2" UserVersion="0" />
+  <Header>
+    <CommonConfiguration>
+      <CommonItems>
+        <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+      </CommonItems>
+    </CommonConfiguration>
+    <WorkspaceRoot>
+      <WorkspaceConfigRoot />
+    </WorkspaceRoot>
+  </Header>
+  <MenuGroup Name="EXPRESS">
+    <MacroGroup Name="EXPRESSMacros" Citizen="A">
+      <MenuMacro UID="ID_ACETXRFLST">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0034">List Xref/Block Properties</Name>
+          <Command>^C^Cxlist  </Command>
+          <HelpString xlate="true" UID="XLS_0296">Displays properties of objects nested in blocks and external references: XLIST</HelpString>
+          <SmallImage Name="et_XRFLST16.BMP" />
+          <LargeImage Name="et_XRFLST24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETNCOPY">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0036">Copy Nested Objects</Name>
+          <Command>^C^Cncopy  </Command>
+          <HelpString xlate="true" UID="XLS_0338">Copies objects nested inside blocks and external references: NCOPY</HelpString>
+          <SmallImage Name="et_NCOPY16.BMP" />
+          <LargeImage Name="et_NCOPY24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTRMBLK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0038">Trim to Nested Objects</Name>
+          <Command>^C^Cbtrim  </Command>
+          <HelpString xlate="true" UID="XLS_0309">Trims to objects nested in blocks and external references: BTRIM</HelpString>
+          <SmallImage Name="et_TRMBLK16.BMP" />
+          <LargeImage Name="et_TRMBLK24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETEXTBLK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0040">Extend to Nested Objects</Name>
+          <Command>^C^Cbextend  </Command>
+          <HelpString xlate="true" UID="XLS_0288">Extends to objects nested in blocks and external references: BEXTEND</HelpString>
+          <SmallImage Name="et_EXTBLK16.BMP" />
+          <LargeImage Name="et_EXTBLK24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETBURST">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0042">Explode Attributes to Text</Name>
+          <Command>^C^Cburst  </Command>
+          <HelpString xlate="true" UID="XLS_0332">Explodes block and converts attributes to text: BURST</HelpString>
+          <SmallImage Name="et_BURST16.BMP" />
+          <LargeImage Name="et_BURST24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETSHPBLK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0044">Convert Shape to Block</Name>
+          <Command>^C^Cshp2blk  </Command>
+          <HelpString xlate="true" UID="XLS_0329">Converts from a shape definition to  a block definition: SHP2BLK</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETATTOUT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0046">Export Attribute Information</Name>
+          <Command>^C^Cattout  </Command>
+          <HelpString xlate="true" UID="XLS_0264">Extracts attribute information from the drawing: ATTOUT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETATTIN">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0048">Import Attribute Information</Name>
+          <Command>^C^Cattin  </Command>
+          <HelpString xlate="true" UID="XLS_0271">Inserts attribute information into the drawing: ATTIN</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETBLOCKTOXREF">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0050">Convert block to xref</Name>
+          <Command>^C^Cblocktoxref  </Command>
+          <HelpString xlate="true" UID="XLS_0258">Convert a specified block and all of inserts of it to an xref: BLOCKTOXREF</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETBLOCKREPLACE">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0052">Replace block with another block</Name>
+          <Command>^C^Cblockreplace  </Command>
+          <HelpString xlate="true" UID="XLS_0279">Replace all inserts of one block with inserts of another: BLOCKREPLACE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETRTEXT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0055">Remote Text</Name>
+          <Command>^C^Crtext  </Command>
+          <HelpString xlate="true" UID="XLS_0325">Inserts or edits a remote text object: RTEXT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTXTFIT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0057">Text Fit</Name>
+          <Command>^C^Ctextfit  </Command>
+          <HelpString xlate="true" UID="XLS_0295">Fits text between specified points: TEXTFIT</HelpString>
+          <SmallImage Name="et_TXTFIT16.BMP" />
+          <LargeImage Name="et_TXTFIT24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTXTMSK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0059">Text Mask</Name>
+          <Command>^C^Ctextmask  </Command>
+          <HelpString xlate="true" UID="XLS_0323">Places a mask behind selected text: TEXTMASK</HelpString>
+          <SmallImage Name="et_TXTMSK16.BMP" />
+          <LargeImage Name="et_TXTMSK24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTXTUMSK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0061">Unmask Text</Name>
+          <Command>^C^Ctextunmask  </Command>
+          <HelpString xlate="true" UID="XLS_0324">Removes a mask from behind selected text: TEXTUNMASK</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTXTEXP">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0063">Explode Text</Name>
+          <Command>^C^Ctxtexp  </Command>
+          <HelpString xlate="true" UID="XLS_0277">Explodes text into polylines: TXTEXP</HelpString>
+          <SmallImage Name="et_txtexp16.BMP" />
+          <LargeImage Name="et_txtexp24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTXT2MT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0065">Convert Text to Mtext</Name>
+          <Command>^C^Ctxt2mtxt  </Command>
+          <HelpString xlate="true" UID="XLS_0256">Converts text created with TEXT or DTEXT to multiline text: TXT2MTXT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETARCTXT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0067">Arc-Aligned Text</Name>
+          <Command>^C^C_.arctext  </Command>
+          <HelpString xlate="true" UID="XLS_0269">Creates text following a selected arc: ARCTEXT</HelpString>
+          <SmallImage Name="et_ARCTXT16.BMP" />
+          <LargeImage Name="et_ARCTXT24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTJUST">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0069">Justify Text</Name>
+          <Command>^C^Ctjust  </Command>
+          <HelpString xlate="true" UID="XLS_0320">Justifies text created with MTEXT and ATTDEF: TJUST</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTORIEN">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0071">Rotate Text</Name>
+          <Command>^C^Ctorient  </Command>
+          <HelpString xlate="true" UID="XLS_0260">Rotates text, multiline text, and block attribute objects to new orientation: TORIENT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTCIRCL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0073">Enclose Text with Object</Name>
+          <Command>^C^Ctcircle  </Command>
+          <HelpString xlate="true" UID="XLS_0292">Surrounds text or multiline text with circles, slots, or rectangles: TCIRCLE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTCOUNT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0075">Automatic Text Numbering</Name>
+          <Command>^C^Ctcount  </Command>
+          <HelpString xlate="true" UID="XLS_0259">Adds sequential numbering to text objects: TCOUNT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETTCASE">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0077">Change Text Case</Name>
+          <Command>^C^Ctcase  </Command>
+          <HelpString xlate="true" UID="XLS_0291">Changes the case of selected text: TCASE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETASPACE">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0082">Align Space</Name>
+          <Command>^C^Calignspace  </Command>
+          <HelpString xlate="true" UID="XLS_0315">Aligns model space objects in different viewports with each other or with objects in paper space: ALIGNSPACE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETVPSYNC">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0084">Synchronize Viewports</Name>
+          <Command>^C^Cvpsync  </Command>
+          <HelpString xlate="true" UID="XLS_0321">Synchronizes one or more viewports with a master viewport: VPSYNCH</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETVPSCAL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0086">List Viewport Scale</Name>
+          <Command>^C^Cvpscale  </Command>
+          <HelpString xlate="true" UID="XLS_0322">Lists the scale of a selected viewport: VPSCALE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETLAYOUTMRG">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0088">Merge Layout</Name>
+          <Command>^C^Clayoutmerge  </Command>
+          <HelpString xlate="true" UID="XLS_0286">Merges the objects from other layouts into one layout and saves corresponding views: LAYOUTMERGE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETQLATCH">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0092">Attach Leader to Annotation</Name>
+          <Command>^C^C_.qlattach  </Command>
+          <HelpString xlate="true" UID="XLS_0304">Associate a leader to an annotation object: QLATTACH</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETQLDTCH">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0094">Detach Leaders from Annotation</Name>
+          <Command>^C^C_.qldetachset  </Command>
+          <HelpString xlate="true" UID="XLS_0281">Dissassociates selected leaders from an annotation: QLDETACHSET</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETQLATAL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0096">Global Attach Leader to Annotation</Name>
+          <Command>^C^C_.qlattachset  </Command>
+          <HelpString xlate="true" UID="XLS_0331">Associates selected leaders with a likely annotation: QLATTACHSET</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETDIMEX">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0098">Dimstyle Export...</Name>
+          <Command>^C^C_.dimex  </Command>
+          <HelpString xlate="true" UID="XLS_0294">Saves dimension styles to a file: DIMEX</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETDIMIM">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0100">Dimstyle Import...</Name>
+          <Command>^C^C_.dimim  </Command>
+          <HelpString xlate="true" UID="XLS_0308">Imports dimension styles saved to a file using DIMEX: DIMIM</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETDIMASSOC">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0102">Reset Dim Text Value</Name>
+          <Command>^C^Cdimreassoc  </Command>
+          <HelpString xlate="true" UID="XLS_0299">Re-associates dimensions: DIMREASSOC</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETGETSEL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0105">Get Selection Set</Name>
+          <Command>^C^Cgetsel  </Command>
+          <HelpString xlate="true" UID="XLS_0313">Selects specific types of objects: GETSEL</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETFSTSEL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0107">Fast Select</Name>
+          <Command>'fs  </Command>
+          <HelpString xlate="true" UID="XLS_0302">Selects objects that touch a specified object: FS</HelpString>
+          <SmallImage Name="et_FSTSEL16.BMP" />
+          <LargeImage Name="et_FSTSEL24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETMSTRCH">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0110">Multiple Object Stretch</Name>
+          <Command>^C^Cmstretch  </Command>
+          <HelpString xlate="true" UID="XLS_0337">Stretches objects with multiple selection windows: MSTRETCH</HelpString>
+          <SmallImage Name="et_MSTRCH16.BMP" />
+          <LargeImage Name="et_MSTRCH24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETMOCORO">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0112">Move/Copy/Rotate</Name>
+          <Command>^C^C_.MOCORO  </Command>
+          <HelpString xlate="true" UID="XLS_0257">Moves, copies, rotates, and scales objects: MOCORO</HelpString>
+          <SmallImage Name="et_MOCORO16.BMP" />
+          <LargeImage Name="et_MOCORO24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETCLIPIT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0114">Extended Clip</Name>
+          <Command>^C^Cclipit  </Command>
+          <HelpString xlate="true" UID="XLS_0342">Adds arc, circle, and polyline capability to XCLIP: CLIPIT</HelpString>
+          <SmallImage Name="et_CLIPIT16.BMP" />
+          <LargeImage Name="et_CLIPIT24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETCDORDER">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0118">DrawOrder by color</Name>
+          <Command>^C^Ccdorder  </Command>
+          <HelpString xlate="true" UID="XLS_0328">Aranges draw order of objects based on color: CDORDER</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETOVERKILL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0120">Delete duplicate objects</Name>
+          <Command>^C^Coverkill  </Command>
+          <HelpString xlate="true" UID="XLS_0255">Cleans up overlapping geometry by removing duplicated and/or unneeded objects: OVERKILL</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETFLATTEN">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0122">Flatten objects</Name>
+          <Command>^C^CFlatten  </Command>
+          <HelpString xlate="true" UID="XLS_0274">Converts 3D geometry to 2D: FLATTEN</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETCOPYM">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0124">Multiple Copy</Name>
+          <Command>^C^Ccopym  </Command>
+          <HelpString xlate="true" UID="XLS_0285">Copies objects multiple times with options to repeat, divide, measure, and array: COPYM</HelpString>
+          <SmallImage Name="et_COPYM16.BMP" />
+          <LargeImage Name="et_COPYM24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETEXOFFSET">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0126">Extended Offset</Name>
+          <Command>^C^Cexoffset  </Command>
+          <HelpString xlate="true" UID="XLS_0284">Enhances OFFSET: EXOFFSET</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETBREAKL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0129">Break-line Symbol</Name>
+          <Command>^C^Cbreakline  </Command>
+          <HelpString xlate="true" UID="XLS_0265">Creates polylines and inserts break-line symbol: BREAKLINE</HelpString>
+          <SmallImage Name="et_BREAKL16.BMP" />
+          <LargeImage Name="et_BREAKL24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETSHATCH">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0131">Super Hatch...</Name>
+          <Command>^C^C_superhatch  </Command>
+          <HelpString xlate="true" UID="XLS_0268">Uses images, blocks, external references, or wipeouts as hatch patterns: SUPERHATCH</HelpString>
+          <SmallImage Name="et_SHATCH16.BMP" />
+          <LargeImage Name="et_SHATCH24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETMOVEBAK">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0134">Move Backup Files</Name>
+          <Command>^C^Cmovebak  </Command>
+          <HelpString xlate="true" UID="XLS_0300">Moves saved AutoCAD backup files to a directory: MOVEBAK</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETPLT2DW">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0136">Convert PLT to DWG</Name>
+          <Command>^C^Cplt2dwg  </Command>
+          <HelpString xlate="true" UID="XLS_0276">Imports HP-GL files into the current drawing session: PLT2DWG</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETIMGEDT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0138">Edit Image</Name>
+          <Command>^C^Cimageedit  </Command>
+          <HelpString xlate="true" UID="XLS_0293">Launches an image editor application for editing a selected image: IMAGEEDIT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETREDIR">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0140">Redefine Path</Name>
+          <Command>^C^Credir  </Command>
+          <HelpString xlate="true" UID="XLS_0287">Redefines the paths in external references, images, shapes, and fonts: REDIR</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETPROPULATE">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0142">Update Drawing Property Data</Name>
+          <Command>^C^CPropulate  </Command>
+          <HelpString xlate="true" UID="XLS_0318">Updates, lists, and clears drawing property information: PROPULATE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETSAVEALL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0144">Save All Drawings</Name>
+          <Command>^C^Csaveall  </Command>
+          <HelpString xlate="true" UID="XLS_0333">Saves all open drawings: SAVEALL</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETCLOSEALL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0146">Close All Drawings</Name>
+          <Command>^C^Ccloseall  </Command>
+          <HelpString xlate="true" UID="XLS_0314">Closes all open drawings: CLOSEALL</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETQQUIT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0148">Quick Exit</Name>
+          <Command>^C^Cqquit  </Command>
+          <HelpString xlate="true" UID="XLS_0317">Closes all drawings and exits: QQUIT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETREVERT">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0150">Revert to Original</Name>
+          <Command>^C^Crevert  </Command>
+          <HelpString xlate="true" UID="XLS_0319">Closes the current drawing and re-opens the original version: REVERT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETSHWURL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0153">Show URLs</Name>
+          <Command>^C^Cshowurls  </Command>
+          <HelpString xlate="true" UID="XLS_0275">Shows the location of embedded URL addresses: SHOWURLS</HelpString>
+          <SmallImage Name="et_SHWURL16.BMP" />
+          <LargeImage Name="et_SHWURL24.BMP" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETCHGURL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0155">Change URLs</Name>
+          <Command>^C^Cchurls  </Command>
+          <HelpString xlate="true" UID="XLS_0266">Modifies URL addresses: CHURLS</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETREPURL">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0157">Find and Replace URLs</Name>
+          <Command>^C^Crepurls  </Command>
+          <HelpString xlate="true" UID="XLS_0306">Replaces URL addresses with others: REPURLS</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETALIAS">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0160">Command Alias Editor...</Name>
+          <Command>^C^Caliasedit  </Command>
+          <HelpString xlate="true" UID="XLS_0326">Launches an editor for aliases stored in the acad.pgp file: ALIASEDIT</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETSYSVAR">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0162">System Variable Editor...</Name>
+          <Command>^C^C_.sysvdlg  </Command>
+          <HelpString xlate="true" UID="XLS_0336">Launches an editor for system variables: SYSVDLG</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETMKLTYP">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0164">Make Linetype</Name>
+          <Command>^C^Cmkltype  </Command>
+          <HelpString xlate="true" UID="XLS_0272">Creates a linetype based on selected objects: MKLTYPE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETMKSHAP">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0166">Make Shape</Name>
+          <Command>^C^Cmkshape  </Command>
+          <HelpString xlate="true" UID="XLS_0301">Creates a shape based on selected objects: MKSHAPE</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETRTUCS">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0168">Real-Time UCS</Name>
+          <Command>^C^Crtucs  </Command>
+          <HelpString xlate="true" UID="XLS_0334">Changes the UCS in real time: RTUCS</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETXDATA">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0170">Attach Xdata</Name>
+          <Command>^C^Cxdata  </Command>
+          <HelpString xlate="true" UID="XLS_0341">Attaches extended object data (xdata) to an object: XDATA</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETXDLIST">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0172">List Object Xdata</Name>
+          <Command>^C^Cxdlist  </Command>
+          <HelpString xlate="true" UID="XLS_0262">Lists the extended object data (xdata) attached to an object: XDLIST</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETEXPLAN">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0176">Extended Plan</Name>
+          <Command>^C^Cexplan  </Command>
+          <HelpString xlate="true" UID="XLS_0290">Enhances PLAN: EXPLAN</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETEDITTIME">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0178">Dwg Editing Time</Name>
+          <Command>^C^Cedittime  </Command>
+          <HelpString xlate="true" UID="XLS_0305">Tracks total active editing time in drawing: EDITTIME</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETWEXP">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0181">Express Tools Web site</Name>
+          <Command>^C^C_.browser http://www.autodesk.com/expresstools  </Command>
+          <HelpString xlate="true" UID="XLS_0335">Launches web browser and loads the AutoCAD Express Tools Web site.</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETNEWS">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0183">Express Tools Newsgroup</Name>
+          <Command>^C^C_.browser news://discussion.autodesk.com/autodesk.expresstools  </Command>
+          <HelpString xlate="true" UID="XLS_0316">Launches a news reader and displays the AutoCAD Express Tools newsgroup.</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETWPRO">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0185">Autodesk Products and Support Website</Name>
+          <Command>^C^C_.browser http://www.autodesk.com/products  </Command>
+          <HelpString xlate="true" UID="XLS_0330">Launches a web browser and displays the Autodesk Products website.</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETFAQ">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0187">Express Tools FAQ</Name>
+          <Command>^C^C^P(acet-help "faq") ^P </Command>
+          <HelpString xlate="true" UID="XLS_0307">Displays an FAQ for AutoCAD Express Tools.</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_MNACETHELP">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0189">Help</Name>
+          <Command>^C^C^P(acet-help) ^P </Command>
+          <HelpString xlate="true" UID="XLS_0303">Displays Help for the AutoCAD Express Tools.</HelpString>
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="ID_ACETTFRAME">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0245">Toggle Frames</Name>
+          <Command>^C^C_tframes  </Command>
+          <HelpString xlate="true" UID="XLS_0261">Toggles frames for images and wipeouts: TFRAMES</HelpString>
+          <SmallImage Name="et_TFRAME16.BMP" />
+          <LargeImage Name="et_TFRAME24.BMP" />
+        </Macro>
+      </MenuMacro>
+    </MacroGroup>
+    <MenuRoot>
+      <AcceleratorRoot />
+      <OverrideRoot />
+      <MouseButtonRoot />
+      <DigitizerButtonRoot />
+      <PopMenuRoot>
+        <PopMenu hasDiesel="false" UID="ID_MNEXPRESS">
+          <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="0" />
+          <Alias>POP1</Alias>
+          <Name xlate="true" UID="XLS_0001">E&amp;xpress</Name>
+          <Description xlate="true" UID="XLS_0343" />
+          <PopMenuRef pUID="ID_MNACETBLK" UID="PMR_0002">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETTEXT" UID="PMR_0003">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETLOUT" UID="PMR_0004">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETDIM" UID="PMR_0006">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETSEL" UID="PMR_0007">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETMOD" UID="PMR_0008">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETDRAW" UID="PMR_0009">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETFTOOL" UID="PMR_0010">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETNET" UID="PMR_0011">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuRef pUID="ID_MNACETTOOL" UID="PMR_0012">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuRef pUID="ID_MNACETWEB" UID="PMR_0013">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0087">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0187" xlate="true">Express Tools &amp;FAQ</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETFAQ" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0088">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0189" xlate="true">&amp;Help</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETHELP" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETBLK">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0033">&amp;Blocks</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0016">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0034" xlate="true">&amp;List Xref/Block Properties</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETXRFLST" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0017">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0036" xlate="true">&amp;Copy Nested Objects</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETNCOPY" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0018">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0038" xlate="true">T&amp;rim to Nested Objects</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTRMBLK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0019">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0040" xlate="true">Exte&amp;nd to Nested Objects</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETEXTBLK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0020">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0042" xlate="true">Ex&amp;plode Attributes to Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBURST" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0021">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0044" xlate="true">Convert &amp;Shape to Block</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHPBLK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0022">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0046" xlate="true">Export &amp;Attribute Information</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETATTOUT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0023">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0048" xlate="true">&amp;Import Attribute Information</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETATTIN" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0024">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0050" xlate="true">Convert block to &amp;xref</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBLOCKTOXREF" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0025">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0052" xlate="true">&amp;Replace block with another block</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBLOCKREPLACE" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETTEXT">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0054">&amp;Text</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0026">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0055" xlate="true">&amp;Remote Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETRTEXT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0027">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0057" xlate="true">Text &amp;Fit</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTFIT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0028">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0059" xlate="true">Text &amp;Mask</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTMSK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0029">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0061" xlate="true">&amp;Unmask Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTUMSK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0030">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0063" xlate="true">E&amp;xplode Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTEXP" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0031">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0065" xlate="true">Con&amp;vert Text to Mtext</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXT2MT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0032">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0067" xlate="true">&amp;Arc-Aligned Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETARCTXT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0033">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0069" xlate="true">&amp;Justify Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTJUST" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0034">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0071" xlate="true">R&amp;otate Text</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTORIEN" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0035">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0073" xlate="true">Enclo&amp;se Text with Object</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTCIRCL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0036">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0075" xlate="true">Automatic Text &amp;Numbering</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTCOUNT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0037">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0077" xlate="true">Chan&amp;ge Text Case</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETTCASE" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETLOUT">
+          <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0079">&amp;Layout tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0039">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0082" xlate="true">&amp;Align Space</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETASPACE" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0040">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0084" xlate="true">Synchronize &amp;Viewports</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETVPSYNC" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0041">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0086" xlate="true">&amp;List Viewport Scale</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETVPSCAL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0042">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0088" xlate="true">&amp;Merge Layout</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETLAYOUTMRG" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETDIM">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0090">&amp;Dimension</Name>
+          <PopMenuRef pUID="ID_ACETLEADER" UID="PMR_0005">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuRef>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0046">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0098" xlate="true">Dimstyle &amp;Export...</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETDIMEX" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0047">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0100" xlate="true">Dimstyle &amp;Import...</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETDIMIM" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0048">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0102" xlate="true">&amp;Reset Dim Text Value</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETDIMASSOC" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_ACETLEADER">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0091">&amp;Leader Tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0043">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0092" xlate="true">&amp;Attach Leader to Annotation</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETQLATCH" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0044">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0094" xlate="true">&amp;Detach Leaders from Annotation</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETQLDTCH" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0045">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0096" xlate="true">&amp;Global Attach Leader to Annotation</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETQLATAL" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETSEL">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0104">&amp;Selection tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0049">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0105" xlate="true">&amp;Get Selection Set</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETGETSEL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0050">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0107" xlate="true">&amp;Fast Select</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETFSTSEL" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETMOD">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0109">&amp;Modify</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0051">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0110" xlate="true">&amp;Multiple Object Stretch</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMSTRCH" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0052">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0112" xlate="true">M&amp;ove/Copy/Rotate</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMOCORO" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0053">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0114" xlate="true">Extended C&amp;lip</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCLIPIT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0054">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0044" xlate="true">Convert &amp;Shape to Block</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHPBLK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0055">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0118" xlate="true">&amp;DrawOrder by color</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCDORDER" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0056">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0120" xlate="true">Delete d&amp;uplicate objects</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETOVERKILL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0057">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0122" xlate="true">Fl&amp;atten objects</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETFLATTEN" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0058">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0124" xlate="true">&amp;Multiple Copy</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCOPYM" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0059">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0126" xlate="true">Ext&amp;ended Offset</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETEXOFFSET" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETDRAW">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0128">&amp;Draw</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0060">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0129" xlate="true">&amp;Break-line Symbol</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBREAKL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0061">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0131" xlate="true">&amp;Super Hatch...</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHATCH" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETFTOOL">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0133">&amp;File tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0062">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0134" xlate="true">&amp;Move Backup Files</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMOVEBAK" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0063">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0136" xlate="true">C&amp;onvert PLT to DWG</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETPLT2DW" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0064">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0138" xlate="true">&amp;Edit Image</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETIMGEDT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0065">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0140" xlate="true">&amp;Redefine Path</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETREDIR" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0066">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0142" xlate="true">&amp;Update Drawing Property Data</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETPROPULATE" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0067">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0144" xlate="true">Save &amp;All Drawings</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSAVEALL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0068">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0146" xlate="true">&amp;Close All Drawings</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCLOSEALL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0069">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0148" xlate="true">&amp;Quick Exit</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETQQUIT" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0070">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0150" xlate="true">Re&amp;vert to Original</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETREVERT" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETNET">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0152">&amp;Web tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0071">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0153" xlate="true">&amp;Show URLs</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHWURL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0072">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0155" xlate="true">&amp;Change URLs</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCHGURL" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0073">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0157" xlate="true">&amp;Find and Replace URLs</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETREPURL" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETTOOL">
+          <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0159">&amp;Tools</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0074">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0160" xlate="true">Command &amp;Alias Editor...</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETALIAS" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0075">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0162" xlate="true">System &amp;Variable Editor...</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSYSVAR" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0076">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0164" xlate="true">Make Li&amp;netype</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMKLTYP" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0077">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0166" xlate="true">Ma&amp;ke Shape</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMKSHAP" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0078">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0168" xlate="true">&amp;Real-Time UCS</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETRTUCS" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0079">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0170" xlate="true">Attach &amp;Xdata</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETXDATA" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0080">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0172" xlate="true">List Object X&amp;data</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETXDLIST" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0082">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0176" xlate="true">&amp;Extended Plan</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETEXPLAN" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="true" hasDiesel="false">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0083">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0178" xlate="true">Dwg Editing &amp;Time</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETEDITTIME" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+        <PopMenu hasDiesel="false" UID="ID_MNACETWEB">
+          <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="0" />
+          <Name xlate="true" UID="XLS_0180">&amp;Web Links</Name>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0085">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0183" xlate="true">Express Tools &amp;Newsgroup</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETNEWS" />
+            </MenuItem>
+          </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_0086">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <NameRef UID="XLS_0185" xlate="true">&amp;Autodesk Products and Support Website</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_MNACETWPRO" />
+            </MenuItem>
+          </PopMenuItem>
+        </PopMenu>
+      </PopMenuRoot>
+      <ToolbarRoot>
+        <Toolbar ToolbarOrient="floating" ToolbarVisible="hide" xval="310" yval="145" rows="1" UID="ID_TBACETTEXT">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Alias>TB_EXPRESS_TOOLS_TEXT_TOOLBAR</Alias>
+          <Alias>TB_ET:_TEXT</Alias>
+          <Alias>ET:_Text</Alias>
+          <Description xlate="true" UID="XLS_0214" />
+          <Name xlate="true" UID="XLS_0213">ET: Text</Name>
+          <ToolbarButton IsSeparator="false" UID="TBB_0012">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0354">Text Fit</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTFIT" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0013">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0355">Text Mask</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTMSK" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0014">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0356">Explode Text</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTXTEXP" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0015">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0357">Arc-Aligned Text</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETARCTXT" />
+            </MenuItem>
+          </ToolbarButton>
+        </Toolbar>
+        <Toolbar ToolbarOrient="floating" ToolbarVisible="hide" xval="310" yval="205" rows="1" UID="ID_TBACETBLK">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Alias>TB_EXPRESS_TOOLS_BLOCK_TOOLBAR</Alias>
+          <Alias>TB_ET:_BLOCKS</Alias>
+          <Alias>ET:_Blocks</Alias>
+          <Description xlate="true" UID="XLS_0224" />
+          <Name xlate="true" UID="XLS_0223">ET: Blocks</Name>
+          <ToolbarButton IsSeparator="false" UID="TBB_0016">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0358">Copy Nested Objects</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETNCOPY" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0017">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0359">Trim to Nested Objects</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTRMBLK" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0018">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0360">Extend to Nested Objects</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETEXTBLK" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0019">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0361">List Xref/Block Properties</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETXRFLST" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0020">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0362">Extended Clip</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCLIPIT" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0021">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0363">Explode Attributes to Text</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBURST" />
+            </MenuItem>
+          </ToolbarButton>
+        </Toolbar>
+        <Toolbar ToolbarOrient="floating" ToolbarVisible="hide" xval="310" yval="265" rows="1" UID="ID_TBACETTOOL">
+          <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          <Alias>TB_EXPRESS_TOOLS_STANDARD_TOOLBAR</Alias>
+          <Alias>TB_ET:_STANDARD</Alias>
+          <Alias>ET:_Standard</Alias>
+          <Description xlate="true" UID="XLS_0238" />
+          <Name xlate="true" UID="XLS_0237">ET: Standard</Name>
+          <ToolbarButton IsSeparator="false" UID="TBB_0022">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0364">Multiple Object Stretch</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMSTRCH" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0023">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0365">Move/Copy/Rotate</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETMOCORO" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="true" UID="TBB_0024">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0025">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0366">Super Hatch...</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHATCH" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0026">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0367">Toggle Frames</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETTFRAME" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0027">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0368">Show URLs</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETSHWURL" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0028">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0369">Break-line Symbol</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETBREAKL" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="true" UID="TBB_0029">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0030">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0370">Fast Select</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETFSTSEL" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="true" UID="TBB_0031">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0032">
+            <ModifiedRev MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0371">Multiple Copy</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="ID_ACETCOPYM" />
+            </MenuItem>
+          </ToolbarButton>
+        </Toolbar>
+      </ToolbarRoot>
+      <ScreenMenuRoot />
+      <ImageMenuRoot />
+      <TabletMenuRoot />
+      <DoubleClickRoot />
+    </MenuRoot>
+  </MenuGroup>
+</CustSection>

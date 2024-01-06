@@ -1,0 +1,51 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTSUNServer+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+			document.onkeydown = closeRegisterToday;
+			
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<!--Insert SUN Data-->
+			<script><!--
+				document.writeln('<b>'+xmsgRegSunData5+'</b>');
+				document.writeln('<p>'+xmsgRegSunData6+'</p>');
+				document.writeln('<p><ul><li>'+xmsgRegSunData7+
+							    '<li>'+xmsgRegSunData8+
+								'<li>'+xmsgRegSunData9+'</ul></p>');
+				FillUpBlankSpaces(180);
+				StartNavigationButtons();
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href=gotoVirtualPage("RTBack.html");\'>');
+				document.writeln('<input type="button" value="'+xmsgNext+'" onclick=\'location.href="RTCountryPage.html" + "?p=" + escape(userTempPath)\'>');
+				document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

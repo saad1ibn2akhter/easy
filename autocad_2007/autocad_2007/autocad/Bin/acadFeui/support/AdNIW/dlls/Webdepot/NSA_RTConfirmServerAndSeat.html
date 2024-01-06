@@ -1,0 +1,138 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+            document.writeln('<title>'+xmsgNSARTConfirmServerAndSeat+'</title>');
+		// -->
+			</script>
+			<script><!--
+			SetCountryParms();
+			
+		function onNext() {
+			if (nointernet == "y" ||
+				processstage == "1") {
+				location.href= "RTCountryPage.html?p=" + escape(userTempPath);
+			} else {
+				StartAni();
+				document.eRegForm.submit();
+				document.RTForm.submitbutn.disabled = true;
+			}
+		}
+		
+		function onBack() {
+			location.href= "NSA_RTEditServerAndSeat.html?p=" + escape(userTempPath);
+		}
+		
+
+		//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+		document.onkeydown = goBackKey;
+		
+		function goBackKey(e) {
+			if (event.keyCode == 8) {
+				event.keyCode = 0;
+				onBack();
+			}
+		}
+		
+		//-->
+		</script>
+		<script><!--
+        document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" enctype="multipart/form-data" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<b>
+			<script><!--
+			document.writeln(xmsgNSARTConfirmServerAndSeat);// -->
+			</script>
+			</b>
+			<p>
+			<script><!--
+			document.writeln(xmsgConfirmServerMsg);
+			if (nointernet == "n" &&
+				processstage != "1") {
+				document.writeln("<br><img height=20 width=20 src=\"RTInfoIcon.gif\">&nbsp;" + xmsgConfirmServerMsg2);
+			}
+			// -->
+			</script>
+			</p>
+			<p>
+			<script><!--
+			document.writeln("<b>"+xmsgConfirmServerHdr2+"</b>&nbsp;&nbsp;");
+			var sHTML = "<table width=\"600\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">";
+			switch (szFlexModel) {
+				case 0:
+					document.writeln("<font color=\""+xmsgDisableColor+"\">"+xmsgEditServerSingle+"</font><p>");
+					sHTML += "<tr><td><b>"+ xmsgConfirmServerHostName + "</b></td><td><b>"+ xmsgConfirmServerHostID +"</b></td></tr>";
+					sHTML += "<tr><td width=210><font color=\""+xmsgDisableColor+"\">"+ szHostName[0] +"</font></td>" +
+							"<td width=230><font color=\""+xmsgDisableColor+"\">"+ szHostID[0] +"</font></td>" +
+							"<td width=148></td></tr>";
+					break;
+				case 1:
+					document.writeln("<font color=\""+xmsgDisableColor+"\">"+xmsgEditServerDistributed+"</font><p>");
+					if (szTotalServerCount < 1) {
+						szTotalServerCount = 1;
+					}
+					var szTotalSeats = 0;
+					sHTML += "<tr><td  width=210><b>"+ xmsgConfirmServerHostName + "</b></td><td  width=230><b>"+ xmsgConfirmServerHostID +"</b></td><td  width=148><b>"+ xmsgConfirmServerSeat +"</b></td></tr>";
+					for (i = 0; i < szTotalServerCount; i++) {
+						sHTML += "<tr><td width=210><font color=\""+xmsgDisableColor+"\">"+ szHostName[i] +"</font></td>" +
+								"<td width=230><font color=\""+xmsgDisableColor+"\">"+ szHostID[i] +"</font></td>" +
+								"<td width=35 align=right><font color=\""+xmsgDisableColor+"\">"+ szSeats[i] +"</font></td></tr>";
+						szTotalSeats += parseInt(szSeats[i], 10);
+					}
+					sHTML += "<tr><td colspan=2 align=right>" + xmsgConfirmServerTotal + "&nbsp;&nbsp;</td>" + 
+								"<td width=35 align=right><font color=\""+xmsgDisableColor+"\">"+ szTotalSeats +"</font></td></tr>";
+					break;
+				case 2:
+					document.writeln("<font color=\""+xmsgDisableColor+"\">"+xmsgEditServerRedundant+"</font><p>");
+					sHTML += "<tr><td><b>"+ xmsgConfirmServerHostName + "</b></td><td><b>"+ xmsgConfirmServerHostID +"</b></td></tr>";
+					for (i = 0; i < 3; i++) {
+						sHTML += "<tr><td width=210><font color=\""+xmsgDisableColor+"\">"+ szHostName[i] +"</font></td>" +
+								"<td width=230><font color=\""+xmsgDisableColor+"\">"+ szHostID[i] +"</font></td>" +
+								"<td width=148></td></tr>";
+					}
+					break;
+			}
+			sHTML += "</table>";
+			document.writeln(sHTML);
+			// -->
+			</script>
+			</p>
+			<script><!--
+			//	Pravacy Statement
+			document.writeln("<p><font size=\"1\">"+xmsgPrivacy()+"</font></p>");
+			StartNavigationButtons();
+			
+			document.writeln('<script src=\"rtanimdots.js\"></script>');
+			
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick="onBack();">');
+			document.writeln('<input type="button" value="'+xmsgNext+'" name=submitbutn onclick="onNext();">');
+			document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rtthinpackage.js\"></script>');
+		// -->
+		</script>
+	</body>
+</html>

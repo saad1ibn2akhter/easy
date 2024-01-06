@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<script><!--
+			var args = window.dialogArguments;
+			var encodedUserTempPath = args.path;
+			var userTempPath = unescape(encodedUserTempPath);
+
+			//	remove "+"
+			while (userTempPath.indexOf("+") != (-1)) {
+				userTempPath = userTempPath.replace("+", " ");
+			}
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgHelpTitle+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+		<script><!--
+			document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+		<script><!--
+			function OnLoad() {
+				document.RTForm.ok.focus();
+			}
+		// -->
+		</script>
+	</head>
+	<body onload="OnLoad()">
+		<table border=0>
+			<script><!--
+				document.writeln('<br><tr><td width=6%></td><td width=85%>');
+			// -->
+			</script>
+			<table border=0>
+				<tr>
+				<td><img src="RTHelp.gif"></td>
+				<td class=TITLE>
+				<script><!--
+					document.writeln(xmsgCountryUpgrade);
+				// -->
+				</script>
+				</font></td>
+				</tr>
+			</table>
+			<script><!--
+				document.writeln('</td></tr>');
+				document.writeln('<tr><td width=6%></td><td width=85%>');
+				document.writeln('<p>'+xmsgHelpUpgradeMsg+'</p>');
+				document.writeln('</td></tr>');
+			// -->
+			</script>
+			<form name="RTForm">
+			<script><!--
+				document.writeln('<tr><td>&nbsp;</td><td>&nbsp;</td></tr>');
+				document.writeln('<tr><td width=6%></td><td align="center" width=85%>');
+				document.writeln('<input type=button name="ok" value="'+ xmsgOK +'" onclick="window.close();">');
+				document.writeln('</td></tr>');
+			// -->
+			</script>			
+			</form>
+		</table>
+	</body>
+</html>

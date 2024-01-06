@@ -1,0 +1,57 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script><!--
+			var encodedUserTempPath = unescape(location.search).substr(3);
+			var userTempPath = unescape(encodedUserTempPath);
+
+			//	remove "+"
+			while (userTempPath.indexOf("+") != (-1)) {
+				userTempPath = userTempPath.replace("+", " ");
+			}
+
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+            document.writeln('<script src=\"RTResource.js\"></script>');
+            document.writeln('<script src=\"'+userTempPath+'rtthinpackage.js\"></script>');
+		// -->
+		</script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTBeginReg+'</title>');
+		// -->
+		</script>
+		<STYLE TYPE="text/css" MEDIA="screen">
+			<!--
+			BODY {
+			font: 10pt Arial, Helvetica, sans-serif;
+			margin-left: 10px;
+			}
+		--></STYLE>
+		<script><!--            
+            function onLoad() {
+				document.bgColor = bkcolor;
+				document.fgColor = fontcolor;
+            }
+		// -->
+		</script>
+		<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+		</script>
+		<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<!--Table Footer -->
+		<table align="center" border="0" cellpadding="0" cellspacing="0" ID="Table1">
+			<tr>
+				<td align="center" valign="center">
+					<script language="javascript" src="rtanimdots.js"></script>
+				</td>
+			</tr>
+		</table>
+		<script><!--
+            // Submit the thin package...
+            onLoad();
+            StartAni();
+            document.eRegForm.submit();
+        // --> </script>
+	</body>
+</html>

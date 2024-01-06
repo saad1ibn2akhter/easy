@@ -1,0 +1,387 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgNSARTLocateLicense+'</title>');
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script language="javascript1.2"><!--
+			SetCountryParms();
+			
+			var loadLicenseURL = "NSA_RTLocateLicense.html?p=" + escape(userTempPath);
+			var szRemove = new Array (szMaxServer);
+			var szTotalSeats = 0;
+			
+			function onNext() {
+				if (szFlexModel == 1 &&
+					onChangeSeats() == true) {
+					return;
+				}
+				location.href= "NSA_RTConfirmServerAndSeat.html?p=" + escape(userTempPath);
+			}
+		
+			function onBack() {
+				location.href= "NSA_RTBegin.html?p=" + escape(userTempPath);
+			}
+		
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+			document.onkeydown = goBackKey;
+			
+			function goBackKey(e) {
+				if (event.keyCode == 8) {
+					event.keyCode = 0;
+					onBack();
+				}
+			}
+		
+			function onLoad() {
+		      for (i=0; i<document.RTForm.selradio.length; i++) {
+				if (i == szFlexModel) {
+					document.RTForm.selradio[i].checked = true;
+				} else {
+					document.RTForm.selradio[i].checked = false;
+				}
+		      }
+		      
+		      buildSerialNumberLayer();
+		      buildServerInfo(szFlexModel);
+		      
+		      document.RTForm.nsernum[0].focus();
+			}
+
+			function onMacLookup(fieldindex) {
+				document.RTForm.browsefield.value = "hostid";
+				document.RTForm.browsefieldindex.value = fieldindex;
+				document.RTForm.page.value = "RTMacLookup.html";
+				document.RTForm.action=gotoVirtualPage("RTMacLookup.html");
+				document.RTForm.submit();
+			}
+			
+			function onLocateServer(fieldindex) {
+				document.RTForm.browsefield.value = "hostname";
+				document.RTForm.browsefieldindex.value = fieldindex;
+				document.RTForm.page.value = "RTPickServer.html";
+				document.RTForm.action=gotoVirtualPage("RTPickServer.html");
+				document.RTForm.submit();
+			}
+
+			function onBrowser() {
+				document.RTForm.licensepath.value = "";
+				document.RTForm.browsefield.value = "licensepath";
+				document.RTForm.browsefieldindex.value = 1;
+				document.RTForm.page.value = "RTBrowse.html";
+				document.RTForm.action=gotoVirtualPage("RTBrowse.html");
+				document.RTForm.submit();
+			}
+			
+			function onHelp() {
+				window.showModalDialog("NSA_RTServerModelHelp.html", 0, 
+					"help:no; status:no; resizable:yes; unadorned:no; dialogHeight:500px; dialogWidth:500px;");
+			}
+
+			function buildSerialNumberLayer() {
+				var sHTML = "";
+				
+				sHTML = SerialNumberBlock;
+				serialNumberLayer.innerHTML = sHTML;
+				if (szSerialNumber != "") {
+					var sernumArray = szSerialNumber.split("-");
+					document.RTForm.nsernum[0].value = sernumArray[0];
+					document.RTForm.nsernum[1].value = sernumArray[1];
+				}
+			}
+			
+			function SelectRadio (curRadio) {				
+				for (i=0; i<document.RTForm.selradio.length; i++) {
+					if (i == curRadio) {
+						document.RTForm.selradio[i].checked = true;
+					} else {
+						document.RTForm.selradio[i].checked = false;
+					}
+				}
+			    
+			    //	same server model
+			    if (curRadio == szFlexModel)
+					return;
+					
+				updateServerInfo();
+				buildServerInfo(curRadio);
+				
+				szFlexModel = curRadio;
+			}
+			
+			function buildServerInfo(curServer) {
+				serverInfoLayer.innerHTML  = "";
+				
+				var sHTML = "<table width=\"600\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">";
+				switch (curServer) {
+					case 0:	//	single server
+						sHTML += "<tr><td>"+ HostNameHdr + "</td><td>"+ HostIDHdr +"</td></tr>";
+						sHTML += "<tr><td width=210><input type=text name=\"hostname\" size=25 maxlength=40 value=\""+ szHostName[0] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerDots+ "\" NAME=\"Button1\" onclick=\"onLocateServer(1)\"></td>" +
+								 "<td width=230><input type=text name=\"hostid\" size=12 maxlength=12 value=\""+ szHostID[0] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerLookup +"\" NAME=\"Button2\" onclick=\"onMacLookup(1)\"></td>" +
+								 "<td width=148></td></tr>";
+						sHTML += "<tr><td width=210><input type=hidden name=\"hostname\" size=25 value=\""+ szHostName[1] +"\"></td>" +
+								 "<td width=230><input type=hidden name=\"hostid\" size=12 maxlength=12 value=\""+ szHostID[1] +"\"></td>" +
+								 "<td width=148></td></tr>";
+						document.RTForm.szTotalServerCount.value = 1;
+						break;
+					case 1:	//	Distributed server
+						//	default number of servers
+						if (szTotalServerCount < 3) {
+							szTotalServerCount = 3;
+						}
+						
+						sHTML += "<tr><td width=65>"+RemoveHdr+"</td><td  width=210>"+ HostNameHdr + "</td><td  width=230>"+ HostIDHdr +"</td><td  width=148>"+ SeatHdr +"</td></tr>";
+						for (i = 0; i < szTotalServerCount; i++) {
+							sHTML +="<tr><td width=65 align=center><input type=\"checkbox\" name=\"removed\" value=" + szRemove[i] + "></td>" + 
+									"<td width=210><input type=text name=\"hostname\" size=25 maxlength=40 value=\""+ szHostName[i] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerDots+ "\" NAME=\"Button1\" onclick=\"onLocateServer("+ (i+1)+")\"></td>" +
+									"<td width=230><input type=text name=\"hostid\" size=12 maxlength=12 value=\""+ szHostID[i] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerLookup +"\" NAME=\"Button2\" onclick=\"onMacLookup("+ (i+1) +")\"></td>" +
+									"<td width=148><input type=text name=\"seats\" size=5 maxlength=4 value=\""+ szSeats[i] +"\" align=right onChange=\"onChangeSeats()\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\"></td></tr>";
+						}
+						
+						//	"Remove" button and Total field
+						sHTML += "<tr><td colspan=2 align=left><br>" +
+							"<input type=button value=\""+ xmsgEditServerRemoveServer +"\" onClick=\"onRemoveServer()\">";
+						if (szTotalServerCount < szMaxServer) {
+							sHTML += "&nbsp;<input type=button value=\""+ xmsgEditServerAddServer +"\" onClick=\"onAddServer()\">";
+						} 
+						sHTML += "</td><td align=right>" + xmsgEditServerTotal + "&nbsp;&nbsp;</td>" +
+								 "<td><input type=text name=\"totalseats\" size=5 value=\"" + szTotalSeats +"\" align=right></td>" +
+								 "</tr>";
+						if (szTotalServerCount >= szMaxServer) {
+							sHTML += "<tr><td colspan=4 align=left><br>"+ xmsgEditServerExceedMaxServer +"</td></tr>";
+						}
+						document.RTForm.szTotalServerCount.value = szTotalServerCount;
+						break;
+					case 2:	//	Redundant Server
+						sHTML += "<tr><td>"+ HostNameHdr + "</td><td>"+ HostIDHdr +"</td></tr>";
+						for (i = 0; i < 3; i++) {
+							sHTML += "<tr><td width=210><input type=text name=\"hostname\" size=25 maxlength=40 value=\""+ szHostName[i] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerDots+ "\" NAME=\"Button1\" onclick=\"onLocateServer("+ (i+1)+")\"></td>" +
+									"<td width=230><input type=text name=\"hostid\" size=12 maxlength=12 value=\""+ szHostID[i] +"\" onkeydown=\"if(event.keyCode == 8) {event.keyCode=0;}\">&nbsp;<input type=button value=\""+ xmsgEditServerLookup +"\" NAME=\"Button2\" onclick=\"onMacLookup("+ (i+1) +")\"></td>" +
+									"<td width=148></td></tr>";
+						}
+						document.RTForm.szTotalServerCount.value = 3;
+						break;
+				}
+				sHTML += "</table>";
+				
+				serverInfoLayer.innerHTML  = sHTML;
+				
+				//	disable totalseat field
+				if (curServer == 1) {
+					document.RTForm.totalseats.disabled = true;
+					onChangeSeats();	//	to update total number of seats
+				}
+			}
+
+			//	retrieve server information
+			function updateServerInfo() {
+				if (szFlexModel == 0) {
+					if (typeof(document.RTForm.hostname[0]) == "undefined") {
+						szHostName[0] = document.RTForm.hostname.value;
+					} else {
+						szHostName[0] = document.RTForm.hostname[0].value;
+					}
+					if (typeof(document.RTForm.hostid[0]) == "undefined") {
+						szHostID[0] = document.RTForm.hostid.value;
+					} else {
+						szHostID[0] = document.RTForm.hostid[0].value;
+					}
+				} else {
+					for (i=0; i<document.RTForm.hostname.length; i++) {
+						szHostName[i] = document.RTForm.hostname[i].value;
+						szHostID[i] = document.RTForm.hostid[i].value;
+						if (typeof(document.RTForm.seats) != "undefined") {
+							szSeats[i] = document.RTForm.seats[i].value;
+						}
+					}
+				}
+			}
+
+			//	Add one server information
+			function onAddServer() {
+				if (szTotalServerCount < szMaxServer) {
+					szTotalServerCount++;
+					updateServerInfo();
+					buildServerInfo(1);
+				}
+			}
+
+			//	Remove server information
+			function onRemoveServer() {
+				//	initialize
+				for (i = 0; i < szMaxServer; ++i) {
+					szRemove[i] = "";
+					szHostName[i] = "";
+					szHostID[i] = "";
+					szSeats[i] = "";
+				}
+				
+				var totalCount = 0;
+				//	update based on remove flag
+				for (i=0; i<document.RTForm.hostname.length; i++) {
+					//	skip this one ?!
+					if (document.RTForm.removed[i].checked) {
+						continue;
+					} 
+					szHostName[totalCount] = document.RTForm.hostname[i].value;
+					szHostID[totalCount] = document.RTForm.hostid[i].value;
+					szSeats[totalCount] = document.RTForm.seats[i].value;
+					++totalCount;
+				}
+				
+				if (totalCount < 3) {
+					szTotalServerCount = 3;
+				} else {
+					szTotalServerCount = totalCount;
+				}
+					
+				buildServerInfo(1);
+			}
+			
+			function onChangeSeats() {
+				szTotalSeats = 0;
+				var curSeats, newSeats;
+				var iseats;
+				var err = false;
+				
+				var newSeats = new Array(szTotalServerCount);
+				// loop through all the seats and get the total value
+				for (i=0; i<szTotalServerCount; i++) {
+					if (typeof(document.RTForm.seats[i]) == "undefined") {
+						curSeats = document.RTForm.seats.value;
+					} else {
+						curSeats = document.RTForm.seats[i].value;
+					}
+					newSeats[i] = "";
+					for (j=0; j < curSeats.length; ++j) {
+						if (curSeats.charAt(j) < "0" ||
+							curSeats.charAt(j) > "9") {
+							err = true;
+							continue;
+						}
+						newSeats[i] += curSeats.charAt(j);
+					}
+					iseats = parseInt(newSeats[i], 10);
+					if (isNaN(iseats)) {
+						continue;
+					}
+					szTotalSeats += iseats;
+				}
+				
+				document.RTForm.totalseats.value = szTotalSeats;
+				
+				if (err) {
+					alert(xmsgEditServerSeatError);
+					for (i = 0; i < szTotalServerCount; ++i) {
+						if (newSeats[i] == "") {
+							newSeats[i] = "0";
+						}
+						if (typeof(document.RTForm.seats[i]) == "undefined") {
+							document.RTForm.seats.value = newSeats[i];
+						} else {
+							document.RTForm.seats[i].value = newSeats[i];
+						}
+					}
+					return true;
+				} else {
+					return false;
+				}
+			}
+			
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+			<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+	</head>
+	<body onload="onLoad()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" enctype="multipart/form-data">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<b>
+				<script><!--
+			document.writeln(xmsgEditServerHdrMsg1);// -->
+				</script>
+			</b>
+			<p>
+				<script><!--
+			document.writeln(xmsgEditServerMsg1);
+			
+			document.writeln('<input type="hidden" name="page" value="dummy">');
+			document.writeln('<input type="hidden" name="browsefield" value="dummy" ID="Hidden1">');
+			document.writeln('<input type="hidden" name="browsefieldindex" value="dummy" ID="Hidden2">');
+			document.writeln('<input type="hidden" name="browsetype" value="2">');
+			// -->
+				</script>
+			</p>
+			<span id="serialNumberLayer"></span>
+			<p>
+				<script><!--
+			document.writeln(LicenseServerModelHdr);
+			// -->
+				</script>
+				<a onclick="onHelp()"><img src="RTHelp.gif"></a>
+			</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="selradio" checked onclick="SelectRadio(0)">
+				<a onclick="SelectRadio(0)">
+					<script><!--
+			document.writeln(xmsgEditServerSingle);// -->
+					</script>
+				</a>
+			</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="selradio" onclick="SelectRadio(1)">
+				<a onclick="SelectRadio(1)">
+					<script><!--
+			document.writeln(xmsgEditServerDistributed);// -->
+					</script>
+				</a>
+			</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="selradio" onclick="SelectRadio(2)">
+				<a onclick="SelectRadio(2)">
+					<script><!--
+			document.writeln(xmsgEditServerRedundant);// -->
+					</script>
+				</a><input type="hidden" name="szTotalServerCount" value="0">
+			</p>
+			<span id="serverInfoLayer"></span>
+			<p>
+				<script><!--
+			document.writeln("<INPUT TYPE=\"hidden\" NAME=\"licensepath\">");
+			document.writeln("<a onclick=\"onBrowser();\"><font color=\""+document.linkColor+"\"><u>");
+			document.writeln(xmsgEditServerMsg2);
+			document.writeln("</font></u></a>");
+			// -->
+				</script>
+				<script><!--
+			//	Pravacy Statement
+			document.writeln("<p><font size=\"1\">"+xmsgPrivacy()+"</font></p>");
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick="onBack();">');
+			document.writeln('<input type="button" value="'+xmsgNext+'" onclick="onNext();">');
+			document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+			EndNavigationButtons();
+			// -->
+				</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

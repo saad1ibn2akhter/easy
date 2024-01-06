@@ -1,0 +1,23 @@
+<Catalog>
+   <ItemID idValue="{3E512545-0B6F-4773-B956-8148BC366ED8}"/>
+   <StockTools>
+      <StockTool>
+        <!--Light tool-->
+        <ItemID idValue="{727E468D-2F6D-408E-A4CA-A163B060CCD1}"/>
+        <Properties>
+          <ItemName src="AcTpCatalogRes.dll" resource="193"/>
+        </Properties>
+        <Source/>
+        <Object>
+            <ComClass>
+               <CLSID idValue="{727E468D-2F6D-408E-A4CA-A163B060CCD1}"/>
+            </ComClass>
+            <Module>
+               <File>AcSceneCOM.dll</File>
+            </Module>
+            <ModuleInstallInfo/>
+         </Object>
+      </StockTool>
+   </StockTools>
+   <Catalogs/>
+</Catalog>

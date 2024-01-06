@@ -1,0 +1,75 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTCustID+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+		var xmsgTab= "&nbsp;&nbsp;&nbsp;&nbsp;";
+	    function setfocus()	{
+		    formObj = document.RTForm;
+		    formObj.custid.focus();
+	    }
+
+		function doSubmit() {
+			location.href="RTCustIDConfirm.html" + "?p=" + escape(userTempPath);
+		}
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body onload="setfocus()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<b>
+				<script><!--
+				document.writeln(xmsgCustIDMainTitle);// -->
+				</script>
+			</b>
+			<p>
+				<script><!--
+				document.writeln(xmsgCustIDText2);
+				if (reqtype == "3") {
+					document.writeln(xmsgCustIDText3NSA);
+				} else {
+					document.writeln(xmsgCustIDText3);
+				}
+				// -->
+				</script>
+			<p><script><!--
+				document.writeln(xmsgCustIDTitle1);// -->
+				</script><br>
+				<input type="text" name="custid" size="62" maxlength="40">
+			</p>
+			<script><!--
+				document.writeln('<p>'+xmsgPhone+'<br>');
+				document.writeln(xmsgTab+xmsgArea+'<input type="text" name="phonearea" size="5" maxlength="5">'+
+								 xmsgTab+xmsgNumber+'<input type="text" name="phonenumber" size="22" maxlength="22"></p>');
+				StartNavigationButtons();
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+				document.writeln('<input type="button" value="'+xmsgNext+'" onclick="doSubmit()">');
+				document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

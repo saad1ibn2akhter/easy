@@ -1,0 +1,89 @@
+﻿<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+
+			var i = document.URL.lastIndexOf("/");
+			var j = document.URL.lastIndexOf("\\");
+			var curPath = document.URL.substring(i+1, j+1);
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRTCustIDConfirm+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+		    SetCountryParms();
+		    
+			function onNext() {
+				if (reqtype == "3" &&
+					nointernet == "y") {
+					location.href= szRTEmail + "?p=" + escape(userTempPath);
+				} else {
+					if (internetconnection == "n") {
+						location.href= "file://" + userTempPath + "RTConnectLive.html" + "?p=" + escape(curPath);
+					} else {
+						StartAni();
+						document.eRegForm.submit();
+						document.RTForm.submitbutn.disabled = true;
+					}
+				}
+			}
+
+		    // -->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<script><!--
+				document.writeln(format(InsertConfirmInfo, xmsgRTCustIDConfirm, xmsgConfirmCustIDInfoTxt));// -->
+			</script>
+			<!--Insert Customer ID text block -->
+			<script><!--
+				document.writeln(xmsgCustIDTitle1+'<br>'+'<font color="'+xmsgDisableColor+'">'+custid+'</font>');
+			// -->
+			</script>
+			<!--Insert Phone Number -->
+			<script><!--
+			document.writeln("<p>"+xmsgPhone+"<br>");
+			document.writeln("<font color=\""+xmsgDisableColor+"\">");
+			if (phone == "") {
+				document.writeln(xmsgNone);				
+			} else {
+				document.writeln(phone);
+			}
+			document.writeln("</font></p>");
+			//	Pravacy Statement
+			document.writeln("<p><font size=\"1\">"+xmsgPrivacy()+"</font></p>");
+			
+			StartNavigationButtons();
+			
+			document.writeln('<script src=\"rtanimdots.js\"></script>');
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+			document.writeln('<input type="button" value="'+xmsgNext+'" name=submitbutn onclick="onNext()">');
+			document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rtfullpackage.js\"></script>');
+		// -->
+		</script>
+	</body>
+</html>

@@ -1,0 +1,548 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="STGsans80" />
+    <meta name="LASTUPDATED" content="05/25/05 11:24:05" />
+    <title>FLEXnet Licensing Versions</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="contents" title="Table of Contents" href="TOC.htm" />
+<link rel="index" title="Index" href="IX.htm" />
+<link rel="first" title="First" href="TOC.htm" />
+<link rel="last" title="Last" href="IX.htm" />
+<link rel="previous" title="Previous" href="chap16.htm" />
+<link rel="next" title="Next" href="IX.htm" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <table id="SummaryNotReq1" width="220" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq1" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap16.htm"><img id="LongDescNotReq2" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="IX.htm"><img id="LongDescNotReq3" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq4" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <img border="0" src="graphics/FLEXnetPubl.gif">
+    </p>
+    <hr align="left" />
+
+    <blockquote>
+<a name="wp916246"> </a><h2 class="pAppTitle">
+FLEXnet Licensing Versions
+</h2>
+<a name="wp916622"> </a><h2 class="pAppNum">
+<p align=right> Appendix I</p>
+</h2>
+<hr /><a name="wp916243"> </a><h3 class="pHeading2">
+	Version Compatibility with FLEXnet Licensing<span style="font-weight: normal"> </span>Components
+</h3>
+<a name="wp897519"> </a><p class="pBody">
+In general, always use the latest <code class="cCode">lmgrd</code> and <code class="cCode">lmutil</code>/LMTOOLS, which are available from <a href="http://www.macrovision.com">www.macrovision.com</a>, and you&#39;ll automatically enjoy many of the enhancements available in the most recent versions of FLEXnet Licensing. However, some enhancements require a vendor daemon built with a newer version of FLEXnet Licensing, and yet others require a FLEXenabled application built with a newer version of FLEXnet Licensing. Contact your software vendor for the most current version of their vendor daemon. 
+</p>
+<a name="wp912970"> </a><p class="pBody">
+The rules about FLEXnet Licensing version compatibility are summarized as:
+</p>
+<a name="wp897525"> </a><p class="pIndented2Relative">
+Version of <code class="cCode">lmutil</code>/LMTOOLS must be &gt;=
+</p>
+<a name="wp897526"> </a><p class="pIndented2Relative">
+Version of <code class="cCode">lmgrd</code>, which must be &gt;=
+</p>
+<a name="wp897527"> </a><p class="pIndented2Relative">
+Version of vendor daemon, which must be &gt;=
+</p>
+<a name="wp897528"> </a><p class="pIndented2Relative">
+Version of the client library linked to the FLEXenabled application, which must be &gt;=
+</p>
+<a name="wp897529"> </a><p class="pIndented2Relative">
+Version of license file format
+</p>
+<a name="wp912907"> </a><p class="pBody">
+Except for the license file, use <code class="cCode">lmver</code> to discover the version of all these FLEXnet Licensing components. For the vendor daemon, <code class="cCode">lmgrd</code>, and <code class="cCode">lmutil</code>, you can also use the <code class="cCode">-v</code> argument to print the version. 
+</p>
+<a name="wp897531"> </a><h3 class="pHeading2">
+	How to Tell the License File Version
+</h3>
+<a name="wp897532"> </a><p class="pBody">
+The following rules apply to individual FEATURE, INCREMENT or UPGRADE lines. It&#39;s possible to have a mix of versions in a single file. Only the features that a particular application checks out determine the version of the license for that feature.
+</p>
+<a name="wp897554"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="1" cellpadding="10" id="wp897535table897533">
+  <caption></caption>
+  <tr align="left">    <td><a name="wp897535"> </a><div class="pCellBody">
+<span style="font-style: normal; font-weight: normal; text-decoration: none; vertical-align: baseline">Version 2</span>
+</div>
+</td>
+    <td><a name="wp897537"> </a><div class="pCellBody">
+Blank quotes or a quoted string at the end of the FEATURE line.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp897539"> </a><div class="pCellBody">
+&gt;= Version 3
+</div>
+</td>
+    <td><a name="wp897541"> </a><div class="pCellBody">
+INCREMENT or UPGRADE line.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp897543"> </a><div class="pCellBody">
+&gt;= Version 4
+</div>
+</td>
+    <td><a name="wp897545"> </a><div class="pCellBody">
+OVERDRAFT, DUP_GROUP, INTERNET, or PACKAGE appear.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp897547"> </a><div class="pCellBody">
+&gt;= Version 5
+</div>
+</td>
+    <td><a name="wp897549"> </a><div class="pCellBody">
+SUPERSEDE, ISSUED, USER_BASED, HOST_BASED, or SN appear.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp897551"> </a><div class="pCellBody">
+&gt;= Version 6
+</div>
+</td>
+    <td><a name="wp897553"> </a><div class="pCellBody">
+START appears.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp905033"> </a><div class="pCellBody">
+&gt;= Version 7.1
+</div>
+</td>
+    <td><a name="wp905035"> </a><div class="pCellBody">
+SIGN= keyword appears.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp908579"> </a><div class="pCellBody">
+&gt;= Version 8
+</div>
+</td>
+    <td><a name="wp908581"> </a><div class="pCellBody">
+BORROW, FLOAT_OK, and TS_OK appear.
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+<a name="wp897555"> </a><h3 class="pHeading2">
+	Version Summary
+</h3>
+<a name="wp915456"> </a><h5 class="pHeading4">
+v1.0-1988
+</h5>
+<a name="wp897563"> </a><p class="pBody">
+First FLEXlm Release, containing all the basic FLEXlm features
+</p>
+<a name="wp897564"> </a><h5 class="pHeading4">
+v1.5-February 1990
+</h5>
+<a name="wp897565"> </a><p class="pBody">
+First widely used version including DEMO
+</p>
+<a name="wp897566"> </a><h5 class="pHeading4">
+v2.1-March 1991
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897567"> </a><div class="pSmartList1"><li>Improved TIMEOUT support</li></div>
+<a name="wp897568"> </a><div class="pSmartList1"><li>Improved ethernet hostid support</li></div>
+</ul></div>
+<a name="wp897569"> </a><h5 class="pHeading4">
+v2.21-November 1991
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897570"> </a><div class="pSmartList1"><li>Added support for many platforms and some platform-specific improvements, such as hostid</li></div>
+<a name="wp897571"> </a><div class="pSmartList1"><li>Hostid ANY added</li></div>
+</ul></div>
+<a name="wp897572"> </a><h5 class="pHeading4">
+v2.26-March 1992 (Used only by Sun)
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897573"> </a><div class="pSmartList1"><li>Added license lingering</li></div>
+</ul></div>
+<a name="wp897574"> </a><h5 class="pHeading4">
+v2.4-December 1992
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897575"> </a><div class="pSmartList1"><li>Added &quot;use-all-feature-lines&quot; capability for incremental license distribution</li></div>
+<a name="wp897576"> </a><div class="pSmartList1"><li>Enhanced vendor customization routines</li></div>
+<a name="wp897577"> </a><div class="pSmartList1"><li>Enhanced end-user options file</li></div>
+<a name="wp897578"> </a><div class="pSmartList1"><li>Added new hostid types: USER, HOSTNAME, and DISPLAY</li></div>
+<a name="wp897579"> </a><div class="pSmartList1"><li>Added <code class="cCodeEmphasis">port</code><code class="cCode">@</code><code class="cCodeEmphasis">host</code> to locate license file -downloads license file from server</li></div>
+</ul></div>
+<a name="wp897580"> </a><h5 class="pHeading4">
+v2.61-March 1993 (Used only by Sun)
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897581"> </a><div class="pSmartList1"><li>Added INCREMENT and UPGRADE lines to license file</li></div>
+</ul></div>
+<a name="wp897582"> </a><h5 class="pHeading4">
+v3.0-May 1994 
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897583"> </a><div class="pSmartList1"><li>INCREMENT and UPGRADE behavior changed and improved</li></div>
+<a name="wp897584"> </a><div class="pSmartList1"><li>Added UDP protocol support</li></div>
+<a name="wp897585"> </a><div class="pSmartList1"><li>Added <code class="cCode">uname -i</code> hostid for HP</li></div>
+<a name="wp897589"> </a><div class="pSmartList1"><li>Added multiple jobs for enhanced support of <code class="cCode">LM_LICENSE_FILE</code> environment variable as a license-file list</li></div>
+<a name="wp897590"> </a><div class="pSmartList1"><li>New, optional license file format with <code class="cCodeEmphasis">keyword</code><code class="cCode">=</code><code class="cCodeEmphasis">value</code> syntax for optional new features, including: asset_info, ISSUER, and NOTICE, &quot; \ &quot; license file continuation character, 2048 character limit per feature</li></div>
+</ul></div>
+<a name="wp897591"> </a><h5 class="pHeading4">
+v4.0-December 1994
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897592"> </a><div class="pSmartList1"><li>Removed use of floating point, for enhanced reliability</li></div>
+<a name="wp897593"> </a><div class="pSmartList1"><li>FEATURE line additions: ck, OVERDRAFT, DUP_GROUP, INTERNET hostid</li></div>
+<a name="wp897594"> </a><div class="pSmartList1"><li>PACKAGE line</li></div>
+<a name="wp897595"> </a><div class="pSmartList1"><li>License Finder</li></div>
+<a name="wp897596"> </a><div class="pSmartList1"><li><code class="cCode">lmdiag</code> and <code class="cCode">FLEXLM_DIAGNOSTICS</code> for end-user diagnostics</li></div>
+</ul></div>
+<a name="wp897597"> </a><h5 class="pHeading4">
+v4.1-May 1995
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897598"> </a><div class="pSmartList1"><li>Performance improvements and new platform support</li></div>
+</ul></div>
+<a name="wp897599"> </a><h5 class="pHeading4">
+v4.1-Patch Release 6, October 1995
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897600"> </a><div class="pSmartList1"><li>Windows patch release for Windows 95 with various performance improvements</li></div>
+</ul></div>
+<a name="wp897601"> </a><h5 class="pHeading4">
+v5.0-March 1996
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897602"> </a><div class="pSmartList1"><li>Improved <code class="cCodeEmphasis">port</code><code class="cCode">@</code><code class="cCodeEmphasis">host</code> behavior-FLEXenabled application doesn&#39;t read license file</li></div>
+<a name="wp897603"> </a><div class="pSmartList1"><li>Automatic <code class="cCodeEmphasis">port</code><code class="cCode">@</code><code class="cCodeEmphasis">host</code> via USE_SERVER line in license file</li></div>
+<a name="wp897604"> </a><div class="pSmartList1"><li>Hostid lists-lock a feature to several hostids</li></div>
+<a name="wp897605"> </a><div class="pSmartList1"><li>New FEATURE attributes: SN (serial number), USER_BASED, HOST_BASED, MINIMUM, SUPERSEDE, ISSUED (issued date), CAPACITY (charging based on system capacity)</li></div>
+<a name="wp897606"> </a><div class="pSmartList1"><li>Optional avoidance of NIS and DNS via IP address instead of host name</li></div>
+<a name="wp897607"> </a><div class="pSmartList1"><li>Improved report log file format</li></div>
+<a name="wp897608"> </a><div class="pSmartList1"><li>Server, upon startup, notifies of licenses that expire within two weeks</li></div>
+<a name="wp897609"> </a><div class="pSmartList1"><li>Improved end-user options file functionality</li></div>
+</ul></div>
+<a name="wp897610"> </a><h5 class="pHeading4">
+v5.11-February 1997
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897611"> </a><div class="pSmartList1"><li>SUPERSEDE lists, PLATFORMS= license attribute,</li></div>
+<a name="wp897612"> </a><div class="pSmartList1"><li>new end-user options: MAX, TIMEOUTALL</li></div>
+<a name="wp897613"> </a><div class="pSmartList1"><li>Windows control panel added </li></div>
+<a name="wp897614"> </a><div class="pSmartList1"><li>Windows license generator <code class="cCode">GENLIC</code> added</li></div>
+</ul></div>
+<a name="wp897615"> </a><h5 class="pHeading4">
+v5.12-April 1997
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897616"> </a><div class="pSmartList1"><li>Performance improvements and new platform support</li></div>
+</ul></div>
+<a name="wp897617"> </a><h5 class="pHeading4">
+v6.0-September 1997
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897618"> </a><div class="pSmartList1"><li><code class="cCode">lmgrd</code> can read multiple license files</li></div>
+<a name="wp897622"> </a><div class="pSmartList1"><li>FLEXlm license directory support: <code class="cCode">*.lic</code> automatically used</li></div>
+<a name="wp897623"> </a><div class="pSmartList1"><li>License files require no editing for use at the end-user site</li></div>
+<a name="wp897624"> </a><div class="pSmartList1"><li>Optional path on DAEMON/VENDOR line; $<code class="cCode">PATH</code> environment variable used</li></div>
+<a name="wp897625"> </a><div class="pSmartList1"><li>Decimal license format, with <code class="cCode">lminstall</code> utility for typing in licenses</li></div>
+<a name="wp897626"> </a><div class="pSmartList1"><li>FEATURE lines are shorter, easier to understand and type in</li></div>
+<a name="wp897627"> </a><div class="pSmartList1"><li>PACKAGE lines can be shipped in separate files that never require user editing</li></div>
+<a name="wp897628"> </a><div class="pSmartList1"><li>Default TCP/IP port numbers make SERVER line port number optional</li></div>
+<a name="wp897629"> </a><div class="pSmartList1"><li>Default end-user options file path</li></div>
+<a name="wp897630"> </a><div class="pSmartList1"><li><code class="cCode">this_host</code> host name supported on SERVER line</li></div>
+<a name="wp897631"> </a><div class="pSmartList1"><li><code class="cCodeEmphasis">VENDOR</code><code class="cCode">_LICENSE_FILE</code> supported (e.g., <code class="cCode">GSI_LICENSE_FILE</code>)</li></div>
+<a name="wp897632"> </a><div class="pSmartList1"><li><code class="cCode">@</code><code class="cCodeEmphasis">host</code> supported where default port numbers are used</li></div>
+<a name="wp897633"> </a><div class="pSmartList1"><li>Windows only: user prompted for license file or license server name</li></div>
+<a name="wp897634"> </a><div class="pSmartList1"><li>License files are optionally case insensitive</li></div>
+<a name="wp897635"> </a><div class="pSmartList1"><li><code class="cCode">lmdown</code> and <code class="cCode">lmreread</code> accept <code class="cCode">-vendor </code><code class="cCodeEmphasis">vendor</code> argument</li></div>
+<a name="wp897636"> </a><div class="pSmartList1"><li><code class="cCode">START=</code><code class="cCodeEmphasis">dd</code><code class="cCode">-</code><code class="cCodeEmphasis">mmm</code><code class="cCode">-</code><code style="font-style: italic" class="cCodeEmphasis">yyyy</code><span style="font-style: italic"> </span>optional license attribute</li></div>
+</ul></div>
+<a name="wp897637"> </a><h5 class="pHeading4">
+v6.1-June 1998
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897638"> </a><div class="pSmartList1"><li>Performance improvements</li></div>
+</ul></div>
+<a name="wp897639"> </a><h5 class="pHeading4">
+v7.0-August 1999
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp897640"> </a><div class="pSmartList1"><li>License Certificate Manager support for automatic license fulfillment</li></div>
+<a name="wp897641"> </a><div class="pSmartList1"><li>Support for &quot;try-before-you-buy&quot; licensing</li></div>
+<a name="wp897642"> </a><div class="pSmartList1"><li>License file handles inserted newlines from emailers</li></div>
+<a name="wp897643"> </a><div class="pSmartList1"><li>License lines automatically optimally sorted</li></div>
+<a name="wp897644"> </a><div class="pSmartList1"><li>Improved LMTOOLS interface for Windows</li></div>
+<a name="wp897645"> </a><div class="pSmartList1"><li><code class="cCode">lmgrd</code>, when run at command line on Windows, runs in background by default</li></div>
+<a name="wp897646"> </a><div class="pSmartList1"><li>Improved three-server redundancy reliability (v7.0 vendor daemon and <code class="cCode">lmgrd</code>)</li></div>
+<a name="wp897647"> </a><div class="pSmartList1"><li><code class="cCode">lmreread</code> and <code class="cCode">lmdown</code> take <code class="cCode">-all</code> argument to shut down or reread all <code class="cCode">lmgrd</code>s</li></div>
+<a name="wp897651"> </a><div class="pSmartList1"><li>Support registry (Windows) and <code class="cCode">$HOME/.flexlmrc</code> (UNIX) for FLEXlm environment variables</li></div>
+<a name="wp897652"> </a><div class="pSmartList1"><li>Automatically install license path in registry or <code class="cCode">$HOME/.flexlmrc</code> after successful checkout</li></div>
+<a name="wp897653"> </a><div class="pSmartList1"><li>Options support for <code class="cCode">LM_PROJECT</code> with PROJECT</li></div>
+<a name="wp897654"> </a><div class="pSmartList1"><li>Performance improvements, especially for Windows NT</li></div>
+<a name="wp897655"> </a><div class="pSmartList1"><li>Intel Pentium III CPU-ID (v7.0d+, November 1999)</li></div>
+</ul></div>
+<a name="wp882974"> </a><h5 class="pHeading4">
+v7.1-August 2000
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp898300"> </a><div class="pSmartList1"><li>Security enhancements </li></div>
+<a name="wp903219"> </a><div class="pSmartList1"><li>SIGN= keyword in license </li></div>
+<a name="wp914410"> </a><div class="pSmartList1"><li><code class="cCode">lmnewlog</code> utility (v7.1+ vendor daemon)</li></div>
+</ul></div>
+<a name="wp905684"> </a><h5 class="pHeading4">
+v7.2-December 2000
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp905685"> </a><div class="pSmartList1"><li>Performance enhancements </li></div>
+</ul></div>
+<a name="wp906980"> </a><h5 class="pHeading4">
+v8.0-October 2001
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp911198"> </a><div class="pSmartList1"><li><code class="cCode">lmborrow</code> (v8.0+ components), <code class="cCode">lmpath</code> (v8.0+ vendor daemon), <code class="cCode">lmswitch</code> (v8.0+ vendor daemon) utilities</li></div>
+<a name="wp914392"> </a><div class="pSmartList1"><li><code class="cCode">lmreread</code> rereads end-user options file and SERVER host name </li></div>
+<a name="wp915281"> </a><div class="pSmartList1"><li>License borrowing with BORROW keyword </li></div>
+</ul></div>
+<a name="wp916292"> </a><h5 class="pHeading4">
+v8.1-January 2002
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916306"> </a><div class="pSmartList1"><li>CRO Security enhancements</li></div>
+</ul></div>
+<a name="wp916379"> </a><h5 class="pHeading4">
+v8.2-August 2002
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916383"> </a><div class="pSmartList1"><li>Support added for Windows XP compliancy</li></div>
+</ul></div>
+<a name="wp916395"> </a><h5 class="pHeading4">
+v8.3-October 2002
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916396"> </a><div class="pSmartList1"><li>Support added for returning borrowed licenses early</li></div>
+</ul></div>
+<a name="wp916409"> </a><h5 class="pHeading4">
+v8.4-January 2003
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916413"> </a><div class="pSmartList1"><li>Support for reserved package suites</li></div>
+</ul></div>
+<a name="wp916437"> </a><h5 class="pHeading4">
+v9.0-March 2003
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916444"> </a><div class="pSmartList1"><li>Support for COMPOSITE= hostid type</li></div>
+</ul></div>
+<a name="wp916467"> </a><h5 class="pHeading4">
+v9.2-July 2003
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916468"> </a><div class="pSmartList1"><li>Options file keywords added: GROUPCASEINSENSITIVE and MAX_BORROW_HOURS</li></div>
+</ul></div>
+<a name="wp916481"> </a><h5 class="pHeading4">
+v9.5-November 2004
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp916487"> </a><div class="pSmartList1"><li>New environment variable: LM_UTIL_CASE_SENSITIVE</li></div>
+</ul></div>
+<a name="wp917276"> </a><h5 class="pHeading4">
+v10.0-April 2004
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp917280"> </a><div class="pSmartList1"><li>Released as FLEXnet Licensing</li></div>
+<a name="wp917307"> </a><div class="pSmartList1"><li>Support for fully qualified domain names</li></div>
+</ul></div>
+<a name="wp917284"> </a><h5 class="pHeading4">
+v10.1-November 2004
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp917288"> </a><div class="pSmartList1"><li>Additional FLEXid driver support for USB dongles</li></div>
+</ul></div>
+<a name="wp917295"> </a><h5 class="pHeading4">
+v10.8-April 2005
+</h5>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp917299"> </a><div class="pSmartList1"><li>IPv6 address support for hostids</li></div>
+<a name="wp917303"> </a><div class="pSmartList1"><li>Enhanced three-server redundant configuration support</li></div>
+<a name="wp917304"> </a><div class="pSmartList1"><li>Support for common vendor daemons</li></div>
+</ul></div>
+<a name="wp917143"> </a><h3 class="pHeading2">
+	Third Party License Agreements
+</h3>
+<a name="wp917150"> </a><p class="pBody">
+Part of the software shipped with the FLEXnet Licensing toolkit to enable the FLEXnet Fulfillment API is protected by the following third party copyrights:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp917154"> </a><div class="pSmartList1"><li><a href="chap17.htm#wp917176">The Apache Software Foundation </a></li></div>
+<a name="wp917155"> </a><p class="pIndented2Relative">
+This product includes software developed by the Apache Software Foundation (<a href="http://www.apache.org/">http://www.apache.org/</a>). Copyright (c) 2000 The Apache Software Foundation. All rights reserved.
+</p>
+<a name="wp917160"> </a><div class="pSmartList1"><li><a href="chap17.htm#wp917191">The Open SSL Project </a></li></div>
+<a name="wp917161"> </a><p class="pIndented2Relative">
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (<a href="http://www.openssl.org/">http://www.openssl.org/</a>). Copyright (c) 1998-2003 The Open SSL Project. All rights reserved.
+</p>
+<a name="wp917166"> </a><div class="pSmartList1"><li><a href="chap17.htm#wp917208">Eric Young </a></li></div>
+<a name="wp917168"> </a><p class="pIndented2Relative">
+This product includes cryptographic software written by Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>). Copyright (c) 1995-1998 Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>). All rights reserved.
+</p>
+<a name="wp917173"> </a><div class="pSmartList1"><li><a href="chap17.htm#wp917223">Genivia Inc. </a></li></div>
+<a name="wp917174"> </a><p class="pIndented2Relative">
+Part of the software embedded in this product is gSOAP software. Copyright (c) 2001-2003 Robert A. van Engelen, Genivia Inc. All rights reserved.
+</p>
+</ul></div>
+<a name="wp917176"> </a><h5 class="pHeading4">
+The Apache Software Foundation
+</h5>
+<a name="wp917177"> </a><p class="pBody">
+Version 1.1 Copyright (c) 2000 The Apache Software Foundation. All rights reserved. 
+</p>
+<a name="wp917178"> </a><p class="pBody">
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp917179"> </a><div class="pSmartList1"><li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. </li></div>
+<a name="wp917180"> </a><div class="pSmartList1"><li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. </li></div>
+<a name="wp917181"> </a><div class="pSmartList1"><li>The end-user documentation included with the redistribution, if any, must include the following acknowledgment: &quot;This product includes software developed by the Apache Software Foundation (<a href="http://www.apache.org/">http://www.apache.org/</a>).&quot; Alternately, this acknowledgment may appear in the software itself, if and wherever such third-party acknowledgments normally appear. </li></div>
+<a name="wp917183"> </a><div class="pSmartList1"><li>The names &quot;Apache&quot; and &quot;Apache Software Foundation&quot; must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact <a href="mailto:apache@apache.org">apache@apache.org</a>. </li></div>
+<a name="wp917185"> </a><div class="pSmartList1"><li>Products derived from this software may not be called &quot;Apache&quot;, nor may &quot;Apache&quot; appear in their name, without prior written permission of the Apache Software Foundation. </li></div>
+</ol></div>
+<a name="wp917186"> </a><p class="pBody">
+THIS SOFTWARE IS PROVIDED &quot;AS IS&quot; AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+</p>
+<a name="wp917188"> </a><p class="pBody">
+This software consists of voluntary contributions made by many individuals on behalf of the Apache Software Foundation. For more information on the Apache Software Foundation, please see <a href="http://www.apache.org/">http://www.apache.org/</a>. Portions of this software are based upon public domain software originally written at the National Center for Supercomputer Applications, University of Illinois, Urban-Champaign.
+</p>
+<a name="wp917191"> </a><h5 class="pHeading4">
+The Open SSL Project
+</h5>
+<a name="wp917192"> </a><p class="pBody">
+Copyright (c) 1998-2003 The OpenSSL Project. All rights reserved. 
+</p>
+<a name="wp917193"> </a><p class="pBody">
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp917194"> </a><div class="pSmartList1"><li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. </li></div>
+<a name="wp917195"> </a><div class="pSmartList1"><li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. </li></div>
+<a name="wp917196"> </a><div class="pSmartList1"><li>All advertising materials mentioning features or use of this software must display the following acknowledgment: &quot;This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (<a href="http://www.openssl.org/">http://www.openssl.org/</a>)&quot; </li></div>
+<a name="wp917198"> </a><div class="pSmartList1"><li>The names &quot;OpenSSL Toolkit&quot; and &quot;OpenSSL Project&quot; must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact <a href="mailto:openssl-core@openssl.org">openssl-core@openssl.org</a>. </li></div>
+<a name="wp917200"> </a><div class="pSmartList1"><li>Products derived from this software may not be called &quot;OpenSSL&quot; nor may &quot;OpenSSL&quot; appear in their names without prior written permission of the OpenSSL Project. </li></div>
+<a name="wp917201"> </a><div class="pSmartList1"><li>Redistributions of any form whatsoever must retain the following acknowledgment: &quot;This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<a href="http://www.openssl.org/">http://www.openssl.org/</a>)&quot; </li></div>
+</ol></div>
+<a name="wp917203"> </a><p class="pBody">
+THIS SOFTWARE IS PROVIDED BY THE OPENSSL PROJECT &quot;AS IS&quot; AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE OPENSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+</p>
+<a name="wp917205"> </a><p class="pBody">
+This product includes cryptographic software written by Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>). This product includes software written by Tim Hudson (<a href="mailto:tjh@cryptsoft.com">tjh@cryptsoft.com</a>). 
+</p>
+<a name="wp917208"> </a><h5 class="pHeading4">
+Eric Young
+</h5>
+<a name="wp917210"> </a><p class="pBody">
+Copyright (c) 1995-1998 Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>) All rights reserved. 
+</p>
+<a name="wp917212"> </a><p class="pBody">
+This package is an SSL implementation written by Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>). The implementation was written so as to conform with Netscape&#39;s SSL. This library is free for commercial and non-commercial use as long as the following conditions are adhered to. The following conditions apply to all code found in this distribution, be it the RC4, RSA, leash, DES, etc., code; not just the SSL code. The SSL documentation included with this distribution is covered by the same copyright terms except that the holder is Tim Hudson (<a href="mailto:tjh@cryptsoft.com">tjh@cryptsoft.com</a>). Copyright remains Eric Young&#39;s, and as such any Copyright notices in the code are not to be removed. If this package is used in a product, Eric Young should be given attribution as the author of the parts of the library used. This can be in the form of a textual message at program startup or in documentation (online or textual) provided with the package. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp917214"> </a><div class="pSmartList1"><li>Redistributions of source code must retain the copyright notice, this list of conditions and the following disclaimer. </li></div>
+<a name="wp917215"> </a><div class="pSmartList1"><li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. </li></div>
+<a name="wp917216"> </a><div class="pSmartList1"><li>All advertising materials mentioning features or use of this software must display the following acknowledgement: &quot;This product includes cryptographic software written by Eric Young (<a href="mailto:eay@cryptsoft.com">eay@cryptsoft.com</a>)&quot; The word &quot;cryptographic&quot; can be left out if the routines from the library being used are not cryptographic related :-). </li></div>
+<a name="wp917218"> </a><div class="pSmartList1"><li>If you include any Windows specific code (or a derivative thereof) from the apps directory (application code) you must include an acknowledgement: &quot;This product includes software written by Tim Hudson (<a href="mailto:tjh@cryptsoft.com">tjh@cryptsoft.com</a>)&quot; </li></div>
+</ol></div>
+<a name="wp917220"> </a><p class="pBody">
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+<a name="wp917221"> </a><p class="pBody">
+The licence and distribution terms for any publicly available version or derivative of this code cannot be changed. i.e. this code cannot simply be copied and put under another distribution licence [including the GNU Public Licence.]
+</p>
+<a name="wp917223"> </a><h5 class="pHeading4">
+Genivia Inc.
+</h5>
+<a name="wp917224"> </a><p class="pBody">
+Part of the software embedded in this product is gSOAP software. 
+</p>
+<a name="wp917225"> </a><p class="pBody">
+Portions created by gSOAP are Copyright (C) 2001-2003 Robert A. van Engelen, Genivia inc. All Rights Reserved. 
+</p>
+<a name="wp917226"> </a><p class="pBody">
+THE SOFTWARE IN THIS PRODUCT WAS IN PART PROVIDED BY GENIVIA INC. AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table align="right" border="0" cellspacing="0" cellpadding="0">
+    <td align="right" width="200" height="85">
+    <map name="FPMap0">
+    <area href="http://www.macrovision.com" shape="rect" coords="4, 0, 199, 33">
+    <area href="http://www.macrovision.com" shape="rect" coords="1, 40, 199, 57"></map><img border="0" src="graphics/gsitoplogo.gif" usemap="#FPMap0" /></td>
+    <td align="right" width="200" height="85">
+    <map name="FPMap1">
+    <area href="mailto:support@macrovision.com" shape="rect" coords="9, 70, 151, 99"></map><img border="0" src="graphics/footerAddress.gif" usemap="#FPMap1" /></td>
+</table>
+         
+ <p>&nbsp;</p>
+ 
+   <table id="SummaryNotReq2" width="220" border="0" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq5" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap16.htm"><img id="LongDescNotReq6" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="IX.htm"><img id="LongDescNotReq7" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq8" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+      <table align="left">
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2"><i>
+        FLEXnet </i></font><i><font face="Verdana" size="2">Licensing End User 
+        Guide</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">Version 10.8</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">May 2005</font></i></td>
+      </tr>
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2">
+        <a href="cpyrt.htm">copyright</a></font></td>
+      </tr>
+    </table>
+
+    
+  </body>
+</html>

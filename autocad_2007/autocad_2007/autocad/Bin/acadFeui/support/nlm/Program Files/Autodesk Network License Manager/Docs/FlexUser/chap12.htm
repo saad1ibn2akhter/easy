@@ -1,0 +1,251 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="STGsans80" />
+    <meta name="LASTUPDATED" content="05/25/05 11:24:03" />
+    <title>FLEXnet Licensing Environment Variables</title>
+    <link rel="StyleSheet" href="document.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="contents" title="Table of Contents" href="TOC.htm" />
+<link rel="index" title="Index" href="IX.htm" />
+<link rel="first" title="First" href="TOC.htm" />
+<link rel="last" title="Last" href="IX.htm" />
+<link rel="previous" title="Previous" href="chap11.htm" />
+<link rel="next" title="Next" href="chap13.htm" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <table id="SummaryNotReq1" width="220" border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq1" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap11.htm"><img id="LongDescNotReq2" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap13.htm"><img id="LongDescNotReq3" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq4" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <img border="0" src="graphics/FLEXnetPubl.gif">
+    </p>
+    <hr align="left" />
+
+    <blockquote>
+<a name="wp915955"> </a><h2 class="pAppTitle">
+FLEXnet Licensing Environment Variables
+</h2>
+<a name="wp916229"> </a><h2 class="pAppNum">
+<p align=right> Appendix D</p>
+</h2>
+<hr /><a name="wp896409"> </a><p class="pBody">
+Environment variables are not required in order to use FLEXenabled applications. Environment variables are normally used for debugging or for changing license default location.
+</p>
+<a name="wp896411"> </a><h3 class="pHeading2">
+	How to Set Environment Variables
+</h3>
+<a name="wp896415"> </a><p class="pBody">
+FLEXnet Licensing environment variables are set in two different ways: 
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp896416"> </a><div class="pSmartList1"><li>In the process&#39; environment</li></div>
+<a name="wp896417"> </a><div class="pSmartList1"><li>In the registry (Windows v6.0+) or in <code class="cCode">$HOME/.flexlmrc</code> (UNIX v7.0+), which functions like the registry for FLEXnet Licensing on UNIX. </li></div>
+</ul></div>
+<a name="wp896421"> </a><h4 class="pHeading3">
+	Registry
+</h4>
+<a name="wp896425"> </a><p class="pBody">
+On Windows, the FLEXnet Licensing registry location is:
+</p>
+<a name="wp896426"> </a><p class="pIndented2CodeRelative">
+HKEY_LOCAL_MACHINE\Software\FLEXlm License Manager
+</p>
+<a name="wp896427"> </a><p class="pBody">
+On UNIX, the equivalent information is stored in <code class="cCode">$HOME/.flexlmrc</code>. In this file, the syntax is <code class="cCodeEmphasis">variable</code><code class="cCode">=</code><code class="cCodeEmphasis">value</code>.
+</p>
+<a name="wp896428"> </a><h4 class="pHeading3">
+	Precedence
+</h4>
+<a name="wp896432"> </a><p class="pBody">
+If the variable is <code class="cCode">LM_LICENSE_FILE</code> or <code class="cCodeEmphasis">VENDOR</code><code class="cCode">_LICENSE_FILE</code>, then both the environment and the registry are used, with the environment used first, and the registry appended to the path.
+</p>
+<a name="wp896433"> </a><p class="pBody">
+If it&#39;s a different variable, then if the environment set, only that is used, otherwise the registry is used. That is, the registry is only used if the environment is not set.
+</p>
+<a name="wp896435"> </a><h3 class="pHeading2">
+	Environment Variables
+</h3>
+<a name="wp896481"> </a><p class="pBodyRelative">
+</p>
+<div align="left">
+<table border="1" cellpadding="10" id="wp916914table896436">
+  <caption></caption>
+  <tr align="left">    <td><a name="wp916914"> </a><div class="pCellBody">
+<b style="font-style: normal; font-weight: bold; text-decoration: none; vertical-align: baseline" class="cBold">Variable</b>
+</div>
+</td>
+    <td><a name="wp916919"> </a><div class="pCellBody">
+<b class="cBold">Definition</b>
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916844"> </a><div class="pCellBody">
+<code class="cCode">FLEXLM_BATCH</code>
+</div>
+</td>
+    <td><a name="wp916846"> </a><div class="pCellBody">
+Windows only: prevents interactive pop-ups from appearing. Set to 1 if a batch application. (Version 7.0+ clients)
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916833"> </a><div class="pCellBody">
+<code class="cCode">FLEXLM_DIAGNOSTICS</code>
+</div>
+</td>
+    <td><a name="wp916835"> </a><div class="pCellBody">
+Used for debugging where applications don&#39;t print FLEXnet Licensing error message text. Set to 1, 2, or 3, depending on the amount of diagnostic information desired. See <a href="chap11.htm#wp896119">&quot;FLEXLM_DIAGNOSTICS.&quot; </a> (Version 5.0+ clients)
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916824"> </a><div class="pCellBody">
+<code class="cCode">FLEXLM_TIMEOUT</code>
+</div>
+</td>
+    <td><a name="wp916829"> </a><div class="pCellBody">
+Windows only: Sets the timeout value a FLEXenabled application uses when attempting to connect to a license server system port in the range 27000-27009. 
+</div>
+<a name="wp916830"> </a><div class="pCellBody">
+Values are in microseconds, within the range 0 through 2147483647. The default setting is 100000 microseconds.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916883"> </a><div class="pCellBody">
+<code class="cCode">LM_BORROW</code>
+</div>
+</td>
+    <td><a name="wp916885"> </a><div class="pCellBody">
+Used for initiating license borrowing and setting the borrow period. See <a href="chap8.htm#wp908723">&quot;Initiating License Borrowing&quot; </a> for more details. On UNIX platforms, <code class="cCode">$HOME/.flexlmborrow</code> is used for the registry instead of <code class="cCode">$HOME/.flexlmrc</code>.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916872"> </a><div class="pCellBody">
+<code class="cCode">LM_PROJECT</code>
+</div>
+</td>
+    <td><a name="wp916874"> </a><div class="pCellBody">
+<code class="cCode">LM_PROJECT</code>&#39;s value is logged in the report log file and later reported on by FLEXnet Manager. Limited to 30 characters. (v5.0+ client required.) 
+</div>
+<a name="wp916878"> </a><div class="pCellBody">
+This can also be used to RESERVE, INCLUDE, etc. licenses with PROJECT. For example:
+</div>
+<a name="wp916879"> </a><div class="pCellBodyCode">
+RESERVE 1 f1 PROJECT airplane
+</div>
+<a name="wp916880"> </a><div class="pCellBody">
+v5.0+ clients and v7.0+ vendor daemon are required for this feature.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916867"> </a><div class="pCellBody">
+<code class="cCode">LM_SERVER_HIGHEST_FD</code>
+</div>
+</td>
+    <td><a name="wp916869"> </a><div class="pCellBody">
+Used to set the highest file descriptor value, above which the license server will not access.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916859"> </a><div class="pCellBody">
+<code class="cCode">LM_UTIL_CASE_SENSITIVE</code>
+</div>
+</td>
+    <td><a name="wp916864"> </a><div class="pCellBody">
+Used by the FLEXlm utilities. If set to <code class="cCode">1</code>, the utilities process license file lines as case sensitive. By default, this variable is set to <code class="cCode">0</code>; license files are treated as case insensitive. This environment variable is applicable only when the license server, itself, has been configured by your vendor to treat license files in a case sensitive manner.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916852"> </a><div class="pCellBody">
+<code class="cCode">TCP_NODELAY</code>
+</div>
+</td>
+    <td><a name="wp916857"> </a><div class="pCellBody">
+Improves FLEXnet license server system performance when processing license requests. Set to 1 to enable performance enhancements. Use with caution: when enabled it may cause an increase in network traffic.
+</div>
+</td>
+</tr>
+  <tr align="left">    <td><a name="wp916901"> </a><div class="pCellBody">
+<code class="cCode">LM_LICENSE_FILE or</code>
+</div>
+<a name="wp916903"> </a><div class="pCellBody">
+<code class="cCode">VENDOR_LICENSE_FILE</code>
+</div>
+</td>
+    <td><a name="wp916905"> </a><div class="pCellBody">
+Reset path to license file. Can be a license-file list, separated by &quot; : &quot; on UNIX and &quot; ; &quot; on Windows. If <code class="cCodeEmphasis">VENDOR</code><code class="cCode">_LICENSE_FILE</code> used, <code class="cCodeEmphasis">VENDOR</code> is the vendor daemon name used by this application. For example, Macrovision products use <code class="cCode">GSI_LICENSE_FILE</code>. Can be a file name, or <code class="cCodeEmphasis">port</code><code class="cCode">@</code><code class="cCodeEmphasis">host</code>. See also <a href="chap2.htm#wp919349">&quot;Setting the Path with an Environment Variable.&quot; </a> (<code class="cCodeEmphasis">VENDOR</code><code class="cCode">_LICENSE_FILE</code> requires v6.0+ clients.)
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="pBodyRelative">
+
+</p>
+    </blockquote>
+
+    <hr />
+
+    <table align="right" border="0" cellspacing="0" cellpadding="0">
+    <td align="right" width="200" height="85">
+    <map name="FPMap0">
+    <area href="http://www.macrovision.com" shape="rect" coords="4, 0, 199, 33">
+    <area href="http://www.macrovision.com" shape="rect" coords="1, 40, 199, 57"></map><img border="0" src="graphics/gsitoplogo.gif" usemap="#FPMap0" /></td>
+    <td align="right" width="200" height="85">
+    <map name="FPMap1">
+    <area href="mailto:support@macrovision.com" shape="rect" coords="9, 70, 151, 99"></map><img border="0" src="graphics/footerAddress.gif" usemap="#FPMap1" /></td>
+</table>
+         
+ <p>&nbsp;</p>
+ 
+   <table id="SummaryNotReq2" width="220" border="0" cellpadding="0" cellspacing="0">
+      <tr> 
+        <td>
+<a accesskey="1" href="TOC.htm"><img id="LongDescNotReq5" src="graphics/toc.gif" border="0" alt="Table of Contents" /></a><a accesskey="4" href="chap11.htm"><img id="LongDescNotReq6" src="graphics/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="chap13.htm"><img id="LongDescNotReq7" src="graphics/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.htm"><img id="LongDescNotReq8" src="graphics/index.gif" border="0" alt="Index" /></a>
+        </td>
+      </tr>
+    </table>
+      <table align="left">
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2"><i>
+        FLEXnet </i></font><i><font face="Verdana" size="2">Licensing End User 
+        Guide</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">Version 10.8</font></i></td>
+      </tr>
+      <tr>
+        
+    <td align="left"><i><font face="Verdana" size="2">May 2005</font></i></td>
+      </tr>
+      <tr>
+        <td align="left"><font color="Black" face="Verdana" size="2">
+        <a href="cpyrt.htm">copyright</a></font></td>
+      </tr>
+    </table>
+
+    
+  </body>
+</html>

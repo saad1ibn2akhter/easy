@@ -1,0 +1,68 @@
+BODY {
+  color: "#000000";
+  font: 10pt Arial, Helvetica, sans-serif;
+  background: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+P,TD {
+  font: 10pt Arial, Helvetica, sans-serif;
+  color: black;
+  margin-left: 0px;
+}
+
+TD.TITLE 
+{
+  font: 12pt Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color: black;
+  margin-left: 0px;
+}
+
+HR {
+  width: 575px;
+  text-align: left;
+}
+
+TEXTAREA {
+  overflow: hidden;
+}
+
+H1.REGTITLE {
+  font: 19pt Verdana, Helvetica, sans-serif;
+  color: "#0066cc";
+  margin-top: 15px;
+  margin-left:0px;
+  margin-bottom: 0px;
+}
+
+INPUT.PREFIX 
+{
+	width: 28px;
+}
+
+INPUT.SUBFIX
+{
+	width: 63px;
+}
+
+a:link {
+    color: #0066CC;
+	text-decoration: none;
+}
+a:visited {
+    color: #6699CC;
+	text-decoration: none;
+}
+a:hover {
+    color: #0066CC;
+	text-decoration: underline;
+}
+a.offline 
+{
+	cursor:hand;
+    color: #0066CC;
+	text-decoration: none;
+}

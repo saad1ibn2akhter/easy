@@ -1,0 +1,35 @@
+;;
+;;  AutoCAD SXF Linetype Definition file
+;;  Version 1.0
+;;  Copyright 2003 by Autodesk, Inc.
+;;
+*SXF_破線,02 dashed -- -- -- -- -- --
+A,6,-1.5
+*SXF_跳び破線,03 dashed_spaced --  --  --  --
+A,6,-6
+*SXF_一点長鎖線,04 long_dashed_dotted ---- . ---- . ----
+A,12,-1.5,0.25,-1.5
+*SXF_二点長鎖線,05 long_dashed_double-dotted ---- . . ---- 
+A,12,-1.5,0.25,-1.5,0.25,-1.5
+*SXF_三点長鎖線,06 long_dashed_triplicate-dotted ---- ... ---- 
+A,12,-1.5,0.25,-1.5,0.25,-1.5,0.25,-1.5
+*SXF_点線,07 dotted . . . . . . . . . . . . 
+A,0.25,-1.5
+*SXF_一点鎖線,08 chain ---- - --- - --- - ---
+A,12,-1.5,3.5,-1.5
+*SXF_二点鎖線,09 chain_double_dash ---- - - ---- - - ----
+A,12,-1.5,3.5,-1.5,3.5,-1.5
+*SXF_一点短鎖線,10 dashed_dotted -- . -- . -- . --
+A,6,-1.5,0.25,-1.5
+*SXF_一点二短鎖線,11 double-dashed_dotted -- -- . -- --
+A,6,-1.5,6,-1.5,0.25,-1.5
+*SXF_二点短鎖線,12 dashed_double_dotted -- . . -- . . --
+A,6,-1.5,0.25,-1.5,0.25,-1.5
+*SXF_二点二短鎖線,13 double-dashed_double-dotted -- -- . . -- --
+A,6,-1.5,6,-1.5,0.25,-1.5,0.25,-1.5
+*SXF_三点短鎖線,14 dashed triplicate-dotted -- . . . -- . . . --
+A,6,-1.5,0.25,-1.5,0.25,-1.5,0.25,-1.5
+*SXF_三点二短鎖線,15 double-dashed triplicate-dotted -- -- . . . -- -- 
+A,6,-1.5,6,-1.5,0.25,-1.5,0.25,-1.5,0.25,-1.5
+
+

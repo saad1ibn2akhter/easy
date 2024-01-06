@@ -1,0 +1,47 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+
+<html>
+	<head>
+	    <script src="RTTempPath.js"></script>
+	    <script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+        </script>
+	    <script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+	    <script><!--
+            document.writeln('<title>'+xmsgRTSUNDataConfirm+'</title>');// -->
+		// -->
+        </script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+        <script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+        </script>
+        <meta http-equiv="MSThemeCompatible" CONTENT="yes">
+    </head>
+
+	<body>
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+
+			<!--Insert SUN Data-->
+			<script><!--
+				document.writeln('<b>'+xmsgRegSunData1+'</b>');
+				document.writeln('<p>'+xmsgRegSunData2);
+				document.writeln(SUNDatapath+'</p>');
+				FillUpBlankSpaces(220);
+				StartNavigationButtons();
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+				document.writeln('<input type="button" value="'+xmsgFinish+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

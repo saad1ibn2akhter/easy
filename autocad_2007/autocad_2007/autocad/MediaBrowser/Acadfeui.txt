@@ -1,0 +1,2285 @@
+[Acadfeui.dbd]
+ENU=
+
+[ENU.Global]
+Caption=Media Browser - AutoCAD 2007
+Ok=OK
+Cancel=Cancel
+Browse=Browse...
+
+[ENU.Launch Application]
+Caption=DemoShield
+Insert Disk Message=The '%s' application could not be located.
+Insert Disk Instructions=Please insert the next disk and press OK to continue.
+Browse Message=The '%s' application could not be located.
+Browse Instructions=Please browse for the application you want to launch.
+
+[ENU.Welcome.W2k SP4 SysCheck Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Welcome.W2k SPSysCheck Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Welcome.SysCheck Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Welcome.Button-Ok SysCheck]
+Type=3
+Data=OK
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Button-W2k SP4 SysCheck]
+Type=3
+Data=OK
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Button-W2k SPSysCheck]
+Type=3
+Data=OK
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Text-SysCheck Dialog Title]
+Type=2
+Data=Invalid OS Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Text-W2k SP4 SysCheckTitle]
+Type=2
+Data=Windows 2000: Unsupported Operating System
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Text-W2k SPSysCheckTitle]
+Type=2
+Data=Windows 2000: Unsupported Operating System
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Hot Spot-Exit Box-SysChec Dialog]
+Type=5
+Tooltip=
+
+[ENU.Welcome.Hot Spot-W2k SP4 SysCheck]
+Type=5
+Tooltip=
+
+[ENU.Welcome.Hot Spot-W2k SPSysCheck]
+Type=5
+Tooltip=
+
+[ENU.Welcome.Quick Report-W2k SPSysCheck]
+Type=2
+Data=To install the product on the Windows 2000 operating system, you must have Service Pack 4 (or greater) installed on your system.\n
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Report-SysChec Dialog Text]
+Type=2
+Data=<Global.DetectOS> is not a supported operating system for <Global.String1(Global)>.  You must upgrade to a supported operating system before you install the product.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Report-W2k SP4 SysCheck]
+Type=2
+Data=To install the product on the Windows 2000 operating system, you must have Service Pack 4 (or greater) installed on your system.\n
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.UNC Path Error]
+Type=1
+Tooltip=
+
+[ENU.Welcome.Quick Report-UNC Path Error]
+Type=2
+Data=The directory containing Setup.exe must be the currect directory.\nPlease change your directory to where Setup.exe lives, and try again.\n
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Button-UNC Path Error]
+Type=3
+Data=OK
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Hot Spot-UNC Path Error]
+Type=5
+Tooltip=
+
+[ENU.Welcome.Hot Spot - Splash]
+Type=5
+Tooltip=
+
+[ENU.Install.Area3]
+Type=1
+Tooltip=
+
+[ENU.Install.Area2]
+Type=1
+Tooltip=
+
+[ENU.Install.Area1]
+Type=1
+Tooltip=
+
+[ENU.Install.Text-Screen Title]
+Type=2
+Data=Stand-Alone Installation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-Review Product Documentatio]
+Type=2
+Data=Review Product Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-System Requirements]
+Type=2
+Data=System Requirements
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-Installation Guide]
+Type=2
+Data=Quick Start to Stand-Alone Installation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-Readme]
+Type=2
+Data=Readme
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-Install AutoCAD]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-Product Registration]
+Type=2
+Data=Details
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-Register Product]
+Type=2
+Data=Learn About Product Registration
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Quick Link-Graphics Card Driver]
+Type=2
+Data=Graphics Card Driver Update
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Quick Report-Install AutoCAD]
+Type=2
+Data=Install <Global.String1(Global)>
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Button-Cancel MSIE Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Install.Button-Cancel AAR Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Install.Hot Spot-Exit Box-AAR Dialog]
+Type=5
+Tooltip=
+
+[ENU.Install.Hot Spot-Exit Box-MSIE Dialog]
+Type=5
+Tooltip=
+
+[ENU.Install.Quick Report-MSIE Dialog Text]
+Type=2
+Data=Microsoft Internet Explorer 6.0 Service Pack 1 or later is required to install and run <Global.String1(Global)>.\n\nPlease install the latest version of Microsoft Internet Explorer and continue with your installation.\n\nMicrosoft Internet Explorer can be found at:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-AAR Dialog Text]
+Type=2
+Data=Adobe Reader is required to view or print this document.\n\nPlease install the latest version of Adobe Reader from:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-AAR Dialog Title]
+Type=2
+Data=Adobe Reader Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-MSIE Dialog Title]
+Type=2
+Data=Microsoft Internet Explorer Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Link-InternetExplorer]
+Type=2
+Data=Microsoft Internet Explorer download
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Button-Back]
+Type=3
+Data=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-Rollover-Install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Install2]
+Type=2
+Data=Start the <Global.String1(Global)> Installation.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-SReq]
+Type=2
+Data=System Requirements
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-SReq2]
+Type=2
+Data=View hardware and software requirements before you install.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Driver]
+Type=2
+Data=Graphics Card Driver
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Driver2]
+Type=2
+Data=Verify and update your graphics card driver to optimize <Global.String1(Global)>.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-QStart]
+Type=2
+Data=Quick Start to Stand-Alone Installation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-QStart2]
+Type=2
+Data=Provides instructions for installing and activating <global.string1(global)> on an individual computer.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Readme]
+Type=2
+Data=Readme
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Readme2]
+Type=2
+Data=Review important product information before you install that may not be documented in the printed documentation or in Help.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Details]
+Type=2
+Data=Product Registration Details
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Text-Rollover-Details2]
+Type=2
+Data=Find out how to register and activate your product.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Install.Line]
+Type=0
+Tooltip=
+
+[ENU.Install.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Text-Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install.Flash-Logo]
+Type=1
+Tooltip=
+
+[ENU.Install.MSIE Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Install.AAR Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Install Start.Area2]
+Type=1
+Tooltip=
+
+[ENU.Install Start.Area1]
+Type=1
+Tooltip=
+
+[ENU.Install Start.Area3]
+Type=1
+Tooltip=
+
+[ENU.Install Start.Text-Screen Title]
+Type=2
+Data=Choose an installation type:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Quick Link-StandAlone]
+Type=2
+Data=Stand-Alone Installation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Text-StandAloneText]
+Type=2
+Data=One seat is installed using a single serial number. 
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Quick MSSA]
+Type=2
+Data=Multi-Seat Stand-Alone Deployment
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Text-MSSA Text]
+Type=2
+Data=Multiple seats are installed using a single serial number. 
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Link-Network Deployment]
+Type=2
+Data=Network Deployment
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Text-Network Deployment]
+Type=2
+Data=Multiple seats are installed using multiple network licenses.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Text_Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Install Start.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Area2]
+Type=1
+Tooltip=
+
+[ENU.Documentation.Area3]
+Type=1
+Tooltip=
+
+[ENU.Documentation.Area1]
+Type=1
+Tooltip=
+
+[ENU.Documentation.Text-Screen Title]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-InstallationGuide]
+Type=2
+Data=Stand-Alone Installation Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Readme]
+Type=2
+Data=Readme (CHM)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Users Guide]
+Type=2
+Data=User's Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Standalone Licensing Guide]
+Type=2
+Data=Stand-Alone Licensing Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Quick Reference]
+Type=2
+Data=Quick Reference (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Command Reference]
+Type=2
+Data=Command Reference (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Customization Guide]
+Type=2
+Data=Customization Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Driver and Peripheral Guide]
+Type=2
+Data=Driver and Peripheral Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text-For Network Administrators]
+Type=2
+Data=Installation and Licensing Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Network Admin Guide]
+Type=2
+Data=Network Administrator's Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Network Licensing Guide]
+Type=2
+Data=Network Licensing Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-SAM Report-lite]
+Type=2
+Data=SAMreport-Lite User's Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text - User Documentation]
+Type=2
+Data=User Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Hot Spot-Exit Box-AAR Dialog]
+Type=5
+Tooltip=
+
+[ENU.Documentation.Text-AAR Dialog Title]
+Type=2
+Data=Adobe Reader Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Button-Cancel AAR Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Documentation.Text-AAR Dialog Text]
+Type=2
+Data=Adobe Reader is required to view or print this document.\n\nPlease install the latest version of Adobe Reader from:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Adobe Acrobat Reader]
+Type=2
+Data=Adobe Reader download
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Getting Started]
+Type=2
+Data=Getting Started (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Line]
+Type=0
+Tooltip=
+
+[ENU.Documentation.Text-Rollover-Readme]
+Type=2
+Data=Readme
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Readme2]
+Type=2
+Data=Provides important product information before you install that may not be documented in the printed documentation or in Help.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Start]
+Type=2
+Data=Getting Started
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Start2]
+Type=2
+Data=Provides a self-study introduction to <Global.String1(Global)>.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Guide]
+Type=2
+Data=User's Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Guide2]
+Type=2
+Data=Explains <Global.String1(Global)> concepts, provides step-by-step procedures and associated commands, and includes a glossary with definitions of <Global.String1(Global)> terms.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Ref2]
+Type=2
+Data=Lists and describes commonly used features, commands, system variables, shortcut keys, and other controls.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Driver]
+Type=2
+Data=Driver and Peripheral Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Driver2]
+Type=2
+Data=Provides information about plotters and plotter configuration, pointing devices, AutoSpool, and external database configuration.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Custom]
+Type=2
+Data=Customization Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Custom2]
+Type=2
+Data=Tells experienced users how to customize <Global.String1(Global)>.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Ref]
+Type=2
+Data=Quick Reference
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-CmdRef]
+Type=2
+Data=Command Reference
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-CmdRef2]
+Type=2
+Data=Provides a comprehensive reference to all <global.string1(global)> commands and system variables.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SAInstall]
+Type=2
+Data=Stand-Alone Installation Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SAInstall2]
+Type=2
+Data=Provides instructions for installing and activating <global.string1(global)> on an individual computer.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-NAGuide]
+Type=2
+Data=Network Administrator's Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-NAGuide2]
+Type=2
+Data=Provides instructions for deploying <global.string1(global)> on a network.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SALicense]
+Type=2
+Data=Stand-Alone Licensing Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SALicense2]
+Type=2
+Data=Provides information and instructions for managing an Autodesk stand-alone license on a workstation.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-NetLicense]
+Type=2
+Data=Network Licensing Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-NetLicense2]
+Type=2
+Data=Provides information about installing the Network License Manager on a network.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SAMGuide]
+Type=2
+Data=SAMreport-Lite User's Guide
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-SAMGuide2]
+Type=2
+Data=Provides instructions for tracking network license usage and generating reports.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text-Install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text-Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Link-Concept Deisgn]
+Type=2
+Data=Building Your World (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text-Rollover-Concept]
+Type=2
+Data=Building Your World
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.Text-Rollover-Concept2]
+Type=2
+Data=Provides a self-study introduction to 3D solid modeling.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Documentation.AAR Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Support.Area2]
+Type=1
+Tooltip=
+
+[ENU.Support.Area3]
+Type=1
+Tooltip=
+
+[ENU.Support.Area1]
+Type=1
+Tooltip=
+
+[ENU.Support.Text-Screen Title]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text 1]
+Type=2
+Data=If you need assistance with your installation, contact your Authorized Autodesk Reseller, or use any of the following support options. 
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Quick Link-Installation Support]
+Type=2
+Data=Installation Support Online
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Installation Support]
+Type=2
+Data=Find the most up-to-date installation support information for this product online. 
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Quick Link-FAQ]
+Type=2
+Data=Frequently Asked Questions and Answers (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-FAQ]
+Type=2
+Data=Read Q&A installation support information that is located on this CD.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Quick Link-Additional Features]
+Type=2
+Data=Additional Services Information Online
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Additional Features]
+Type=2
+Data=View a list of additional services, including training and options for ongoing support, customization, and consulting. 
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Hot Spot-Exit Box-AAR Dialog]
+Type=5
+Tooltip=
+
+[ENU.Support.Text-AAR Dialog Text]
+Type=2
+Data=Adobe Reader is required to view or print this document.\n\nPlease install the latest version of Adobe Reader from:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-AAR Dialog Title]
+Type=2
+Data=Adobe Reader Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Button-Cancel AAR Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Support.Link-Adobe Acrobat Reader]
+Type=2
+Data=Adobe Reader download
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Link-Subscription]
+Type=2
+Data=Subscription Center
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Subscription]
+Type=2
+Data=Available for subscription customers;access the Subscription Center support site.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Rollover-Service]
+Type=2
+Data=Additional Services
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Support.Text-Rollover-Service2]
+Type=2
+Data=Get access to Autodesk technical and project management professionals, a global network of technical experts, Autodesk Authorized Training Centers, Autodesk Developer Network members, Autodesk Authorized Resellers, and third-party consultants.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Support.Line]
+Type=0
+Tooltip=
+
+[ENU.Support.Text-Rollover-Sub]
+Type=2
+Data=Subscription Center
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Support.Text-Rollover-Sub2]
+Type=2
+Data=For subscription customers only. Log in to the Subscription Center to access web support, e-Learning, and more.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Support.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-Install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.AAR Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Area2]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Area3]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Area1]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Text-Screen Title]
+Type=2
+Data=Network Deployment
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Review Product Documentatio]
+Type=2
+Data=Review Product Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-Network Admin Guide]
+Type=2
+Data=Quick Start to Network Administration
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-Network Licensing Guide]
+Type=2
+Data=Quick Start to Network Licensing
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-SAM Report-lite]
+Type=2
+Data=Quick Start to SAMreport-Lite
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-NSW Install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Install Network Setup Wiz]
+Type=2
+Data=Install the Deployment Wizard
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-Install License Manager]
+Type=2
+Data=Network License Manager
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Install License Manager]
+Type=2
+Data=Install the Network License Components
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Install Supplemental Tools]
+Type=2
+Data=Install Supplemental Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-Cad Manager]
+Type=2
+Data=Autodesk CAD Manager Tools 4.0
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-SAMReport-lite]
+Type=2
+Data=SAMreport-Lite 3.4
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Quick Link-NSA]
+Type=2
+Data=Network License Activation Utility
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Rectangle - NFW popup]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Text - NFW popup]
+Type=2
+Data=New Features Workshop
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Link-Readme]
+Type=2
+Data=Readme
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Hot Spot-Exit Box-AAR Dialog]
+Type=5
+Tooltip=
+
+[ENU.Network Deployment.Text-AAR Dialog Title]
+Type=2
+Data=Adobe Reader Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-AAR Dialog Text]
+Type=2
+Data=Adobe Reader is required to view or print this document.\n\nPlease install the latest version of Adobe Reader from:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Button-Cancel AAR Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Network Deployment.Link-Adobe Acrobat Reader]
+Type=2
+Data=Adobe Reader download
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Button-back]
+Type=1
+Tooltip=
+
+[ENU.Network Deployment.Text-Rollover-NLM]
+Type=2
+Data=Install the Network License Manager
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-NLM2]
+Type=2
+Data=Configure and manage the license servers.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Line]
+Type=0
+Tooltip=
+
+[ENU.Network Deployment.Text-Rollover-NLA]
+Type=2
+Data=Install the Network License Activation Utility
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-NLA2]
+Type=2
+Data=Obtain licenses over the Internet, register your product, get automated support for email if you cannot obtain a license over the Internet, and save and migrate license files automatically.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-MB]
+Type=2
+Data=Run from the Media Browser
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-MB2]
+Type=2
+Data=Run the Deployment wizard directly from the Media Browser.\n\n- This option is recommended if you want to retain earlier versions of the Deployment wizard on your system.\n\n- The <global.string1(global)> Deployment wizard cannot be used to create deployments for earlier versions of Autodesk products.\n\n- Settings that you select in the Deployment wizard (such as the path to the administrative image) are stored on your system and are remembered the next time you use the Deployment wizard.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-Install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-Install2]
+Type=2
+Data=Install the Deployment wizard to your system.\n\n- The <global.string1(global)> Deployment wizard cannot be used to create deployments for earlier versions of Autodesk products.\n\n- Earlier versions of the Deployment wizard must be uninstalled before you install this version.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-CAD]
+Type=2
+Data=CAD Manager Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-CAD2]
+Type=2
+Data=Autodesk Product Manager compiles a report that lists the Autodesk software installed on the computers in the network.\n\nCAD Manager Control utility configures DesignCenter Online, Communication Center, Subscription Center access, and Customer Error Reporting.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-SAM]
+Type=2
+Data=SAMreport-Lite
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-SAM2]
+Type=2
+Data=Helps you track network license usage and generate a network license-usage report for Autodesk software that uses FLEXlm(r) licensing technology.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSAdmin]
+Type=2
+Data=Quick Start to Network Administration
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSAdmin2]
+Type=2
+Data=Provides instructions before you install for deploying <global.string1(global)> on a network.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSSAM]
+Type=2
+Data=Quick Start to SAMreport-Lite
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSSAM2]
+Type=2
+Data=Provides instructions before you install for tracking network license usage and generating reports.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSLicense]
+Type=2
+Data=Review Product Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSLicense2]
+Type=2
+Data=Provides instructions before you install for configuring and managing the license server.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSReadme]
+Type=2
+Data=Readme
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Text-Rollover-QSReadme2]
+Type=2
+Data=Provides important product information before you install that may not be documented in the printed documentation or in Help.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.Network Deployment.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.Link-NSW Run Media Browser]
+Type=2
+Data=Run from Media Browser
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Network Deployment.AAR Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.MSSA Deployment.Area3]
+Type=1
+Tooltip=
+
+[ENU.MSSA Deployment.Area2]
+Type=1
+Tooltip=
+
+[ENU.MSSA Deployment.Area1]
+Type=1
+Tooltip=
+
+[ENU.MSSA Deployment.Text-Screen Title]
+Type=2
+Data=Multi-Seat Stand-Alone Deployment
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-Review Product Documentatio]
+Type=2
+Data=Review Product Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Link-Network Admin Guide]
+Type=2
+Data=Quick Start to Network Administration (CHM)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-MSSA Deployment]
+Type=2
+Data=Deployment Wizard *
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-Install Supplemental Tools]
+Type=2
+Data=Install Supplemental Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Link-Cad Manager]
+Type=2
+Data=Autodesk CAD Manager Tools 4.0
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-MSSA description]
+Type=2
+Data=* To create a multi-seat stand-alone deployment (where multiple installations use a single serial number), you must install and run the Deployment wizard.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Button-Back]
+Type=1
+Tooltip=
+
+[ENU.MSSA Deployment.Text-Rollover-Run]
+Type=2
+Data=Run from the Media Browser
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Line]
+Type=0
+Tooltip=
+
+[ENU.MSSA Deployment.Text-Rollover-Run2]
+Type=2
+Data=Run the Deployment wizard directly from the Media Browser.\n\n- This option is recommended if you want to retain earlier versions of the Deployment wizard on your system.\n\n- The <global.string1(global)> Deployment wizard cannot be used to create deployments for earlier versions of Autodesk products.\n\n- Settings that you select in the Deployment wizard (such as the path to the administrative image) are stored on your system and are remembered the next time you use the Deployment wizard.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Link-NSW install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-Rollover-install]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Text-Rollover-Install2]
+Type=2
+Data=Install the Deployment wizard to your system.\n\n- The <global.string1(global)> Deployment wizard cannot be used to create deployments for earlier versions of Autodesk products.\n\n- Earlier versions of the Deployment wizard must be uninstalled before you install this version.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Text-Rollover-CAD]
+Type=2
+Data=CAD Manager Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Text-Rollover-CAD2]
+Type=2
+Data=Autodesk Product Manager compiles a report that lists the Autodesk software installed on the computers in the network.\n\nCAD Manager Control utility configures DesignCenter Online, Communication Center, Subscription Center access, and Customer Error Reporting.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=8
+
+[ENU.MSSA Deployment.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Text-Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.MSSA Deployment.Link-NSW From Media Browser]
+Type=2
+Data=Run from the Media Browser
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Area1]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Area2]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Area3]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Text-Screen Title]
+Type=2
+Data=System Requirements
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Quick Report-Install Guide text]
+Type=2
+Data=Before you install <Global.String1(Global)>, make sure that your computer meets the minimum hardware and software requirements. For more detailed system requirements, see the Stand-Alone Installation Guide.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Link-InstallationGuide]
+Type=2
+Data=Stand-Alone Installation Guide (PDF)
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Rectangle 1]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Text-Hardware/Software]
+Type=2
+Data=Operating System\n\n\n\nBrowser\nProcessor\nRAM\nVideo\nHard Disk
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text-Requirement]
+Type=2
+Data=Microsoft Windows 2000 SP3/SP4\nMicrosoft Windows XP for TabletPC SP2\nMicrosoft Windows XP Home/Professional \nSP1/SP2\nMicrosoft Internet Explorer 6.0 SP 1 or later\nPentium(r) IV or greater\n512 MB\n1024 x 768 with True Color\nInstallation 750 MB
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Hot Spot-Exit Box-AAR Dialog]
+Type=5
+Tooltip=
+
+[ENU.System Requirements.Text-AAR Dialog Title]
+Type=2
+Data=Adobe Reader Alert
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Button-Cancel AAR Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.System Requirements.Text-AAR Dialog Text]
+Type=2
+Data=Adobe Reader is required to view or print this document.\n\nPlease install the latest version of Adobe Reader from:
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Link-Adobe Acrobat Reader]
+Type=2
+Data=Adobe Reader download
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Button-Back]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Button-Documentation]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Button-Support]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text-Documentation]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text-Support]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.AAR Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Learn About Product Reg.Area3]
+Type=1
+Tooltip=
+
+[ENU.Learn About Product Reg.Area2]
+Type=1
+Tooltip=
+
+[ENU.Learn About Product Reg.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Quick Button 1]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Quick Button 2]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Text 1]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Text 2]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Button-Back]
+Type=1
+Tooltip=
+
+[ENU.Learn About Product Reg.Text 3]
+Type=2
+Data=Learn About Product Registration
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Learn About Product Reg.Text 4]
+Type=2
+Data=You need to register and activate <Global.String1(Global)> after you install it. To register and activate the product, start <Global.String1(Global)> and follow the instructions in the Activation wizard, which is displayed when the product starts.\n\nThe fastest and most reliable way for you to register and activate your product is by using the Internet. Simply enter your registration information and send it to Autodesk over the Internet. Once you submit your information, registration and activation occur almost instantly. \n\nIf you do not have Internet access or you want to use another method of registration, you can register and activate <Global.String1(Global)> by emailing, faxing, or mailing your registration information.\n
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Area3]
+Type=1
+Tooltip=
+
+[ENU.CAD Manager Tools.Area2]
+Type=1
+Tooltip=
+
+[ENU.CAD Manager Tools.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Quick Button 1]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Quick Button 2]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Text 1]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Text 2]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Button-Back]
+Type=1
+Tooltip=
+
+[ENU.CAD Manager Tools.Text 3]
+Type=2
+Data=Install Supplemental Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Text 4]
+Type=2
+Data=Autodesk CAD Manager Tools 4.0
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.CAD Manager Tools.Link 1]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Area3]
+Type=1
+Tooltip=
+
+[ENU.SAMreport-Lite.Area2]
+Type=1
+Tooltip=
+
+[ENU.SAMreport-Lite.Button-Install]
+Type=3
+Data=Install
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Quick Button 1]
+Type=3
+Data=Documentation
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Quick Button 2]
+Type=3
+Data=Support
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Text 1]
+Type=2
+Data=Documentation
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Text 2]
+Type=2
+Data=Support
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Button-Back]
+Type=1
+Tooltip=
+
+[ENU.SAMreport-Lite.Text 4]
+Type=2
+Data=SAMreport-Lite
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Text 5]
+Type=2
+Data=SAMreport-Lite is available to help you track network license usage.\nSAMreport-Lite provides some of the features from SAMreport, the report-writing product made by Macrovision. You can generate a network license-usage report for Autodesk software that uses FLEXlm(r) licensing technology. SAMreport-Lite generates reports in a variety of output formats including HTML, text, and Report Interchange Format. You need Java(r) Runtime Environment 1.4.2 to run SAMreport-Lite.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Link 1]
+Type=2
+Data=Obtain license
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Link 2]
+Type=2
+Data=Install JRE 1.4.2
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Link 3]
+Type=2
+Data=Install
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.SAMreport-Lite.Text 6]
+Type=2
+Data=Install Supplemental Tools
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.DiskCheck.Hot Spot-DiskCheck]
+Type=5
+Tooltip=
+
+[ENU.DiskCheck.Text 2]
+Type=2
+Data=<Global.String2(Global)>\<Global.String3(Global)>\<Global.String4(Global)>
+Caption=
+Tooltip=
+Font=Arial
+Point Size=12
+
+[ENU.DiskCheck.Text-DiskCheck]
+Type=2
+Data=Please insert disk <Global.String6(Global)>
+Caption=
+Tooltip=
+Font=Arial
+Point Size=14
+
+[ENU.DiskCheck.Quick Button-Cancel]
+Type=3
+Data=Cancel
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.DiskCheck.Quick Button-Retry]
+Type=3
+Data=Retry
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.CAD Manager Tools.Text 5]
+Type=2
+Data=Autodesk CAD Manager Tools consists of the following:\n\nAutodesk Product Manager compiles a report that lists the Autodesk software installed on the computers in the network. CAD Manager Control utility configures DesignCenter Online, Communication Center, Subscription Center access, and Customer Error Reporting.
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Welcome.Quick Button-W2K SP4 OK]
+Type=3
+Data=OK
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text 1]
+Type=2
+Data=Additional Recommendations for 3D
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text 2]
+Type=2
+Data=Processor\nRAM\nGraphics Card
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text 3]
+Type=2
+Data=3.0 GHz or greater\n2 GB\n128 MB or greater, OpenGL-capable workstation-class graphics card\n
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.PDF Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Documentation.Button-Cancel PDF Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.Documentation.Text-PDF Dialog Title]
+Type=2
+Data=File Not Found
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Text-PDF Dialog Text]
+Type=2
+Data=Please insert Disk 1, and then click the link again
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Documentation.Hot Spot-Exit Box-PDF Dialog]
+Type=5
+Tooltip=
+
+[ENU.Support.PDF Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.Support.Hot Spot-Exit Box-PDF Dialog]
+Type=5
+Tooltip=
+
+[ENU.Support.Text-PDF Dialog Text]
+Type=2
+Data=Please insert Disk 1, and then click the link again
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Text-PDF Dialog Title]
+Type=2
+Data=File Not Found
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.Support.Button-Cancel PDF Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+
+[ENU.System Requirements.PDF Dialog Box]
+Type=1
+Tooltip=
+
+[ENU.System Requirements.Hot Spot-Exit Box-PDF Dialog]
+Type=5
+Tooltip=
+
+[ENU.System Requirements.Text-PDF Dialog Text]
+Type=2
+Data=Please insert Disk 1, and then click the link again
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Text-PDF Dialog Title]
+Type=2
+Data=File Not Found
+Caption=
+Tooltip=
+Font=Arial
+Point Size=9
+
+[ENU.System Requirements.Button-Cancel PDF Dialog]
+Type=3
+Data=Close
+Tooltip=
+Font=Arial
+Point Size=10
+

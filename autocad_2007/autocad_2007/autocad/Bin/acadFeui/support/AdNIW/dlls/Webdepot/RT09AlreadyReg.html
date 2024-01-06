@@ -1,0 +1,90 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+	    <script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgRT09AlreadyReg+'</title>');// -->
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<script><!--
+		    SetCountryParms();// -->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');
+
+			//	Handle "backspace" key and make "backspace" key behave like "Back" button		
+			document.onkeydown = gotoPrevPage;
+
+            // -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+	</head>
+	<body onload="SetCountryInfo()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+					<!--Registration Error Info -->
+			<table>
+			<tr><td>
+			<table>
+			<tr valign=center>
+			<td><img src="RTError.gif"></td>
+			<td align=left><b><script><!--
+				if (reqtype=="3") {
+					document.writeln(xmsgLicErrorHdr);
+				} else {
+					document.writeln(xmsgRegErrorHdr);
+				}
+				document.writeln(" (" + rterrnum + ')');// -->
+			</script></b></td>
+			</tr>
+			<tr><td colspan=2 align=left><br>
+			<script><!--
+			document.writeln(xmsgRegErrorPrevReg);
+			document.writeln("<p>");
+			document.writeln(xmsgContactAutodeskMsg1 +"<p>");
+				// -->
+			</script>
+			</td></tr>
+			</table></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><script><!--
+				document.writeln(CountryDHTML);
+				// -->
+			</script></td>
+			</tr>
+			</table></p>
+
+<!--Web Info -->
+			<span id="WebLayer"></span>
+<!--email Info -->
+			<span id="EmailLayer"></span>
+<!--Fax Info -->
+			<span id="FaxLayer"></span>
+<!--Call Info -->
+			<span id="CallLayer"></span>
+<!--Mail Info -->
+			<span id="MailLayer"></span>
+			<script><!--
+			StartNavigationButtons();
+			document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-2)"\'>');
+			document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+			document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

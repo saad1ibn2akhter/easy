@@ -1,0 +1,85 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+
+<html>
+	<head>
+	    <script src="RTTempPath.js"></script>
+	    <script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+        </script>
+	    <script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+	    <script><!--
+            document.writeln('<title>'+xmsgRTContactAutodesk+'</title>');// -->
+		// -->
+        </script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+        <script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+        </script>
+        <meta http-equiv="MSThemeCompatible" CONTENT="yes">
+    </head>
+
+	<body onload="SetCountryInfo()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" ID="Form1">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+				<p><table>
+				<tr><td>
+				<table>
+				<tr valign=center>
+				<td><img src="RTError.gif"></td>
+				<td align=left><b><script><!--
+					document.writeln(xmsgContactAutodesk);// -->
+				</script></b></td>
+				</tr>
+				<tr><td colspan=2 align=left><br>
+				<script><!--
+					document.writeln(xmsgContactAutodeskMsg1);
+					// -->
+				</script>
+				</td></tr>
+				</table></td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><script><!--
+					document.writeln(CountryDHTML);
+					// -->
+				</script></td>
+				</tr>
+				</table></p>
+
+<!--Web Info -->
+				<span id="WebLayer"></span>
+<!--email Info -->
+				<span id="EmailLayer"></span>
+<!--Fax Info -->
+				<span id="FaxLayer"></span>
+<!--Call Info -->
+				<span id="CallLayer"></span>
+<!--Mail Info -->
+				<span id="MailLayer"></span>
+
+<!--Section Break-->
+				<p>
+				<script><!--
+					document.writeln(RegInfoConfirm1);// -->
+				</script>
+				</p>
+
+<!--Table Footer -->
+				<script><!--
+				StartNavigationButtons();
+				document.writeln('<input type="button" value="'+xmsgBack+'" onclick=\'location.href="javascript:history.go(-1)"\'>');
+				document.writeln('<input type="button" value="'+xmsgPrint+'" onclick=\'location.href=gotoVirtualPage("RTPrint.html");\'>');
+				document.writeln('<input type="button" value="'+xmsgClose+'" onclick=\'location.href=gotoVirtualPage("RTQuit.html");\'>');
+				EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

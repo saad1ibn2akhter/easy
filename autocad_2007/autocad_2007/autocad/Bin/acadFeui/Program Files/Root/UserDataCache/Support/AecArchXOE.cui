@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose customization and migration functionality.
+If you need to change information in the customization file, use the Customize User Interface dialog box in the product.
+To access the Customize User Interface dialog box, click the Tools menu > Customize > Interface, or enter CUI on the command line. 
+-->
+<CustSection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FileVersion MajorVersion="0" MinorVersion="1" IncrementalVersion="3" UserVersion="0" />
+  <Header>
+    <CommonConfiguration>
+      <CommonItems>
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+      </CommonItems>
+    </CommonConfiguration>
+    <WorkspaceRoot>
+      <WorkspaceConfigRoot />
+    </WorkspaceRoot>
+  </Header>
+  <MenuGroup Name="AECARCHXOE">
+    <MacroGroup Name="AECARCHXOEMacros">
+      <MenuMacro UID="AECID_AecDisplayManagerConfigsSelection">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          <Name xlate="false" UID="XLS_0002">Set Current Display Configuration</Name>
+          <Command>^C^C_AecDisplayManagerConfigsSelection </Command>
+          <HelpString xlate="false" UID="XLS_0005">Sets the current display configuration:  DISPLAYMANAGERCONFIGSSELECTION</HelpString>
+          <SmallImage Name="setcurrentdisplayconfig" />
+          <LargeImage Name="setcurrentdisplayconfig" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="AECID_AecExportToAutoCAD">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          <Name xlate="false" UID="XLS_0003">Export to AutoCAD</Name>
+          <Command>^C^C_-AecExportToAutoCAD </Command>
+          <HelpString xlate="false" UID="XLS_0006">Exports to AutoCAD format:  -EXPORTTOAUTOCAD</HelpString>
+          <SmallImage Name="RCDATA_ICON_EXPORT_TO_ACAD" />
+          <LargeImage Name="RCDATA_ICON_EXPORT_TO_ACAD" />
+        </Macro>
+      </MenuMacro>
+      <MenuMacro UID="AECID_AecSetXrefConfig">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          <Name xlate="false" UID="XLS_0004">Override External Reference Display Configuration</Name>
+          <Command>^C^C_AecSetXrefConfig </Command>
+          <HelpString xlate="false" UID="XLS_0007">Overrides the display configuration for an external reference:  SETXREFCONFIG</HelpString>
+          <SmallImage Name="RCDATA_ICON_OVERRIDE_XREF_DISPLAY_CONFIGURATION" />
+          <LargeImage Name="RCDATA_ICON_OVERRIDE_XREF_DISPLAY_CONFIGURATION" />
+        </Macro>
+      </MenuMacro>
+    </MacroGroup>
+    <MenuRoot>
+      <AcceleratorRoot />
+      <OverrideRoot />
+      <MouseButtonRoot />
+      <DigitizerButtonRoot />
+      <PopMenuRoot />
+      <ToolbarRoot>
+        <Toolbar ToolbarOrient="top" ToolbarVisible="show" xval="1" yval="1" rows="1" UID="TB_0001">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          <Alias>AEC_OE</Alias>
+          <Name xlate="false" UID="XLS_0001">AEC OE</Name>
+          <ToolbarButton IsSeparator="false" UID="TBB_0001">
+            <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0008">Set Current Display Configuration</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="AECID_AecDisplayManagerConfigsSelection" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="true" UID="TBB_0002">
+            <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0003">
+            <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0009">Export to AutoCAD</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="AECID_AecExportToAutoCAD" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBB_0004">
+            <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+            <Name xlate="true" UID="XLS_0010">Override External Reference Display Configuration</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="AECID_AecSetXrefConfig" />
+            </MenuItem>
+          </ToolbarButton>
+        </Toolbar>
+      </ToolbarRoot>
+      <ScreenMenuRoot />
+      <ImageMenuRoot />
+      <TabletMenuRoot />
+    </MenuRoot>
+  </MenuGroup>
+</CustSection>

@@ -1,0 +1,66 @@
+;;
+;;;
+;;;    ACETMAIN.MNL
+;;;    Copyright © 1999 by Autodesk, Inc.
+;;;
+;;;    Your use of this software is governed by the terms and conditions of the
+;;;    License Agreement you accepted prior to installation of this software.
+;;;    Please note that pursuant to the License Agreement for this software,
+;;;    "[c]opying of this computer program or its documentation except as
+;;;    permitted by this License is copyright infringement under the laws of
+;;;    your country.  If you copy this computer program without permission of
+;;;    Autodesk, you are violating the law."
+;;;
+;;;    AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS.
+;;;    AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+;;;    MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC.
+;;;    DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+;;;    UNINTERRUPTED OR ERROR FREE.
+;;;
+;;;    Use, duplication, or disclosure by the U.S. Government is subject to
+;;;    restrictions set forth in FAR 52.227-19 (Commercial Computer
+;;;    Software - Restricted Rights) and DFAR 252.227-7013(c)(1)(ii)
+;;;    (Rights in Technical Data and Computer Software), as applicable.
+;;;
+;;;  ----------------------------------------------------------------
+ 
+; ------------  PLACE THE EXPRESS PULL-DOWN FUNCTION -------------
+;  This function places the Express pull-down to the left of the
+;  Window pull-down on the acad menu. If FLG is true the current
+;  Express pull-down if present will be removed and placed again.
+;  If FLG is nil and the pull-down is present, nothing will be done
+;
+;  When placing the Express menu, acad's Window menu is used to
+;  determine the pull-down location. if the Window pull-down is
+;  missing, the Help pull-down will be used instead. If that too
+;  is missing, it will place the Express pull-down after the last
+;  menu location.
+; ----------------------------------------------------------------
+ 
+; Place the Express Tools pulldown to the left of the last pulldown already loaded
+ 
+(defun acet-init-placemenu( / n )
+  (if (menugroup "EXPRESS")
+      (progn
+       (setq n 1)
+       (while (< n 24)
+        (if (menucmd (strcat "P" (itoa n) ".1=?"))
+            (setq n (+ n 1))
+            (progn
+             (if (> n 3)
+                 (setq n (- n 2))
+                 (setq n 3)
+             );if
+             (menucmd (strcat "p" (itoa n) "=+EXPRESS.pop1"))
+             (setq n 25)
+            );progn
+        );if
+       );while
+      );progn
+  );if
+);defun acet-init-placemenu
+ 
+(acet-init-placemenu)
+
+
+(princ)

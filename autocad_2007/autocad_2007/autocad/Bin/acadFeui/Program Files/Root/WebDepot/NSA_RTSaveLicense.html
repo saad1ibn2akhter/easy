@@ -1,0 +1,179 @@
+﻿<!--  (C) Copyright 2004 by Autodesk, Inc.  All rights reserved. -->
+<html>
+	<head>
+		<script src="RTTempPath.js"></script>
+		<script><!--
+            document.writeln('<script src=\"'+userTempPath+'rteregconfdata.js\"></script>');
+		// -->
+		</script>
+		<script src="RTResource.js"></script>
+		<script src="RTResStrings.js"></script>
+		<script src="RTCountry.js"></script>
+		<script src="RTVersion.js"></script>
+		<script><!--
+            document.writeln('<title>'+xmsgSaveLicenseHdr+'</title>');
+		// -->
+		</script>
+		<link rel="stylesheet" href="RTStyle1.css" type="text/css">
+			<STYLE TYPE="text/css" MEDIA="screen">
+				<!--
+			A {cursor:hand;}
+		--></STYLE>
+			<script><!--
+		function onLoad() {
+			//	build license location list
+			var sHTML = "";
+			var sRegInfoHTML = "";
+			var hasError = 0;
+			var count= 0;
+			
+			for (i = 0 ; i < szMaxServer; ++i) {
+				if (szHostName[i] == "") break;
+				
+				if (typeof(szLicSaveStatus) != "undefined") {
+					if (szLicSaveStatus[i] == "1") {
+						if (sRegInfoHTML == "") {
+							sRegInfoHTML = xmsgLicPathMsg2;
+						}
+						sRegInfoHTML += "<br>" + szLicSavePath[i];
+						continue;
+					}
+					hasError = 1;
+					sHTML += "<br><hr><br><font color=\"red\">";
+					switch (szLicSaveStatus[i]) {
+						case "2" :	//	open fail
+						case "4" :	//	error on writing
+							sHTML += xmsgSaveErrorNoDiskSpace;
+							break;
+						case "5" :	//	path not exist
+							sHTML += xmsgSaveErrorPathNotExit;
+							break;
+						case "7" :	//	blank file name
+							sHTML += xmsgSaveErrorPathBlank;
+							break;
+						case "9" :	//	no write permission
+							sHTML += xmsgSaveErrorNoPermission;
+							break;
+						case "12" :	//	Invalid file
+						default:
+							sHTML += xmsgSaveErrorInvalidFile;
+							break;
+					}
+					sHTML += "</font><br><br>";
+				} else {
+					sHTML += "<br><hr><br>";
+				}
+				
+				sHTML += xmsgLicLocationMsg(szHostName[i]) + "<br>";
+				sHTML += "<INPUT TYPE=\"text\" NAME=\"licensepath\" size=\"65\" maxlength=\"2048\" "; 
+				if (typeof(szLicSavePath) != "undefined") {
+					sHTML += "value=\"" + szLicSavePath[i] + "\" "; 
+				}
+				sHTML += "onclick=\'onFocus(\"licensepath\", "+ (count+1) +");\'>";
+				sHTML += "&nbsp;&nbsp;";
+				sHTML += "<input type=\"button\" value=\""+xmsgBrowse+"\" onclick=\'onBrowser(\"licensepath\", "+ (count+1) +", "+ i +");\'>";
+				sHTML += "<br>";
+				
+				//	radio buttons
+				sHTML += xmsgSaveLicenseMsg2 + "<br>";
+				sHTML += "<input type=\"radio\" value=\""+"\" name=\"selradio"+(count+1)+"\" checked>";
+				sHTML += "<a onclick=\"document.RTForm.selradio"+(count+1)+"[0].checked=true;\">"+xmsgSaveLicenseMsg3+"</a><br>";
+				sHTML += "<input type=\"radio\" value=\""+"\" name=\"selradio"+(count+1)+"\">";
+				sHTML += "<a onclick=\"document.RTForm.selradio"+(count+1)+"[1].checked=true;;\">"+xmsgSaveLicenseMsg4+"</a><br>";
+				++count;
+			}
+			sHTML += "<br>";
+			
+			licenseLocationLayer.innerHTML  = sHTML;
+			
+			if (hasError == 0) {
+				MsgLayer.innerHTML = "<b>" + xmsgSaveLicenseHdr + "</b><br><br>" + xmsgSaveLicenseMsg1 +
+					"<a onclick=\"onHelp()\"><img src=\"RTHelp.gif\"></a></LI><br>" +
+					xmsgSaveLicenseMsg6;				
+			} else {
+				MsgLayer.innerHTML = "<font color=\"red\">" + xmsgSaveLicenseMsg5 + "</font>";
+			}
+			
+			if (sRegInfoHTML != "") {
+				sRegInfoHTML += "<hr>";
+			}
+			RegInfoLayer.innerHTML = sRegInfoHTML;
+		}
+
+		function onBack() {
+			document.RTForm.browsefield.value = "";
+			location.href="javascript:history.go(-1)";
+		}
+		
+		function onNext() {
+			location.href= "NSA_RTAuthConfirmed.html?p=" + escape(userTempPath);;
+		}
+		
+		function onFocus(fieldname, fieldindex) {
+			document.RTForm.browsefield.value = fieldname;
+			document.RTForm.browsefieldindex.value = fieldindex;
+		}
+		
+		function onBrowser(fieldname, fieldindex, serverindex) {
+			document.RTForm.browsefield.value = fieldname;
+			document.RTForm.browsefieldindex.value = fieldindex;
+			document.RTForm.hostname.value = szHostName[serverindex];
+			document.RTForm.page.value = "RTBrowse.html";
+			document.RTForm.action=gotoVirtualPage("RTBrowse.html");
+			document.RTForm.submit();
+		}
+		
+		function onHelp() {
+			window.showModalDialog("NSA_RTSaveLicenseHelp.html", 0, 
+				"help:no; status:no; resizable:yes; unadorned:no; dialogHeight:550px; dialogWidth:500px;");
+		}
+			
+		//-->
+			</script>
+			<script><!--
+            document.writeln('<META HTTP-EQUIV="content-type" CONTENT="text/html; charset='+rtcodepage+'">');// -->
+			</script>
+			<meta http-equiv="MSThemeCompatible" CONTENT="yes">
+			<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+	</head>
+	<body onload="onLoad()">
+		<script src="RTHeader.js"></script>
+		<script src="RTNavigation.js"></script>
+		<form name="RTForm" enctype="multipart/form-data">
+			<!--Begin Software Information table -->
+			<script src="RTSoftwareSection.js"></script>
+			<script><!--
+			document.writeln('<input type="hidden" name="prodlang" value="'+xmsgProductLanguage+'">');
+		// -->
+			</script>
+			<span id="MsgLayer"></span>
+			<!--Section Break-->
+			<script><!--
+		
+			document.writeln('<input type="hidden" name="page" value="dummy">');
+			document.writeln('<input type="hidden" name="browsefield" value="licensepath">');
+			document.writeln('<input type="hidden" name="browsefieldindex" value="dummy">');
+			document.writeln('<input type="hidden" name="hostname" value="dummy">');
+		
+			//	browsertype :	1 <-- Save
+			//					2 <-- Load license
+			//					3 <-- Load Regdata.ini
+			document.writeln('<input type="hidden" name="browsetype" value="1">');
+			// -->
+			</script>
+			<span id="licenseLocationLayer"></span>
+			<hr>
+			<span id="RegInfoLayer"></span>
+			<script><!--
+			document.writeln('<script src=\"rtanimdots.js\"></script>');
+			
+			StartNavigationButtons();
+			document.writeln('<input type="button" name="next" value="'+xmsgNext+'" onclick="onNext();">');
+			document.writeln('<input type="button" value="'+xmsgCancel+'" onclick=\'location.href=gotoVirtualPage("RTcancel.html");\'>  ');
+			EndNavigationButtons();
+			// -->
+			</script>
+		</form>
+		<script src="RTFooter.js"></script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<Catalog>
+    <ItemID idValue="{BCE9057C-916B-4783-894A-251734714907}"/>
+    <Properties>
+		<ItemName resource="232" src="AcAssistRes.dll"/>
+        <Description></Description>
+        <Image/>
+        <ToolTip></ToolTip>
+        <Keywords></Keywords>
+    </Properties>
+    <Palettes>
+        <Palette>
+            <ItemID idValue="{F7B1B1FD-E833-48FB-8157-977C935D4AC1}"/>
+            <Properties>
+		        <ItemName resource="233" src="AcAssistRes.dll"/>
+                <Description></Description>
+                <Image/>
+                <ToolTip></ToolTip>
+                <Keywords></Keywords>
+            </Properties>
+            <Navigation>
+                <Dynamic isDynamic="true">
+                    <DynamicLink>$COMMAND$.htm</DynamicLink>
+                </Dynamic>
+                <DefaultPage>defaultpage.htm</DefaultPage>
+                <HomePage>home.htm</HomePage>
+                <BaseRoot>mk:@MSITStore:$EXE$\help\acad_assist.chm::/.</BaseRoot>
+            </Navigation>
+        </Palette>
+    </Palettes>
+    <Catalogs/>
+</Catalog>

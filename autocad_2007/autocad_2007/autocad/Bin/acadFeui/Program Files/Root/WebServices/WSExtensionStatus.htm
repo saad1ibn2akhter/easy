@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="WSLiveUpdateExtStyle.css" />
+        <title>Extension Status</title>
+        <META HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+        <script SRC="WSXMLUtil.js" LANGUAGE="JavaScript"></script>
+        <script SRC="xmsg_WSLiveUpdateExt.js" LANGUAGE="JavaScript"></script>
+        <script language="JavaScript1.2" type="text/javascript">
+
+// modify this to get the right path from the opener
+var dataFile = window.opener.CommCntrDataFilePath;
+
+function displayAvailableExts() {
+
+	if(document.getElementById("availableExts")) {
+		document.getElementById("availableExts").innerHTML= getAvailableExts();
+	} else {
+		alert(xmsg_missing_availExts);	
+	}
+
+}
+
+function getAvailableExts() {
+	return getTransformedResult(dataFile,"WSavailableExts.xsl");	
+}
+
+function displayInstalledExts() {
+
+	if(document.getElementById("installedExts")) {
+		document.getElementById("installedExts").innerHTML= getInstalledExts();	
+	} else {
+		alert(xmsg_missing_installExts);	
+	}
+}
+
+function getInstalledExts() {
+	return getTransformedResult(dataFile,"WSinstalledExts.xsl");	
+}
+
+function displayResults() {
+	displayAvailableExts();
+	displayInstalledExts();
+	FormatLaunchDates();
+}
+
+
+// formatting the date. The date is given as seconds from
+// 1-1-1970 (java convention). If format changes, need modification here.
+// The array of month strings need localization..
+
+function FormatLaunchDates() {
+	dates = document.all("launchDate");
+	if (dates != null) { 
+		var str="";
+		if (dates.length != null)
+		{
+		    for (var i = 0; i<dates.length; i++) {
+			    str = dates[i].innerHTML;
+			    var d = new Date(dates[i].innerHTML*1000);
+			    dates[i].innerHTML = d.getDate()+"-"+short_month_names[d.getMonth()]+"-"+d.getYear();
+		    }
+		}
+		else // only one item is found
+		{
+			str = dates.innerHTML;
+			if (str != null && str != "")
+			{
+			    var d = new Date(str*1000);
+			    dates.innerHTML = d.getDate()+"-"+short_month_names[d.getMonth()]+"-"+d.getYear();
+			}
+		}
+	}
+}
+
+        </script>
+    </head>
+    <body onload="displayResults()">
+        <table border="0" cellpadding="3" cellspacing="3" width="775">
+            <tr>
+                <td><img src="ext_adsklogo.gif"></td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" width="775" ID="Table1">
+                        <tr>
+                            <td valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="256" ID="Table2">
+                                    <tr>
+                                        <td bgcolor="#cccccc"><img src="ext_clear.gif" width="10" height="1"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td bgcolor="#ffffff">
+                                <img src="ext_clear.gif" width="3" height="1">
+                            </td>
+                            <td valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="516" ID="Table3">
+                                    <tr>
+                                        <td bgcolor="#cccccc"><img src="ext_clear.gif" width="10" height="1"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="775" ID="Table4">
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="256" ID="Table5">
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td bgcolor="#ffffff">
+                                <img src="ext_clear.gif" width="3" height="1">
+                            </td>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="516" ID="Table6">
+                                    <tr>
+                                        <td align="left" class="pageSubHeader">Extension Status Center<br />
+                                            <br />
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pageBodyText">The extensions listed below are enhancements to your 
+                                            Autodesk software and available to Autodesk Subscription Program members. Click 
+                                            on the extension name to learn more about the extension and get immediate 
+                                            access to the latest design tools.
+                                            <br />
+                                            <br />
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" class="pageSubHeader">The following extension(s) are now 
+                                            available:<br />
+                                            <br />
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="516" ID="Table7">
+                                                <tr>
+                                                    <td class="pageBodyText" width="400">Name</td>
+                                                    <td class="pageBodyText" width="140">Date Available</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" bgcolor="#cccccc"><img src="ext_clear.gif" width="10" height="1"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <!-- A list of the entries... generated by JavaScript by parsing XML  -->
+                                    <tr>
+                                        <td>
+                                            <div id="availableExts"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><br />
+                                            <br />
+                                        </td>
+                                    </tr>
+                                    <!-- Items that have been installed already -->
+                                    <tr>
+                                        <td align="left" class="pageSubHeader">The following extension(s) have already been 
+                                            installed on your machine:<br />
+                                            <br />
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="516" ID="Table8">
+                                                <tr>
+                                                    <td class="pageBodyText" width="400">Name</td>
+                                                    <td class="pageBodyText" width="140">Date Available</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" bgcolor="#cccccc"><img src="ext_clear.gif" width="10" height="1"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <!-- A list of the entries generated by Javascript parsing XML  -->
+                                    <tr>
+                                        <td>
+                                            <div id="installedExts"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

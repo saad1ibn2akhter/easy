@@ -1,0 +1,44 @@
+
+<!-- Styles for Communication Center LiveUpdate and Extension Landing page -->
+
+<!-- Generic styles for both landing pages -->
+
+.pageSubHeader
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13px;
+    FONT-WEIGHT: bold;
+}
+
+.pageBodyText
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13px;
+    FONT-STYLE: normal;
+}
+
+<!-- LiveUpdate specific -->
+
+.updateButton
+{
+	BACKGROUND: #336699;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 13px;
+    FONT-STYLE: bold;
+    BORDER-COLOR: #6699cc;
+    BORDER-STYLE: raised;
+    cursor:hand;
+}
+
+<!-- Extension specific -->
+
+.pageTextLinkRegular
+{
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13px;
+    FONT-STYLE: normal;
+	COLOR: #003399;
+}
